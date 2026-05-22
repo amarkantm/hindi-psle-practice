@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W18 — Sep 7–11, 2026 | Hindi PSLE Daily Practice</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#b71c1c;--phase-bg:#ffebee;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .day-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  .ans-key-section{page-break-before:always;}
+  @page{size:A4;margin:15mm;}
+}
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:20px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:20px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.countdown-banner{background:#b71c1c;color:white;padding:12px 20px;text-align:center;font-size:14px;font-weight:700;letter-spacing:.5px;}
+.phase-badge{background:#FFD700;color:#b71c1c;display:inline-block;padding:3px 12px;border-radius:12px;font-size:12px;font-weight:700;margin-top:6px;}
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#000080;text-decoration:none;}
+.nav-chip.active{background:#b71c1c;color:white;border-color:#b71c1c;}
+.day-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.day-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ef9a9a;}
+.day-title{font-size:16px;font-weight:700;color:var(--navy);}
+.day-meta{font-size:11px;color:#555;}
+.day-countdown{font-size:11px;font-weight:700;color:#b71c1c;background:#fff;padding:2px 8px;border-radius:10px;border:1px solid #b71c1c;}
+.vocab-card{margin:14px 18px;border:2px solid var(--saffron);border-radius:10px;overflow:hidden;}
+.vocab-title{background:var(--saffron);color:white;padding:7px 14px;font-size:13px;font-weight:700;}
+.vocab-table{width:100%;border-collapse:collapse;}
+.vocab-table th{background:#fff3e0;padding:6px 10px;font-size:11px;font-weight:700;color:#e65100;text-align:left;border-bottom:1px solid #ffe0b2;}
+.vocab-table td{padding:7px 10px;font-size:13px;border-bottom:1px solid #fff3e0;vertical-align:top;}
+.vocab-table tr:last-child td{border-bottom:none;}
+.vocab-hindi{font-size:15px;font-weight:700;color:var(--navy);}
+.years-badge{font-size:9px;background:#e3f2fd;color:#1565c0;border-radius:3px;padding:1px 5px;margin-top:3px;display:inline-block;}
+.practice-section{padding:14px 18px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #eee;}
+.sec-tag{background:var(--navy);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;}
+.sec-title{font-size:15px;font-weight:700;color:var(--navy);}
+.sec-time{font-size:11px;color:#888;margin-left:auto;}
+.source-badge{font-size:9px;background:#ede7f6;color:#4a148c;border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:4px;font-style:italic;}
+.q-block{margin-bottom:16px;}
+.q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.hint{font-size:11px;color:#777;font-style:italic;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
+.q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
+.opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
+.ans-line{border-bottom:1.5px solid #bbb;min-height:32px;margin:4px 0 10px;background:none;}
+.passage-box{background:#f8f9fa;border-left:4px solid var(--navy);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:2;font-family:serif;}
+.blank-num{background:#000080;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin:0 2px;vertical-align:middle;}
+.word-box{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.9;}
+.word-box strong{color:#856404;font-size:11px;display:block;margin-bottom:4px;}
+.writing-prompt{background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:14px 16px;margin-bottom:14px;}
+.writing-prompt h4{color:#e65100;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-text{font-size:13px;color:#333;margin-bottom:10px;line-height:1.9;}
+.writing-lines .ans-line{min-height:36px;}
+.self-assess{background:#f0f4ff;border-radius:8px;padding:10px 14px;margin:14px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.sa-item{font-size:12px;color:#333;}
+.sa-item b{color:var(--navy);}
+.ans-key-section{background:#fffde7;border:1px solid #ffe082;border-radius:8px;margin:14px 18px;padding:14px 16px;}
+.ans-key-section h4{font-size:12px;font-weight:700;color:#b8860b;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 16px;}
+.ak-item{font-size:12px;color:#333;padding:3px 0;}
+.ak-item b{color:var(--navy);}
+.idiom-table{width:100%;border-collapse:collapse;margin-bottom:14px;}
+.idiom-table td,.idiom-table th{padding:7px 10px;font-size:12px;border:1px solid #e0e0e0;vertical-align:top;}
+.idiom-table th{background:#f5f5f5;font-weight:700;color:#333;}
+.idiom-table tr:nth-child(odd){background:#fafafa;}
+.timer-box{background:#b71c1c;color:white;padding:8px 16px;border-radius:6px;margin:10px 18px;font-size:13px;font-weight:700;text-align:center;}
+.wknd-banner{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:8px 18px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.day-block.weekend-block{border-top-color:#1565c0;}
+.day-header.weekend-header{background:#e3f2fd;border-bottom-color:#90caf9;}
+.preview-box{background:#f3e5f5;border:1.5px solid #ce93d8;border-radius:8px;padding:12px 16px;margin:10px 18px;}
+.preview-box h4{color:#7b1fa2;font-size:12px;font-weight:700;margin-bottom:6px;}
+.preview-box p{font-size:12px;color:#333;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+
+<div class="header">
+  <h1>🇸🇬 Hindi PSLE Daily Practice — सप्ताह 18</h1>
+  <p>Week 18 &nbsp;|&nbsp; Sep 7–11, 2026 &nbsp;|&nbsp; Phase 5: Final Push &nbsp;|&nbsp; Primary 5</p>
+  <div class="phase-badge">⚡ PHASE 5 — 2024–2025 MIXED</div>
+</div>
+
+<div class="countdown-banner">
+  PSLE में 21 दिन बचे! आप बहुत मेहनत कर रहे हैं! 🌟 &nbsp;|&nbsp; PSLE: 28 सितंबर 2026
+</div>
+
+<div class="week-nav no-print">
+  <strong style="font-size:11px;color:#555;">सप्ताह:</strong>
+  <a class="nav-chip" href="W16_Aug18.html">W16 Aug24</a>
+  <a class="nav-chip" href="W17_Aug25.html">W17 Aug31</a>
+  <a class="nav-chip active" href="W18_Sep01.html">W18 Sep07</a>
+  <a class="nav-chip" href="W19_Sep08.html">W19 Sep14</a>
+  <a class="nav-chip" href="W20_Sep15.html">W20 Sep21</a>
+</div>
+
+<!-- ═══ DAY 1 — MON SEP 1 ═══ -->
+<div class="day-block">
+  <div class="day-header">
+    <div class="day-title">🗓 सोमवार — Monday, Sep 7</div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <div class="day-meta">शब्द-भंडार — 2025 Paper Style</div>
+      <div class="day-countdown">21 दिन बाकी</div>
+    </div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के 5 शब्द — देशभक्ति / Patriotism</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>English Meaning</th><th>Example Sentence</th><th>Years Seen</th></tr>
+      <tr><td><div class="vocab-hindi">धरोहर</div></td><td>Heritage / legacy</td><td>हमारी संस्कृति हमारी सबसे बड़ी धरोहर है।</td><td><span class="years-badge">2025 ★★</span></td></tr>
+      <tr><td><div class="vocab-hindi">मातृभूमि</div></td><td>Motherland</td><td>मातृभूमि की सेवा सबसे बड़ा धर्म है।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">नैतिकता</div></td><td>Ethics / morality</td><td>नैतिकता के बिना शिक्षा अधूरी है।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">उन्नति</div></td><td>Progress / advancement</td><td>देश की उन्नति में हर नागरिक का योगदान होता है।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">देशभक्ति</div></td><td>Patriotism</td><td>देशभक्ति केवल युद्ध में नहीं, रोज़मर्रा में दिखती है।</td><td><span class="years-badge">2025</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">सोमवार</span>
+      <span class="sec-title">शब्द-भंडार: रिक्त स्थान भरिए (2025 Style)</span>
+      <span class="sec-time">⏱ 20 मिनट</span>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> हम सबको मिलकर अपने <span class="blank"></span> को बेहतर बनाना चाहिए। <span class="hint">(environment/society)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> उसने हमेशा <span class="blank"></span> का रास्ता चुना। <span class="hint">(truth/right path)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> बच्चे माता-पिता की <span class="blank"></span> में खिलते हैं। <span class="hint">(nurturing/love)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> उसने <span class="blank"></span> के लिए अपना सब कुछ दे दिया। <span class="hint">(country/motherland)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> हमें <span class="blank"></span> के प्रति कृतज्ञ रहना चाहिए। <span class="hint">(nature/God/elders)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> उसने हर <span class="blank"></span> में धैर्य रखा। <span class="hint">(situation/difficulty)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> उसकी <span class="blank"></span> देखकर सभी प्रभावित हुए। <span class="hint">(simplicity/modesty)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> वह अपने <span class="blank"></span> पर बहुत ध्यान देता था। <span class="hint">(health/diet)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> उसने <span class="blank"></span> के साथ अपनी बात रखी। <span class="hint">(confidence)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A1 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> माता-पिता का <span class="blank"></span> बच्चों को आगे बढ़ने की शक्ति देता है। <span class="hint">(encouragement/support)</span></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय लिया:</b> _____मिनट</div>
+    <div class="sa-item"><b>✅ स्कोर:</b> _____ / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> ☆☆☆☆☆</div>
+    <div class="sa-item"><b>📅 21 दिन बाकी!</b></div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी (Mon W18)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> समाज / परिवेश को</div>
+      <div class="ak-item"><b>2.</b> सच्चाई / न्याय का</div>
+      <div class="ak-item"><b>3.</b> ममता / देखभाल में</div>
+      <div class="ak-item"><b>4.</b> देश / मातृभूमि के</div>
+      <div class="ak-item"><b>5.</b> प्रकृति / माता-पिता के</div>
+      <div class="ak-item"><b>6.</b> परिस्थिति / मुश्किल में</div>
+      <div class="ak-item"><b>7.</b> सरलता / विनम्रता</div>
+      <div class="ak-item"><b>8.</b> स्वास्थ्य / खानपान पर</div>
+      <div class="ak-item"><b>9.</b> आत्मविश्वास</div>
+      <div class="ak-item"><b>10.</b> प्रोत्साहन / सहयोग</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 2 — TUE SEP 2 ═══ -->
+<div class="day-block">
+  <div class="day-header">
+    <div class="day-title">🗓 मंगलवार — Tuesday, Sep 8</div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <div class="day-meta">Cloze Passage — देशभक्ति (2025)</div>
+      <div class="day-countdown">20 दिन बाकी</div>
+    </div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के 5 शब्द — परंपरा / Tradition</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>English Meaning</th><th>Example Sentence</th><th>Years Seen</th></tr>
+      <tr><td><div class="vocab-hindi">परंपरा</div></td><td>Tradition / custom</td><td>परंपराएँ हमें अपनी जड़ों से जोड़ती हैं।</td><td><span class="years-badge">Recurring ★★★</span></td></tr>
+      <tr><td><div class="vocab-hindi">रीति-रिवाज</div></td><td>Customs and rituals</td><td>हर त्योहार पर अपने रीति-रिवाज़ों का पालन करते हैं।</td><td><span class="years-badge">Recurring ★★★</span></td></tr>
+      <tr><td><div class="vocab-hindi">विरासत</div></td><td>Heritage / inheritance</td><td>यह मंदिर हमारी सांस्कृतिक विरासत है।</td><td><span class="years-badge">Recurring ★★</span></td></tr>
+      <tr><td><div class="vocab-hindi">राष्ट्रीय</div></td><td>National</td><td>राष्ट्रीय पर्वों पर हम एकजुट होते हैं।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">सांस्कृतिक</div></td><td>Cultural</td><td>सांस्कृतिक विविधता हमारी शक्ति है।</td><td><span class="years-badge">Recurring ★★★</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">मंगलवार</span>
+      <span class="sec-title">रिक्त स्थान भरिए — देशभक्ति Cloze</span>
+      <span class="sec-time">⏱ 20 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2, A2]</div>
+
+    <div class="passage-box">
+      हमारा देश हमारी सबसे बड़ी <span class="blank-num">1</span> है। इसकी <span class="blank-num">2</span>, इतिहास और <span class="blank-num">3</span> पर हमें गर्व होना चाहिए। एक अच्छे <span class="blank-num">4</span> का कर्तव्य है कि वह अपने देश की <span class="blank-num">5</span> करे। हमें अपनी भाषाओं और <span class="blank-num">6</span> को जीवित रखना चाहिए। हर व्यक्ति अपने-अपने <span class="blank-num">7</span> से देश की <span class="blank-num">8</span> में योगदान दे सकता है। बच्चों को देशभक्ति और <span class="blank-num">9</span> का पाठ बचपन से ही पढ़ाना चाहिए। यही उनका सबसे बड़ा <span class="blank-num">10</span> होगा।
+    </div>
+
+    <div class="word-box">
+      <strong>शब्द-सूची (Word Box):</strong>
+      धरोहर &nbsp;|&nbsp; संस्कृति &nbsp;|&nbsp; परंपरा &nbsp;|&nbsp; नागरिक &nbsp;|&nbsp; सेवा &nbsp;|&nbsp; रीतियों &nbsp;|&nbsp; क्षेत्र &nbsp;|&nbsp; उन्नति &nbsp;|&nbsp; नैतिकता &nbsp;|&nbsp; उपहार
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 20px;">
+      <div><span class="q-num">1.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">2.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">3.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">4.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">5.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">6.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">7.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">8.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">9.</span> <div class="ans-line"></div></div>
+      <div><span class="q-num">10.</span> <div class="ans-line"></div></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय लिया:</b> _____मिनट</div>
+    <div class="sa-item"><b>✅ स्कोर:</b> _____ / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> ☆☆☆☆☆</div>
+    <div class="sa-item"><b>📅 20 दिन बाकी!</b></div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी (Tue W18)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> धरोहर</div>
+      <div class="ak-item"><b>2.</b> संस्कृति</div>
+      <div class="ak-item"><b>3.</b> परंपरा</div>
+      <div class="ak-item"><b>4.</b> नागरिक</div>
+      <div class="ak-item"><b>5.</b> सेवा</div>
+      <div class="ak-item"><b>6.</b> रीतियों</div>
+      <div class="ak-item"><b>7.</b> क्षेत्र</div>
+      <div class="ak-item"><b>8.</b> उन्नति</div>
+      <div class="ak-item"><b>9.</b> नैतिकता</div>
+      <div class="ak-item"><b>10.</b> उपहार</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 3 — WED SEP 3 ═══ -->
+<div class="day-block">
+  <div class="day-header">
+    <div class="day-title">🗓 बुधवार — Wednesday, Sep 9</div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <div class="day-meta">MCQ Comprehension — मीरा की चित्रकारी (2025)</div>
+      <div class="day-countdown">19 दिन बाकी</div>
+    </div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के 5 शब्द — प्रतिभा / Talent</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>English Meaning</th><th>Example Sentence</th><th>Years Seen</th></tr>
+      <tr><td><div class="vocab-hindi">विशेषता</div></td><td>Specialty / uniqueness</td><td>अलग होना कमज़ोरी नहीं, विशेषता है।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">प्रतिभाशाली</div></td><td>Talented / gifted</td><td>वह बेहद प्रतिभाशाली बच्ची है।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">जीवंत</div></td><td>Lively / vibrant</td><td>उसके रेखाचित्र बेहद जीवंत थे।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">रेखाचित्र</div></td><td>Sketch / drawing</td><td>उसके रेखाचित्र देखने वालों को दंग कर देते थे।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">निखारना</div></td><td>To polish / develop (a skill)</td><td>हर प्रतिभा को निखारने की ज़रूरत होती है।</td><td><span class="years-badge">2025</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">बुधवार</span>
+      <span class="sec-title">बोध-प्रश्न — MCQ (2025 Paper)</span>
+      <span class="sec-time">⏱ 25 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2, A3 · Q.1–10]</div>
+
+    <div class="passage-box">
+      <strong>गद्यांश पढ़िए — मीरा की रंगीन दुनिया:</strong><br><br>
+      आठ वर्षीय मीरा एक विशेष बच्ची थी। वह कम बोलती थी और भीड़ में असहज महसूस करती थी, लेकिन उसके रंगों की दुनिया बेहद समृद्ध थी। जब वह पेंटिंग करती थी, तो उसका पूरा व्यक्तित्व बदल जाता था — वह एकाग्र, शांत और आत्मविश्वासी लगती थी। उसके रेखाचित्र इतने जीवंत होते थे कि देखने वाले दंग रह जाते थे। एक बार स्कूल की वार्षिक प्रदर्शनी में मीरा की पेंटिंग को पहला पुरस्कार मिला। उस दिन उसकी माँ की आँखों में आँसू थे — खुशी के आँसू। अध्यापिका ने मंच पर कहा — "हर बच्चे में कोई न कोई प्रतिभा होती है। हमारा काम उसे पहचानना और निखारना है।" पुरस्कार लेते समय मीरा ने पहली बार सबके सामने मुस्कुराई। उस मुस्कान में उसकी पूरी कहानी थी। मीरा की कहानी हमें सिखाती है कि अलग होना कमज़ोरी नहीं, विशेषता है — और हर इंसान की अपनी अनूठी भाषा होती है।
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> मीरा के बारे में क्या सच है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) वह बहुत बातूनी थी।</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) वह कम बोलती थी पर पेंटिंग में माहिर थी।</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) वह पढ़ाई में बहुत तेज़ थी।</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) उसे स्कूल से डर लगता था।</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> जब मीरा पेंटिंग करती थी तो वह कैसी लगती थी?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) घबराई हुई और उदास</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) एकाग्र, शांत और आत्मविश्वासी</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) थकी हुई और अनमनी</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) शोर मचाने वाली</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> प्रदर्शनी में मीरा की पेंटिंग को क्या मिला?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) दूसरा पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) पहला पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) तीसरा पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) कोई पुरस्कार नहीं</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> माँ की आँखों में आँसू क्यों थे?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) दुख के कारण</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) खुशी के कारण</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) डर के कारण</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) थकान के कारण</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> अध्यापिका ने मंच पर क्या कहा?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) "मीरा सबसे अच्छी छात्रा है।"</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) "हर बच्चे में कोई न कोई प्रतिभा होती है।"</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) "पेंटिंग बहुत आसान है।"</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) "सभी बच्चे एक जैसे हैं।"</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> "जीवंत" शब्द का क्या अर्थ है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) मृत / निर्जीव</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) जीते-जागते जैसा / lively</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) रंगीन</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) छोटा</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> मीरा ने पहली बार सबके सामने कब मुस्कुराई?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) जब वह कक्षा में आई</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) जब उसने पेंटिंग बनाई</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) पुरस्कार लेते समय</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) जब माँ ने गले लगाया</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> इस गद्यांश का मुख्य संदेश क्या है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) पेंटिंग सबसे अच्छी कला है।</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) अलग होना कमज़ोरी नहीं, विशेषता है।</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) स्कूल की प्रदर्शनियाँ ज़रूरी हैं।</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) माँ-बाप को बच्चों की मदद करनी चाहिए।</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> "निखारना" शब्द का अर्थ है:</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) बर्बाद करना</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) किसी गुण को माँजना / develop करना</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) छुपाना</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) तोड़ना</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2025 · P2, A3 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> मीरा की "अनूठी भाषा" क्या थी?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> (क) अंग्रेज़ी</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ख) उसकी पेंटिंग और रंग</div>
+        <div class="q-opt"><div class="opt-circle"></div> (ग) सांकेतिक भाषा</div>
+        <div class="q-opt"><div class="opt-circle"></div> (घ) कविता</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय लिया:</b> _____मिनट</div>
+    <div class="sa-item"><b>✅ स्कोर:</b> _____ / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> ☆☆☆☆☆</div>
+    <div class="sa-item"><b>📅 19 दिन बाकी!</b></div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी (Wed W18)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> (ख)</div>
+      <div class="ak-item"><b>2.</b> (ख)</div>
+      <div class="ak-item"><b>3.</b> (ख)</div>
+      <div class="ak-item"><b>4.</b> (ख)</div>
+      <div class="ak-item"><b>5.</b> (ख)</div>
+      <div class="ak-item"><b>6.</b> (ख)</div>
+      <div class="ak-item"><b>7.</b> (ग)</div>
+      <div class="ak-item"><b>8.</b> (ख)</div>
+      <div class="ak-item"><b>9.</b> (ख)</div>
+      <div class="ak-item"><b>10.</b> (ख)</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 4 — THU SEP 4 ═══ -->
+<div class="day-block">
+  <div class="day-header">
+    <div class="day-title">🗓 गुरुवार — Thursday, Sep 10</div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <div class="day-meta">मुहावरे + वाक्य पूर्ति (2025 Fresh Idioms)</div>
+      <div class="day-countdown">18 दिन बाकी</div>
+    </div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के 5 शब्द — 2025 मुहावरे</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>English Meaning</th><th>Example Sentence</th><th>Years Seen</th></tr>
+      <tr><td><div class="vocab-hindi">आँचल में छुपाना</div></td><td>To protect lovingly (mother's embrace)</td><td>माँ ने बच्चे को अपने आँचल में छुपा लिया।</td><td><span class="years-badge">2025 Idiom</span></td></tr>
+      <tr><td><div class="vocab-hindi">रोम-रोम पुलकित होना</div></td><td>To be thoroughly thrilled / overjoyed</td><td>उसकी सफलता सुनकर माँ का रोम-रोम पुलकित हो गया।</td><td><span class="years-badge">2025 Idiom</span></td></tr>
+      <tr><td><div class="vocab-hindi">नींव पर महल खड़ा होना</div></td><td>Strong foundation leads to great success</td><td>मेहनत की नींव पर ही सफलता का महल खड़ा होता है।</td><td><span class="years-badge">2025 Idiom</span></td></tr>
+      <tr><td><div class="vocab-hindi">सूरज को दीपक दिखाना</div></td><td>Teaching a master (pointless/patronising)</td><td>उस विद्वान को व्याकरण सिखाना सूरज को दीपक दिखाना है।</td><td><span class="years-badge">2025 Idiom</span></td></tr>
+      <tr><td><div class="vocab-hindi">अपनत्व</div></td><td>Sense of belonging / affection</td><td>उसके व्यवहार में गहरा अपनत्व था।</td><td><span class="years-badge">2025</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">गुरुवार — भाग A</span>
+      <span class="sec-title">मुहावरों का मिलान (2025)</span>
+      <span class="sec-time">⏱ 10 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2, B6]</div>
+
+    <table class="idiom-table">
+      <tr><th>मुहावरा</th><th>अर्थ चुनिए</th><th>उत्तर</th></tr>
+      <tr>
+        <td><b>1.</b> चाँद पर थूकना</td>
+        <td>(क) चाँद को देखना<br>(ख) किसी महान व्यक्ति को बुरा कहकर खुद को नुकसान पहुँचाना<br>(ग) असंभव काम करना<br>(घ) बहुत ऊँचा जाना</td>
+        <td><div class="ans-line" style="min-width:60px;"></div></td>
+      </tr>
+      <tr>
+        <td><b>2.</b> नींव पर महल खड़ा होना</td>
+        <td>(क) बड़ी इमारत बनाना<br>(ख) मज़बूत आधार से महान काम होना<br>(ग) अमीर बनना<br>(घ) घर बनाना</td>
+        <td><div class="ans-line" style="min-width:60px;"></div></td>
+      </tr>
+      <tr>
+        <td><b>3.</b> रोम-रोम पुलकित होना</td>
+        <td>(क) बहुत थक जाना<br>(ख) बहुत दर्द होना<br>(ग) पूरे शरीर में खुशी और रोमांच होना<br>(घ) बुखार आना</td>
+        <td><div class="ans-line" style="min-width:60px;"></div></td>
+      </tr>
+      <tr>
+        <td><b>4.</b> आँचल में छुपाना</td>
+        <td>(क) कपड़ों में छुपाना<br>(ख) माँ का प्यार से बच्चे को बचाना<br>(ग) चोरी करना<br>(घ) डर जाना</td>
+        <td><div class="ans-line" style="min-width:60px;"></div></td>
+      </tr>
+      <tr>
+        <td><b>5.</b> सूरज को दीपक दिखाना</td>
+        <td>(क) रात में रोशनी करना<br>(ख) किसी महान व्यक्ति को उसी विषय में सिखाने की कोशिश करना<br>(ग) दीपक जलाना<br>(घ) अंधेरे में रोशनी करना</td>
+        <td><div class="ans-line" style="min-width:60px;"></div></td>
+      </tr>
+    </table>
+
+    <div class="sec-header" style="margin-top:20px;">
+      <span class="sec-tag">गुरुवार — भाग B</span>
+      <span class="sec-title">वाक्य पूर्ति</span>
+      <span class="sec-time">⏱ 10 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2, B7 · Q.6–10]</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">6.</span> जो बच्चे अपने माता-पिता की सेवा करते हैं, वे सच्चे <span class="blank"></span> होते हैं।</div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">7.</span> हमें अपनी <span class="blank"></span> और परंपराओं पर गर्व करना चाहिए।</div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">8.</span> एक अच्छे नागरिक का कर्तव्य है कि वह अपने देश की <span class="blank"></span> करे।</div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">9.</span> हर बच्चे में कोई न कोई <span class="blank"></span> छुपी होती है।</div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">10.</span> कठिनाइयों का सामना <span class="blank"></span> से करने वाले ही सफल होते हैं।</div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय लिया:</b> _____मिनट</div>
+    <div class="sa-item"><b>✅ स्कोर:</b> _____ / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> ☆☆☆☆☆</div>
+    <div class="sa-item"><b>📅 18 दिन बाकी!</b></div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी (Thu W18)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> (ख)</div>
+      <div class="ak-item"><b>2.</b> (ख)</div>
+      <div class="ak-item"><b>3.</b> (ग)</div>
+      <div class="ak-item"><b>4.</b> (ख)</div>
+      <div class="ak-item"><b>5.</b> (ख)</div>
+      <div class="ak-item"><b>6.</b> पुत्र / संतान</div>
+      <div class="ak-item"><b>7.</b> संस्कृति / विरासत</div>
+      <div class="ak-item"><b>8.</b> सेवा / रक्षा</div>
+      <div class="ak-item"><b>9.</b> प्रतिभा</div>
+      <div class="ak-item"><b>10.</b> साहस / धैर्य</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 5 — FRI SEP 5 ═══ -->
+<div class="day-block">
+  <div class="day-header">
+    <div class="day-title">🗓 शुक्रवार — Friday, Sep 11</div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <div class="day-meta">Paper 1 Writing — 50 मिनट (डायरी-प्रविष्टि)</div>
+      <div class="day-countdown">17 दिन बाकी</div>
+    </div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के 5 शब्द — डायरी लेखन</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>English Meaning</th><th>Example Sentence</th><th>Years Seen</th></tr>
+      <tr><td><div class="vocab-hindi">डायरी-प्रविष्टि</div></td><td>Diary entry</td><td>मैंने आज की डायरी-प्रविष्टि अपने नए दोस्त के बारे में लिखी।</td><td><span class="years-badge">2025 P1</span></td></tr>
+      <tr><td><div class="vocab-hindi">समावेश</div></td><td>Inclusion</td><td>कक्षा में नए बच्चे का समावेश करना हमारी ज़िम्मेदारी है।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">स्वागत</div></td><td>Welcome</td><td>हमने नए विद्यार्थी का गर्मजोशी से स्वागत किया।</td><td><span class="years-badge">Recurring ★★★</span></td></tr>
+      <tr><td><div class="vocab-hindi">संगी-साथी</div></td><td>Companion / friend</td><td>अच्छे संगी-साथी जीवन को आसान बनाते हैं।</td><td><span class="years-badge">2025</span></td></tr>
+      <tr><td><div class="vocab-hindi">अपनत्व</div></td><td>Sense of belonging</td><td>उसके व्यवहार में इतना अपनत्व था कि मन खुश हो गया।</td><td><span class="years-badge">2025</span></td></tr>
+    </table>
+  </div>
+
+  <div class="timer-box">⏱ TIMED WRITING — 50 मिनट | अभी घड़ी शुरू करें! Start your timer NOW!</div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">शुक्रवार</span>
+      <span class="sec-title">Paper 1 — डायरी-प्रविष्टि (Diary Entry)</span>
+      <span class="sec-time">⏱ 50 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P1]</div>
+
+    <div class="writing-prompt">
+      <h4>✍️ लेखन-प्रश्न:</h4>
+      <div class="wp-text">
+        आपकी कक्षा में एक <strong>नया विद्यार्थी</strong> आया है जो पहले किसी और देश में रहता था। वह अकेला और उदास दिखता है क्योंकि उसे यहाँ कोई नहीं जानता। आप उसे खुश करने और कक्षा में शामिल करने के लिए क्या-क्या करेंगे?<br><br>
+        इस अनुभव के बारे में <strong>डायरी प्रविष्टि</strong> लिखिए। प्रविष्टि में शामिल करें:<br>
+        — नए विद्यार्थी का नाम, वह कहाँ से आया<br>
+        — आपने उसे खुश करने के लिए क्या किया<br>
+        — उसने क्या महसूस किया<br>
+        — आपने क्या सीखा<br><br>
+        <em>शब्द-सीमा: 150–200 शब्द | डायरी का सही प्रारूप: तारीख + "प्रिय डायरी"</em>
+      </div>
+    </div>
+
+    <div style="background:#e8f5e9;border-radius:6px;padding:10px 14px;margin-bottom:12px;font-size:12px;">
+      <strong style="color:#1b5e20;">💡 डायरी प्रारूप याद रखें:</strong><br>
+      <strong>तारीख:</strong> _____________ &nbsp;|&nbsp; <strong>प्रिय डायरी,</strong><br>
+      (मुख्य भाग) ... <br>
+      <strong>अंत:</strong> तुम्हारा / तुम्हारी, [नाम]
+    </div>
+
+    <div class="writing-lines">
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय लिया:</b> _____मिनट</div>
+    <div class="sa-item"><b>✅ शब्द-संख्या:</b> _____शब्द</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> ☆☆☆☆☆</div>
+    <div class="sa-item" style="background:#b71c1c;color:white;padding:4px 10px;border-radius:6px;font-weight:700;">🌟 17 दिन बाकी — आप शानदार कर रहे हैं!</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DAY 6 — SATURDAY 6 SEP 2026 · 2025 PAPER FOCUS MOCK
+     ═══════════════════════════════════════════════════════════ -->
+<div class="day-block weekend-block" id="day6">
+  <div class="wknd-banner">
+    <span>🏆 2025 पेपर का अभ्यास — पूरी ताकत लगाएँ!</span>
+    <span>PSLE में 16 दिन बाकी · 75 मिनट</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">शनिवार — 12 सितंबर 2026 · 2025 Paper Focus Mock</div>
+      <div class="day-meta">A1 + A2 + A3 + B6+B7 + B8 · [2025 Paper] · 75 मिनट</div>
+    </div>
+    <div class="day-meta">75 मिनट</div>
+  </div>
+
+  <!-- VOCAB REVIEW -->
+  <div class="vocab-card" style="margin:14px 18px;">
+    <div class="vocab-title">📚 सप्ताह की शब्दावली — Quick Review</div>
+    <div style="padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;font-size:12px;">
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">धरोहर</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">मातृभूमि</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">नैतिकता</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">उन्नति</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">देशभक्ति</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">परंपरा</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">रीति-रिवाज</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">विरासत</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">राष्ट्रीय</span>
+      <span style="background:#e3f2fd;color:#1565c0;padding:3px 10px;border-radius:12px;font-weight:600;">विशेषता</span>
+    </div>
+  </div>
+
+  <!-- A1: COLLOCATIONS -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A1</span>
+      <span class="sec-title">Collocations — 10 प्रश्न</span>
+      <span class="sec-time">15 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2 · A1]</div>
+    <div class="q-block"><span class="q-num">1.</span><span class="q-text">हमें अपनी सांस्कृतिक <span class="blank">&nbsp;</span> की रक्षा करनी चाहिए।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) धरोहर</span><span class="q-opt"><span class="opt-circle"></span>(B) धरोहरी</span><span class="q-opt"><span class="opt-circle"></span>(C) धारण</span><span class="q-opt"><span class="opt-circle"></span>(D) धरातल</span></div></div>
+    <div class="q-block"><span class="q-num">2.</span><span class="q-text">उसके मन में <span class="blank">&nbsp;</span> की भावना कूट-कूट कर भरी है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) देशभक्ति</span><span class="q-opt"><span class="opt-circle"></span>(B) देशभक्त</span><span class="q-opt"><span class="opt-circle"></span>(C) देशभक्तिपूर्ण</span><span class="q-opt"><span class="opt-circle"></span>(D) देश</span></div></div>
+    <div class="q-block"><span class="q-num">3.</span><span class="q-text">हमें जीवन में हमेशा <span class="blank">&nbsp;</span> का पालन करना चाहिए।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) नैतिकता</span><span class="q-opt"><span class="opt-circle"></span>(B) नैतिक</span><span class="q-opt"><span class="opt-circle"></span>(C) नैतिकतापूर्ण</span><span class="q-opt"><span class="opt-circle"></span>(D) अनैतिक</span></div></div>
+    <div class="q-block"><span class="q-num">4.</span><span class="q-text">देश की <span class="blank">&nbsp;</span> के लिए सबको मिलकर काम करना होगा।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) उन्नति</span><span class="q-opt"><span class="opt-circle"></span>(B) उन्नत</span><span class="q-opt"><span class="opt-circle"></span>(C) उन्नतशील</span><span class="q-opt"><span class="opt-circle"></span>(D) उन्नतिकारक</span></div></div>
+    <div class="q-block"><span class="q-num">5.</span><span class="q-text">यह हमारी पुरानी <span class="blank">&nbsp;</span> है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) परंपरा</span><span class="q-opt"><span class="opt-circle"></span>(B) परंपरागत</span><span class="q-opt"><span class="opt-circle"></span>(C) परंपरावादी</span><span class="q-opt"><span class="opt-circle"></span>(D) परंपराहीन</span></div></div>
+    <div class="q-block"><span class="q-num">6.</span><span class="q-text">यह त्योहार हमारे <span class="blank">&nbsp;</span> का हिस्सा है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) रीति-रिवाज</span><span class="q-opt"><span class="opt-circle"></span>(B) रीति</span><span class="q-opt"><span class="opt-circle"></span>(C) रिवाज़ी</span><span class="q-opt"><span class="opt-circle"></span>(D) रिवाज़दार</span></div></div>
+    <div class="q-block"><span class="q-num">7.</span><span class="q-text">यह इमारत हमारी <span class="blank">&nbsp;</span> है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) विरासत</span><span class="q-opt"><span class="opt-circle"></span>(B) विरासती</span><span class="q-opt"><span class="opt-circle"></span>(C) विरासतदार</span><span class="q-opt"><span class="opt-circle"></span>(D) विरासतपूर्ण</span></div></div>
+    <div class="q-block"><span class="q-num">8.</span><span class="q-text">यह एक <span class="blank">&nbsp;</span> पर्व है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) राष्ट्रीय</span><span class="q-opt"><span class="opt-circle"></span>(B) राष्ट्र</span><span class="q-opt"><span class="opt-circle"></span>(C) राष्ट्रीयता</span><span class="q-opt"><span class="opt-circle"></span>(D) राष्ट्रवादी</span></div></div>
+    <div class="q-block"><span class="q-num">9.</span><span class="q-text">इस देश की सबसे बड़ी <span class="blank">&nbsp;</span> इसकी विविधता है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) विशेषता</span><span class="q-opt"><span class="opt-circle"></span>(B) विशेष</span><span class="q-opt"><span class="opt-circle"></span>(C) विशेषज्ञ</span><span class="q-opt"><span class="opt-circle"></span>(D) विशेषतापूर्ण</span></div></div>
+    <div class="q-block"><span class="q-num">10.</span><span class="q-text">यह हमारी <span class="blank">&nbsp;</span> की पहचान है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) मातृभूमि</span><span class="q-opt"><span class="opt-circle"></span>(B) मातृ</span><span class="q-opt"><span class="opt-circle"></span>(C) मातृत्व</span><span class="q-opt"><span class="opt-circle"></span>(D) माता</span></div></div>
+  </div>
+
+  <!-- A2: CLOZE — PATRIOTISM -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A2</span>
+      <span class="sec-title">Cloze — Patriotism Theme · 10 रिक्त स्थान</span>
+      <span class="sec-time">15 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2 · A2]</div>
+    <div style="background:#f9fbe7;border:1.5px solid #aed581;border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:13px;line-height:2.4;">
+      भारत एक महान <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(11)&nbsp;</span> है जहाँ अनेक संस्कृतियाँ मिलकर रहती हैं। हमारी <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(12)&nbsp;</span> हमें एकता का पाठ पढ़ाती है। हर नागरिक का कर्तव्य है कि वह अपने देश की <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(13)&nbsp;</span> में योगदान दे। हमारे पूर्वजों ने देश के लिए बड़ी <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(14)&nbsp;</span> दी। उनकी <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(15)&nbsp;</span> को हमें याद रखना चाहिए। हमारे <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(16)&nbsp;</span> और त्योहार हमें जोड़ते हैं। देश की <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(17)&nbsp;</span> को बनाए रखना हमारी ज़िम्मेदारी है। यह सब हमारी अनमोल <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(18)&nbsp;</span> है। इसे सँभालना हमारा <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(19)&nbsp;</span> है। देश की सेवा सबसे बड़ी <span style="border-bottom:2px solid #333;min-width:50px;display:inline-block;">&nbsp;(20)&nbsp;</span> है।
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:12px;">
+      <div><b>11:</b> <span class="q-opt"><span class="opt-circle"></span>(A) देश</span> <span class="q-opt"><span class="opt-circle"></span>(B) गाँव</span></div>
+      <div><b>12:</b> <span class="q-opt"><span class="opt-circle"></span>(A) परंपरा</span> <span class="q-opt"><span class="opt-circle"></span>(B) कमज़ोरी</span></div>
+      <div><b>13:</b> <span class="q-opt"><span class="opt-circle"></span>(A) उन्नति</span> <span class="q-opt"><span class="opt-circle"></span>(B) बर्बादी</span></div>
+      <div><b>14:</b> <span class="q-opt"><span class="opt-circle"></span>(A) कुर्बानी</span> <span class="q-opt"><span class="opt-circle"></span>(B) ख़ुशी</span></div>
+      <div><b>15:</b> <span class="q-opt"><span class="opt-circle"></span>(A) क़ुर्बानी / विरासत</span> <span class="q-opt"><span class="opt-circle"></span>(B) भूल</span></div>
+      <div><b>16:</b> <span class="q-opt"><span class="opt-circle"></span>(A) रीति-रिवाज</span> <span class="q-opt"><span class="opt-circle"></span>(B) झगड़े</span></div>
+      <div><b>17:</b> <span class="q-opt"><span class="opt-circle"></span>(A) एकता</span> <span class="q-opt"><span class="opt-circle"></span>(B) दुश्मनी</span></div>
+      <div><b>18:</b> <span class="q-opt"><span class="opt-circle"></span>(A) धरोहर</span> <span class="q-opt"><span class="opt-circle"></span>(B) समस्या</span></div>
+      <div><b>19:</b> <span class="q-opt"><span class="opt-circle"></span>(A) कर्तव्य</span> <span class="q-opt"><span class="opt-circle"></span>(B) अधिकार मात्र</span></div>
+      <div><b>20:</b> <span class="q-opt"><span class="opt-circle"></span>(A) देशभक्ति</span> <span class="q-opt"><span class="opt-circle"></span>(B) मूर्खता</span></div>
+    </div>
+  </div>
+
+  <!-- A3: MCQ — MEERA THE PAINTER -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A3</span>
+      <span class="sec-title">MCQ — मीरा: ऑटिस्टिक चित्रकार · 10 प्रश्न</span>
+      <span class="sec-time">15 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2 · A3]</div>
+    <div style="background:#f9fbe7;border:1.5px solid #aed581;border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:13px;line-height:2;">
+      <p>मीरा एक दस साल की लड़की थी जिसे ऑटिज़्म था। वह बोलती कम थी, लेकिन उसके रंग और कूची में जादू था। उसकी माँ उसे हर रोज़ कागज़ और रंग देती थीं। मीरा घंटों बैठकर तस्वीरें बनाती — पहाड़, नदियाँ, चिड़ियाँ और रंग-बिरंगे फूल।</p>
+      <p style="margin-top:8px;">एक दिन उसके स्कूल में कला प्रतियोगिता हुई। मीरा ने अपनी मातृभूमि की एक बड़ी तस्वीर बनाई जिसमें हरे-भरे खेत, नदी और आसमान था। जूरी ने उसे पहला पुरस्कार दिया। मीरा की माँ की आँखों में आँसू थे — पर वे खुशी के आँसू थे।</p>
+    </div>
+    <div class="q-block"><span class="q-num">21.</span><span class="q-text">मीरा की क्या विशेषता थी?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) वह बहुत बोलती थी</span><span class="q-opt"><span class="opt-circle"></span>(B) उसे चित्रकारी का हुनर था</span><span class="q-opt"><span class="opt-circle"></span>(C) वह गाना गाती थी</span><span class="q-opt"><span class="opt-circle"></span>(D) वह नृत्य करती थी</span></div></div>
+    <div class="q-block"><span class="q-num">22.</span><span class="q-text">माँ ने मीरा को क्या दिया?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) खिलौने</span><span class="q-opt"><span class="opt-circle"></span>(B) कागज़ और रंग</span><span class="q-opt"><span class="opt-circle"></span>(C) किताबें</span><span class="q-opt"><span class="opt-circle"></span>(D) संगीत</span></div></div>
+    <div class="q-block"><span class="q-num">23.</span><span class="q-text">मीरा ने प्रतियोगिता में क्या बनाया?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) समुद्र की तस्वीर</span><span class="q-opt"><span class="opt-circle"></span>(B) शहर की तस्वीर</span><span class="q-opt"><span class="opt-circle"></span>(C) मातृभूमि की तस्वीर</span><span class="q-opt"><span class="opt-circle"></span>(D) अपने घर की तस्वीर</span></div></div>
+    <div class="q-block"><span class="q-num">24.</span><span class="q-text">"कूची" शब्द का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) चित्र</span><span class="q-opt"><span class="opt-circle"></span>(B) रंग लगाने का ब्रश</span><span class="q-opt"><span class="opt-circle"></span>(C) कागज़</span><span class="q-opt"><span class="opt-circle"></span>(D) रंग</span></div></div>
+    <div class="q-block"><span class="q-num">25.</span><span class="q-text">माँ के आँसू खुशी के क्यों थे?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) मीरा हार गई थी</span><span class="q-opt"><span class="opt-circle"></span>(B) मीरा को पहला पुरस्कार मिला</span><span class="q-opt"><span class="opt-circle"></span>(C) मीरा ने गाना गाया</span><span class="q-opt"><span class="opt-circle"></span>(D) प्रतियोगिता रद्द हो गई</span></div></div>
+    <div class="q-block"><span class="q-num">26.</span><span class="q-text">मीरा किस बीमारी से पीड़ित थी?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) बहरापन</span><span class="q-opt"><span class="opt-circle"></span>(B) ऑटिज़्म</span><span class="q-opt"><span class="opt-circle"></span>(C) अंधापन</span><span class="q-opt"><span class="opt-circle"></span>(D) कोई नहीं</span></div></div>
+    <div class="q-block"><span class="q-num">27.</span><span class="q-text">इस कहानी का उचित शीर्षक होगा —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) कला प्रतियोगिता</span><span class="q-opt"><span class="opt-circle"></span>(B) रंगों की भाषा</span><span class="q-opt"><span class="opt-circle"></span>(C) माँ का प्यार</span><span class="q-opt"><span class="opt-circle"></span>(D) मातृभूमि का चित्र</span></div></div>
+    <div class="q-block"><span class="q-num">28.</span><span class="q-text">मीरा के चित्र में क्या-क्या था?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) समुद्र और जहाज़</span><span class="q-opt"><span class="opt-circle"></span>(B) हरे-भरे खेत, नदी और आसमान</span><span class="q-opt"><span class="opt-circle"></span>(C) शहर और सड़कें</span><span class="q-opt"><span class="opt-circle"></span>(D) जंगल और जानवर</span></div></div>
+    <div class="q-block"><span class="q-num">29.</span><span class="q-text">इस कहानी से क्या सीख मिलती है?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) प्रतियोगिता में हमेशा जीतना चाहिए</span><span class="q-opt"><span class="opt-circle"></span>(B) हर बच्चे में कोई न कोई हुनर होता है</span><span class="q-opt"><span class="opt-circle"></span>(C) माँ-बाप को बच्चों पर ध्यान देना चाहिए</span><span class="q-opt"><span class="opt-circle"></span>(D) चित्रकारी सबसे अच्छी कला है</span></div></div>
+    <div class="q-block"><span class="q-num">30.</span><span class="q-text">जूरी ने मीरा को क्या दिया?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) दूसरा पुरस्कार</span><span class="q-opt"><span class="opt-circle"></span>(B) पहला पुरस्कार</span><span class="q-opt"><span class="opt-circle"></span>(C) प्रशंसा-पत्र</span><span class="q-opt"><span class="opt-circle"></span>(D) कोई नहीं</span></div></div>
+  </div>
+
+  <!-- B6+B7 -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B6 + B7</span>
+      <span class="sec-title">Idioms + Completions · Q31–40</span>
+      <span class="sec-time">15 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2 · B6 + B7]</div>
+    <p style="font-size:12px;font-weight:700;margin-bottom:8px;">B6 — मुहावरे (Q31–35):</p>
+    <div class="q-block"><span class="q-num">31.</span><span class="q-text">"देश के लिए जान देना" मुहावरे का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) देशभक्ति का सर्वोच्च बलिदान</span><span class="q-opt"><span class="opt-circle"></span>(B) देश छोड़ना</span><span class="q-opt"><span class="opt-circle"></span>(C) युद्ध से भागना</span><span class="q-opt"><span class="opt-circle"></span>(D) देश बदलना</span></div></div>
+    <div class="q-block"><span class="q-num">32.</span><span class="q-text">"माथा ऊँचा होना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) सिरदर्द होना</span><span class="q-opt"><span class="opt-circle"></span>(B) गर्व और सम्मान होना</span><span class="q-opt"><span class="opt-circle"></span>(C) ऊँचा होना</span><span class="q-opt"><span class="opt-circle"></span>(D) बीमार होना</span></div></div>
+    <div class="q-block"><span class="q-num">33.</span><span class="q-text">"मिट्टी में मिलना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) खेत में काम करना</span><span class="q-opt"><span class="opt-circle"></span>(B) नष्ट हो जाना</span><span class="q-opt"><span class="opt-circle"></span>(C) मिट्टी खाना</span><span class="q-opt"><span class="opt-circle"></span>(D) घर बनाना</span></div></div>
+    <div class="q-block"><span class="q-num">34.</span><span class="q-text">"झंडा ऊँचा करना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) झंडा फहराना</span><span class="q-opt"><span class="opt-circle"></span>(B) देश का नाम रोशन करना</span><span class="q-opt"><span class="opt-circle"></span>(C) प्रतियोगिता जीतना</span><span class="q-opt"><span class="opt-circle"></span>(D) खेल खेलना</span></div></div>
+    <div class="q-block"><span class="q-num">35.</span><span class="q-text">"मन में देश बसना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) देश के प्रति गहरा प्रेम होना</span><span class="q-opt"><span class="opt-circle"></span>(B) देश में रहना</span><span class="q-opt"><span class="opt-circle"></span>(C) देश बनाना</span><span class="q-opt"><span class="opt-circle"></span>(D) यात्रा करना</span></div></div>
+    <p style="font-size:12px;font-weight:700;margin:12px 0 8px;">B7 — वाक्य-पूर्ति (Q36–40):</p>
+    <div class="q-block"><span class="q-num">36.</span><span class="q-text">यह मंदिर हमारी पुरानी <span class="blank">&nbsp;</span> है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) धरोहर</span><span class="q-opt"><span class="opt-circle"></span>(B) धरातल</span><span class="q-opt"><span class="opt-circle"></span>(C) धर्म</span><span class="q-opt"><span class="opt-circle"></span>(D) धन</span></div></div>
+    <div class="q-block"><span class="q-num">37.</span><span class="q-text">उसने अपनी <span class="blank">&nbsp;</span> के लिए सब कुछ न्योछावर कर दिया।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) मातृभूमि</span><span class="q-opt"><span class="opt-circle"></span>(B) माता</span><span class="q-opt"><span class="opt-circle"></span>(C) मातृत्व</span><span class="q-opt"><span class="opt-circle"></span>(D) मातृभाषा</span></div></div>
+    <div class="q-block"><span class="q-num">38.</span><span class="q-text">सच्ची <span class="blank">&nbsp;</span> शब्दों में नहीं, कार्यों में दिखती है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) देशभक्ति</span><span class="q-opt"><span class="opt-circle"></span>(B) देशभक्त</span><span class="q-opt"><span class="opt-circle"></span>(C) देशप्रेमी</span><span class="q-opt"><span class="opt-circle"></span>(D) देश</span></div></div>
+    <div class="q-block"><span class="q-num">39.</span><span class="q-text">हमें अपने देश की <span class="blank">&nbsp;</span> पर गर्व होना चाहिए।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) विरासत</span><span class="q-opt"><span class="opt-circle"></span>(B) विरोध</span><span class="q-opt"><span class="opt-circle"></span>(C) विभाजन</span><span class="q-opt"><span class="opt-circle"></span>(D) विराम</span></div></div>
+    <div class="q-block"><span class="q-num">40.</span><span class="q-text">हर नागरिक का <span class="blank">&nbsp;</span> है कि वह देश की सेवा करे।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) कर्तव्य</span><span class="q-opt"><span class="opt-circle"></span>(B) अधिकार मात्र</span><span class="q-opt"><span class="opt-circle"></span>(C) विशेषाधिकार</span><span class="q-opt"><span class="opt-circle"></span>(D) कर्तव्यहीनता</span></div></div>
+  </div>
+
+  <!-- B8: LIBRARY CORNER PASSAGE -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">Open-Ended — पुस्तक कोना · Q41–44</span>
+      <span class="sec-time">15 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2 · B8]</div>
+    <div style="background:#f9fbe7;border:1.5px solid #aed581;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:13px;line-height:2;">
+      <p>आयान एक बारह साल का लड़का था जिसे किताबें बहुत पसंद थीं। उसके मोहल्ले में कई बच्चे ऐसे थे जो किताबें खरीदने में असमर्थ थे। एक दिन आयान के मन में एक विचार आया — क्यों न पार्क में एक "पुस्तक कोना" बनाया जाए जहाँ सभी बच्चे मुफ्त में किताबें पढ़ सकें?</p>
+      <p style="margin-top:8px;">उसने अपने दोस्तों और पड़ोसियों से पुरानी किताबें इकट्ठी कीं। माँ ने एक छोटी सी लकड़ी की अलमारी बनवाई। हर शाम बच्चे वहाँ आते, किताबें पढ़ते और एक-दूसरे से अपनी पसंदीदा कहानियाँ सुनाते। धीरे-धीरे यह पुस्तक कोना पूरे मोहल्ले में मशहूर हो गया। अखबार वालों ने भी इसकी खबर छापी। आयान बहुत उत्साही था — उसका सपना था कि हर बच्चे को पढ़ने का मौका मिले।</p>
+    </div>
+    <div class="q-block"><span class="q-num">Q41.</span><span class="q-text">आयान ने पुस्तक कोना क्यों शुरू किया? <span class="hint">(2 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:50px;"></div></div>
+    <div class="q-block"><span class="q-num">Q42.</span><span class="q-text">"उत्साही" शब्द का अर्थ क्या है? <span class="hint">(1 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:36px;"></div></div>
+    <div class="q-block"><span class="q-num">Q43.</span><span class="q-text">इस कार्य से किसे फ़ायदा हुआ? <span class="hint">(2 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:50px;"></div></div>
+    <div class="q-block"><span class="q-num">Q44.</span><span class="q-text">इस कहानी से क्या सीख मिलती है? <span class="hint">(3 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:70px;"></div></div>
+  </div>
+
+  <!-- SELF-ASSESSMENT -->
+  <div style="background:#e8f5e9;border:2px solid #43a047;border-radius:10px;padding:14px 18px;margin:14px 18px;">
+    <div style="font-size:13px;font-weight:700;color:#1b5e20;margin-bottom:10px;">📊 Self-Assessment Tracker — शनिवार 2025 Focus Mock</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+      <div><b>A1 (Q1–10):</b> <span class="blank" style="min-width:40px">&nbsp;</span>/10</div>
+      <div><b>A2 Cloze (Q11–20):</b> <span class="blank" style="min-width:40px">&nbsp;</span>/10</div>
+      <div><b>A3 MCQ (Q21–30):</b> <span class="blank" style="min-width:40px">&nbsp;</span>/10</div>
+      <div><b>B6+B7 (Q31–40):</b> <span class="blank" style="min-width:40px">&nbsp;</span>/10</div>
+      <div><b>B8 (Q41–44):</b> <span class="blank" style="min-width:40px">&nbsp;</span>/8</div>
+      <div style="background:#1b5e20;color:white;padding:3px 8px;border-radius:6px;font-weight:700;"><b>कुल:</b> <span class="blank" style="min-width:40px">&nbsp;</span>/48</div>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div style="background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:12px 16px;margin:10px 18px;">
+    <div style="font-size:12px;font-weight:700;color:#e65100;margin-bottom:6px;">उत्तर-कुंजी — Day 6 शनिवार (2025 Mock)</div>
+    <div style="font-size:12px;color:#333;line-height:2;">
+      <b>A1:</b> 1-A · 2-A · 3-A · 4-A · 5-A · 6-A · 7-A · 8-A · 9-A · 10-A<br>
+      <b>A2:</b> 11-A · 12-A · 13-A · 14-A · 15-A · 16-A · 17-A · 18-A · 19-A · 20-A<br>
+      <b>A3:</b> 21-B · 22-B · 23-C · 24-B · 25-B · 26-B · 27-B · 28-B · 29-B · 30-B<br>
+      <b>B6:</b> 31-A · 32-B · 33-B · 34-B · 35-A<br>
+      <b>B7:</b> 36-A · 37-A · 38-A · 39-A · 40-A<br>
+      <b>B8 आदर्श:</b> Q41: मोहल्ले के बच्चे किताबें खरीद नहीं सकते थे — आयान चाहता था कि सभी को मुफ्त में पढ़ने का मौका मिले। Q42: "उत्साही" = जोश से भरा हुआ / enthusiastic। Q43: मोहल्ले के वे सभी बच्चे जो किताबें नहीं खरीद सकते थे। Q44: छोटे प्रयास से बड़ा बदलाव आ सकता है; ज्ञान बाँटने से बढ़ता है।
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DAY 7 — SUNDAY 7 SEP 2026 · TARGETED WEAK AREAS
+     ═══════════════════════════════════════════════════════════ -->
+<div class="day-block weekend-block" id="day7">
+  <div class="wknd-banner">
+    <span>🎯 Idioms + B8 — सबसे कमज़ोर क्षेत्रों पर ध्यान</span>
+    <span>PSLE में 15 दिन · 30 मिनट</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">रविवार — 13 सितंबर 2026 · Targeted Weak Areas</div>
+      <div class="day-meta">Idioms + B8 Focus · 5 Questions</div>
+    </div>
+    <div class="day-meta">30 मिनट</div>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">लक्षित</span>
+      <span class="sec-title">5 प्रश्न — मुहावरे + B8 (सबसे कमज़ोर क्षेत्र)</span>
+      <span class="sec-time">25 मिनट</span>
+    </div>
+    <div class="source-badge">[2025 · P2 · B6 + B8]</div>
+    <div class="q-block"><span class="q-num">1.</span><span class="q-text">"झंडा ऊँचा करना" मुहावरे का सही अर्थ चुनें —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) देश का नाम रोशन करना</span><span class="q-opt"><span class="opt-circle"></span>(B) झंडा फहराना</span><span class="q-opt"><span class="opt-circle"></span>(C) खेल जीतना</span><span class="q-opt"><span class="opt-circle"></span>(D) प्रतियोगिता में भाग लेना</span></div></div>
+    <div class="q-block"><span class="q-num">2.</span><span class="q-text">"माथा ऊँचा होना" का प्रयोग कब होता है?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) जब कोई बहुत लंबा हो</span><span class="q-opt"><span class="opt-circle"></span>(B) जब किसी को गर्व और सम्मान मिले</span><span class="q-opt"><span class="opt-circle"></span>(C) जब बुखार हो</span><span class="q-opt"><span class="opt-circle"></span>(D) जब कोई ऊँचाई पर चढ़े</span></div></div>
+    <div class="q-block"><span class="q-num">3.</span><span class="q-text">आयान (पुस्तक कोना) की कहानी में — उसकी माँ ने क्या किया?</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) किताबें बाँटीं</span><span class="q-opt"><span class="opt-circle"></span>(B) लकड़ी की अलमारी बनवाई</span><span class="q-opt"><span class="opt-circle"></span>(C) अखबार को बुलाया</span><span class="q-opt"><span class="opt-circle"></span>(D) पार्क बनवाया</span></div></div>
+    <div class="q-block"><span class="q-num">4.</span><span class="q-text">B8 उत्तर लेखन में सबसे ज़रूरी बात है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) लंबा उत्तर लिखना</span><span class="q-opt"><span class="opt-circle"></span>(B) गद्यांश से संबंधित, पूरे वाक्य में सटीक उत्तर</span><span class="q-opt"><span class="opt-circle"></span>(C) केवल एक शब्द लिखना</span><span class="q-opt"><span class="opt-circle"></span>(D) अपनी राय लिखना</span></div></div>
+    <div class="q-block"><span class="q-num">5.</span><span class="q-text">मीरा (ऑटिस्टिक चित्रकार) की कहानी से सबसे उचित सीख है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) हर बच्चे में कोई न कोई हुनर होता है</span><span class="q-opt"><span class="opt-circle"></span>(B) चित्रकारी सबसे अच्छी कला है</span><span class="q-opt"><span class="opt-circle"></span>(C) प्रतियोगिता ज़रूर जीतनी चाहिए</span><span class="q-opt"><span class="opt-circle"></span>(D) माँ को बच्चे की देखभाल करनी चाहिए</span></div></div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div style="background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:10px 16px;margin:10px 18px;">
+    <div style="font-size:11px;font-weight:700;color:#e65100;margin-bottom:4px;">उत्तर-कुंजी — Day 7 रविवार</div>
+    <div style="font-size:12px;color:#333;">1-A · 2-B · 3-B · 4-B · 5-A</div>
+  </div>
+
+  <!-- PREVIEW -->
+  <div class="preview-box">
+    <h4>👀 अगले सप्ताह (W19) — PSLE में 9 दिन बाकी!</h4>
+    <p><strong>W19 (Sep 14)</strong> — लक्षित पुनरावलोकन · सबसे कठिन क्षेत्रों का अभ्यास · Paper 1 Full Writing Prompt · PSLE countdown!</p>
+  </div>
+</div>
+
+<div style="text-align:center;padding:16px;font-size:12px;color:#888;">
+  W18 | Phase 5 — Final Push | Hindi PSLE 2026 | PSLE: Sep 28, 2026 (Paper 1: 0815h · Paper 2: 1015h)
+</div>
+
+</body>
+</html>

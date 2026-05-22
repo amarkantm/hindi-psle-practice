@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Week 3 — Easy Papers | Pinki Ma'am</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--easy:#2e7d32;--easy-bg:#e8f5e9;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:13px;line-height:1.6;}
+.page-top{background:linear-gradient(135deg,#000080,#003580);color:white;padding:18px 28px;border-bottom:5px solid #FF9933;}
+.page-top h1{font-size:20px;} .page-top p{font-size:11px;opacity:.8;margin-top:4px;}
+.stripe{display:flex;height:4px;} .stripe div{flex:1;}
+.paper{background:white;margin:18px 22px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.09);overflow:hidden;}
+.paper-head{padding:12px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #eee;}
+.paper-head.weekend{background:var(--easy-bg);border-bottom-color:#a5d6a7;}
+.paper-head.weekday{background:#ede7f6;border-bottom-color:#ce93d8;}
+.paper-title{font-size:15px;font-weight:700;color:var(--navy);}
+.paper-meta{font-size:11px;color:#555;text-align:right;}
+.pinki-band{background:var(--navy);color:white;padding:5px 18px;font-size:11px;display:flex;justify-content:space-between;}
+.section{padding:16px 20px;border-bottom:1px solid #f0f0f0;}
+.section:last-child{border-bottom:none;}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.sec-tag{background:var(--navy);color:white;font-size:10px;font-weight:700;padding:3px 9px;border-radius:4px;}
+.sec-title{font-size:14px;font-weight:700;color:var(--navy);}
+.sec-marks{font-size:11px;color:#666;margin-left:auto;}
+.sec-instr{font-size:12px;color:#444;background:#f9f9f9;border-left:3px solid var(--navy);padding:6px 10px;margin-bottom:12px;border-radius:0 4px 4px 0;}
+.q-block{margin-bottom:12px;}
+.q-num{font-size:12px;font-weight:700;color:var(--navy);min-width:24px;display:inline-block;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.7;}
+.blank{display:inline-block;min-width:120px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.q-hint{font-size:11px;color:#777;font-style:italic;margin-left:6px;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;margin-top:6px;margin-left:28px;}
+.q-opt{font-size:12px;color:#333;}
+.q-opt span{display:inline-block;width:18px;height:18px;border:1.5px solid #999;border-radius:50%;margin-right:5px;vertical-align:middle;}
+.ans-key{background:#fffde7;border:1px solid #ffe082;border-radius:6px;padding:10px 14px;margin-top:14px;}
+.ans-key h4{font-size:11px;font-weight:700;color:#b8860b;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:4px;}
+.ak-item{font-size:11px;color:#333;} .ak-item b{color:var(--navy);}
+.passage{background:#f8f9fa;border-left:4px solid var(--navy);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:1.9;}
+.blank-num{background:#000080;color:white;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin:0 2px;}
+.writing-prompt{background:#fff3e0;border:1.5px solid #ffcc80;border-radius:8px;padding:14px;}
+.writing-prompt h4{color:#e65100;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-bullets{margin-left:16px;margin-top:6px;}
+.wp-bullets li{font-size:12px;color:#444;margin-bottom:4px;}
+.w-line{border-bottom:1px solid #ccc;min-height:28px;margin-bottom:5px;}
+.score-box{background:var(--easy-bg);border:1px solid #a5d6a7;border-radius:6px;padding:8px 14px;display:flex;gap:20px;align-items:center;margin-top:10px;flex-wrap:wrap;}
+.score-box .sc-item{font-size:12px;} .score-box .sc-item b{color:var(--navy);}
+.page-break{page-break-after:always;height:2px;background:#e0e0e0;margin:16px 22px;}
+.notice-box{border:3px double var(--navy);border-radius:8px;padding:16px;margin-bottom:14px;background:#fafff8;}
+.notice-box .notice-title{text-align:center;font-size:16px;font-weight:700;color:var(--navy);border-bottom:2px solid var(--navy);padding-bottom:8px;margin-bottom:10px;}
+.notice-box .notice-org{text-align:center;font-size:12px;color:#555;margin-bottom:10px;}
+.notice-body{font-size:13px;line-height:1.8;}
+.notice-body li{margin-bottom:6px;}
+.mini-mock-header{background:linear-gradient(135deg,#1a237e,#283593);color:white;text-align:center;padding:12px;border-radius:6px 6px 0 0;margin-bottom:0;}
+</style>
+</head>
+<body>
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:white;border-top:1px solid #eee"></div><div style="background:#138808"></div></div>
+<div class="page-top">
+  <h1>📗 Week 3 Practice Papers — Phase 1 Easy</h1>
+  <p>Pinki Ma'am's PSLE Hindi Plan &nbsp;|&nbsp; May 3–9, 2026 &nbsp;|&nbsp; Weekend: 75 min &nbsp;|&nbsp; Weekdays: 30 min &nbsp;|&nbsp; <b>Theme: MCQ Comprehension + Graphic/Notice + Full Booklet A Mini-Mock</b></p>
+</div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WEEKEND PAPER W3 (75 min) — Booklet A Mini-Mock -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="paper">
+  <div class="pinki-band"><span>📅 WEEKEND PAPER W3 &nbsp;|&nbsp; Sat 3 + Sun 4 May 2026</span><span>कुल समय: 75 मिनट &nbsp;|&nbsp; कुल अंक: 64</span></div>
+  <div class="paper-head weekend">
+    <div class="paper-title">🗓 Weekend Paper W3 — Booklet A Mini-Mock (A1–A5)</div>
+    <div class="paper-meta"><b>Phase:</b> Easy &nbsp;|&nbsp; <b>Time:</b> 75 min &nbsp;|&nbsp; <b>Marks:</b> 64</div>
+  </div>
+
+  <!-- A1: Language Use -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A1</span><span class="sec-title">भाषा-प्रयोग — Language Use (Gap Fill)</span><span class="sec-marks">[5 अंक | 10 मिनट]</span></div>
+    <div class="sec-instr">नीचे दिए गए गद्यांश में रिक्त स्थानों (1–5) को दिए गए विकल्पों में से सही शब्द चुनकर भरिए।</div>
+    <div class="passage">
+      &nbsp;&nbsp;&nbsp;&nbsp;आजकल शहरों में वायु प्रदूषण एक गंभीर <b><span class="blank-num">1</span></b> बन गया है। कारखानों और वाहनों से निकलने वाला धुआँ हवा को <b><span class="blank-num">2</span></b> कर देता है। इससे लोगों को साँस <b><span class="blank-num">3</span></b> में कठिनाई होती है और कई बीमारियाँ <b><span class="blank-num">4</span></b> हो जाती हैं। इस समस्या से निपटने के लिए सरकार ने कई नियम <b><span class="blank-num">5</span></b> हैं, जैसे पुराने वाहनों पर प्रतिबंध और पेड़-पौधे लगाने का अभियान।
+    </div>
+
+    <div class="q-block"><span class="q-num">1.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) समारोह</div><div class="q-opt"><span></span>(B) समस्या</div>
+        <div class="q-opt"><span></span>(C) समाचार</div><div class="q-opt"><span></span>(D) समाधान</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">2.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सुगंधित</div><div class="q-opt"><span></span>(B) स्वच्छ</div>
+        <div class="q-opt"><span></span>(C) प्रदूषित</div><div class="q-opt"><span></span>(D) शुद्ध</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">3.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) लेने</div><div class="q-opt"><span></span>(B) देने</div>
+        <div class="q-opt"><span></span>(C) चुराने</div><div class="q-opt"><span></span>(D) बचाने</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">4.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) ठीक</div><div class="q-opt"><span></span>(B) पैदा</div>
+        <div class="q-opt"><span></span>(C) बंद</div><div class="q-opt"><span></span>(D) समाप्त</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">5.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) तोड़े</div><div class="q-opt"><span></span>(B) लिखे</div>
+        <div class="q-opt"><span></span>(C) बनाए</div><div class="q-opt"><span></span>(D) भुलाए</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी A1</h4><div class="ak-grid">
+      <div class="ak-item"><b>1.</b> (B) समस्या</div>
+      <div class="ak-item"><b>2.</b> (C) प्रदूषित</div>
+      <div class="ak-item"><b>3.</b> (A) लेने</div>
+      <div class="ak-item"><b>4.</b> (B) पैदा</div>
+      <div class="ak-item"><b>5.</b> (C) बनाए</div>
+    </div></div>
+  </div>
+
+  <!-- A2: Language Use (Narrative) -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A2</span><span class="sec-title">भाषा-प्रयोग — Language Use (Narrative)</span><span class="sec-marks">[5 अंक | 10 मिनट]</span></div>
+    <div class="sec-instr">नीचे दिए गए गद्यांश में रिक्त स्थानों (6–10) को दिए गए विकल्पों में से सही शब्द चुनकर भरिए।</div>
+    <div class="passage">
+      &nbsp;&nbsp;&nbsp;&nbsp;रिया अपनी दादी के साथ गाँव गई थी। वहाँ उसने देखा कि बच्चे <b><span class="blank-num">6</span></b> में मिलकर खेल रहे थे। उनके पास न मोबाइल था, न टेलीविज़न, फिर भी वे बहुत <b><span class="blank-num">7</span></b> थे। रिया उन्हें देखकर हैरान हो <b><span class="blank-num">8</span></b>। दादी ने समझाया — "असली खुशी चीज़ों में नहीं, <b><span class="blank-num">9</span></b> में होती है।" रिया को यह बात दिल में <b><span class="blank-num">10</span></b> गई।
+    </div>
+
+    <div class="q-block"><span class="q-num">6.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) मेले</div><div class="q-opt"><span></span>(B) मैदान</div>
+        <div class="q-opt"><span></span>(C) स्कूल</div><div class="q-opt"><span></span>(D) बाज़ार</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">7.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) उदास</div><div class="q-opt"><span></span>(B) चिंतित</div>
+        <div class="q-opt"><span></span>(C) खुश</div><div class="q-opt"><span></span>(D) थके</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">8.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) गई</div><div class="q-opt"><span></span>(B) उठी</div>
+        <div class="q-opt"><span></span>(C) रुकी</div><div class="q-opt"><span></span>(D) भागी</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">9.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सोने</div><div class="q-opt"><span></span>(B) अकेलेपन</div>
+        <div class="q-opt"><span></span>(C) रिश्तों</div><div class="q-opt"><span></span>(D) दौलत</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">10.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) भूल</div><div class="q-opt"><span></span>(B) उतर</div>
+        <div class="q-opt"><span></span>(C) डाल</div><div class="q-opt"><span></span>(D) बिगड़</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी A2</h4><div class="ak-grid">
+      <div class="ak-item"><b>6.</b> (B) मैदान</div>
+      <div class="ak-item"><b>7.</b> (C) खुश</div>
+      <div class="ak-item"><b>8.</b> (A) गई</div>
+      <div class="ak-item"><b>9.</b> (C) रिश्तों</div>
+      <div class="ak-item"><b>10.</b> (B) उतर</div>
+    </div></div>
+  </div>
+
+  <!-- A3: Cloze -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A3</span><span class="sec-title">अर्थग्रहण — Cloze Passage</span><span class="sec-marks">[8 अंक | 12 मिनट]</span></div>
+    <div class="sec-instr">नीचे दिए गए गद्यांश में रिक्त स्थानों (11–18) को दिए गए विकल्पों में से सही शब्द चुनकर भरिए।</div>
+    <div class="passage">
+      &nbsp;&nbsp;&nbsp;&nbsp;मोहन एक छोटे से गाँव में रहता था। उसके पिता एक <b><span class="blank-num">11</span></b> किसान थे, जो सुबह से शाम तक खेतों में <b><span class="blank-num">12</span></b> करते थे। मोहन हर रोज़ स्कूल जाता था, लेकिन पढ़ाई में उसका मन <b><span class="blank-num">13</span></b> नहीं लगता था। एक दिन उसके शिक्षक ने उसे बताया कि <b><span class="blank-num">14</span></b> ही जीवन में सफलता की कुंजी है। शिक्षक की बात सुनकर मोहन के मन में एक नई <b><span class="blank-num">15</span></b> जागी। उसने दृढ़ <b><span class="blank-num">16</span></b> किया कि वह खूब पढ़ेगा। अगले महीने की परीक्षा में मोहन ने सभी विषयों में अच्छे <b><span class="blank-num">17</span></b> प्राप्त किए। उसके माता-पिता उसे देखकर बहुत <b><span class="blank-num">18</span></b> हुए।
+    </div>
+
+    <div class="q-block"><span class="q-num">11.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) आलसी</div><div class="q-opt"><span></span>(B) मेहनती</div>
+        <div class="q-opt"><span></span>(C) धनी</div><div class="q-opt"><span></span>(D) बूढ़े</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">12.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) आराम</div><div class="q-opt"><span></span>(B) खेलते</div>
+        <div class="q-opt"><span></span>(C) काम</div><div class="q-opt"><span></span>(D) सोते</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">13.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) खूब</div><div class="q-opt"><span></span>(B) बहुत</div>
+        <div class="q-opt"><span></span>(C) बिल्कुल</div><div class="q-opt"><span></span>(D) जल्दी</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">14.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) धन</div><div class="q-opt"><span></span>(B) सुस्ती</div>
+        <div class="q-opt"><span></span>(C) परिश्रम</div><div class="q-opt"><span></span>(D) शोर</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">15.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) नींद</div><div class="q-opt"><span></span>(B) उमंग</div>
+        <div class="q-opt"><span></span>(C) चिंता</div><div class="q-opt"><span></span>(D) भूख</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">16.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) इनकार</div><div class="q-opt"><span></span>(B) निश्चय</div>
+        <div class="q-opt"><span></span>(C) झगड़ा</div><div class="q-opt"><span></span>(D) विश्राम</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">17.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) जुर्माने</div><div class="q-opt"><span></span>(B) सज़ाएँ</div>
+        <div class="q-opt"><span></span>(C) अंक</div><div class="q-opt"><span></span>(D) झगड़े</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">18.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) दुखी</div><div class="q-opt"><span></span>(B) क्रोधित</div>
+        <div class="q-opt"><span></span>(C) गर्वित</div><div class="q-opt"><span></span>(D) चिंतित</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी A3</h4><div class="ak-grid">
+      <div class="ak-item"><b>11.</b> (B) मेहनती</div>
+      <div class="ak-item"><b>12.</b> (C) काम</div>
+      <div class="ak-item"><b>13.</b> (C) बिल्कुल</div>
+      <div class="ak-item"><b>14.</b> (C) परिश्रम</div>
+      <div class="ak-item"><b>15.</b> (B) उमंग</div>
+      <div class="ak-item"><b>16.</b> (B) निश्चय</div>
+      <div class="ak-item"><b>17.</b> (C) अंक</div>
+      <div class="ak-item"><b>18.</b> (C) गर्वित</div>
+    </div></div>
+  </div>
+
+  <!-- A4: MCQ Comprehension + Synonyms -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A4</span><span class="sec-title">गद्यांश-बोध एवं शब्द-ज्ञान — MCQ Comprehension + Synonyms</span><span class="sec-marks">[14 अंक | 18 मिनट]</span></div>
+    <div class="sec-instr">नीचे दिए गए गद्यांश को पढ़कर प्रश्नों (19–25) के उत्तर दीजिए। (19–23 = बोध प्रश्न, 24–25 = पर्याय)</div>
+    <div class="passage">
+      <b>स्वयंसेवी कार्य का महत्त्व</b><br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;स्वयंसेवी कार्य वह कार्य है जिसे लोग बिना किसी पारिश्रमिक के, अपनी इच्छा से समाज की भलाई के लिए करते हैं। सिंगापुर में हर वर्ष लाखों लोग स्वेच्छा से अस्पतालों, वृद्धाश्रमों और विद्यालयों में अपनी सेवाएँ देते हैं।<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;स्वयंसेवी कार्य न केवल दूसरों की मदद करता है, बल्कि स्वयंसेवक को भी लाभ पहुँचाता है। इससे व्यक्ति में दया, सहानुभूति और ज़िम्मेदारी की भावना विकसित होती है। छात्र जब स्वयंसेवी कार्य करते हैं, तो उनका आत्मविश्वास बढ़ता है और वे नए कौशल सीखते हैं।<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;अनेक विद्यालय अपने छात्रों को समुदाय सेवा में भाग लेने के लिए प्रोत्साहित करते हैं। यह अनुभव उन्हें जीवन में एक बेहतर इंसान बनने में सहायता करता है। जो व्यक्ति दूसरों की मदद करता है, उसे समाज में सम्मान और प्यार मिलता है।
+    </div>
+
+    <div class="q-block"><span class="q-num">19.</span><span class="q-text"> स्वयंसेवी कार्य की मुख्य विशेषता क्या है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) इसमें बहुत धन मिलता है</div>
+        <div class="q-opt"><span></span>(B) यह बिना वेतन के समाज-भलाई के लिए किया जाता है</div>
+        <div class="q-opt"><span></span>(C) इसे सरकार करवाती है</div>
+        <div class="q-opt"><span></span>(D) यह केवल डॉक्टरों के लिए है</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">20.</span><span class="q-text"> स्वयंसेवी कार्य से व्यक्ति में कौन-सी भावना विकसित होती है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) घमंड और लालच</div>
+        <div class="q-opt"><span></span>(B) आलस्य और निराशा</div>
+        <div class="q-opt"><span></span>(C) दया, सहानुभूति और ज़िम्मेदारी</div>
+        <div class="q-opt"><span></span>(D) क्रोध और ईर्ष्या</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">21.</span><span class="q-text"> गद्यांश के अनुसार, छात्रों को स्वयंसेवी कार्य से क्या लाभ होता है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) परीक्षा में नकल करने की आदत</div>
+        <div class="q-opt"><span></span>(B) आत्मविश्वास बढ़ता है और नए कौशल सीखते हैं</div>
+        <div class="q-opt"><span></span>(C) उन्हें खेलने का अधिक समय मिलता है</div>
+        <div class="q-opt"><span></span>(D) वे पाठ्यक्रम से मुक्त हो जाते हैं</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">22.</span><span class="q-text"> विद्यालय छात्रों को किस कार्य के लिए प्रोत्साहित करते हैं?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) अधिक गृहकार्य करने के लिए</div>
+        <div class="q-opt"><span></span>(B) खेलकूद में भाग लेने के लिए</div>
+        <div class="q-opt"><span></span>(C) समुदाय सेवा में भाग लेने के लिए</div>
+        <div class="q-opt"><span></span>(D) विदेश जाने के लिए</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">23.</span><span class="q-text"> "जो व्यक्ति दूसरों की मदद करता है, उसे समाज में क्या मिलता है?" — इस पंक्ति का क्या अर्थ है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) उसे और अधिक काम दिया जाता है</div>
+        <div class="q-opt"><span></span>(B) उसे सम्मान और प्यार मिलता है</div>
+        <div class="q-opt"><span></span>(C) उसे पैसे और पुरस्कार मिलते हैं</div>
+        <div class="q-opt"><span></span>(D) उसे सरकारी नौकरी मिलती है</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">24.</span><span class="q-text"> "पारिश्रमिक" का पर्याय है —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) थकान</div><div class="q-opt"><span></span>(B) वेतन</div>
+        <div class="q-opt"><span></span>(C) कठिनाई</div><div class="q-opt"><span></span>(D) अभ्यास</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">25.</span><span class="q-text"> "सहानुभूति" का पर्याय है —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) स्वार्थ</div><div class="q-opt"><span></span>(B) घृणा</div>
+        <div class="q-opt"><span></span>(C) हमदर्दी</div><div class="q-opt"><span></span>(D) क्रोध</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी A4</h4><div class="ak-grid">
+      <div class="ak-item"><b>19.</b> (B)</div>
+      <div class="ak-item"><b>20.</b> (C)</div>
+      <div class="ak-item"><b>21.</b> (B)</div>
+      <div class="ak-item"><b>22.</b> (C)</div>
+      <div class="ak-item"><b>23.</b> (B)</div>
+      <div class="ak-item"><b>24.</b> (B) वेतन</div>
+      <div class="ak-item"><b>25.</b> (C) हमदर्दी</div>
+    </div></div>
+  </div>
+
+  <!-- A5: Graphic/Notice Comprehension -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A5</span><span class="sec-title">सूचना-बोध — Notice Comprehension</span><span class="sec-marks">[8 अंक | 10 मिनट]</span></div>
+    <div class="sec-instr">नीचे दी गई सूचना को ध्यानपूर्वक पढ़कर प्रश्नों (26–32) के उत्तर दीजिए।</div>
+
+    <div class="notice-box">
+      <div class="notice-title">सूचना</div>
+      <div class="notice-org">राजकीय हिंदी विद्यालय, सिंगापुर</div>
+      <div class="notice-body">
+        <p>सभी छात्रों को सूचित किया जाता है कि हमारे विद्यालय में <b>वार्षिक पर्यावरण मेला</b> आयोजित किया जाएगा।</p>
+        <br>
+        <ul class="wp-bullets">
+          <li><b>दिनांक:</b> 20 मई 2026 (बुधवार)</li>
+          <li><b>समय:</b> प्रातः 9 बजे से दोपहर 1 बजे तक</li>
+          <li><b>स्थान:</b> विद्यालय का मुख्य प्रांगण</li>
+          <li><b>गतिविधियाँ:</b> पेड़-पौधे लगाना, प्रदर्शनी, पर्यावरण-प्रश्नोत्तरी, पुनर्चक्रण कार्यशाला</li>
+          <li><b>प्रतिभागिता:</b> सभी कक्षाओं के छात्र भाग ले सकते हैं</li>
+          <li><b>पंजीकरण:</b> अपने कक्षा-अध्यापक के पास 15 मई तक करवाएँ</li>
+          <li><b>पुरस्कार:</b> सर्वश्रेष्ठ प्रदर्शनी के लिए ट्रॉफी एवं प्रमाण-पत्र</li>
+        </ul>
+        <br>
+        <p style="text-align:right;font-size:12px;">— प्रधानाचार्य</p>
+      </div>
+    </div>
+
+    <div class="q-block"><span class="q-num">26.</span><span class="q-text"> पर्यावरण मेला किस दिन आयोजित होगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सोमवार, 18 मई</div><div class="q-opt"><span></span>(B) बुधवार, 20 मई</div>
+        <div class="q-opt"><span></span>(C) शुक्रवार, 22 मई</div><div class="q-opt"><span></span>(D) रविवार, 24 मई</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">27.</span><span class="q-text"> पर्यावरण मेला कहाँ आयोजित होगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) पुस्तकालय में</div><div class="q-opt"><span></span>(B) कक्षाओं में</div>
+        <div class="q-opt"><span></span>(C) विद्यालय के मुख्य प्रांगण में</div><div class="q-opt"><span></span>(D) खेल के मैदान में</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">28.</span><span class="q-text"> पंजीकरण की अंतिम तिथि कौन-सी है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) 10 मई</div><div class="q-opt"><span></span>(B) 20 मई</div>
+        <div class="q-opt"><span></span>(C) 15 मई</div><div class="q-opt"><span></span>(D) 25 मई</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">29.</span><span class="q-text"> पुरस्कार किसे दिया जाएगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सबसे अधिक अंक पाने वाले को</div>
+        <div class="q-opt"><span></span>(B) सर्वश्रेष्ठ प्रदर्शनी के लिए</div>
+        <div class="q-opt"><span></span>(C) सबसे पहले पंजीकरण करने वाले को</div>
+        <div class="q-opt"><span></span>(D) सबसे अधिक पेड़ लगाने वाले को</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">30.</span><span class="q-text"> मेले में कौन-सी गतिविधि नहीं है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) पेड़-पौधे लगाना</div><div class="q-opt"><span></span>(B) प्रश्नोत्तरी</div>
+        <div class="q-opt"><span></span>(C) तैराकी प्रतियोगिता</div><div class="q-opt"><span></span>(D) पुनर्चक्रण कार्यशाला</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">31.</span><span class="q-text"> मेले में कौन-कौन भाग ले सकता है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) केवल उच्च कक्षाओं के छात्र</div>
+        <div class="q-opt"><span></span>(B) केवल शिक्षक</div>
+        <div class="q-opt"><span></span>(C) सभी कक्षाओं के छात्र</div>
+        <div class="q-opt"><span></span>(D) केवल पर्यावरण क्लब के सदस्य</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">32.</span><span class="q-text"> मेले का समय कितने बजे से शुरू होता है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) 7 बजे प्रातः</div><div class="q-opt"><span></span>(B) 8 बजे प्रातः</div>
+        <div class="q-opt"><span></span>(C) 9 बजे प्रातः</div><div class="q-opt"><span></span>(D) 10 बजे प्रातः</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी A5</h4><div class="ak-grid">
+      <div class="ak-item"><b>26.</b> (B) बुधवार, 20 मई</div>
+      <div class="ak-item"><b>27.</b> (C) मुख्य प्रांगण</div>
+      <div class="ak-item"><b>28.</b> (C) 15 मई</div>
+      <div class="ak-item"><b>29.</b> (B) सर्वश्रेष्ठ प्रदर्शनी</div>
+      <div class="ak-item"><b>30.</b> (C) तैराकी प्रतियोगिता</div>
+      <div class="ak-item"><b>31.</b> (C) सभी कक्षाओं के छात्र</div>
+      <div class="ak-item"><b>32.</b> (C) 9 बजे प्रातः</div>
+    </div></div>
+    <div class="score-box">
+      <div class="sc-item"><b>कुल अंक:</b> 64</div>
+      <div class="sc-item"><b>प्राप्त अंक:</b> _____ / 64</div>
+      <div class="sc-item"><b>समय:</b> 75 मिनट</div>
+      <div class="sc-item"><b>A1:</b> ___/5 &nbsp; <b>A2:</b> ___/5 &nbsp; <b>A3:</b> ___/8 &nbsp; <b>A4:</b> ___/14 &nbsp; <b>A5:</b> ___/8 &nbsp; <b>Writing:</b> ___/24</div>
+    </div>
+  </div>
+
+  <!-- Situational Writing -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">लेखन</span><span class="sec-title">परिस्थिति-आधारित लेखन — Situational Writing</span><span class="sec-marks">[24 अंक | 25 मिनट]</span></div>
+    <div class="writing-prompt">
+      <h4>लेखन कार्य — सूचना लेखन</h4>
+      <p style="font-size:13px;margin-bottom:8px;">आप अपने विद्यालय के हिंदी क्लब के सचिव हैं। विद्यालय के प्रांगण में एक <b>हिंदी कविता-प्रतियोगिता</b> का आयोजन किया जाएगा। इस बारे में अपने सहपाठियों को सूचित करने के लिए एक <b>नोटिस</b> लिखिए।</p>
+      <ul class="wp-bullets">
+        <li>दिनांक: 28 मई 2026 (गुरुवार)</li>
+        <li>समय: दोपहर 2 बजे से 4 बजे तक</li>
+        <li>स्थान: विद्यालय का सभागार</li>
+        <li>कम-से-कम तीन अन्य जानकारियाँ स्वयं जोड़िए (जैसे: पंजीकरण, पुरस्कार, नियम आदि)</li>
+      </ul>
+      <p style="font-size:12px;color:#777;margin-top:8px;">अपना नाम: _______________ &nbsp;|&nbsp; कक्षा: _______________ &nbsp;|&nbsp; दिनांक: 3 मई 2026</p>
+    </div>
+    <div style="margin-top:14px;">
+      <div class="w-line"></div><div class="w-line"></div><div class="w-line"></div>
+      <div class="w-line"></div><div class="w-line"></div><div class="w-line"></div>
+      <div class="w-line"></div><div class="w-line"></div><div class="w-line"></div>
+      <div class="w-line"></div><div class="w-line"></div><div class="w-line"></div>
+      <div class="w-line"></div><div class="w-line"></div><div class="w-line"></div>
+      <div class="w-line"></div><div class="w-line"></div><div class="w-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WEEKDAY D1 — MCQ Comprehension Practice        -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="paper">
+  <div class="pinki-band"><span>📅 सोमवार D1 &nbsp;|&nbsp; 4 मई 2026</span><span>समय: 30 मिनट &nbsp;|&nbsp; अंक: 14</span></div>
+  <div class="paper-head weekday">
+    <div class="paper-title">📘 Weekday D1 — MCQ Comprehension "पानी की बचत"</div>
+    <div class="paper-meta"><b>Phase:</b> Easy &nbsp;|&nbsp; <b>Topic:</b> A4 Comprehension</div>
+  </div>
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A4</span><span class="sec-title">गद्यांश-बोध — Comprehension + Synonyms</span><span class="sec-marks">[14 अंक]</span></div>
+    <div class="sec-instr">नीचे दिए गए गद्यांश को पढ़कर प्रश्नों के उत्तर दीजिए।</div>
+    <div class="passage">
+      <b>पानी की बचत — हमारी ज़िम्मेदारी</b><br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;पानी हमारे जीवन का सबसे आवश्यक तत्त्व है। बिना पानी के न मनुष्य जी सकता है, न पशु-पक्षी, और न ही पेड़-पौधे। किंतु आज विश्व के अनेक भागों में जल की भारी कमी हो रही है। इसका मुख्य कारण है पानी की बर्बादी और प्रदूषण।<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;हम अपने दैनिक जीवन में बहुत-सा पानी व्यर्थ बहा देते हैं। नल खुला छोड़ना, ज़रूरत से अधिक पानी से नहाना और बगीचे में अनावश्यक सिंचाई — ये सब पानी की बर्बादी के उदाहरण हैं। यदि हम अभी से सावधान न हुए, तो आने वाली पीढ़ियों को पानी के लिए संघर्ष करना पड़ेगा।<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;पानी बचाना कठिन नहीं है। ब्रश करते समय नल बंद रखें, वर्षा के पानी को इकट्ठा करें और पुराने पानी को पौधों में डालें। छोटे-छोटे प्रयास मिलकर बड़ा बदलाव ला सकते हैं।
+    </div>
+
+    <div class="q-block"><span class="q-num">1.</span><span class="q-text"> गद्यांश के अनुसार, जल की कमी का मुख्य कारण क्या है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) अधिक जनसंख्या</div>
+        <div class="q-opt"><span></span>(B) पानी की बर्बादी और प्रदूषण</div>
+        <div class="q-opt"><span></span>(C) बारिश का न होना</div>
+        <div class="q-opt"><span></span>(D) नदियों का सूखना</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">2.</span><span class="q-text"> "पानी की बर्बादी" का उदाहरण कौन-सा है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) वर्षा जल इकट्ठा करना</div>
+        <div class="q-opt"><span></span>(B) ब्रश करते समय नल बंद रखना</div>
+        <div class="q-opt"><span></span>(C) नल खुला छोड़ना</div>
+        <div class="q-opt"><span></span>(D) पुराने पानी को पौधों में डालना</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">3.</span><span class="q-text"> यदि हम पानी न बचाएँ तो क्या होगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) मौसम बदल जाएगा</div>
+        <div class="q-opt"><span></span>(B) आने वाली पीढ़ियों को पानी के लिए संघर्ष करना पड़ेगा</div>
+        <div class="q-opt"><span></span>(C) नदियाँ सूख जाएँगी</div>
+        <div class="q-opt"><span></span>(D) बिजली चली जाएगी</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">4.</span><span class="q-text"> पानी बचाने का एक तरीका कौन-सा है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) रोज़ नई बोतल खरीदना</div>
+        <div class="q-opt"><span></span>(B) वर्षा के पानी को इकट्ठा करना</div>
+        <div class="q-opt"><span></span>(C) खूब सारे पौधे लगाना</div>
+        <div class="q-opt"><span></span>(D) नल हमेशा खुला रखना</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">5.</span><span class="q-text"> गद्यांश का मुख्य संदेश क्या है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) पानी पीना स्वास्थ्य के लिए अच्छा है</div>
+        <div class="q-opt"><span></span>(B) नदियाँ साफ़ रखनी चाहिए</div>
+        <div class="q-opt"><span></span>(C) हमें पानी की बचत करनी चाहिए</div>
+        <div class="q-opt"><span></span>(D) सरकार को नए कुएँ बनाने चाहिए</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">6.</span><span class="q-text"> "आवश्यक" का पर्याय है —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) अनावश्यक</div><div class="q-opt"><span></span>(B) ज़रूरी</div>
+        <div class="q-opt"><span></span>(C) व्यर्थ</div><div class="q-opt"><span></span>(D) साधारण</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">7.</span><span class="q-text"> "संघर्ष" का पर्याय है —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) मज़ा</div><div class="q-opt"><span></span>(B) यात्रा</div>
+        <div class="q-opt"><span></span>(C) जद्दोजहद</div><div class="q-opt"><span></span>(D) आराम</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी D1</h4><div class="ak-grid">
+      <div class="ak-item"><b>1.</b> (B)</div><div class="ak-item"><b>2.</b> (C)</div>
+      <div class="ak-item"><b>3.</b> (B)</div><div class="ak-item"><b>4.</b> (B)</div>
+      <div class="ak-item"><b>5.</b> (C)</div>
+      <div class="ak-item"><b>6.</b> (B) ज़रूरी</div><div class="ak-item"><b>7.</b> (C) जद्दोजहद</div>
+    </div></div>
+    <div class="score-box"><div class="sc-item"><b>अंक:</b> _____ / 14</div><div class="sc-item"><b>समय:</b> 30 मिनट</div></div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WEEKDAY D2 — Notice Comprehension (A5)         -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="paper">
+  <div class="pinki-band"><span>📅 मंगलवार D2 &nbsp;|&nbsp; 5 मई 2026</span><span>समय: 30 मिनट &nbsp;|&nbsp; अंक: 8</span></div>
+  <div class="paper-head weekday">
+    <div class="paper-title">📘 Weekday D2 — Graphic/Notice Comprehension (A5)</div>
+    <div class="paper-meta"><b>Phase:</b> Easy &nbsp;|&nbsp; <b>Topic:</b> A5 Graphic Comprehension</div>
+  </div>
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A5</span><span class="sec-title">सूचना/ग्राफ़िक-बोध — Notice Comprehension</span><span class="sec-marks">[8 अंक]</span></div>
+    <div class="sec-instr">नीचे दिए गए विज्ञापन को ध्यानपूर्वक पढ़कर प्रश्नों के उत्तर दीजिए।</div>
+
+    <div class="notice-box">
+      <div class="notice-title">🌟 ग्रीष्मकालीन हिंदी शिविर 2026 🌟</div>
+      <div class="notice-org">मार्गदर्शन: श्रीमती पिंकी वर्मा (हिंदी शिक्षिका)</div>
+      <div class="notice-body">
+        <ul class="wp-bullets">
+          <li><b>आयु-वर्ग:</b> 9 से 12 वर्ष के छात्र-छात्राएँ</li>
+          <li><b>तिथियाँ:</b> 1 जून – 15 जून 2026 (सोमवार से शुक्रवार)</li>
+          <li><b>समय:</b> प्रातः 10:00 से दोपहर 12:00 बजे तक</li>
+          <li><b>स्थान:</b> कक्ष संख्या 204, टेक्नो टॉवर, सिंगापुर</li>
+          <li><b>शुल्क:</b> $80 प्रति सप्ताह (सामग्री सहित)</li>
+          <li><b>विषय:</b> शब्द-भंडार, व्याकरण, लेखन, कहानी-वाचन</li>
+          <li><b>अधिकतम सीटें:</b> केवल 15 छात्र</li>
+          <li><b>संपर्क:</b> pinki@hindiclass.sg या 9123 4567</li>
+        </ul>
+        <br>
+        <p style="text-align:center;font-weight:700;color:#2e7d32;">शीघ्र पंजीकरण करें — सीटें सीमित हैं!</p>
+      </div>
+    </div>
+
+    <div class="q-block"><span class="q-num">1.</span><span class="q-text"> यह शिविर किसके लिए है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) 6 से 8 वर्ष के बच्चों के लिए</div>
+        <div class="q-opt"><span></span>(B) 9 से 12 वर्ष के छात्रों के लिए</div>
+        <div class="q-opt"><span></span>(C) 13 से 15 वर्ष के किशोरों के लिए</div>
+        <div class="q-opt"><span></span>(D) केवल लड़कियों के लिए</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">2.</span><span class="q-text"> शिविर में अधिकतम कितने छात्र भाग ले सकते हैं?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) 10</div><div class="q-opt"><span></span>(B) 20</div>
+        <div class="q-opt"><span></span>(C) 15</div><div class="q-opt"><span></span>(D) 25</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">3.</span><span class="q-text"> शिविर का शुल्क कितना है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) $50 प्रति सप्ताह</div><div class="q-opt"><span></span>(B) $80 प्रति सप्ताह</div>
+        <div class="q-opt"><span></span>(C) $100 प्रति सप्ताह</div><div class="q-opt"><span></span>(D) $60 प्रति माह</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">4.</span><span class="q-text"> शिविर किस दिन नहीं होगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सोमवार</div><div class="q-opt"><span></span>(B) बुधवार</div>
+        <div class="q-opt"><span></span>(C) शनिवार</div><div class="q-opt"><span></span>(D) शुक्रवार</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">5.</span><span class="q-text"> शिविर में कौन-सा विषय नहीं पढ़ाया जाएगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) शब्द-भंडार</div><div class="q-opt"><span></span>(B) व्याकरण</div>
+        <div class="q-opt"><span></span>(C) गणित</div><div class="q-opt"><span></span>(D) लेखन</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">6.</span><span class="q-text"> संपर्क के लिए ईमेल पता क्या है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) hindi@class.sg</div><div class="q-opt"><span></span>(B) pinki@hindiclass.sg</div>
+        <div class="q-opt"><span></span>(C) teacher@hindi.sg</div><div class="q-opt"><span></span>(D) summer@pinki.sg</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">7.</span><span class="q-text"> शिविर का समापन किस तिथि को होगा?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) 1 जून</div><div class="q-opt"><span></span>(B) 30 जून</div>
+        <div class="q-opt"><span></span>(C) 15 जून</div><div class="q-opt"><span></span>(D) 20 जून</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">8.</span><span class="q-text"> शिविर का समय क्या है?</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सुबह 8 बजे से 10 बजे</div><div class="q-opt"><span></span>(B) सुबह 10 बजे से दोपहर 12 बजे</div>
+        <div class="q-opt"><span></span>(C) दोपहर 12 बजे से 2 बजे</div><div class="q-opt"><span></span>(D) शाम 4 बजे से 6 बजे</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी D2</h4><div class="ak-grid">
+      <div class="ak-item"><b>1.</b> (B)</div><div class="ak-item"><b>2.</b> (C) 15</div>
+      <div class="ak-item"><b>3.</b> (B) $80</div><div class="ak-item"><b>4.</b> (C) शनिवार</div>
+      <div class="ak-item"><b>5.</b> (C) गणित</div><div class="ak-item"><b>6.</b> (B)</div>
+      <div class="ak-item"><b>7.</b> (C) 15 जून</div><div class="ak-item"><b>8.</b> (B)</div>
+    </div></div>
+    <div class="score-box"><div class="sc-item"><b>अंक:</b> _____ / 8</div><div class="sc-item"><b>समय:</b> 30 मिनट</div></div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WEEKDAY D3 — Cloze #3 "अतिथि का प्रयोग"     -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="paper">
+  <div class="pinki-band"><span>📅 बुधवार D3 &nbsp;|&nbsp; 6 मई 2026</span><span>समय: 30 मिनट &nbsp;|&nbsp; अंक: 10</span></div>
+  <div class="paper-head weekday">
+    <div class="paper-title">📘 Weekday D3 — Cloze #3 "अतिथि देवो भव"</div>
+    <div class="paper-meta"><b>Phase:</b> Easy &nbsp;|&nbsp; <b>Topic:</b> A3 Cloze</div>
+  </div>
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">A3</span><span class="sec-title">अर्थग्रहण — Cloze Passage (10 रिक्त स्थान)</span><span class="sec-marks">[10 अंक]</span></div>
+    <div class="sec-instr">नीचे दिए गए गद्यांश में रिक्त स्थानों (1–10) को दिए गए विकल्पों में से सही शब्द चुनकर भरिए।</div>
+    <div class="passage">
+      &nbsp;&nbsp;&nbsp;&nbsp;भारत में "अतिथि देवो भव" की <b><span class="blank-num">1</span></b> बहुत पुरानी है। इसका अर्थ है — अतिथि को भगवान के <b><span class="blank-num">2</span></b> मानो। जब कोई मेहमान घर आता है, तो हम उसका <b><span class="blank-num">3</span></b> से स्वागत करते हैं।<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;पिछले सप्ताह हमारे घर हमारी बुआ जी <b><span class="blank-num">4</span></b>। माँ ने उनके लिए तरह-तरह के <b><span class="blank-num">5</span></b> बनाए। बुआ जी को हलवा बहुत <b><span class="blank-num">6</span></b> है। हम बच्चे उनके साथ खेले और <b><span class="blank-num">7</span></b> कहानियाँ सुनीं।<br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;बुआ जी ने हमें बताया कि मेहमान को हमेशा <b><span class="blank-num">8</span></b> से विदा करना चाहिए। उनकी यह बात मेरे मन में <b><span class="blank-num">9</span></b> उतर गई। मैंने <b><span class="blank-num">10</span></b> किया कि मैं भी हमेशा मेहमानों का सम्मान करूँगा।
+    </div>
+
+    <div class="q-block"><span class="q-num">1.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) समस्या</div><div class="q-opt"><span></span>(B) परंपरा</div>
+        <div class="q-opt"><span></span>(C) शिकायत</div><div class="q-opt"><span></span>(D) कठिनाई</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">2.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) दुश्मन</div><div class="q-opt"><span></span>(B) बराबर</div>
+        <div class="q-opt"><span></span>(C) समान</div><div class="q-opt"><span></span>(D) विपरीत</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">3.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) उदासी</div><div class="q-opt"><span></span>(B) क्रोध</div>
+        <div class="q-opt"><span></span>(C) प्रेम</div><div class="q-opt"><span></span>(D) घृणा</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">4.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) गईं</div><div class="q-opt"><span></span>(B) आईं</div>
+        <div class="q-opt"><span></span>(C) भागीं</div><div class="q-opt"><span></span>(D) रुकीं</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">5.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) कपड़े</div><div class="q-opt"><span></span>(B) खिलौने</div>
+        <div class="q-opt"><span></span>(C) व्यंजन</div><div class="q-opt"><span></span>(D) पत्र</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">6.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) कड़वा</div><div class="q-opt"><span></span>(B) पसंद</div>
+        <div class="q-opt"><span></span>(C) नापसंद</div><div class="q-opt"><span></span>(D) भारी</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">7.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) उबाऊ</div><div class="q-opt"><span></span>(B) डरावनी</div>
+        <div class="q-opt"><span></span>(C) रोचक</div><div class="q-opt"><span></span>(D) झूठी</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">8.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) गुस्से</div><div class="q-opt"><span></span>(B) रोते हुए</div>
+        <div class="q-opt"><span></span>(C) प्रेम</div><div class="q-opt"><span></span>(D) चिल्लाकर</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">9.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) तल तक</div><div class="q-opt"><span></span>(B) गहराई तक</div>
+        <div class="q-opt"><span></span>(C) ऊपर तक</div><div class="q-opt"><span></span>(D) बाहर तक</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">10.</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) इनकार</div><div class="q-opt"><span></span>(B) निश्चय</div>
+        <div class="q-opt"><span></span>(C) भूल</div><div class="q-opt"><span></span>(D) झगड़ा</div>
+      </div>
+    </div>
+    <div class="ans-key"><h4>उत्तर-कुंजी D3</h4><div class="ak-grid">
+      <div class="ak-item"><b>1.</b> (B) परंपरा</div>
+      <div class="ak-item"><b>2.</b> (C) समान</div>
+      <div class="ak-item"><b>3.</b> (C) प्रेम</div>
+      <div class="ak-item"><b>4.</b> (B) आईं</div>
+      <div class="ak-item"><b>5.</b> (C) व्यंजन</div>
+      <div class="ak-item"><b>6.</b> (B) पसंद</div>
+      <div class="ak-item"><b>7.</b> (C) रोचक</div>
+      <div class="ak-item"><b>8.</b> (C) प्रेम</div>
+      <div class="ak-item"><b>9.</b> (B) गहराई तक</div>
+      <div class="ak-item"><b>10.</b> (B) निश्चय</div>
+    </div></div>
+    <div class="score-box"><div class="sc-item"><b>अंक:</b> _____ / 10</div><div class="sc-item"><b>समय:</b> 30 मिनट</div></div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WEEKDAY D4 — Idioms Set 3 (B6 Format)          -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="paper">
+  <div class="pinki-band"><span>📅 गुरुवार D4 &nbsp;|&nbsp; 7 मई 2026</span><span>समय: 30 मिनट &nbsp;|&nbsp; अंक: 20</span></div>
+  <div class="paper-head weekday">
+    <div class="paper-title">📘 Weekday D4 — Idioms Set 3 (मुहावरे / B6 Format)</div>
+    <div class="paper-meta"><b>Phase:</b> Easy &nbsp;|&nbsp; <b>Topic:</b> B6 Idioms</div>
+  </div>
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">B6</span><span class="sec-title">मुहावरे एवं लोकोक्तियाँ — Idioms Set 3</span><span class="sec-marks">[20 अंक]</span></div>
+
+    <!-- Part A: Word Bank Fill -->
+    <div style="margin-bottom:16px;">
+      <div class="sec-instr"><b>भाग अ:</b> दिए गए मुहावरों में से उचित मुहावरा चुनकर वाक्य पूरे कीजिए।</div>
+      <div style="background:#e8eaf6;border-radius:6px;padding:10px 14px;margin-bottom:10px;font-size:12px;">
+        <b>शब्द-बैंक:</b> &nbsp; आँखें खुलना &nbsp;|&nbsp; नाक में दम करना &nbsp;|&nbsp; मुँह की खाना &nbsp;|&nbsp; कान खड़े होना &nbsp;|&nbsp; हाथ पर हाथ धरे बैठना &nbsp;|&nbsp; तीन तेरह करना &nbsp;|&nbsp; दाँत खट्टे करना &nbsp;|&nbsp; लोहा लेना &nbsp;|&nbsp; आग में घी डालना &nbsp;|&nbsp; पानी-पानी होना
+      </div>
+      <div class="q-block"><span class="q-num">1.</span><span class="q-text"> जब दुश्मन ने हमला किया, तो हमारे सैनिकों ने बहादुरी से उससे _______________ किया।</span></div>
+      <div class="q-block"><span class="q-num">2.</span><span class="q-text"> जब अध्यापक ने उसकी गलती सबके सामने बताई, तो वह _______________ हो गया।</span></div>
+      <div class="q-block"><span class="q-num">3.</span><span class="q-text"> छोटे भाई की शरारतों ने सबकी _______________।</span></div>
+      <div class="q-block"><span class="q-num">4.</span><span class="q-text"> जब उसने झूठ बोलते हुए पकड़ा गया, तो उसकी _______________।</span></div>
+      <div class="q-block"><span class="q-num">5.</span><span class="q-text"> झगड़ा शांत हो रहा था लेकिन उसकी बात ने _______________ का काम किया।</span></div>
+      <div class="q-block"><span class="q-num">6.</span><span class="q-text"> परेशानी के समय _______________ बैठने से काम नहीं चलता।</span></div>
+      <div class="q-block"><span class="q-num">7.</span><span class="q-text"> पड़ोसी के कुत्ते ने सारे मोहल्ले की _______________।</span></div>
+      <div class="q-block"><span class="q-num">8.</span><span class="q-text"> अपने से ताकतवर से _______________ में उसे हार मिली।</span></div>
+      <div class="q-block"><span class="q-num">9.</span><span class="q-text"> दुर्घटना की खबर सुनकर हमारे _______________।</span></div>
+      <div class="q-block"><span class="q-num">10.</span><span class="q-text"> पुलिस की वर्दी देखते ही चोर ने अपना सामान _______________।</span></div>
+    </div>
+
+    <!-- Part B: Meaning Match -->
+    <div>
+      <div class="sec-instr"><b>भाग ब:</b> मुहावरे का सही अर्थ MCQ से चुनिए।</div>
+      <div class="q-block"><span class="q-num">11.</span><span class="q-text"> "आग में घी डालना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) खाना पकाना</div><div class="q-opt"><span></span>(B) झगड़ा और बढ़ाना</div>
+          <div class="q-opt"><span></span>(C) पूजा करना</div><div class="q-opt"><span></span>(D) मदद करना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">12.</span><span class="q-text"> "पानी-पानी होना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) बहुत खुश होना</div><div class="q-opt"><span></span>(B) पानी में भीगना</div>
+          <div class="q-opt"><span></span>(C) बहुत शर्मिंदा होना</div><div class="q-opt"><span></span>(D) थका हुआ होना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">13.</span><span class="q-text"> "मुँह की खाना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) खाना खाना</div><div class="q-opt"><span></span>(B) बुरी तरह हार जाना</div>
+          <div class="q-opt"><span></span>(C) चोट लगना</div><div class="q-opt"><span></span>(D) बोलना बंद करना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">14.</span><span class="q-text"> "कान खड़े होना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) कान का दर्द होना</div><div class="q-opt"><span></span>(B) सावधान हो जाना</div>
+          <div class="q-opt"><span></span>(C) कुछ न सुनना</div><div class="q-opt"><span></span>(D) नींद आना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">15.</span><span class="q-text"> "दाँत खट्टे करना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) खट्टा फल खाना</div><div class="q-opt"><span></span>(B) अच्छी तरह हराना</div>
+          <div class="q-opt"><span></span>(C) दाँत साफ़ करना</div><div class="q-opt"><span></span>(D) झगड़ा करना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">16.</span><span class="q-text"> "तीन तेरह करना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) गणित करना</div><div class="q-opt"><span></span>(B) व्यवस्था बिगाड़ देना</div>
+          <div class="q-opt"><span></span>(C) तीन लोगों से मिलना</div><div class="q-opt"><span></span>(D) खेल खेलना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">17.</span><span class="q-text"> "नाक में दम करना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) नाक बंद होना</div><div class="q-opt"><span></span>(B) बहुत परेशान करना</div>
+          <div class="q-opt"><span></span>(C) खुशबू लेना</div><div class="q-opt"><span></span>(D) नाक साफ़ करना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">18.</span><span class="q-text"> "लोहा लेना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) लोहा खरीदना</div><div class="q-opt"><span></span>(B) मुकाबला करना</div>
+          <div class="q-opt"><span></span>(C) लोहे से बनी चीज़ लेना</div><div class="q-opt"><span></span>(D) नकल करना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">19.</span><span class="q-text"> "आँखें खुलना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) नींद से जागना</div><div class="q-opt"><span></span>(B) सच्चाई का पता चलना</div>
+          <div class="q-opt"><span></span>(C) चश्मा लगाना</div><div class="q-opt"><span></span>(D) रोना बंद करना</div>
+        </div>
+      </div>
+      <div class="q-block"><span class="q-num">20.</span><span class="q-text"> "हाथ पर हाथ धरे बैठना" का अर्थ है —</span>
+        <div class="q-options">
+          <div class="q-opt"><span></span>(A) हाथ धोना</div><div class="q-opt"><span></span>(B) बहुत काम करना</div>
+          <div class="q-opt"><span></span>(C) बिल्कुल कुछ न करना</div><div class="q-opt"><span></span>(D) हाथ जोड़कर प्रणाम करना</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ans-key"><h4>उत्तर-कुंजी D4</h4>
+      <div class="ak-grid">
+        <div class="ak-item"><b>1.</b> लोहा लेना</div>
+        <div class="ak-item"><b>2.</b> पानी-पानी होना</div>
+        <div class="ak-item"><b>3.</b> नाक में दम करना</div>
+        <div class="ak-item"><b>4.</b> मुँह की खाना</div>
+        <div class="ak-item"><b>5.</b> आग में घी डालना</div>
+        <div class="ak-item"><b>6.</b> हाथ पर हाथ धरे बैठना</div>
+        <div class="ak-item"><b>7.</b> नाक में दम करना</div>
+        <div class="ak-item"><b>8.</b> लोहा लेना</div>
+        <div class="ak-item"><b>9.</b> कान खड़े होना</div>
+        <div class="ak-item"><b>10.</b> तीन तेरह करना</div>
+        <div class="ak-item"><b>11.</b> (B)</div><div class="ak-item"><b>12.</b> (C)</div>
+        <div class="ak-item"><b>13.</b> (B)</div><div class="ak-item"><b>14.</b> (B)</div>
+        <div class="ak-item"><b>15.</b> (B)</div><div class="ak-item"><b>16.</b> (B)</div>
+        <div class="ak-item"><b>17.</b> (B)</div><div class="ak-item"><b>18.</b> (B)</div>
+        <div class="ak-item"><b>19.</b> (B)</div><div class="ak-item"><b>20.</b> (C)</div>
+      </div>
+    </div>
+    <div class="score-box"><div class="sc-item"><b>अंक:</b> _____ / 20</div><div class="sc-item"><b>समय:</b> 30 मिनट</div></div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WEEKDAY D5 — Collocations Set C + Synonyms     -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="paper">
+  <div class="pinki-band"><span>📅 शुक्रवार D5 &nbsp;|&nbsp; 8 मई 2026</span><span>समय: 30 मिनट &nbsp;|&nbsp; अंक: 25</span></div>
+  <div class="paper-head weekday">
+    <div class="paper-title">📘 Weekday D5 — Collocations Set C + Synonyms Set 3</div>
+    <div class="paper-meta"><b>Phase:</b> Easy &nbsp;|&nbsp; <b>Topic:</b> शब्द-प्रयोग + पर्याय</div>
+  </div>
+
+  <!-- Collocations Set C -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">भाग अ</span><span class="sec-title">शब्द-प्रयोग — Collocations Set C</span><span class="sec-marks">[15 अंक | 18 मिनट]</span></div>
+    <div class="sec-instr">रिक्त स्थानों को उचित शब्द से भरिए। अंग्रेज़ी संकेत कोष्ठक में है।</div>
+
+    <div class="q-block"><span class="q-num">1.</span><span class="q-text"> उसने अपनी गलती के लिए दिल से _______________ माँगी। <span class="q-hint">(asked for forgiveness)</span></span></div>
+    <div class="q-block"><span class="q-num">2.</span><span class="q-text"> बाढ़ के कारण गाँव को भारी _______________ उठाना पड़ा। <span class="q-hint">(suffered great loss)</span></span></div>
+    <div class="q-block"><span class="q-num">3.</span><span class="q-text"> वह हर दिन सूरज उगने से पहले ही _______________ हो जाती है। <span class="q-hint">(wakes up / gets up)</span></span></div>
+    <div class="q-block"><span class="q-num">4.</span><span class="q-text"> परीक्षा में _______________ पाने के लिए उसने रात भर पढ़ाई की। <span class="q-hint">(to achieve good marks/rank)</span></span></div>
+    <div class="q-block"><span class="q-num">5.</span><span class="q-text"> उसके व्यवहार ने अपने परिवार का सिर _______________ कर दिया। <span class="q-hint">(lowered their head / brought shame)</span></span></div>
+    <div class="q-block"><span class="q-num">6.</span><span class="q-text"> नई नौकरी मिलने पर उसने अपने सपने को _______________ किया। <span class="q-hint">(fulfilled / realized)</span></span></div>
+    <div class="q-block"><span class="q-num">7.</span><span class="q-text"> बुखार के कारण उसे _______________ लेनी पड़ी। <span class="q-hint">(had to take leave / rest)</span></span></div>
+    <div class="q-block"><span class="q-num">8.</span><span class="q-text"> प्रधानाचार्य ने विजेता का _______________ किया। <span class="q-hint">(felicitated / honoured)</span></span></div>
+    <div class="q-block"><span class="q-num">9.</span><span class="q-text"> मेरी दादी हर सुबह मंदिर में _______________ चढ़ाती हैं। <span class="q-hint">(offer flowers)</span></span></div>
+    <div class="q-block"><span class="q-num">10.</span><span class="q-text"> पड़ोसी की मदद करने से मन को बड़ी _______________ मिलती है। <span class="q-hint">(satisfaction / peace of mind)</span></span></div>
+    <div class="q-block"><span class="q-num">11.</span><span class="q-text"> खिलाड़ी ने मैदान में अपना _______________ दिखाया। <span class="q-hint">(showed his skill/talent)</span></span></div>
+    <div class="q-block"><span class="q-num">12.</span><span class="q-text"> उसने परीक्षा में नकल करने की _______________ की। <span class="q-hint">(made an attempt)</span></span></div>
+    <div class="q-block"><span class="q-num">13.</span><span class="q-text"> भाई ने बहन का _______________ करते हुए उसकी मदद की। <span class="q-hint">(while defending / protecting)</span></span></div>
+    <div class="q-block"><span class="q-num">14.</span><span class="q-text"> माँ ने बच्चे को गोद में लेकर _______________ गाया। <span class="q-hint">(sang a lullaby)</span></span></div>
+    <div class="q-block"><span class="q-num">15.</span><span class="q-text"> सरकार ने बाढ़-प्रभावित लोगों की _______________ की। <span class="q-hint">(gave relief / rendered assistance)</span></span></div>
+
+    <div class="ans-key"><h4>उत्तर-कुंजी भाग अ</h4><div class="ak-grid">
+      <div class="ak-item"><b>1.</b> माफ़ी</div>
+      <div class="ak-item"><b>2.</b> नुकसान</div>
+      <div class="ak-item"><b>3.</b> तैयार</div>
+      <div class="ak-item"><b>4.</b> सफलता / अच्छे अंक</div>
+      <div class="ak-item"><b>5.</b> नीचा</div>
+      <div class="ak-item"><b>6.</b> साकार</div>
+      <div class="ak-item"><b>7.</b> छुट्टी</div>
+      <div class="ak-item"><b>8.</b> सम्मान</div>
+      <div class="ak-item"><b>9.</b> फूल</div>
+      <div class="ak-item"><b>10.</b> संतुष्टि</div>
+      <div class="ak-item"><b>11.</b> जौहर / हुनर</div>
+      <div class="ak-item"><b>12.</b> कोशिश</div>
+      <div class="ak-item"><b>13.</b> पक्ष</div>
+      <div class="ak-item"><b>14.</b> लोरी</div>
+      <div class="ak-item"><b>15.</b> सहायता</div>
+    </div></div>
+  </div>
+
+  <!-- Synonyms Set 3 -->
+  <div class="section">
+    <div class="sec-head"><span class="sec-tag">भाग ब</span><span class="sec-title">पर्याय — Synonyms Set 3 (MCQ)</span><span class="sec-marks">[10 अंक | 12 मिनट]</span></div>
+    <div class="sec-instr">प्रत्येक शब्द के लिए सही पर्याय (MCQ) चुनिए।</div>
+
+    <div class="q-block"><span class="q-num">16.</span><span class="q-text"> "विद्यालय" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) घर</div><div class="q-opt"><span></span>(B) पाठशाला</div>
+        <div class="q-opt"><span></span>(C) बाज़ार</div><div class="q-opt"><span></span>(D) मंदिर</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">17.</span><span class="q-text"> "वर्षा" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) धूप</div><div class="q-opt"><span></span>(B) बाढ़</div>
+        <div class="q-opt"><span></span>(C) बारिश</div><div class="q-opt"><span></span>(D) ओस</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">18.</span><span class="q-text"> "अंधकार" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) प्रकाश</div><div class="q-opt"><span></span>(B) तमस</div>
+        <div class="q-opt"><span></span>(C) चाँदनी</div><div class="q-opt"><span></span>(D) भोर</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">19.</span><span class="q-text"> "मित्र" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) शत्रु</div><div class="q-opt"><span></span>(B) दोस्त</div>
+        <div class="q-opt"><span></span>(C) पड़ोसी</div><div class="q-opt"><span></span>(D) भाई</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">20.</span><span class="q-text"> "साहसी" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) कायर</div><div class="q-opt"><span></span>(B) आलसी</div>
+        <div class="q-opt"><span></span>(C) निडर</div><div class="q-opt"><span></span>(D) घबराया</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">21.</span><span class="q-text"> "ईमानदार" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) धोखेबाज़</div><div class="q-opt"><span></span>(B) सच्चा</div>
+        <div class="q-opt"><span></span>(C) लालची</div><div class="q-opt"><span></span>(D) कंजूस</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">22.</span><span class="q-text"> "कठिन" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) सरल</div><div class="q-opt"><span></span>(B) आसान</div>
+        <div class="q-opt"><span></span>(C) मुश्किल</div><div class="q-opt"><span></span>(D) तेज़</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">23.</span><span class="q-text"> "प्रसन्न" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) उदास</div><div class="q-opt"><span></span>(B) क्रोधित</div>
+        <div class="q-opt"><span></span>(C) खुश</div><div class="q-opt"><span></span>(D) थका</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">24.</span><span class="q-text"> "नदी" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) समुद्र</div><div class="q-opt"><span></span>(B) तालाब</div>
+        <div class="q-opt"><span></span>(C) सरिता</div><div class="q-opt"><span></span>(D) झरना</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">25.</span><span class="q-text"> "भोजन" का पर्याय —</span>
+      <div class="q-options">
+        <div class="q-opt"><span></span>(A) पानी</div><div class="q-opt"><span></span>(B) आहार</div>
+        <div class="q-opt"><span></span>(C) वस्त्र</div><div class="q-opt"><span></span>(D) वाहन</div>
+      </div>
+    </div>
+
+    <div class="ans-key"><h4>उत्तर-कुंजी भाग ब</h4><div class="ak-grid">
+      <div class="ak-item"><b>16.</b> (B) पाठशाला</div>
+      <div class="ak-item"><b>17.</b> (C) बारिश</div>
+      <div class="ak-item"><b>18.</b> (B) तमस</div>
+      <div class="ak-item"><b>19.</b> (B) दोस्त</div>
+      <div class="ak-item"><b>20.</b> (C) निडर</div>
+      <div class="ak-item"><b>21.</b> (B) सच्चा</div>
+      <div class="ak-item"><b>22.</b> (C) मुश्किल</div>
+      <div class="ak-item"><b>23.</b> (C) खुश</div>
+      <div class="ak-item"><b>24.</b> (C) सरिता</div>
+      <div class="ak-item"><b>25.</b> (B) आहार</div>
+    </div></div>
+    <div class="score-box"><div class="sc-item"><b>कुल अंक:</b> _____ / 25</div><div class="sc-item"><b>भाग अ:</b> ___/15</div><div class="sc-item"><b>भाग ब:</b> ___/10</div><div class="sc-item"><b>समय:</b> 30 मिनट</div></div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:18px;font-size:12px;color:#666;border-top:2px solid #eee;margin:18px 22px 0;">
+  <b>Week 3 Complete</b> &nbsp;|&nbsp; Pinki Ma'am's PSLE Hindi 60-Day Plan &nbsp;|&nbsp; Phase 1 Easy — Week 3 of 9 &nbsp;|&nbsp; May 3–9, 2026<br>
+  <span style="color:#2e7d32;">✓ A1 A2 A3 A4 A5 covered this week + Idioms (B6) + Collocations + Synonyms</span>
+</div>
+</body>
+</html>

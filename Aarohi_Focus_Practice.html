@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aarohi — Hindi Focus Practice (Real PSLE Questions)</title>
+<style>
+  :root {
+    --navy: #002147;
+    --saffron: #FF6600;
+    --green: #138808;
+    --red: #C0392B;
+    --border: #D0C0A0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans Devanagari', 'Arial Unicode MS', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #111;
+    background: #F5F0E8;
+    padding: 20px;
+  }
+  .page-title {
+    background: linear-gradient(135deg, var(--navy), #003a7a);
+    color: white;
+    padding: 18px 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .page-title h1 { font-size: 22px; margin-bottom: 4px; }
+  .page-title p { font-size: 13px; opacity: 0.85; }
+  .weak-banner {
+    background: #FFF3CD;
+    border: 2px solid var(--saffron);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+  }
+  .weak-banner strong { color: var(--red); }
+  .section {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .section-header {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-header.b7 { background: #E8F4E8; border-bottom: 2px solid var(--green); }
+  .section-header.a3 { background: #E8F0FF; border-bottom: 2px solid var(--navy); }
+  .section-header.b8 { background: #FFF0E8; border-bottom: 2px solid var(--saffron); }
+  .section-badge {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: bold; color: white;
+    flex-shrink: 0;
+  }
+  .b7 .section-badge { background: var(--green); }
+  .a3 .section-badge { background: var(--navy); }
+  .b8 .section-badge { background: var(--saffron); }
+  .section-info h2 { font-size: 16px; }
+  .section-info p { font-size: 12.5px; color: #555; margin-top: 2px; }
+  .section-body { padding: 18px 20px; }
+  .src-badge {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    font-size: 10px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+  }
+  .src-badge.yr2024 { background: #1565C0; }
+  .src-badge.yr2025 { background: #C62828; }
+  .q-block {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #DDD;
+  }
+  .q-block:last-child { border-bottom: none; margin-bottom: 0; }
+  .q-text {
+    font-size: 15px;
+    line-height: 2;
+    margin: 4px 0 8px 0;
+  }
+  .blank {
+    display: inline-block;
+    border-bottom: 2px solid #333;
+    min-width: 100px;
+    margin: 0 4px;
+  }
+  .marks-label {
+    font-size: 11px;
+    color: #666;
+    text-align: right;
+    margin-top: 2px;
+  }
+  .options { margin: 6px 0 0 8px; }
+  .opt-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+    font-size: 14.5px;
+  }
+  .opt-num { color: #666; font-size: 12px; min-width: 18px; }
+  .opt-box {
+    width: 16px; height: 16px;
+    border: 1.5px solid #888;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+  .passage {
+    background: #FAFAFA;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 14.5px;
+    line-height: 2.1;
+  }
+  .passage .blank-num {
+    display: inline-block;
+    border-bottom: 2px solid #333;
+    min-width: 65px;
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+    margin: 0 2px;
+  }
+  .oe-line {
+    border-bottom: 1.5px solid #AAA;
+    height: 30px;
+    margin: 4px 0;
+  }
+  .self-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FFFDE7;
+    border: 1px solid #F9A825;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  .time-box {
+    border-bottom: 1px solid #999;
+    display: inline-block;
+    min-width: 60px;
+  }
+  details {
+    margin-top: 24px;
+    border: 1.5px solid var(--green);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  summary {
+    background: var(--green);
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+  }
+  .ans-key { padding: 16px 20px; background: #F1FAF1; }
+  .ans-section { margin-bottom: 16px; }
+  .ans-section h4 { color: var(--navy); font-size: 14px; margin-bottom: 8px; border-bottom: 1px solid #CCC; padding-bottom: 4px; }
+  .ans-row {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+    font-size: 13.5px;
+  }
+  .ans-item {
+    background: white;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 2px 8px;
+    min-width: 85px;
+    text-align: center;
+  }
+  .ans-item strong { color: var(--red); }
+  .oe-ans { font-size: 13px; line-height: 1.8; margin-bottom: 6px; }
+  .oe-ans em { color: #555; }
+  .tip-box {
+    font-size: 13px;
+    color: #555;
+    background: #E8F4E8;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+  .tip-box.orange { background: #FFF0E8; }
+  .tip-box.blue { background: #E8F0FF; }
+  @media print {
+    body { background: white; padding: 0; font-size: 13.5px; }
+    .page-title, .weak-banner, .section-header, .section-badge, .src-badge {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    details { display: none; }
+    .section { break-inside: avoid; }
+  }
+  @page { size: A4; margin: 15mm; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>Aarohi — Hindi Focus Practice</h1>
+  <p>वास्तविक PSLE प्रश्न (Real Questions) · B7 · A3 · B8 &nbsp;|&nbsp; स्रोत: PSLE 2024 &amp; 2025 (Actual Papers)</p>
+</div>
+
+<div class="weak-banner">
+  📊 <strong>आरोही का WA2 स्कोर:</strong> &nbsp;Section A (B7 — वाक्य पूर्ति) = <strong>0/5</strong> &nbsp;|&nbsp; Section C (A3 — Cloze) = <strong>0/5</strong> &nbsp;|&nbsp; Section E (B8 — OE Comprehension) = <strong>5/12</strong>
+  <br>इन तीनों को आज ध्यान से करो! हर प्रश्न पर अपना पूरा समय दो।
+</div>
+
+
+<!-- ==================== PART 1 — B7 ==================== -->
+<div class="section">
+  <div class="section-header b7">
+    <div class="section-badge">B7</div>
+    <div class="section-info">
+      <h2>खंड B7 — वाक्य पूर्ति &nbsp;(Sentence Completion)</h2>
+      <p>खाली स्थान में <strong>अपना उचित शब्द</strong> भरो — कोई विकल्प नहीं दिया गया। &nbsp;· 10 अंक (प्रत्येक 1 अंक)</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <div class="tip-box">
+      💡 <strong>टिप:</strong> वाक्य पूरा पढ़ो, फिर ऐसा शब्द सोचो जो दोनों वाक्यांशों को जोड़े। जैसे: <em>क्योंकि, ताकि, पहले, बाद, बिना, जब से, हालाँकि, यद्यपि</em>
+    </div>
+
+    <p style="font-size:12px;font-weight:bold;color:#C62828;margin-bottom:10px;">▶ प्रश्न 1–5 &nbsp;<span class="src-badge yr2025">PSLE 2025 · Booklet B · Q41–45</span></p>
+
+    <div class="q-block">
+      <span class="src-badge yr2025">2025 · B7 · Q41</span>
+      <div class="q-text"><strong>1.</strong>&nbsp; वह सफल था <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> उसके माता-पिता ने उसे प्रोत्साहित किया।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2025">2025 · B7 · Q42</span>
+      <div class="q-text"><strong>2.</strong>&nbsp; मैंने केक को चीनी का उपयोग किए <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> बनाया।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2025">2025 · B7 · Q43</span>
+      <div class="q-text"><strong>3.</strong>&nbsp; आप खरीदारी पर जाने से <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> अपने पैसे लाना याद रखें।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2025">2025 · B7 · Q44</span>
+      <div class="q-text"><strong>4.</strong>&nbsp; मैं कॉन्सर्ट में सम्मिलित होने में सफल रहा <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मेरे पास टिकट नहीं था।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2025">2025 · B7 · Q45</span>
+      <div class="q-text"><strong>5.</strong>&nbsp; <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> ठंड का मौसम शुरू हुआ है मैं एक बार भी बाहर नहीं गई हूँ।</div>
+    </div>
+
+    <p style="font-size:12px;font-weight:bold;color:#1565C0;margin:16px 0 10px;padding-top:10px;border-top:1px dashed #CCC;">▶ प्रश्न 6–10 &nbsp;<span class="src-badge yr2024">PSLE 2024 · Booklet B · Q41–45</span></p>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B7 · Q41</span>
+      <div class="q-text"><strong>6.</strong>&nbsp; जब मैं छोटा था तब मेरी माँ ने मुझे सिखाया कि रोटी <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> बनती है।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B7 · Q42</span>
+      <div class="q-text"><strong>7.</strong>&nbsp; मेरे चाचा अपने बचपन <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> पाँच अलग-अलग देशों में रहे।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B7 · Q43</span>
+      <div class="q-text"><strong>8.</strong>&nbsp; क्या आपने वो किताब पढ़ी है जो इस <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> में है कि लोग पुराने दिनों में कैसे रहते थे?</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B7 · Q44</span>
+      <div class="q-text"><strong>9.</strong>&nbsp; इस केक का स्वाद ज़्यादा अच्छा होगा यदि आप इसे पकने के <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> ठंडा होने के लिए छोड़ दें।</div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B7 · Q45</span>
+      <div class="q-text"><strong>10.</strong>&nbsp; मेरे माता-पिता ने मुझे फ्रांस भेजा <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मैं फ्रेंच बोलना सीख सकूँ।</div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ==================== PART 2 — A3 ==================== -->
+<div class="section">
+  <div class="section-header a3">
+    <div class="section-badge">A3</div>
+    <div class="section-info">
+      <h2>खंड A3 — अर्थ ग्रहण &nbsp;(Cloze Comprehension)</h2>
+      <p>अवतरण पढ़ो और प्रश्न 11–20 के लिए <strong>सही विकल्प (1, 2, 3 या 4)</strong> चुनो। &nbsp;· 20 अंक</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <p style="margin-bottom:8px;"><span class="src-badge yr2024">PSLE 2024 · Booklet A · A3 · Q11–20</span></p>
+
+    <div class="tip-box blue">
+      💡 <strong>टिप:</strong> पहले पूरा अवतरण पढ़ो, फिर हर खाली के आसपास के शब्दों से संकेत लो। व्याकरण और अर्थ दोनों देखो।
+    </div>
+
+    <div class="passage">
+      एक समय की बात है, एक राजा था जिसे दो शानदार बाज़ उपहार में मिले। वे अब तक के सबसे <span class="blank-num">&nbsp;11&nbsp;</span> पक्षी थे जिन्हें उसने देखा था। राजा ने पक्षियों को प्रशिक्षित करने के लिए उन्हें अपने बाज़ों के प्रमुख प्रशिक्षक को दे दिया।
+      <br><br>
+      महीनों बीत गए और एक दिन प्रमुख बाज़ प्रशिक्षक ने राजा को सूचित किया कि <span class="blank-num">&nbsp;12&nbsp;</span> दोनों बाज़ों में से एक बाज़ शानदार तरीके से आसमान में ऊँचा उड़ रहा था वहीं दूसरा पक्षी अपनी शाखा से उस दिन से <span class="blank-num">&nbsp;13&nbsp;</span> भी नहीं था जिस दिन से वह वहाँ आया था।
+      <br><br>
+      राजा ने बाज़ को उड़ाने की कोशिश करने के लिए पूरे <span class="blank-num">&nbsp;14&nbsp;</span> से विशेषज्ञों को बुलाया। उन्होंने कई दिनों तक कोशिश की, लेकिन राजा ने महल की खिड़की <span class="blank-num">&nbsp;15&nbsp;</span> देखा कि पक्षी अभी भी अपने बसेरे से नहीं हिला है।
+      <br><br>
+      बाकी सभी कोशिशें करने के पश्चात्, राजा ने मन ही मन सोचा, "शायद मुझे इस समस्या को समझने के लिए ग्रामीण इलाके से किसी अधिक <span class="blank-num">&nbsp;16&nbsp;</span> व्यक्ति की आवश्यकता है!" इसलिए वह अपने दरबार में ज़ोर से चिल्लाया, "जाओ और एक <span class="blank-num">&nbsp;17&nbsp;</span> को लेकर आओ।"
+      <br><br>
+      प्रातःकाल, राजा दूसरे बाज़ को महल के बगीचों के ऊपर ऊँचा उड़ता देख <span class="blank-num">&nbsp;18&nbsp;</span> हो उठा। उसने अपने दरबारियों से कहा, "मेरे सामने उस व्यक्ति को लेकर आओ जिसने यह <span class="blank-num">&nbsp;19&nbsp;</span> किया है।" दरबारियों ने शीघ्र ही उस किसान का पता लगा लिया, वो आया और राजा के सामने खड़ा हो गया। राजा ने उससे पूछा, "तुमने बाज़ को कैसे उड़ाया?"
+      <br><br>
+      सिर झुकाकर, किसान मुस्कुराया और उसने राजा से कहा "महाराज यह बहुत आसान था। मैंने तो <span class="blank-num">&nbsp;20&nbsp;</span> उस डाली को काट दिया जहाँ बाज़ बैठा था।"
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q11</span>
+      <div class="q-text"><strong>11</strong>&nbsp; सबसे <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> पक्षी</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> सुंदर</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> स्वादिष्ट</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> नम</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> मैला</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q12</span>
+      <div class="q-text"><strong>12</strong>&nbsp; <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> दोनों बाज़ों में से एक बाज़ ऊँचा उड़ रहा था वहीं दूसरा...</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> बावजूद</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> क्योंकि</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> यद्यपि</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> और भी</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q13</span>
+      <div class="q-text"><strong>13</strong>&nbsp; अपनी शाखा से उस दिन से <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> भी नहीं था</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> दौड़ा</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> गिरा</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> बचा</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> हिला</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q14</span>
+      <div class="q-text"><strong>14</strong>&nbsp; पूरे <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> से विशेषज्ञों को बुलाया</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> आकाश</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> देश</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> समुद्र</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> खेत</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q15</span>
+      <div class="q-text"><strong>15</strong>&nbsp; महल की खिड़की <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> देखा कि पक्षी अभी भी नहीं हिला</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> से</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> नीचे</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> अंदर</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> ऊपर</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q16</span>
+      <div class="q-text"><strong>16</strong>&nbsp; किसी अधिक <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> व्यक्ति की आवश्यकता है</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> गुस्सा</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> प्रसन्न</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> जानकार</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> उदास</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q17</span>
+      <div class="q-text"><strong>17</strong>&nbsp; जाओ और एक <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> को लेकर आओ</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> रसोईया</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> किसान</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> नाविक</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> वकील</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q18</span>
+      <div class="q-text"><strong>18</strong>&nbsp; बाज़ को उड़ता देख राजा <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> हो उठा</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> साहसी</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> नाराज़</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> भयभीत</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> रोमांचित</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q19</span>
+      <div class="q-text"><strong>19</strong>&nbsp; जिसने यह <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> किया है</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> अपराध</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> गड़बड़</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> चमत्कार</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> आविष्कार</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · A3 · Q20</span>
+      <div class="q-text"><strong>20</strong>&nbsp; मैंने तो <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> उस डाली को काट दिया जहाँ बाज़ बैठा था</div>
+      <div class="options">
+        <div class="opt-row"><span class="opt-num">(1)</span><span class="opt-box"></span> केवल</div>
+        <div class="opt-row"><span class="opt-num">(2)</span><span class="opt-box"></span> थोड़ा</div>
+        <div class="opt-row"><span class="opt-num">(3)</span><span class="opt-box"></span> लगातार</div>
+        <div class="opt-row"><span class="opt-num">(4)</span><span class="opt-box"></span> मूर्खतापूर्ण</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ==================== PART 3 — B8 ==================== -->
+<div class="section">
+  <div class="section-header b8">
+    <div class="section-badge">B8</div>
+    <div class="section-info">
+      <h2>खंड B8 — आशय समझना &nbsp;(Open-Ended Comprehension)</h2>
+      <p>अवतरण पढ़ो और <strong>अपने शब्दों में</strong> उत्तर लिखो। हर प्रश्न में 2 बातें चाहिए। &nbsp;· 20 अंक</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <p style="margin-bottom:8px;"><span class="src-badge yr2024">PSLE 2024 · Booklet B · B8 · Q46–50</span></p>
+
+    <div class="tip-box orange">
+      💡 <strong>टिप:</strong> हर प्रश्न में <em>2 विवरण</em> माँगे गए हैं। अवतरण में से दो अलग-अलग बातें खोजो और अपने शब्दों में लिखो। सीधे copy मत करो — थोड़ा बदलकर लिखो।
+    </div>
+
+    <div class="passage">
+      हाई स्कूल की एक छात्रा ने अपने खाली समय में कारों का निर्माण करना खुद सीखा है। 17 साल की आयशा चीमा अपने पिता से प्रेरित थी जो एक सफल खेती करते हैं। "मेरी माँ विज्ञान की शिक्षिका हैं और मेरे पिताजी एक किसान हैं। उन्हें लगभग सभी यांत्रिक कार्यों में सक्षम होना पड़ता है। वे एक मैकेनिक बन सकते थे। जैसे ही मैंने चलना सीखा, मैं बाहर जाकर उन्हें कृषि यंत्रों और ट्रकों को ठीक करते देखती थी," उसने कहा। बचपन से ही, वह अपने स्वयं के खिलौनों से अधिक अपने पिताजी की कार्यशाला के उपकरणों के साथ खेलना पसंद करती थी।
+      <br><br>
+      आयशा, जो अब सेंट्रल हाई स्कूल की छात्रा है, वह भी अन्य बच्चों की तरह खिलौने की कारों से खेलती थी। जब अन्य बच्चे खुशी-खुशी अपनी कारों को फर्श पर चारों ओर दौड़ाते थे, आयशा को चुपचाप बैठकर खिलौने की कारों को खोलना और उन्हें फिर से एक साथ वापस जोड़ने में सबसे अधिक मज़ा आता था। वह अपने बड़े चचेरे भाइयों की मोटरसाइकिलों की मरम्मत में मदद करना भी पसंद करती थी।
+      <br><br>
+      जैसे-जैसे वह बड़ी होती गई और अपने भविष्य के करियर के बारे में सोचने लगी, उसे एक वास्तविक कार बनाने में अधिक से अधिक दिलचस्पी हो गई। उसने कहा, "यह हमेशा से ही मेरा एक सपना रहा है कि मेरी अपनी एक कार हो और इसलिए मैंने खुद अपनी कार बनाने का फैसला किया।"
+      <br><br>
+      उसने कहा, "जब मैंने 2019 में अपनी कार का निर्माण शुरू किया, तो यह वास्तव में कठिन था क्योंकि मेरे पास कोई पुर्ज़े नहीं थे, लेकिन मेरे पिताजी ने मुझे एक पुरानी मोटरसाइकिल खरीद कर दी, जिसे मैंने पूरा खोल दिया। फिर जब मैं कार में इंजन लगाने जैसे कठिन कार्यों से जूझ रही थी, मेरे पिताजी ने मुझे सिखाया कि यह कैसे करना है।"
+      <br><br>
+      वह मोटरसाइकिल से निकाले गए इंजन को चलाने में कामयाब रही। फिर उसने पड़ोसियों से पहियों और कार के अन्य भागों को माँगा ताकि वह उसके चारों ओर एक कार का ढाँचा बनाना शुरू कर सके। उसने कहा, "अब मेरे पास एक छोटी सी कार है जिसे मैं खेत के चारों ओर चला सकती हूँ, लेकिन यह इतनी विश्वसनीय नहीं है कि दूर तक जा सके। स्थानीय पुलिस को यह तो पसंद है कि मैंने कार बनाई है, लेकिन उन्होंने मुझे सड़क पर न जाने की चेतावनी दी है।"
+      <br><br>
+      आयशा अब तकनीकी और व्यावसायिक शिक्षा प्राप्त करना चाहती है। वह मैकेनिकल इंजीनियरिंग की पढ़ाई के लिए ट्रेनिंग कॉलेज जाने की योजना बना रही है। उसने कहा, "मेरा सपना है कि मेरा अपना कार ब्रांड हो। मेरी यह बेहद इच्छा है कि मेरा अपना कारखाना हो जो मेरी डिज़ाइन की हुई कार का उत्पादन करे।"
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B8 · Q46</span>
+      <div class="q-text"><strong>46.</strong>&nbsp; अनुच्छेद 1 के अनुसार, जब वह बहुत छोटी थी तो आयशा ने ऐसा क्या किया जिससे कार की मरम्मत में उसकी रुचि का पता चलता है? <strong>2 विवरण दें।</strong></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <p class="marks-label">[2 अंक]</p>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B8 · Q47</span>
+      <div class="q-text"><strong>47.</strong>&nbsp; अनुच्छेद 3 के अनुसार, आयशा ने कारें बनाना क्यों शुरू किया? <strong>2 विवरण दें।</strong></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <p class="marks-label">[2 अंक]</p>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B8 · Q48</span>
+      <div class="q-text"><strong>48.</strong>&nbsp; आयशा के पिताजी ने उसके प्रोजेक्ट में कैसे मदद की? <strong>2 विवरण दें।</strong></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <p class="marks-label">[2 अंक]</p>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B8 · Q49</span>
+      <div class="q-text"><strong>49.</strong>&nbsp; आयशा अपनी कार का इस्तेमाल केवल अपने पिताजी के खेत में ही क्यों करती हैं? <strong>2 विवरण दें।</strong></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <p class="marks-label">[2 अंक]</p>
+    </div>
+
+    <div class="q-block">
+      <span class="src-badge yr2024">2024 · B8 · Q50</span>
+      <div class="q-text"><strong>50.</strong>&nbsp; आयशा के जीवन में उसका सपना कैसे पूरा होगा? <strong>2 विवरण दें।</strong></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <div class="oe-line"></div>
+      <p class="marks-label">[2 अंक]</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Self-check -->
+<div class="self-check">
+  <div>⭐ मुझे कितने स्टार मिले? &nbsp; ⭐&nbsp;⭐&nbsp;⭐</div>
+  <div style="margin-left:24px;">⏱ मैंने <span class="time-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मिनट में पूरा किया।</div>
+</div>
+
+
+<!-- Answer Key -->
+<details>
+  <summary>📋 उत्तर कुंजी — Answer Key &nbsp;(पहले मत देखो!)</summary>
+  <div class="ans-key">
+
+    <div class="ans-section">
+      <h4>भाग 1 — B7 वाक्य पूर्ति &nbsp;· स्रोत: PSLE 2025 (Q1–5) और PSLE 2024 (Q6–10)</h4>
+      <p style="font-size:12px;color:#666;margin-bottom:8px;">नोट: एक से अधिक सही उत्तर हो सकते हैं — अर्थ सही हो।</p>
+      <div class="ans-row">
+        <div class="ans-item">1 &nbsp;<strong>क्योंकि</strong></div>
+        <div class="ans-item">2 &nbsp;<strong>बिना</strong></div>
+        <div class="ans-item">3 &nbsp;<strong>पहले</strong></div>
+        <div class="ans-item">4 &nbsp;<strong>हालाँकि / यद्यपि</strong></div>
+        <div class="ans-item">5 &nbsp;<strong>जब से / चूँकि</strong></div>
+      </div>
+      <div class="ans-row" style="margin-top:6px;">
+        <div class="ans-item">6 &nbsp;<strong>कैसे / गोल</strong></div>
+        <div class="ans-item">7 &nbsp;<strong>में</strong></div>
+        <div class="ans-item">8 &nbsp;<strong>विषय / बारे</strong></div>
+        <div class="ans-item">9 &nbsp;<strong>बाद</strong></div>
+        <div class="ans-item">10 &nbsp;<strong>ताकि</strong></div>
+      </div>
+    </div>
+
+    <div class="ans-section">
+      <h4>भाग 2 — A3 Cloze Comprehension &nbsp;· स्रोत: PSLE 2024 (Q11–20)</h4>
+      <div class="ans-row">
+        <div class="ans-item">11 &nbsp;<strong>(1) सुंदर</strong></div>
+        <div class="ans-item">12 &nbsp;<strong>(3) यद्यपि</strong></div>
+        <div class="ans-item">13 &nbsp;<strong>(4) हिला</strong></div>
+        <div class="ans-item">14 &nbsp;<strong>(2) देश</strong></div>
+        <div class="ans-item">15 &nbsp;<strong>(1) से</strong></div>
+      </div>
+      <div class="ans-row" style="margin-top:6px;">
+        <div class="ans-item">16 &nbsp;<strong>(3) जानकार</strong></div>
+        <div class="ans-item">17 &nbsp;<strong>(2) किसान</strong></div>
+        <div class="ans-item">18 &nbsp;<strong>(4) रोमांचित</strong></div>
+        <div class="ans-item">19 &nbsp;<strong>(3) चमत्कार</strong></div>
+        <div class="ans-item">20 &nbsp;<strong>(1) केवल</strong></div>
+      </div>
+    </div>
+
+    <div class="ans-section">
+      <h4>भाग 3 — B8 Open-Ended Comprehension &nbsp;· स्रोत: PSLE 2024 (Q46–50)</h4>
+      <div class="oe-ans">
+        <strong>Q46</strong> <em>(अनुच्छेद 1 — बचपन में रुचि)</em> — किन्हीं 2:<br>
+        ✓ वह अपने पिताजी की कार्यशाला के उपकरणों के साथ खेलना पसंद करती थी<br>
+        ✓ वह बाहर जाकर पिताजी को कृषि यंत्रों और ट्रकों को ठीक करते देखती थी
+      </div>
+      <div class="oe-ans">
+        <strong>Q47</strong> <em>(अनुच्छेद 3 — कार बनाने का कारण)</em> — किन्हीं 2:<br>
+        ✓ उसे वास्तविक कार बनाने में अधिक से अधिक दिलचस्पी होती गई<br>
+        ✓ हमेशा से उसका सपना था कि उसकी अपनी एक कार हो
+      </div>
+      <div class="oe-ans">
+        <strong>Q48</strong> <em>(पिताजी की मदद)</em> — किन्हीं 2:<br>
+        ✓ पिताजी ने उसे एक पुरानी मोटरसाइकिल खरीद कर दी जिसे उसने खोला<br>
+        ✓ पिताजी ने उसे कार में इंजन लगाना सिखाया
+      </div>
+      <div class="oe-ans">
+        <strong>Q49</strong> <em>(खेत में ही क्यों)</em> — किन्हीं 2:<br>
+        ✓ कार इतनी विश्वसनीय नहीं कि दूर तक जा सके<br>
+        ✓ स्थानीय पुलिस ने उसे सड़क पर न जाने की चेतावनी दी है
+      </div>
+      <div class="oe-ans">
+        <strong>Q50</strong> <em>(सपना पूरा कैसे होगा)</em> — किन्हीं 2:<br>
+        ✓ वह मैकेनिकल इंजीनियरिंग की पढ़ाई के लिए ट्रेनिंग कॉलेज जाएगी<br>
+        ✓ वह अपना कार ब्रांड और कारखाना बनाना चाहती है जो उसकी डिज़ाइन की कार बनाए
+      </div>
+    </div>
+
+    <p style="font-size:11.5px;color:#888;border-top:1px solid #CCC;padding-top:8px;margin-top:8px;">
+      सभी प्रश्न वास्तविक PSLE पेपर से हैं। &nbsp;B7 + B8 स्रोत: 0011/2(B)/2025 और 0011/2(B)/2024 &nbsp;|&nbsp; A3 स्रोत: 0011/2(A)/2024
+    </p>
+  </div>
+</details>
+
+<p style="text-align:center;margin-top:20px;font-size:12px;color:#999;">
+  आरोही सिंह · Damai Primary School · PSLE 28 September 2026
+</p>
+
+</body>
+</html>

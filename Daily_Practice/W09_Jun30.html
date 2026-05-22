@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W09 — Jul 6–10, 2026 | Hindi PSLE Daily Practice</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#f57f17;--phase-bg:#fff8e1;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .day-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  .ans-key-section{page-break-before:always;}
+  @page{size:A4;margin:15mm;}
+}
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:20px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:20px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#000080;text-decoration:none;}
+.day-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.day-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffe082;}
+.day-title{font-size:16px;font-weight:700;color:var(--navy);}
+.day-meta{font-size:11px;color:#555;}
+.vocab-card{margin:14px 18px;border:2px solid var(--saffron);border-radius:10px;overflow:hidden;}
+.vocab-title{background:var(--saffron);color:white;padding:7px 14px;font-size:13px;font-weight:700;}
+.vocab-table{width:100%;border-collapse:collapse;}
+.vocab-table th{background:#fff3e0;padding:6px 10px;font-size:11px;font-weight:700;color:#e65100;text-align:left;border-bottom:1px solid #ffe0b2;}
+.vocab-table td{padding:7px 10px;font-size:13px;border-bottom:1px solid #fff3e0;vertical-align:top;}
+.vocab-table tr:last-child td{border-bottom:none;}
+.vocab-hindi{font-size:15px;font-weight:700;color:var(--navy);}
+.years-badge{font-size:9px;background:#e3f2fd;color:#1565c0;border-radius:3px;padding:1px 5px;margin-top:3px;display:inline-block;}
+.practice-section{padding:14px 18px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #eee;}
+.sec-tag{background:var(--navy);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;}
+.sec-title{font-size:15px;font-weight:700;color:var(--navy);}
+.sec-time{font-size:11px;color:#888;margin-left:auto;}
+.source-badge{font-size:9px;background:#ede7f6;color:#4a148c;border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:4px;font-style:italic;}
+.q-block{margin-bottom:16px;}
+.q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.hint{font-size:11px;color:#777;font-style:italic;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
+.q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
+.opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
+.ans-line{border-bottom:1.5px solid #bbb;min-height:32px;margin:4px 0 10px;background:none;}
+.passage-box{background:#f8f9fa;border-left:4px solid var(--navy);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:2;font-family:serif;}
+.blank-num{background:#000080;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin:0 2px;vertical-align:middle;}
+.word-box{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.9;}
+.word-box strong{color:#856404;font-size:11px;display:block;margin-bottom:4px;}
+.writing-prompt{background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:14px 16px;margin-bottom:14px;}
+.writing-prompt h4{color:#e65100;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-text{font-size:13px;color:#333;margin-bottom:10px;line-height:1.9;}
+.writing-lines .ans-line{min-height:36px;}
+.self-assess{background:#f0f4ff;border-radius:8px;padding:10px 14px;margin:14px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.sa-item{font-size:12px;color:#333;}
+.sa-item b{color:var(--navy);}
+.ans-key-section{background:#fffde7;border:1px solid #ffe082;border-radius:8px;margin:14px 18px;padding:14px 16px;}
+.ans-key-section h4{font-size:12px;font-weight:700;color:#b8860b;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 16px;}
+.ak-item{font-size:12px;color:#333;padding:3px 0;}
+.ak-item b{color:var(--navy);}
+.idiom-match-table{width:100%;border-collapse:collapse;margin-bottom:14px;}
+.idiom-match-table td{padding:7px 10px;font-size:13px;border:1px solid #e0e0e0;vertical-align:top;}
+.idiom-match-table tr:nth-child(odd){background:#fafafa;}
+.oe-note{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:6px;padding:8px 12px;font-size:11px;color:#1b5e20;margin-bottom:12px;}
+.marks-badge{background:#e3f2fd;color:#0d47a1;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;margin-left:6px;}
+.wknd-banner{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:8px 18px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.day-block.weekend-block{border-top-color:#1565c0;}
+.day-header.weekend-header{background:#e3f2fd;border-bottom-color:#90caf9;}
+.preview-box{background:#f3e5f5;border:1.5px solid #ce93d8;border-radius:8px;padding:12px 16px;margin:10px 18px;}
+.preview-box h4{color:#7b1fa2;font-size:12px;font-weight:700;margin-bottom:6px;}
+.preview-box p{font-size:12px;color:#333;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+
+<div class="header">
+  <h1>🇮🇳 Hindi PSLE Daily Practice — Phase 2: BUILD</h1>
+  <p>Week 9 &nbsp;|&nbsp; Jul 6 – Jul 10, 2026 &nbsp;|&nbsp; Open-ended Comprehension Focus (B8) &nbsp;|&nbsp; 2019 Paper Style</p>
+  <p style="margin-top:4px;font-size:11px;opacity:.7;">परीक्षा तिथि: 28 सितंबर 2026 &nbsp;|&nbsp; Paper 1: 50 min &nbsp;|&nbsp; Paper 2: 1h 40min</p>
+</div>
+
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">NAVIGATE:</span>
+  <a class="nav-chip" href="../Hindi_Daily_Plan_May_Sept2026.html">📅 Master Plan</a>
+  <a class="nav-chip" href="W08_Jun23.html">← W08</a>
+  <a class="nav-chip" href="W10_Jul07.html">W10 →</a>
+  <span class="nav-chip" style="background:#fff8e1;border-color:#f57f17;color:#e65100;">📌 W09 Jul 6–10</span>
+</div>
+
+<!-- DAY 1 — MONDAY Jul 6 -->
+<div class="day-block" id="mon">
+  <div class="day-header">
+    <div class="day-title">सोमवार — Monday, Jul 6</div>
+    <div class="day-meta">शब्द-भंडार + Vocabulary Collocations &nbsp;|&nbsp; ⏱ 25 min</div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 1/5)</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">ममता</div></td><td>motherly love / affection</td><td>माँ की ममता अतुलनीय होती है।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">फ़र्ज़</div></td><td>duty / obligation</td><td>अपना फ़र्ज़ निभाना हर इंसान का कर्तव्य है।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+      <tr><td><div class="vocab-hindi">ईमानदारी</div></td><td>honesty / integrity</td><td>ईमानदारी सबसे बड़ी नीति है।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">संरक्षण</div></td><td>conservation / protection</td><td>पर्यावरण संरक्षण सबकी ज़िम्मेदारी है।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">लगन</div></td><td>dedication / devotion</td><td>लगन से काम करने वाला सफल होता है।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A1</span>
+      <span class="sec-title">Vocabulary Collocations — सही शब्द भरो</span>
+      <span class="sec-time">⏱ 15 min</span>
+    </div>
+    <p style="font-size:12px;color:#555;margin-bottom:12px;">नीचे दिए गए वाक्यों में रिक्त स्थान पर सही हिंदी शब्द लिखो।</p>
+
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> बच्चे अपने माता-पिता की <span class="blank">&nbsp;</span> में खिलते हैं। <span class="hint">(motherly love / nurturing)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> उसने अपने <span class="blank">&nbsp;</span> से कभी मुँह नहीं मोड़ा। <span class="hint">(duty / responsibility)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> उसने गलती <span class="blank">&nbsp;</span> कर ली। <span class="hint">(accepted / admitted)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> वह अपनी <span class="blank">&nbsp;</span> के लिए जाना जाता है। <span class="hint">(honesty)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> हमें पर्यावरण की <span class="blank">&nbsp;</span> के लिए मिलकर काम करना चाहिए। <span class="hint">(preservation / protection)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> उसने बड़ी <span class="blank">&nbsp;</span> से अपना काम पूरा किया। <span class="hint">(diligence / dedication)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> माँ ने बच्चे को <span class="blank">&nbsp;</span> के साथ पढ़ाया। <span class="hint">(love / affection)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> हमें अपनी <span class="blank">&nbsp;</span> पर ध्यान देना चाहिए। <span class="hint">(health)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> उसने अपने दोस्त को मुसीबत में <span class="blank">&nbsp;</span> दिया। <span class="hint">(support / helped)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> वह अपनी <span class="blank">&nbsp;</span> के कारण सभी में लोकप्रिय था। <span class="hint">(friendly / cheerful nature)</span></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Mon)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> ममता / छाँव</div>
+      <div class="ak-item"><b>2.</b> फ़र्ज़ / कर्तव्य</div>
+      <div class="ak-item"><b>3.</b> स्वीकार / मान</div>
+      <div class="ak-item"><b>4.</b> ईमानदारी</div>
+      <div class="ak-item"><b>5.</b> सुरक्षा / संरक्षण</div>
+      <div class="ak-item"><b>6.</b> लगन / मेहनत</div>
+      <div class="ak-item"><b>7.</b> प्यार / ममता</div>
+      <div class="ak-item"><b>8.</b> सेहत / स्वास्थ्य</div>
+      <div class="ak-item"><b>9.</b> सहारा / साथ</div>
+      <div class="ak-item"><b>10.</b> मिलनसारिता / हँसमुखता</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> मैंने <span class="blank" style="min-width:60px">&nbsp;</span> मिनट में पूरा किया</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 2 — TUESDAY Jul 7 -->
+<div class="day-block" id="tue">
+  <div class="day-header">
+    <div class="day-title">मंगलवार — Tuesday, Jul 7</div>
+    <div class="day-meta">Cloze Passage — परंपरा और विरासत &nbsp;|&nbsp; ⏱ 25 min</div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 2/5)</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">परंपरा</div></td><td>tradition / custom</td><td>हमें अपनी परंपरा बनाए रखनी चाहिए।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">पाककला</div></td><td>culinary art / cooking</td><td>दादी की पाककला बेमिसाल थी।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+      <tr><td><div class="vocab-hindi">विरासत</div></td><td>heritage / legacy</td><td>सांस्कृतिक विरासत हमारी पहचान है।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">पीढ़ी</div></td><td>generation</td><td>हर पीढ़ी को अपनी संस्कृति से जोड़ना चाहिए।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">संस्कृति</div></td><td>culture / civilization</td><td>भारतीय संस्कृति बहुत समृद्ध है।</td><td><span class="years-badge">recurring</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A2</span>
+      <span class="sec-title">Cloze Passage — रिक्त स्थान भरो</span>
+      <span class="sec-time">⏱ 15 min</span>
+    </div>
+    <div class="source-badge">[2019–2020 · P2, A2 · Tradition / Heritage Theme]</div>
+
+    <div class="word-box">
+      <strong>शब्द-बॉक्स (Word Box):</strong>
+      परंपरागत &nbsp;|&nbsp; पाककला &nbsp;|&nbsp; विरासत &nbsp;|&nbsp; पीढ़ियों &nbsp;|&nbsp; संस्कृति &nbsp;|&nbsp; सिखाती &nbsp;|&nbsp; महत्त्व &nbsp;|&nbsp; जोड़ती &nbsp;|&nbsp; अनमोल &nbsp;|&nbsp; उत्सव
+    </div>
+
+    <div class="passage-box">
+      दादी माँ की रसोई में हमेशा <span class="blank-num">1</span>________ व्यंजनों की खुशबू आती थी। उनकी <span class="blank-num">2</span>________ अद्भुत थी जो उन्होंने अपनी माँ से सीखी थी। वे कहती थीं कि खाना बनाना केवल भोजन नहीं, बल्कि अपनी <span class="blank-num">3</span>________ को जीवित रखना है। यह कला हमारी सांस्कृतिक <span class="blank-num">4</span>________ का हिस्सा है जो <span class="blank-num">5</span>________ से चली आ रही है। दादी जब नाती-पोतों को पकाना <span class="blank-num">6</span>________ थीं, तो वे उन्हें अपनी <span class="blank-num">7</span>________ से भी <span class="blank-num">8</span>________ थीं। हर त्योहार और <span class="blank-num">9</span>________ पर यही खाना हमें एक-दूसरे से बाँधता था। ऐसी परंपराएँ सचमुच <span class="blank-num">10</span>________ होती हैं।
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Tue)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> परंपरागत</div>
+      <div class="ak-item"><b>2.</b> पाककला</div>
+      <div class="ak-item"><b>3.</b> संस्कृति</div>
+      <div class="ak-item"><b>4.</b> विरासत</div>
+      <div class="ak-item"><b>5.</b> पीढ़ियों</div>
+      <div class="ak-item"><b>6.</b> सिखाती</div>
+      <div class="ak-item"><b>7.</b> महत्त्व</div>
+      <div class="ak-item"><b>8.</b> जोड़ती</div>
+      <div class="ak-item"><b>9.</b> उत्सव</div>
+      <div class="ak-item"><b>10.</b> अनमोल</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> मैंने <span class="blank" style="min-width:60px">&nbsp;</span> मिनट में पूरा किया</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 3 — WEDNESDAY Jul 8 — OPEN-ENDED COMPREHENSION (B8) -->
+<div class="day-block" id="wed">
+  <div class="day-header">
+    <div class="day-title">बुधवार — Wednesday, Jul 8</div>
+    <div class="day-meta">⭐ Open-ended Comprehension B8 — दीर्घ उत्तरीय प्रश्न &nbsp;|&nbsp; ⏱ 35 min</div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 3/5)</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">गद्यांश</div></td><td>prose passage (exam term)</td><td>गद्यांश पढ़कर प्रश्नों के उत्तर दो।</td><td><span class="years-badge">exam term</span></td></tr>
+      <tr><td><div class="vocab-hindi">निष्कर्ष</div></td><td>conclusion / inference</td><td>गद्यांश का निष्कर्ष क्या है?</td><td><span class="years-badge">2020, 2022</span></td></tr>
+      <tr><td><div class="vocab-hindi">मुख्य विचार</div></td><td>main idea</td><td>गद्यांश का मुख्य विचार लिखो।</td><td><span class="years-badge">exam term</span></td></tr>
+      <tr><td><div class="vocab-hindi">संदर्भ</div></td><td>context / reference</td><td>संदर्भ को ध्यान में रखकर उत्तर दो।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+      <tr><td><div class="vocab-hindi">व्याख्या</div></td><td>explanation / interpretation</td><td>इस वाक्य की व्याख्या करो।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">Open-ended Comprehension — दीर्घ उत्तर लिखो</span>
+      <span class="sec-time">⏱ 25 min</span>
+    </div>
+    <div class="source-badge">[2019 · P2, B8 · Long Answer Comprehension]</div>
+
+    <div class="oe-note">
+      📋 <b>B8 अभ्यास नोट:</b> इस खंड में पूरे वाक्यों में उत्तर लिखो। प्रत्येक उत्तर 2–4 वाक्यों का होना चाहिए। अंक संकेत के अनुसार उत्तर विस्तृत लिखो।
+    </div>
+
+    <div class="passage-box">
+      <strong>गद्यांश पढ़ो:</strong><br><br>
+      सत्तर वर्षीया दादी सावित्री अपने तीन पोते-पोतियों के साथ रहती थीं। उनके बच्चे विदेश में बस गए थे। लेकिन दादी ने अपना घर नहीं छोड़ा — क्योंकि उनका घर उनकी यादों का खज़ाना था।<br><br>
+      हर शनिवार दादी पोते-पोतियों को परंपरागत भारतीय व्यंजन बनाना सिखाती थीं — दाल बाटी, खीर, गुजिया। वे कहती थीं, "जब तुम बड़े होकर दूर जाओगे, तो यह खाना तुम्हें घर की याद दिलाएगा।" बच्चे पहले-पहले अनिच्छा से रसोई में आते थे, लेकिन धीरे-धीरे उन्हें यह समय बहुत प्रिय लगने लगा।<br><br>
+      दादी केवल खाना नहीं सिखाती थीं। वे पकाते समय पुराने किस्से, लोककथाएँ और त्योहारों की परंपराएँ भी सुनाती थीं। बच्चों को एहसास हुआ कि यह पाककला केवल रेसिपी नहीं — यह उनकी संस्कृति, उनकी विरासत और उनके परिवार का प्यार है।<br><br>
+      एक दिन छोटी पोती रिया ने स्कूल में "मेरी सबसे प्रिय याद" पर निबंध लिखा। उसने लिखा — "दादी के साथ रसोई में बिताए वे शनिवार मेरी सबसे अनमोल विरासत हैं।"
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> दादी सावित्री ने अपना घर क्यों नहीं छोड़ा? अपने शब्दों में उत्तर दीजिए। <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> दादी पोते-पोतियों को केवल पकाना ही क्यों नहीं सिखाती थीं? वे और क्या सिखाती थीं? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> बच्चों के व्यवहार में क्या बदलाव आया और क्यों? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> रिया ने अपने निबंध में क्या लिखा? आपको क्यों लगता है कि उसने यही याद चुनी? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.5 — शब्द-अर्थ]</div>
+      <div class="q-text"><span class="q-num">5.</span> गद्यांश में से वह शब्द ढूँढो जिसका अर्थ है <b>"पुरानी कहानियाँ जो लोगों में प्रचलित हों"</b>। <span class="marks-badge">1 अंक</span></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.6 — शब्द-अर्थ]</div>
+      <div class="q-text"><span class="q-num">6.</span> गद्यांश में से वह शब्द ढूँढो जिसका अर्थ है <b>"बिना इच्छा के / मन न करते हुए"</b>। <span class="marks-badge">1 अंक</span></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> इस गद्यांश से आपको क्या सीख मिलती है? अपने विचार 2–3 वाक्यों में लिखो। <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> "यह पाककला केवल रेसिपी नहीं" — दादी के इस कथन का क्या अर्थ है? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-संकेत — Answer Guide (Wed — B8)</h4>
+    <div style="font-size:12px;color:#333;line-height:1.9;">
+      <p><b>Q1.</b> दादी ने अपना घर इसलिए नहीं छोड़ा क्योंकि उनका घर उनकी पुरानी यादों और भावनाओं का खज़ाना था। वह घर उनके जीवन की पहचान था।</p>
+      <p><b>Q2.</b> दादी पकाते समय पुराने किस्से, लोककथाएँ और त्योहारों की परंपराएँ भी सुनाती थीं। वे बच्चों को अपनी संस्कृति और विरासत से जोड़ती थीं।</p>
+      <p><b>Q3.</b> पहले बच्चे अनिच्छा से रसोई में आते थे, लेकिन धीरे-धीरे उन्हें यह समय बहुत प्रिय लगने लगा। दादी के किस्सों और प्यार ने उन्हें बदल दिया।</p>
+      <p><b>Q4.</b> रिया ने लिखा कि दादी के साथ रसोई में बिताए शनिवार उसकी सबसे अनमोल विरासत हैं। उसने यह याद चुनी क्योंकि उसे एहसास हुआ कि यह सिर्फ खाना नहीं, परिवार का प्यार और संस्कृति थी।</p>
+      <p><b>Q5.</b> लोककथाएँ</p>
+      <p><b>Q6.</b> अनिच्छा से</p>
+      <p><b>Q7.</b> (स्वतंत्र उत्तर — e.g.) हमें अपनी परंपराओं और बुज़ुर्गों से जुड़े रहना चाहिए। सांस्कृतिक विरासत को सँजोना ज़रूरी है।</p>
+      <p><b>Q8.</b> दादी का मतलब था कि पाककला में केवल खाना बनाना नहीं, बल्कि संस्कृति, विरासत और परिवार का प्यार समाया होता है।</p>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> मैंने <span class="blank" style="min-width:60px">&nbsp;</span> मिनट में पूरा किया</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 14</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 4 — THURSDAY Jul 9 -->
+<div class="day-block" id="thu">
+  <div class="day-header">
+    <div class="day-title">गुरुवार — Thursday, Jul 9</div>
+    <div class="day-meta">Idioms B6 + Sentence Completion B7 &nbsp;|&nbsp; ⏱ 25 min</div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 4/5)</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">अपना उल्लू सीधा करना</div></td><td>to serve one's own interest (idiom)</td><td>वह हमेशा अपना उल्लू सीधा करता है।</td><td><span class="years-badge">2020</span></td></tr>
+      <tr><td><div class="vocab-hindi">जान पर खेलना</div></td><td>to risk one's life (idiom)</td><td>सैनिक देश के लिए जान पर खेलते हैं।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+      <tr><td><div class="vocab-hindi">सिर पर सवार होना</div></td><td>to constantly bother / pester (idiom)</td><td>छोटा भाई हर समय सिर पर सवार रहता है।</td><td><span class="years-badge">2020</span></td></tr>
+      <tr><td><div class="vocab-hindi">गहन</div></td><td>deep / intense</td><td>उसने गहन अध्ययन किया।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+      <tr><td><div class="vocab-hindi">विस्तृत</div></td><td>detailed / elaborate</td><td>विस्तृत उत्तर लिखने से अंक अधिक मिलते हैं।</td><td><span class="years-badge">2020, 2022</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B6</span>
+      <span class="sec-title">मुहावरे मिलाओ — Idiom Matching</span>
+      <span class="sec-time">⏱ 10 min</span>
+    </div>
+
+    <table class="idiom-match-table">
+      <tr>
+        <td style="font-weight:700;background:#e8eaf6;width:50%">कॉलम A — मुहावरा</td>
+        <td style="font-weight:700;background:#e8eaf6;width:50%">कॉलम B — अर्थ</td>
+      </tr>
+      <tr>
+        <td><div class="source-badge">[2020 · P2, B6 · Q.1]</div><br><b>1.</b> अपना उल्लू सीधा करना</td>
+        <td rowspan="5" style="vertical-align:top;padding-top:10px;">
+          (a) &nbsp;अपने स्वार्थ की पूर्ति करना<br>
+          (b) &nbsp;किसी को बार-बार परेशान करना<br>
+          (c) &nbsp;जीवन को ख़तरे में डालना<br>
+          (d) &nbsp;बहुत कठिन परिस्थिति में होना<br>
+          (e) &nbsp;आँखें खुल जाना / सच्चाई पता चलना<br><br>
+          <b>1 →</b> <span class="blank" style="min-width:30px">&nbsp;</span><br>
+          <b>2 →</b> <span class="blank" style="min-width:30px">&nbsp;</span><br>
+          <b>3 →</b> <span class="blank" style="min-width:30px">&nbsp;</span><br>
+          <b>4 →</b> <span class="blank" style="min-width:30px">&nbsp;</span><br>
+          <b>5 →</b> <span class="blank" style="min-width:30px">&nbsp;</span>
+        </td>
+      </tr>
+      <tr><td><div class="source-badge">[2020 · P2, B6 · Q.2]</div><br><b>2.</b> सिर पर सवार होना</td></tr>
+      <tr><td><div class="source-badge">[2020 · P2, B6 · Q.3]</div><br><b>3.</b> जान पर खेलना</td></tr>
+      <tr><td><div class="source-badge">[2020 · P2, B6 · Q.4]</div><br><b>4.</b> मुसीबत में फँसना (पुनरावृत्ति)</td></tr>
+      <tr><td><div class="source-badge">[2020 · P2, B6 · Q.5]</div><br><b>5.</b> आँखें खुलना (पुनरावृत्ति)</td></tr>
+    </table>
+
+    <div class="sec-header" style="margin-top:20px;">
+      <span class="sec-tag">B7</span>
+      <span class="sec-title">मुहावरों से वाक्य पूरे करो</span>
+      <span class="sec-time">⏱ 10 min</span>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B7 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> वह दोस्ती की आड़ में हमेशा <span class="blank" style="min-width:160px">&nbsp;</span> करता है।</div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B7 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> देश की रक्षा के लिए सैनिकों ने <span class="blank" style="min-width:160px">&nbsp;</span>।</div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B7 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> छोटा भाई सारे दिन <span class="blank" style="min-width:160px">&nbsp;</span> रहता है और पढ़ने नहीं देता।</div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B7 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> दोस्त की बुराई सुनकर आख़िरकार उसकी <span class="blank" style="min-width:160px">&nbsp;</span>।</div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B7 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> बाढ़ में फँसे लोगों को देख बचावकर्मी <span class="blank" style="min-width:160px">&nbsp;</span> उनकी मदद के लिए पहुँचे।</div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Thu)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1 →</b> (a) अपने स्वार्थ की पूर्ति करना</div>
+      <div class="ak-item"><b>2 →</b> (b) किसी को बार-बार परेशान करना</div>
+      <div class="ak-item"><b>3 →</b> (c) जीवन को ख़तरे में डालना</div>
+      <div class="ak-item"><b>4 →</b> (d) बहुत कठिन परिस्थिति में होना</div>
+      <div class="ak-item"><b>5 →</b> (e) आँखें खुल जाना / सच्चाई पता चलना</div>
+      <div class="ak-item"><b>6.</b> अपना उल्लू सीधा</div>
+      <div class="ak-item"><b>7.</b> जान पर खेले</div>
+      <div class="ak-item"><b>8.</b> सिर पर सवार</div>
+      <div class="ak-item"><b>9.</b> आँखें खुल गईं</div>
+      <div class="ak-item"><b>10.</b> जान पर खेलकर</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> मैंने <span class="blank" style="min-width:60px">&nbsp;</span> मिनट में पूरा किया</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 5 — FRIDAY Jul 10 -->
+<div class="day-block" id="fri">
+  <div class="day-header">
+    <div class="day-title">शुक्रवार — Friday, Jul 10</div>
+    <div class="day-meta">Writing (Paper 1) — मेरा प्रिय त्योहार &nbsp;|&nbsp; ⏱ 35 min</div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 5/5)</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">त्योहार</div></td><td>festival / celebration</td><td>त्योहार हमें एक-दूसरे से जोड़ते हैं।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">उत्सव</div></td><td>celebration / festivity</td><td>दीपावली का उत्सव बहुत धूमधाम से मनाया।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">परंपरागत</div></td><td>traditional / customary</td><td>हम परंपरागत तरीके से होली खेलते हैं।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">रीति-रिवाज</div></td><td>customs / rituals</td><td>हर धर्म के अपने रीति-रिवाज होते हैं।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">महत्त्व</div></td><td>importance / significance</td><td>परंपराओं का महत्त्व समझना ज़रूरी है।</td><td><span class="years-badge">2020, 2022, 2024</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">P1</span>
+      <span class="sec-title">लेखन — Writing Practice (Paper 1 Style)</span>
+      <span class="sec-time">⏱ 25 min</span>
+    </div>
+    <div class="source-badge">[2019 · P1 · Descriptive Writing — Festival Theme]</div>
+
+    <div class="writing-prompt">
+      <h4>📝 लेखन-विषय (Writing Prompt):</h4>
+      <div class="wp-text">
+        अपने प्रिय त्योहार का वर्णन कीजिए। यह त्योहार आपको क्यों पसंद है? इसे कैसे मनाते हैं और यह आपके लिए क्यों महत्त्वपूर्ण है?<br>
+        <span style="font-size:11px;color:#e65100;">(100–150 शब्द — संकेत: त्योहार का नाम, कैसे मनाते हैं, परिवार का हिस्सा, विशेष यादें, महत्त्व)</span>
+      </div>
+    </div>
+
+    <div class="writing-lines">
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="sec-header" style="margin-top:20px;">
+      <span class="sec-tag">REVISION</span>
+      <span class="sec-title">मिश्रित अभ्यास — Mixed Revision (5 Qs)</span>
+      <span class="sec-time">⏱ 8 min</span>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Revision · Q.1]</div>
+      <div class="q-text"><span class="q-num">R1.</span> माँ का प्यार और <span class="blank">&nbsp;</span> बच्चे को सुरक्षित रखता है। <span class="hint">(motherly love)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Revision · Q.2]</div>
+      <div class="q-text"><span class="q-num">R2.</span> उसने बड़ी <span class="blank">&nbsp;</span> और मेहनत से अपना काम किया। <span class="hint">(dedication)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019–2020 · P2, A2 · Revision · Q.3]</div>
+      <div class="q-text"><span class="q-num">R3.</span> हमारी सांस्कृतिक <span class="blank">&nbsp;</span> को सँजोकर रखना ज़रूरी है। <span class="hint">(heritage)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B6 · Revision · Q.4]</div>
+      <div class="q-text"><span class="q-num">R4.</span> सच्चाई पता चलने पर उसकी <span class="blank">&nbsp;</span>। <span class="hint">(आँखें खुलना)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, B6 · Revision · Q.5]</div>
+      <div class="q-text"><span class="q-num">R5.</span> वह हमेशा दूसरों की मदद के बहाने <span class="blank">&nbsp;</span> करता है। <span class="hint">(अपना उल्लू सीधा — serves his own interest)</span></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Fri)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>R1.</b> ममता</div>
+      <div class="ak-item"><b>R2.</b> लगन</div>
+      <div class="ak-item"><b>R3.</b> विरासत</div>
+      <div class="ak-item"><b>R4.</b> आँखें खुल गईं</div>
+      <div class="ak-item"><b>R5.</b> अपना उल्लू सीधा</div>
+    </div>
+    <p style="font-size:11px;color:#777;margin-top:8px;">✏️ Writing: Ask a parent / teacher to check — 100–150 words, descriptive style, use of festival vocabulary from this week.</p>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> मैंने <span class="blank" style="min-width:60px">&nbsp;</span> मिनट में पूरा किया</div>
+    <div class="sa-item"><b>📊 Revision स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 5</div>
+    <div class="sa-item"><b>✍️ Writing:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 40</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 6 — SATURDAY Jul 11 -->
+<div class="day-block weekend-block" id="day6">
+  <div class="wknd-banner">
+    <span>शनिवार — Saturday, Jul 11 &nbsp;|&nbsp; 20-Question Mock [2019 Paper B8 Focus]</span>
+    <span>⏱ 60 मिनट</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div class="day-title">शनिवार — Saturday Mock Test</div>
+    <div class="day-meta">W09 · 20 प्रश्न · 2019 Paper Style · B8 Open-ended Focus</div>
+  </div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 सप्ताह-9 शब्द-समीक्षा — Vocab Review (10 words)</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ</th><th>हिंदी शब्द</th><th>अर्थ</th></tr>
+      <tr><td><div class="vocab-hindi">ममता</div></td><td>motherly love</td><td><div class="vocab-hindi">परंपरा</div></td><td>tradition</td></tr>
+      <tr><td><div class="vocab-hindi">फ़र्ज़</div></td><td>duty</td><td><div class="vocab-hindi">पाककला</div></td><td>culinary art</td></tr>
+      <tr><td><div class="vocab-hindi">ईमानदारी</div></td><td>honesty</td><td><div class="vocab-hindi">विरासत</div></td><td>heritage</td></tr>
+      <tr><td><div class="vocab-hindi">संरक्षण</div></td><td>conservation</td><td><div class="vocab-hindi">पीढ़ी</div></td><td>generation</td></tr>
+      <tr><td><div class="vocab-hindi">लगन</div></td><td>dedication</td><td><div class="vocab-hindi">संस्कृति</div></td><td>culture</td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <!-- Q1-5: Collocations -->
+    <div class="sec-header">
+      <span class="sec-tag">A1</span>
+      <span class="sec-title">Collocations — सही शब्द भरो (Q.1–5)</span>
+      <span class="sec-time">⏱ 10 min</span>
+    </div>
+    <div class="source-badge">[2020 · P2, A1]</div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> बच्चे अपने माता-पिता की <span class="blank">&nbsp;</span> में खिलते हैं। <span class="hint">(motherly love / nurturing)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> उसने अपने <span class="blank">&nbsp;</span> से कभी मुँह नहीं मोड़ा। <span class="hint">(duty / obligation)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> वह अपनी <span class="blank">&nbsp;</span> के लिए जाना जाता है। <span class="hint">(honesty)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> उसने बड़ी <span class="blank">&nbsp;</span> से अपना काम पूरा किया। <span class="hint">(dedication)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2020 · P2, A1 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> हमें अपनी सांस्कृतिक <span class="blank">&nbsp;</span> को सँजोकर रखना चाहिए। <span class="hint">(heritage)</span></div>
+    </div>
+
+    <!-- Q6-10: Cloze — Tradition/Food Theme -->
+    <div class="sec-header" style="margin-top:18px;">
+      <span class="sec-tag">A2</span>
+      <span class="sec-title">Cloze Passage — परंपरा और खाना थीम (Q.6–10)</span>
+      <span class="sec-time">⏱ 10 min</span>
+    </div>
+    <div class="source-badge">[2019 · P2, A2 · Tradition / Food Theme]</div>
+    <div class="word-box">
+      <strong>शब्द-बॉक्स (Word Box):</strong>
+      स्वादिष्ट &nbsp;|&nbsp; तरीकों &nbsp;|&nbsp; तृप्ति &nbsp;|&nbsp; बचपन &nbsp;|&nbsp; संस्कृति
+    </div>
+    <div class="passage-box">
+      दादी माँ का खाना सबसे <span class="blank-num">6</span>________ होता था। वे पुराने <span class="blank-num">7</span>________ से खाना बनाती थीं। उनके हाथ का खाना खाने से <span class="blank-num">8</span>________ मिलती थी। खाने के साथ वे अपने <span class="blank-num">9</span>________ की कहानियाँ सुनाती थीं। यह परंपरा हमारी <span class="blank-num">10</span>________ का हिस्सा है।
+    </div>
+
+    <!-- Q11-16: MCQ — Grandmother Passage -->
+    <div class="sec-header" style="margin-top:18px;">
+      <span class="sec-tag">A3</span>
+      <span class="sec-title">MCQ Comprehension — दादी और पोते-पोतियाँ (Q.11–16)</span>
+      <span class="sec-time">⏱ 15 min</span>
+    </div>
+    <div class="source-badge">[2019 · P2, A3 · Grandmother / Heritage Passage]</div>
+    <div class="passage-box">
+      <strong>गद्यांश पढ़ो (W09 का मुख्य गद्यांश):</strong><br><br>
+      सत्तर वर्षीया दादी सावित्री अपने तीन पोते-पोतियों के साथ रहती थीं। उनके बच्चे विदेश में बस गए थे। हर शनिवार दादी पोते-पोतियों को परंपरागत भारतीय व्यंजन बनाना सिखाती थीं — दाल बाटी, खीर, गुजिया। बच्चे पहले-पहले अनिच्छा से रसोई में आते थे, लेकिन धीरे-धीरे उन्हें यह समय बहुत प्रिय लगने लगा। दादी पकाते समय पुराने किस्से और लोककथाएँ भी सुनाती थीं। बच्चों को एहसास हुआ कि यह पाककला केवल रेसिपी नहीं — यह उनकी संस्कृति और विरासत है।
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, A3 · Q.11]</div>
+      <div class="q-text"><span class="q-num">11.</span> दादी सावित्री की आयु कितनी थी?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) साठ वर्ष</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) सत्तर वर्ष</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) अस्सी वर्ष</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) पचास वर्ष</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, A3 · Q.12]</div>
+      <div class="q-text"><span class="q-num">12.</span> दादी हर शनिवार को क्या सिखाती थीं?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) गाना गाना</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) परंपरागत भारतीय व्यंजन बनाना</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) पेंटिंग करना</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) नृत्य करना</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, A3 · Q.13]</div>
+      <div class="q-text"><span class="q-num">13.</span> बच्चे पहले रसोई में कैसे आते थे?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बहुत उत्साह से</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) अनिच्छा से</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) दौड़कर</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) रोते हुए</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, A3 · Q.14]</div>
+      <div class="q-text"><span class="q-num">14.</span> "अनिच्छा से" का क्या अर्थ है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बहुत खुशी से</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) बिना इच्छा के / मन न करते हुए</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) जल्दी-जल्दी</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) थककर</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, A3 · Q.15]</div>
+      <div class="q-text"><span class="q-num">15.</span> दादी खाना सिखाते समय और क्या सुनाती थीं?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) गाने</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) पुराने किस्से और लोककथाएँ</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) समाचार</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) कविताएँ</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, A3 · Q.16]</div>
+      <div class="q-text"><span class="q-num">16.</span> बच्चों को पाककला के बारे में क्या एहसास हुआ?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) यह बहुत कठिन है</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) यह केवल रेसिपी नहीं — यह संस्कृति और विरासत है</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) यह समय की बर्बादी है</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) दादी को अच्छा खाना नहीं आता</div>
+      </div>
+    </div>
+
+    <!-- Q17-18: Open-ended B8 style -->
+    <div class="sec-header" style="margin-top:18px;">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">Open-ended — लिखित उत्तर (Q.17–18)</span>
+      <span class="sec-time">⏱ 10 min</span>
+    </div>
+    <div class="source-badge">[2019 · P2, B8 · Open-ended Written Answers]</div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">17.</span> परंपरागत व्यंजनों को बचाए रखना क्यों ज़रूरी है? 2 वाक्यों में उत्तर दीजिए। <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">18.</span> "विरासत" शब्द का क्या अर्थ है? एक उदाहरण दीजिए। <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <!-- Q19-20: Writing -->
+    <div class="sec-header" style="margin-top:18px;">
+      <span class="sec-tag">P1</span>
+      <span class="sec-title">Writing — अपने परिवार का पारंपरिक खाना (Q.19–20)</span>
+      <span class="sec-time">⏱ 8 min</span>
+    </div>
+    <div class="source-badge">[2019 · P1 · Writing Practice]</div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">19–20.</span> अपने परिवार के किसी पारंपरिक खाने के बारे में 3 वाक्य लिखो।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Sat)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> ममता / छाँव</div>
+      <div class="ak-item"><b>2.</b> फ़र्ज़ / कर्तव्य</div>
+      <div class="ak-item"><b>3.</b> ईमानदारी</div>
+      <div class="ak-item"><b>4.</b> लगन / मेहनत</div>
+      <div class="ak-item"><b>5.</b> विरासत</div>
+      <div class="ak-item"><b>6.</b> स्वादिष्ट</div>
+      <div class="ak-item"><b>7.</b> तरीकों</div>
+      <div class="ak-item"><b>8.</b> तृप्ति</div>
+      <div class="ak-item"><b>9.</b> बचपन</div>
+      <div class="ak-item"><b>10.</b> संस्कृति</div>
+      <div class="ak-item"><b>11.</b> B — सत्तर वर्ष</div>
+      <div class="ak-item"><b>12.</b> B — परंपरागत भारतीय व्यंजन</div>
+      <div class="ak-item"><b>13.</b> B — अनिच्छा से</div>
+      <div class="ak-item"><b>14.</b> B — बिना इच्छा के</div>
+      <div class="ak-item"><b>15.</b> B — पुराने किस्से और लोककथाएँ</div>
+      <div class="ak-item"><b>16.</b> B — संस्कृति और विरासत है</div>
+      <div class="ak-item"><b>17.</b> (sample) परंपरागत व्यंजन हमारी संस्कृति की पहचान हैं। इन्हें बचाए रखने से हम अपनी विरासत को जीवित रखते हैं।</div>
+      <div class="ak-item"><b>18.</b> विरासत = वह चीज़ें जो पुरानी पीढ़ी से मिलती हैं। उदाहरण: दादी की पाककला हमारी विरासत है।</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 20</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 7 — SUNDAY Jul 12 -->
+<div class="day-block weekend-block" id="day7">
+  <div class="wknd-banner">
+    <span>रविवार — Sunday, Jul 12 &nbsp;|&nbsp; 5 Open-ended Challenge (B8 Style)</span>
+    <span>⏱ 25 मिनट</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div class="day-title">रविवार — Sunday B8 Challenge</div>
+    <div class="day-meta">W09 · 5 Written Answer Questions · दादी का गद्यांश</div>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">5 Open-ended Challenge — पूरे वाक्यों में उत्तर लिखो</span>
+      <span class="sec-time">⏱ 25 min</span>
+    </div>
+    <div class="oe-note">
+      📋 सभी उत्तर पूरे वाक्यों में लिखो। गद्यांश को ध्यान से पढ़कर उत्तर दो।
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Sunday · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> दादी सावित्री ने अपना घर क्यों नहीं छोड़ा? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Sunday · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> दादी पाककला सिखाते समय बच्चों को और क्या-क्या देती थीं? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Sunday · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> बच्चों के व्यवहार में समय के साथ क्या बदलाव आया? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Sunday · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> "यह पाककला केवल रेसिपी नहीं" — इस वाक्य का क्या भाव है? <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2019 · P2, B8 · Sunday · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> इस गद्यांश से आपको क्या सीख मिलती है? 2–3 वाक्यों में लिखो। <span class="marks-badge">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-संकेत — Answer Guide (Sun)</h4>
+    <div style="font-size:12px;color:#333;line-height:1.9;">
+      <p><b>Q1.</b> दादी ने घर नहीं छोड़ा क्योंकि वह उनकी यादों और भावनाओं का खज़ाना था।</p>
+      <p><b>Q2.</b> दादी बच्चों को पुराने किस्से, लोककथाएँ, त्योहारों की परंपराएँ और संस्कृति का ज्ञान देती थीं।</p>
+      <p><b>Q3.</b> पहले बच्चे अनिच्छा से आते थे, लेकिन धीरे-धीरे उन्हें दादी का साथ बहुत प्रिय लगने लगा।</p>
+      <p><b>Q4.</b> इसका भाव है कि पाककला में संस्कृति, विरासत और परिवार का प्यार समाया होता है — यह केवल खाना बनाना नहीं है।</p>
+      <p><b>Q5.</b> (स्वतंत्र उत्तर) हमें अपनी परंपराओं और बुज़ुर्गों से जुड़े रहना चाहिए। सांस्कृतिक विरासत को सँजोना हर पीढ़ी की ज़िम्मेदारी है।</p>
+    </div>
+  </div>
+
+  <div class="preview-box">
+    <h4>👀 अगले सप्ताह की झलक — Next Week Preview</h4>
+    <p>अगले सप्ताह (W10) — 2019–20 पेपर · विषय: लेखन अभ्यास (पत्र-पत्रिका) · ईमानदारी और नेकी का थीम</p>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:14px;font-size:11px;color:#999;border-top:1px solid #eee;margin-top:10px;">
+  W09 · Phase 2 BUILD · Hindi PSLE Daily Practice · Jul 6–Jul 12, 2026 · परीक्षा: 28 Sep 2026
+</div>
+</body>
+</html>

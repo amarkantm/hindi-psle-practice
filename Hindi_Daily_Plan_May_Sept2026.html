@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hindi PSLE Daily Plan — May–September 2026</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--p1:#2e7d32;--p1bg:#e8f5e9;--p2:#f57f17;--p2bg:#fff8e1;--p3:#7b1fa2;--p3bg:#f3e5f5;--p4:#c62828;--p4bg:#fce4ec;--p5:#b71c1c;--p5bg:#ffebee;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a1a;font-size:13px;line-height:1.6;}
+@media print{body{background:white;font-size:11px;}.no-print{display:none!important;}@page{size:A4 landscape;margin:10mm;}}
+
+/* Header */
+.stripe{display:flex;height:6px;}
+.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080 0%,#1a1a7a 60%,#000060 100%);color:white;padding:24px 32px;border-bottom:6px solid #FF9933;text-align:center;}
+.header h1{font-size:24px;font-weight:700;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.85;margin-top:6px;}
+
+/* Countdown */
+.countdown{background:#b71c1c;color:white;padding:10px 20px;display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;}
+.cd-box{text-align:center;}
+.cd-num{font-size:28px;font-weight:700;line-height:1;}
+.cd-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;opacity:.85;}
+
+/* Info bar */
+.info-bar{background:white;padding:12px 24px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 12px;font-size:11px;font-weight:600;color:#000080;}
+
+/* Exam card */
+.exam-card{background:white;margin:16px 24px;border-radius:12px;padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.08);border-left:5px solid #FF9933;}
+.exam-card h2{color:var(--navy);font-size:14px;margin-bottom:10px;}
+.exam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
+.exam-box{background:#f8f9fa;border-radius:8px;padding:10px 14px;border-top:3px solid var(--navy);}
+.exam-box .el{font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.4px;}
+.exam-box .ev{font-size:14px;font-weight:700;color:var(--navy);margin-top:2px;}
+.exam-box .ed{font-size:11px;color:#444;margin-top:3px;}
+
+/* Phase headers */
+.phase-bar{margin:16px 24px 6px;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:12px;}
+.phase-bar h3{font-size:13px;font-weight:700;}
+.phase-bar p{font-size:11px;opacity:.85;margin-top:2px;}
+.ph1{background:var(--p1);color:white;}
+.ph2{background:var(--p2);color:white;}
+.ph3{background:var(--p3);color:white;}
+.ph4{background:var(--p4);color:white;}
+.ph5{background:var(--p5);color:white;}
+
+/* Week grid */
+.week-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin:0 24px 8px;}
+.week-card{background:white;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);overflow:hidden;}
+.wc-head{padding:8px 12px;display:flex;justify-content:space-between;align-items:center;}
+.wc-num{font-size:11px;font-weight:700;color:white;background:var(--navy);border-radius:4px;padding:2px 8px;}
+.wc-dates{font-size:10px;color:#555;}
+.wc-body{padding:8px 12px 10px;}
+.wc-theme{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.wc-paper{font-size:10px;color:#666;margin-bottom:6px;}
+.wc-days{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-bottom:8px;}
+.wc-day{background:#f5f5f5;border-radius:3px;padding:3px 2px;text-align:center;font-size:9px;color:#555;}
+.wc-day b{display:block;font-size:10px;color:var(--navy);}
+.wc-link{display:block;background:var(--navy);color:white;text-align:center;padding:5px;border-radius:5px;font-size:11px;font-weight:600;text-decoration:none;transition:opacity .2s;}
+.wc-link:hover{opacity:.85;}
+a.wc-day{text-decoration:none;color:inherit;cursor:pointer;display:block;}
+a.wc-day:hover{opacity:.75;text-decoration:underline;}
+/* Phase-coloured card tops */
+.ph1-card .wc-head{background:var(--p1bg);border-bottom:2px solid var(--p1);}
+.ph2-card .wc-head{background:var(--p2bg);border-bottom:2px solid var(--p2);}
+.ph3-card .wc-head{background:var(--p3bg);border-bottom:2px solid var(--p3);}
+.ph4-card .wc-head{background:var(--p4bg);border-bottom:2px solid var(--p4);}
+.ph5-card .wc-head{background:var(--p5bg);border-bottom:2px solid var(--p5);}
+
+/* Milestone */
+.milestone{background:#fff3cd;border:1.5px solid #ffc107;border-radius:8px;margin:6px 24px;padding:8px 14px;font-size:12px;font-weight:600;color:#856404;display:flex;align-items:center;gap:8px;}
+
+/* How to print */
+.print-guide{background:white;margin:16px 24px 20px;border-radius:10px;padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.print-guide h2{color:var(--navy);font-size:14px;margin-bottom:10px;}
+.print-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:8px;}
+.ps{background:#f8f9fa;border-radius:8px;padding:10px 14px;border-left:3px solid var(--saffron);}
+.ps-num{font-size:18px;font-weight:700;color:var(--saffron);}
+.ps-text{font-size:12px;color:#333;margin-top:4px;line-height:1.5;}
+
+/* Legend */
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:8px 24px 16px;font-size:11px;}
+.leg{display:flex;align-items:center;gap:5px;}
+.leg-dot{width:12px;height:12px;border-radius:3px;}
+
+footer{background:var(--navy);color:white;text-align:center;padding:12px;font-size:11px;opacity:.85;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:white;border-top:1px solid #eee"></div><div style="background:#138808"></div></div>
+
+<div class="header">
+  <h1>Hindi PSLE Daily Study Plan 2026</h1>
+  <p>May 1 – September 28, 2026 &nbsp;|&nbsp; 21 Weeks &nbsp;|&nbsp; 105 Practice Days &nbsp;|&nbsp; Print &amp; Write Every Day</p>
+</div>
+
+<!-- Countdown (JS updates daily) -->
+<div class="countdown no-print" id="countdown">
+  <div class="cd-box"><div class="cd-num" id="cd-days">—</div><div class="cd-label">Days Left</div></div>
+  <div class="cd-box"><div class="cd-num" id="cd-weeks">—</div><div class="cd-label">Weeks Left</div></div>
+  <div style="font-size:13px;font-weight:600;">to PSLE Hindi — September 28, 2026 🏆</div>
+</div>
+
+<div class="info-bar no-print">
+  <span class="chip">📅 21 Weeks (May–Sep)</span>
+  <span class="chip">📝 10 Questions / Day</span>
+  <span class="chip">🔤 5 Vocab Words / Day</span>
+  <span class="chip">📖 2012–2025 Papers</span>
+  <span class="chip">🖨️ Print-Ready A4</span>
+  <span class="chip">✅ Source Badge on Every Question</span>
+</div>
+
+<!-- Exam Card -->
+<div class="exam-card">
+  <h2>Exam Day Details — Monday, 28 September 2026</h2>
+  <div class="exam-grid">
+    <div class="exam-box">
+      <div class="el">Paper 1 — Writing</div>
+      <div class="ev">0815 – 0905 h</div>
+      <div class="ed">50 minutes · Situational / Picture writing · 40 marks</div>
+    </div>
+    <div class="exam-box">
+      <div class="el">Paper 2 Booklet A — MCQ</div>
+      <div class="ev">1015 – 1155 h</div>
+      <div class="ed">Collocations (A1) · Cloze (A2) · Comprehension MCQ (A3/A4/A5)</div>
+    </div>
+    <div class="exam-box">
+      <div class="el">Paper 2 Booklet B — Written</div>
+      <div class="ev">1015 – 1155 h (same session)</div>
+      <div class="ed">Idioms B6 · Sentence completion B7 · Open-ended comprehension B8</div>
+    </div>
+    <div class="exam-box">
+      <div class="el">Daily Practice Time</div>
+      <div class="ev">Weekdays: 30 min</div>
+      <div class="ed">Weekends: 60 min (mock papers) &nbsp;|&nbsp; Prelims: August 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="leg"><div class="leg-dot" style="background:#2e7d32"></div> Phase 1 — Foundation (May)</div>
+  <div class="leg"><div class="leg-dot" style="background:#f57f17"></div> Phase 2 — Build (June)</div>
+  <div class="leg"><div class="leg-dot" style="background:#7b1fa2"></div> Phase 3 — Integrate (July)</div>
+  <div class="leg"><div class="leg-dot" style="background:#c62828"></div> Phase 4 — Prelims Prep (Aug)</div>
+  <div class="leg"><div class="leg-dot" style="background:#b71c1c"></div> Phase 5 — Final Push (Aug–Sep)</div>
+</div>
+
+<!-- ═══════════ PHASE 1 ═══════════ -->
+<div class="phase-bar ph1">
+  <div>
+    <h3>Phase 1 — Foundation (Weeks 1–4, May 5–30)</h3>
+    <p>Vocabulary collocations · Cloze passages · Basic comprehension · 2012–2015 papers · Build habits, no time pressure</p>
+  </div>
+</div>
+
+<div class="week-grid">
+
+  <div class="week-card ph1-card">
+    <div class="wc-head">
+      <span class="wc-num">W01</span>
+      <span class="wc-dates">May 5–9, 2026</span>
+    </div>
+    <div class="wc-body">
+      <div class="wc-theme">Vocabulary Collocations</div>
+      <div class="wc-paper">Source: 2012 Paper · Section A1 + A2</div>
+      <div class="wc-days">
+        <a class="wc-day" href="Daily_Practice/W01_May05.html#day1"><b>Mon</b>Collocations</a>
+        <a class="wc-day" href="Daily_Practice/W01_May05.html#day2"><b>Tue</b>Cloze</a>
+        <a class="wc-day" href="Daily_Practice/W01_May05.html#day3"><b>Wed</b>MCQ</a>
+        <a class="wc-day" href="Daily_Practice/W01_May05.html#day4"><b>Thu</b>Idioms</a>
+        <a class="wc-day" href="Daily_Practice/W01_May05.html#day5"><b>Fri</b>Writing</a>
+      </div>
+      <a class="wc-link" href="Daily_Practice/W01_May05.html">Open Week 1 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph1-card">
+    <div class="wc-head">
+      <span class="wc-num">W02</span>
+      <span class="wc-dates">May 12–16, 2026</span>
+    </div>
+    <div class="wc-body">
+      <div class="wc-theme">Vocabulary Collocations (Harder)</div>
+      <div class="wc-paper">Source: 2013 Paper · Section A1 + A2</div>
+      <div class="wc-days">
+        <a class="wc-day" href="Daily_Practice/W02_May12.html#day1"><b>Mon</b>Collocations</a>
+        <a class="wc-day" href="Daily_Practice/W02_May12.html#day2"><b>Tue</b>Cloze</a>
+        <a class="wc-day" href="Daily_Practice/W02_May12.html#day3"><b>Wed</b>MCQ</a>
+        <a class="wc-day" href="Daily_Practice/W02_May12.html#day4"><b>Thu</b>Idioms</a>
+        <a class="wc-day" href="Daily_Practice/W02_May12.html#day5"><b>Fri</b>Writing</a>
+      </div>
+      <a class="wc-link" href="Daily_Practice/W02_May12.html">Open Week 2 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph1-card">
+    <div class="wc-head">
+      <span class="wc-num">W03</span>
+      <span class="wc-dates">May 25–29, 2026</span>
+    </div>
+    <div class="wc-body">
+      <div class="wc-theme">Cloze Passages</div>
+      <div class="wc-paper">Source: 2014 Paper · Section A2 focus</div>
+      <div class="wc-days">
+        <a class="wc-day" href="Daily_Practice/W03_May19.html#day1"><b>Mon</b>Collocations</a>
+        <a class="wc-day" href="Daily_Practice/W03_May19.html#day2"><b>Tue</b>Cloze</a>
+        <a class="wc-day" href="Daily_Practice/W03_May19.html#day3"><b>Wed</b>MCQ</a>
+        <a class="wc-day" href="Daily_Practice/W03_May19.html#day4"><b>Thu</b>Idioms</a>
+        <a class="wc-day" href="Daily_Practice/W03_May19.html#day5"><b>Fri</b>Writing</a>
+      </div>
+      <a class="wc-link" href="Daily_Practice/W03_May19.html">Open Week 3 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph1-card">
+    <div class="wc-head">
+      <span class="wc-num">W04</span>
+      <span class="wc-dates">Jun 1–5, 2026</span>
+    </div>
+    <div class="wc-body">
+      <div class="wc-theme">Cloze + Technology Theme</div>
+      <div class="wc-paper">Source: 2015 Paper · Section A1 + A2</div>
+      <div class="wc-days">
+        <a class="wc-day" href="Daily_Practice/W04_May26.html#day1"><b>Mon</b>Collocations</a>
+        <a class="wc-day" href="Daily_Practice/W04_May26.html#day2"><b>Tue</b>Cloze</a>
+        <a class="wc-day" href="Daily_Practice/W04_May26.html#day3"><b>Wed</b>MCQ</a>
+        <a class="wc-day" href="Daily_Practice/W04_May26.html#day4"><b>Thu</b>Idioms</a>
+        <a class="wc-day" href="Daily_Practice/W04_May26.html#day5"><b>Fri</b>Writing</a>
+      </div>
+      <a class="wc-link" href="Daily_Practice/W04_May26.html">Open Week 4 Practice →</a>
+    </div>
+  </div>
+
+</div><!-- end week-grid -->
+
+<!-- ═══════════ PHASE 2 ═══════════ -->
+<div class="phase-bar ph2">
+  <div>
+    <h3>Phase 2 — Build (Weeks 5–10, June 2 – July 11)</h3>
+    <p>MCQ comprehension · Idioms &amp; sentence completion · Open-ended comprehension begins · 2016–2020 papers · Timed practice starts</p>
+  </div>
+</div>
+
+<div class="week-grid">
+
+  <div class="week-card ph2-card">
+    <div class="wc-head"><span class="wc-num">W05</span><span class="wc-dates">Jun 8–12, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">MCQ Comprehension</div>
+      <div class="wc-paper">Source: 2016 Paper · A3/A4</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W05_Jun02.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W05_Jun02.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W05_Jun02.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W05_Jun02.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W05_Jun02.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W05_Jun02.html">Open Week 5 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph2-card">
+    <div class="wc-head"><span class="wc-num">W06</span><span class="wc-dates">Jun 15–19, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">MCQ + Friendship Theme</div>
+      <div class="wc-paper">Source: 2017 Paper · A3 + B6/B7</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W06_Jun09.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W06_Jun09.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W06_Jun09.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W06_Jun09.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W06_Jun09.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W06_Jun09.html">Open Week 6 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph2-card">
+    <div class="wc-head"><span class="wc-num">W07</span><span class="wc-dates">Jun 22–26, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Idioms + Role Models</div>
+      <div class="wc-paper">Source: 2017–2018 Papers · B6/B7</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W07_Jun16.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W07_Jun16.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W07_Jun16.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W07_Jun16.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W07_Jun16.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W07_Jun16.html">Open Week 7 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph2-card">
+    <div class="wc-head"><span class="wc-num">W08</span><span class="wc-dates">Jun 29 – Jul 3, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Mixed Practice</div>
+      <div class="wc-paper">Source: 2018–2019 Papers</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W08_Jun23.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W08_Jun23.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W08_Jun23.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W08_Jun23.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W08_Jun23.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W08_Jun23.html">Open Week 8 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph2-card">
+    <div class="wc-head"><span class="wc-num">W09</span><span class="wc-dates">Jul 6–10, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Open-ended Comprehension (B8)</div>
+      <div class="wc-paper">Source: 2019 Paper · B8</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W09_Jun30.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W09_Jun30.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W09_Jun30.html#day3"><b>Wed</b>Open-ended</a><a class="wc-day" href="Daily_Practice/W09_Jun30.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W09_Jun30.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W09_Jun30.html">Open Week 9 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph2-card">
+    <div class="wc-head"><span class="wc-num">W10</span><span class="wc-dates">Jul 13–17, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Writing Focus (Paper 1)</div>
+      <div class="wc-paper">Source: 2019–2020 Papers · P1</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W10_Jul07.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W10_Jul07.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W10_Jul07.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W10_Jul07.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W10_Jul07.html#day5"><b>Fri</b>Full P1</a></div>
+      <a class="wc-link" href="Daily_Practice/W10_Jul07.html">Open Week 10 Practice →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ PHASE 3 ═══════════ -->
+<div class="phase-bar ph3">
+  <div>
+    <h3>Phase 3 — Integrate (Weeks 11–12, July 14–25)</h3>
+    <p>Harder passages · Full B8 open-ended · Picture-based writing · 2020–2021 papers · Exam-style time pressure</p>
+  </div>
+</div>
+
+<div class="week-grid">
+
+  <div class="week-card ph3-card">
+    <div class="wc-head"><span class="wc-num">W11</span><span class="wc-dates">Jul 20–24, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Open-ended B8 (Riya's Story)</div>
+      <div class="wc-paper">Source: 2020 Paper · Full sections</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W11_Jul14.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W11_Jul14.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W11_Jul14.html#day3"><b>Wed</b>Open-ended</a><a class="wc-day" href="Daily_Practice/W11_Jul14.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W11_Jul14.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W11_Jul14.html">Open Week 11 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph3-card">
+    <div class="wc-head"><span class="wc-num">W12</span><span class="wc-dates">Jul 27–31, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">MCQ + Picture Writing</div>
+      <div class="wc-paper">Source: 2021 Paper · Full sections</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W12_Jul21.html#day1"><b>Mon</b>Collocations</a><a class="wc-day" href="Daily_Practice/W12_Jul21.html#day2"><b>Tue</b>Cloze</a><a class="wc-day" href="Daily_Practice/W12_Jul21.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W12_Jul21.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W12_Jul21.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W12_Jul21.html">Open Week 12 Practice →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ PHASE 4 ═══════════ -->
+<div class="phase-bar ph4">
+  <div>
+    <h3>Phase 4 — Prelims Prep (Weeks 13–15, July 28 – August 15)</h3>
+    <p>Timed mini-mocks · Full Paper 2 simulation · 2021–2023 papers · Exam-speed practice · Prelims in August</p>
+  </div>
+</div>
+
+<div class="milestone">⚠️ Prelims expected in August 2026 — Weeks 13–15 are your mock training. Treat every session like the real exam.</div>
+
+<div class="week-grid">
+
+  <div class="week-card ph4-card">
+    <div class="wc-head"><span class="wc-num">W13</span><span class="wc-dates">Aug 3–7, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Timed Mocks Begin ⏱</div>
+      <div class="wc-paper">Source: 2021–2022 Papers · Timed 30 min</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W13_Jul28.html#day1"><b>Mon</b>A1+A2</a><a class="wc-day" href="Daily_Practice/W13_Jul28.html#day2"><b>Tue</b>A3 MCQ</a><a class="wc-day" href="Daily_Practice/W13_Jul28.html#day3"><b>Wed</b>B6+B7</a><a class="wc-day" href="Daily_Practice/W13_Jul28.html#day4"><b>Thu</b>B8</a><a class="wc-day" href="Daily_Practice/W13_Jul28.html#day5"><b>Fri</b>P1 50min</a></div>
+      <a class="wc-link" href="Daily_Practice/W13_Jul28.html">Open Week 13 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph4-card">
+    <div class="wc-head"><span class="wc-num">W14</span><span class="wc-dates">Aug 10–14, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Full Mock — 2022 Paper ⏱</div>
+      <div class="wc-paper">Source: 2022 Paper · All sections</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W14_Aug04.html#day1"><b>Mon</b>A1</a><a class="wc-day" href="Daily_Practice/W14_Aug04.html#day2"><b>Tue</b>A2</a><a class="wc-day" href="Daily_Practice/W14_Aug04.html#day3"><b>Wed</b>A3 MCQ</a><a class="wc-day" href="Daily_Practice/W14_Aug04.html#day4"><b>Thu</b>B6+B7</a><a class="wc-day" href="Daily_Practice/W14_Aug04.html#day5"><b>Fri</b>P1 50min</a></div>
+      <a class="wc-link" href="Daily_Practice/W14_Aug04.html">Open Week 14 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph4-card">
+    <div class="wc-head"><span class="wc-num">W15</span><span class="wc-dates">Aug 17–21, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Grand Prelims Mock — 2023 Paper ⏱</div>
+      <div class="wc-paper">Source: 2023 Paper · Friday = Grand Mock</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W15_Aug11.html#day1"><b>Mon</b>A1</a><a class="wc-day" href="Daily_Practice/W15_Aug11.html#day2"><b>Tue</b>A2</a><a class="wc-day" href="Daily_Practice/W15_Aug11.html#day3"><b>Wed</b>A3</a><a class="wc-day" href="Daily_Practice/W15_Aug11.html#day4"><b>Thu</b>B6+B7</a><a class="wc-day" href="Daily_Practice/W15_Aug11.html#day5"><b>Fri</b>GRAND MOCK</a></div>
+      <a class="wc-link" href="Daily_Practice/W15_Aug11.html">Open Week 15 Practice →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ PHASE 5 ═══════════ -->
+<div class="phase-bar ph5">
+  <div>
+    <h3>Phase 5 — Final Push (Weeks 16–21, Aug 18 – Sep 26)</h3>
+    <p>Post-Prelims · 2024–2025 papers · Speed drills · Targeted revision · PSLE countdown every day!</p>
+  </div>
+</div>
+
+<div class="milestone">🏆 PSLE Hindi is on Monday, 28 September 2026. Stay calm, stay focused. You have worked hard — now show it!</div>
+
+<div class="week-grid">
+
+  <div class="week-card ph5-card">
+    <div class="wc-head"><span class="wc-num">W16</span><span class="wc-dates">Aug 24–28, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Post-Prelims Recovery · 35 days</div>
+      <div class="wc-paper">Source: 2023 Paper · All sections</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W16_Aug18.html#day1"><b>Mon</b>A1</a><a class="wc-day" href="Daily_Practice/W16_Aug18.html#day2"><b>Tue</b>A2</a><a class="wc-day" href="Daily_Practice/W16_Aug18.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W16_Aug18.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W16_Aug18.html#day5"><b>Fri</b>P1</a></div>
+      <a class="wc-link" href="Daily_Practice/W16_Aug18.html">Open Week 16 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph5-card">
+    <div class="wc-head"><span class="wc-num">W17</span><span class="wc-dates">Aug 31 – Sep 4, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">2024 Paper Practice · 28 days</div>
+      <div class="wc-paper">Source: 2024 Paper · All sections</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W17_Aug25.html#day1"><b>Mon</b>A1</a><a class="wc-day" href="Daily_Practice/W17_Aug25.html#day2"><b>Tue</b>A2</a><a class="wc-day" href="Daily_Practice/W17_Aug25.html#day3"><b>Wed</b>Open-ended</a><a class="wc-day" href="Daily_Practice/W17_Aug25.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W17_Aug25.html#day5"><b>Fri</b>P1</a></div>
+      <a class="wc-link" href="Daily_Practice/W17_Aug25.html">Open Week 17 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph5-card">
+    <div class="wc-head"><span class="wc-num">W18</span><span class="wc-dates">Sep 7–11, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">2024–2025 Mixed · 21 days</div>
+      <div class="wc-paper">Source: 2024–2025 Papers</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W18_Sep01.html#day1"><b>Mon</b>A1</a><a class="wc-day" href="Daily_Practice/W18_Sep01.html#day2"><b>Tue</b>A2</a><a class="wc-day" href="Daily_Practice/W18_Sep01.html#day3"><b>Wed</b>MCQ</a><a class="wc-day" href="Daily_Practice/W18_Sep01.html#day4"><b>Thu</b>Idioms</a><a class="wc-day" href="Daily_Practice/W18_Sep01.html#day5"><b>Fri</b>P1</a></div>
+      <a class="wc-link" href="Daily_Practice/W18_Sep01.html">Open Week 18 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph5-card">
+    <div class="wc-head"><span class="wc-num">W19</span><span class="wc-dates">Sep 14–18, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Targeted Revision · 14 days</div>
+      <div class="wc-paper">Best-of all years · 20-idiom speed drill</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W19_Sep08.html#day1"><b>Mon</b>Hardest A1</a><a class="wc-day" href="Daily_Practice/W19_Sep08.html#day2"><b>Tue</b>Hard Cloze</a><a class="wc-day" href="Daily_Practice/W19_Sep08.html#day3"><b>Wed</b>Open-ended</a><a class="wc-day" href="Daily_Practice/W19_Sep08.html#day4"><b>Thu</b>20 Idioms</a><a class="wc-day" href="Daily_Practice/W19_Sep08.html#day5"><b>Fri</b>Writing</a></div>
+      <a class="wc-link" href="Daily_Practice/W19_Sep08.html">Open Week 19 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card ph5-card">
+    <div class="wc-head"><span class="wc-num">W20</span><span class="wc-dates">Sep 21–25, 2026</span></div>
+    <div class="wc-body">
+      <div class="wc-theme">Speed Drills · 7 days</div>
+      <div class="wc-paper">2020–2025 speed reviews · &lt;25 min each</div>
+      <div class="wc-days"><a class="wc-day" href="Daily_Practice/W20_Sep15.html#day1"><b>Mon</b>Speed A1</a><a class="wc-day" href="Daily_Practice/W20_Sep15.html#day2"><b>Tue</b>Speed Cloze</a><a class="wc-day" href="Daily_Practice/W20_Sep15.html#day3"><b>Wed</b>Speed Idioms</a><a class="wc-day" href="Daily_Practice/W20_Sep15.html#day4"><b>Thu</b>Speed B8</a><a class="wc-day" href="Daily_Practice/W20_Sep15.html#day5"><b>Fri</b>P1 Final</a></div>
+      <a class="wc-link" href="Daily_Practice/W20_Sep15.html">Open Week 20 Practice →</a>
+    </div>
+  </div>
+
+  <div class="week-card" style="border:3px solid #FFD700;background:linear-gradient(135deg,#b71c1c,#880000);">
+    <div class="wc-head" style="background:#FFD700;"><span class="wc-num" style="background:#b71c1c;color:white;">🎓</span><span class="wc-dates" style="color:#000;font-weight:700;">Mon Sep 28, 2026 · PSLE EXAM DAY!</span></div>
+    <div class="wc-body" style="color:white;">
+      <div class="wc-theme" style="color:#FFD700;font-size:14px;font-weight:700;">Paper 1: 08:15h &nbsp;|&nbsp; Paper 2: 10:15h</div>
+      <div class="wc-paper" style="color:#ffcdd2;">W20 ends Sun Sep 27 (Final Calm Review). Exam Mon Sep 28. शुभकामनाएँ! 🌟</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Print Guide -->
+<div class="print-guide no-print">
+  <h2>How to Print Each Day's Practice</h2>
+  <div class="print-steps">
+    <div class="ps"><div class="ps-num">1</div><div class="ps-text">Click a week link above to open that week's practice file.</div></div>
+    <div class="ps"><div class="ps-num">2</div><div class="ps-text">Press <b>Ctrl+P</b> (or Cmd+P on Mac) and choose <b>A4 paper, Portrait</b>.</div></div>
+    <div class="ps"><div class="ps-num">3</div><div class="ps-text">Print only the days you need — each day is a separate page block.</div></div>
+    <div class="ps"><div class="ps-num">4</div><div class="ps-text">Fold or cut the <b>Answer Key</b> so the child can check after completing.</div></div>
+    <div class="ps"><div class="ps-num">5</div><div class="ps-text">Child writes answers on the printed sheet — builds exam-day handwriting habit.</div></div>
+    <div class="ps"><div class="ps-num">6</div><div class="ps-text">Fill in time tracker + star rating after each session. Track progress!</div></div>
+  </div>
+</div>
+
+<footer>Hindi PSLE Daily Plan · May–September 2026 · 2012–2025 Past Paper Questions · 21 Weeks · 105 Practice Days</footer>
+
+<script>
+// Live countdown to September 28, 2026
+function updateCountdown(){
+  const exam=new Date('2026-09-28T08:15:00+08:00');
+  const now=new Date();
+  const diff=exam-now;
+  if(diff<=0){document.getElementById('countdown').innerHTML='<div style="font-size:18px;font-weight:700;">परीक्षा का दिन आ गया! ALL THE BEST! 🌟</div>';return;}
+  const days=Math.floor(diff/86400000);
+  const weeks=Math.floor(days/7);
+  document.getElementById('cd-days').textContent=days;
+  document.getElementById('cd-weeks').textContent=weeks;
+}
+updateCountdown();
+setInterval(updateCountdown,60000);
+</script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pinki Ma'am — 60-Day Hindi PSLE Plan</title>
+<style>
+:root{--saffron:#FF9933;--green:#138808;--navy:#000080;--easy-bg:#e8f5e9;--easy:#2e7d32;--med-bg:#fff8e1;--med:#f57f17;--hard-bg:#fce4ec;--hard:#c62828;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a1a;font-size:13px;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:22px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:22px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.stripe{display:flex;height:4px;}
+.stripe div{flex:1;}
+.info-bar{display:flex;gap:10px;flex-wrap:wrap;padding:14px 20px;background:white;border-bottom:1px solid #ddd;}
+.info-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:4px 12px;font-size:11px;font-weight:600;color:#000080;}
+.phase-intro{margin:16px 20px;border-radius:8px;padding:12px 16px;display:flex;gap:12px;align-items:center;}
+.phase-easy{background:var(--easy-bg);border-left:5px solid var(--easy);}
+.phase-med{background:var(--med-bg);border-left:5px solid var(--med);}
+.phase-hard{background:var(--hard-bg);border-left:5px solid var(--hard);}
+.phase-intro h3{font-size:14px;}
+.phase-intro p{font-size:11px;color:#555;margin-top:3px;}
+.week-block{margin:8px 20px 14px;background:white;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;}
+.week-header{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;}
+.week-header.easy{background:var(--easy-bg);}
+.week-header.med{background:var(--med-bg);}
+.week-header.hard{background:var(--hard-bg);}
+.week-title{font-size:14px;font-weight:700;}
+.week-dates{font-size:11px;color:#666;}
+.week-tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;color:white;}
+.easy .week-tag{background:var(--easy);}
+.med .week-tag{background:var(--med);}
+.hard .week-tag{background:var(--hard);}
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #eee;}
+.day-cell{border-right:1px solid #eee;padding:8px 10px;min-height:100px;}
+.day-cell:last-child{border-right:none;}
+.day-cell.weekend{background:#fafafa;}
+.day-name{font-size:9px;font-weight:700;text-transform:uppercase;color:#888;margin-bottom:4px;}
+.day-date{font-size:11px;font-weight:700;color:#000080;margin-bottom:6px;}
+.session-badge{font-size:9px;border-radius:3px;padding:1px 5px;margin-bottom:3px;font-weight:700;}
+.badge-wknd{background:#e3f2fd;color:#1565c0;}
+.badge-wkday{background:#f3e5f5;color:#6a1b9a;}
+.topic-text{font-size:10px;color:#333;line-height:1.4;}
+.file-link{font-size:9px;color:#000080;font-style:italic;margin-top:3px;}
+.paper-num{font-size:9px;background:#000080;color:white;border-radius:3px;padding:1px 5px;margin-top:4px;display:inline-block;}
+
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 20px;font-size:11px;}
+.legend-item{display:flex;align-items:center;gap:5px;}
+.leg-dot{width:10px;height:10px;border-radius:2px;}
+
+.paper-files{margin:16px 20px 30px;background:white;border-radius:10px;padding:16px 20px;box-shadow:0 1px 6px rgba(0,0,0,.08);}
+.paper-files h2{color:#000080;font-size:14px;margin-bottom:10px;}
+.files-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
+.file-card{background:#f0f4ff;border-radius:6px;padding:10px 12px;border-left:3px solid #000080;}
+.file-card .fc-name{font-size:12px;font-weight:700;color:#000080;}
+.file-card .fc-weeks{font-size:10px;color:#666;margin-top:2px;}
+.file-card .fc-phase{font-size:9px;font-weight:700;border-radius:3px;padding:1px 6px;margin-top:4px;display:inline-block;}
+
+@media print{body{background:white;font-size:10px;} .week-grid{grid-template-columns:repeat(7,1fr);} }
+</style>
+</head>
+<body>
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#fff;border:1px solid #eee"></div><div style="background:#138808"></div></div>
+<div class="header">
+  <h1>📚 Pinki Ma'am's 60-Day Hindi PSLE Plan</h1>
+  <p>Weekdays: 30 minutes &nbsp;|&nbsp; Weekends: 75–90 minutes &nbsp;|&nbsp; Progressive: Easy → Medium → Challenging &nbsp;|&nbsp; Apr 19 – Jun 17, 2026</p>
+</div>
+
+<div class="info-bar">
+  <span class="info-chip">📅 60 Days Total</span>
+  <span class="info-chip">📆 43 Weekday Papers (30 min)</span>
+  <span class="info-chip">🗓️ 17 Weekend Papers (75–90 min)</span>
+  <span class="info-chip">✅ Phase 1 Easy: Weeks 1–3</span>
+  <span class="info-chip">📈 Phase 2 Medium: Weeks 4–6</span>
+  <span class="info-chip">🏆 Phase 3 Challenging: Weeks 7–9</span>
+  <span class="info-chip">📂 9 Paper Files + Answer Keys</span>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="leg-dot" style="background:#2e7d32"></div> Easy (Weeks 1–3)</div>
+  <div class="legend-item"><div class="leg-dot" style="background:#f57f17"></div> Medium (Weeks 4–6)</div>
+  <div class="legend-item"><div class="leg-dot" style="background:#c62828"></div> Challenging (Weeks 7–9)</div>
+  <div class="legend-item"><div class="leg-dot" style="background:#1565c0"></div> Weekend Paper (75–90 min)</div>
+  <div class="legend-item"><div class="leg-dot" style="background:#6a1b9a"></div> Weekday Paper (30 min)</div>
+</div>
+
+<!-- PHASE 1 -->
+<div class="phase-intro phase-easy">
+  <div>
+    <h3>🟢 Phase 1 — Foundation (Weeks 1–3, Days 1–21)</h3>
+    <p>Vocabulary collocations · Basic synonyms · Easy cloze passages · Idiom introduction · Short writing · No time pressure · Learn every question type</p>
+  </div>
+</div>
+
+<!-- WEEK 1 -->
+<div class="week-block">
+  <div class="week-header easy">
+    <div><span class="week-title">Week 1</span> &nbsp; <span class="week-tag">Easy</span></div>
+    <div class="week-dates">Apr 19 (Sat) – Apr 25 (Fri) &nbsp;|&nbsp; Theme: Vocabulary Collocations</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">Apr 19</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W1</b><br>Vocabulary Collocations (20 min) + Easy Reading Comprehension (25 min) + Situational Writing (30 min)</div>
+      <div class="paper-num">→ W01_Easy.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">Apr 20</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Review Weekend W1 answers. Revise vocabulary. Add new words to notebook.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">Apr 21</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Collocations Set A</b><br>15 fill-blank sentences with English hints. Focus: माफ़ी, अनुशासन, आरोप, भर्ती, श्रेय</div>
+      <div class="paper-num">→ W01 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">Apr 22</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Synonyms Set 1</b><br>15 MCQ synonym questions. Focus: उत्साह, साहस, मेहनत, विचार, आश्चर्य</div>
+      <div class="paper-num">→ W01 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">Apr 23</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Easy Cloze #1</b><br>"रवि और दादाजी का बगीचा" — 8-blank passage with MCQ options</div>
+      <div class="paper-num">→ W01 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">Apr 24</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Idioms Introduction</b><br>10 idiom completions. Body-part idioms: हाथ, पाँव, आँख, नाक, कान</div>
+      <div class="paper-num">→ W01 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">Apr 25</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Language Use A1</b><br>Informational passage (noise-canceling device) — 5 MCQ fill-blanks. PSLE 2024 style.</div>
+      <div class="paper-num">→ W01 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK 2 -->
+<div class="week-block">
+  <div class="week-header easy">
+    <div><span class="week-title">Week 2</span> &nbsp; <span class="week-tag">Easy</span></div>
+    <div class="week-dates">Apr 26 (Sat) – May 2 (Fri) &nbsp;|&nbsp; Theme: Language Use + Cloze</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">Apr 26</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W2</b><br>Collocations B (20 min) + Easy Cloze Passage (20 min) + MCQ Comprehension (20 min) + Picture Writing (30 min)</div>
+      <div class="paper-num">→ W02_Easy.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">Apr 27</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Review W2 weekend answers. Add 10 new vocabulary words to notebook. Practice reading idioms aloud.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">Apr 28</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Collocations Set B</b><br>15 sentences: अपील, श्रेय, भूमिका, हस्तक्षेप, परहेज़ focus</div>
+      <div class="paper-num">→ W02 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">Apr 29</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Idioms Set 2</b><br>Proverbs + idioms (from Composition Stack 4): थोथा चना, एक पंथ दो काज, कानून के हाथ</div>
+      <div class="paper-num">→ W02 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">Apr 30</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Easy Cloze #2</b><br>"प्रिया का पहला दिन" — 8-blank passage with MCQ options</div>
+      <div class="paper-num">→ W02 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">May 1</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Synonyms Set 2</b><br>15 MCQ: परेशान, दुर्लभ, लालच, विश्वास, अद्भुत, चतुर, समृद्ध</div>
+      <div class="paper-num">→ W02 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">May 2</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Language Use A2</b><br>Narrative passage (personal story) — 5 MCQ fill-blanks. Focus on emotional/action words.</div>
+      <div class="paper-num">→ W02 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK 3 -->
+<div class="week-block">
+  <div class="week-header easy">
+    <div><span class="week-title">Week 3</span> &nbsp; <span class="week-tag">Easy</span></div>
+    <div class="week-dates">May 3 (Sat) – May 9 (Fri) &nbsp;|&nbsp; Theme: MCQ Comprehension + Graphic Notice</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">May 3</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W3</b><br>Full Booklet A mini-mock (easy): A1+A2+A3+A4+A5 (35 MCQ, 40 min) + Situational Writing (35 min)</div>
+      <div class="paper-num">→ W03_Easy.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">May 4</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Review W3 mock answers. Mark Booklet A score. Write sentences using any wrong-answer words.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">May 5</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>MCQ Comprehension</b><br>Short passage "स्वयंसेवी कार्य" + 7 MCQ questions. Focus on finding evidence in the text.</div>
+      <div class="paper-num">→ W03 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">May 6</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Notice/Graphic (A5)</b><br>2 notices (school event + beach cleanup) + 6 questions. Every detail counts!</div>
+      <div class="paper-num">→ W03 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">May 7</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Cloze #3 (10 blanks)</b><br>"अतिथि का प्रयोग" (scientist child) — 10 MCQ blanks. First full A3-format practice.</div>
+      <div class="paper-num">→ W03 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">May 8</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Idioms Set 3 + B6 Format</b><br>PSLE B6 style — word bank of 10 words, complete 5 idiom sentences. From 2024 paper.</div>
+      <div class="paper-num">→ W03 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">May 9</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Mixed Vocabulary Review</b><br>10 collocations + 10 synonyms — quick revision. Identify any gaps from Week 1–3.</div>
+      <div class="paper-num">→ W03 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE 2 -->
+<div class="phase-intro phase-med" style="margin-top:20px;">
+  <div>
+    <h3>🟡 Phase 2 — Skill Building (Weeks 4–6, Days 22–42)</h3>
+    <p>Timed practice · Open-ended comprehension (B8) · Sentence completion (B7) · Full Booklet B · Writing development · Use 2017–2020 PSLE papers</p>
+  </div>
+</div>
+
+<!-- WEEK 4 -->
+<div class="week-block">
+  <div class="week-header med">
+    <div><span class="week-title">Week 4</span> &nbsp; <span class="week-tag">Medium</span></div>
+    <div class="week-dates">May 10 (Sat) – May 16 (Fri) &nbsp;|&nbsp; Theme: Timed A1–A3 + B6+B7</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">May 10</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W4</b><br>Timed Booklet A (35 MCQ, 40 min) + B6+B7 (20 min) + Writing (30 min) = 90 min total</div>
+      <div class="paper-num">→ W04_Med.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">May 11</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Full review of W4 weekend paper. Score each section. Update error log. Revise all wrong answers.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">May 12</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Timed A1+A2 (18 min)</b><br>2017 PSLE Paper 2 Q1–10. Then 12 min review. Target pace: 1.8 min/question.</div>
+      <div class="paper-num">→ W04 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">May 13</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Collocations Set C</b><br>15 new sentences: रंग लाना, हल निकालना, मन लगाना, दूरी बनाए रखना, नाम रोशन करना</div>
+      <div class="paper-num">→ W04 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">May 14</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Cloze #4 Timed (20 min)</b><br>"सुलेखा दादी की बुनाई" — 10-blank MCQ cloze. Medium difficulty. 10 min review.</div>
+      <div class="paper-num">→ W04 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">May 15</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>B6 Idioms (PSLE Format)</b><br>PSLE-style B6: word bank of 10, fill 5 idiom sentences. From 2019–2020 papers.</div>
+      <div class="paper-num">→ W04 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">May 16</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>B7 Sentence Completion</b><br>10 open-ended sentences (no options given). Focus: जब…तब, ताकि, क्योंकि connectors.</div>
+      <div class="paper-num">→ W04 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK 5 -->
+<div class="week-block">
+  <div class="week-header med">
+    <div><span class="week-title">Week 5</span> &nbsp; <span class="week-tag">Medium</span></div>
+    <div class="week-dates">May 17 (Sat) – May 23 (Fri) &nbsp;|&nbsp; Theme: Open-Ended Comprehension B8 + Writing</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">May 17</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W5</b><br>Full Paper 1 Writing (50 min) + B8 OE Comprehension (40 min) = 90 min. Includes passage "एक युवा आविष्कारक".</div>
+      <div class="paper-num">→ W05_Med.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">May 18</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Review writing essay with Pinki ma'am's marking rubric. Score B8 using model answers. Identify weak comprehension skills.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">May 19</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>B8 First OE Attempt</b><br>Passage "पर्यावरण संरक्षण" + 5 OE questions (2 details each). Write in full Hindi sentences.</div>
+      <div class="paper-num">→ W05 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">May 20</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Direct &amp; Indirect Speech</b><br>10 sentence transformations (from Pinki's worksheet). Essential grammar for B7+Writing.</div>
+      <div class="paper-num">→ W05 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">May 21</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Synonyms Set 3 + Vocab Drill</b><br>15 MCQ synonyms (hard words: विरल, प्राचीन, दृढ़, समृद्ध) + 5 collocation review.</div>
+      <div class="paper-num">→ W05 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">May 22</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Writing: Situational (Timed 25 min)</b><br>Scenario: school sports day. 4 bullet points. Write ≥120 words. 5 min self-review.</div>
+      <div class="paper-num">→ W05 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">May 23</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>MCQ Comprehension (Timed)</b><br>Medium passage "डिजिटल दुनिया" + 7 MCQ + 5 synonyms. 25 min timed. 5 min check.</div>
+      <div class="paper-num">→ W05 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK 6 -->
+<div class="week-block">
+  <div class="week-header med">
+    <div><span class="week-title">Week 6</span> &nbsp; <span class="week-tag">Medium</span></div>
+    <div class="week-dates">May 24 (Sat) – May 30 (Fri) &nbsp;|&nbsp; Theme: Full Booklet B + Paper 1 Polish</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">May 24</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W6</b><br>Full mock: 2019 PSLE Paper 2 Booklet A + Booklet B (90 min). Score all sections. Identify weakest area.</div>
+      <div class="paper-num">→ W06_Med.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">May 25</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Deep review W6 mock. Compare scores with Weeks 3–4 mocks. Is your A3 score improving? Target: 70%+ on each section.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">May 26</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Full Booklet B (Timed 28 min)</b><br>B6+B7+B8 from 2018 paper. Compressed timing builds speed. 2 min review.</div>
+      <div class="paper-num">→ W06 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">May 27</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Picture Story Writing</b><br>6-picture sequence (airport scenario from 2024 P1 Q2). Write ≥120 words using the word bank. 5 min plan, 25 min write.</div>
+      <div class="paper-num">→ W06 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">May 28</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Collocations Set D (Hard)</b><br>15 advanced sentences from Pinki's OE comprehension bank. Higher difficulty words.</div>
+      <div class="paper-num">→ W06 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">May 29</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>B8 OE Comprehension #2</b><br>Passage "सुमित की कहानी" (from Pinki's Secondary 1 paper). 5 open-ended questions.</div>
+      <div class="paper-num">→ W06 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">May 30</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Phase 2 Review + Weak Spot Fix</b><br>Look at your error log. Redo 10 questions from your weakest section. Add 15 new vocabulary to notebook.</div>
+      <div class="paper-num">→ W06 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE 3 -->
+<div class="phase-intro phase-hard" style="margin-top:20px;">
+  <div>
+    <h3>🔴 Phase 3 — Exam Simulation (Weeks 7–9, Days 43–60)</h3>
+    <p>Full timed mocks · Exam conditions · Most recent papers (2021–2025) · Compressed timing · Final polish · Exam-day strategy</p>
+  </div>
+</div>
+
+<!-- WEEK 7 -->
+<div class="week-block">
+  <div class="week-header hard">
+    <div><span class="week-title">Week 7</span> &nbsp; <span class="week-tag">Challenging</span></div>
+    <div class="week-dates">May 31 (Sat) – Jun 6 (Fri) &nbsp;|&nbsp; Theme: Full Mock Exams (2020–2021)</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">May 31</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W7</b><br>Full 2020 Paper 1 (50 min) + Full 2020 Paper 2 Booklet A (40 min) = 90 min. Strict exam conditions.</div>
+      <div class="paper-num">→ W07_Hard.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">Jun 1</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Full review of W7 mock. Grade Paper 1 using rubric. Score each A1–A5 section. Find your weakest topic for targeted Week 7 focus.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">Jun 2</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>2021 Booklet A Mock</b><br>Full 35-question Booklet A from 2021 paper in 28 min. 2 min review. Push for speed.</div>
+      <div class="paper-num">→ W07 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">Jun 3</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Hard Cloze (A3)</b><br>"सुलेखा दादी का समूह" — 10-blank hard cloze. Advanced vocabulary. PSLE 2021 style difficulty.</div>
+      <div class="paper-num">→ W07 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">Jun 4</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>2021 Booklet B Mock</b><br>Full B6+B7+B8 from 2021 in 28 min. Strict exam writing conditions. Full sentences throughout.</div>
+      <div class="paper-num">→ W07 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">Jun 5</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Hard Writing (Paper 1)</b><br>2022 Paper 1 prompt. 5 min plan + 25 min write. Aim: 140+ words, 2 idioms, varied sentence structure.</div>
+      <div class="paper-num">→ W07 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">Jun 6</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Advanced B8 Comprehension</b><br>Hard passage "आयशा की गाड़ी" (from 2024 B8) + 5 OE questions. Focus on specific text references.</div>
+      <div class="paper-num">→ W07 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK 8 -->
+<div class="week-block">
+  <div class="week-header hard">
+    <div><span class="week-title">Week 8</span> &nbsp; <span class="week-tag">Challenging</span></div>
+    <div class="week-dates">Jun 7 (Sat) – Jun 13 (Fri) &nbsp;|&nbsp; Theme: Full Mock Exams (2022–2023)</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">Jun 7</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W8</b><br>Full 2022 Paper 1 (50 min) + Full 2022 Paper 2 Booklet A+B (90 min). Split over Sat+Sun.</div>
+      <div class="paper-num">→ W08_Hard.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">Jun 8</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Complete 2022 Paper 2 Booklet B (90 min day 2). Review and score all sections. Compare Paper 1 score to Week 7. Identify any regressions.</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">Jun 9</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>2023 Booklet A (Compressed)</b><br>35 MCQ in 25 min. Strict time. Trust your preparation and move fast. 5 min score check.</div>
+      <div class="paper-num">→ W08 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">Jun 10</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Targeted Weak Section</b><br>Based on error log: revisit your lowest-scoring section type. Do 15 questions from 2022 paper.</div>
+      <div class="paper-num">→ W08 Day 2</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">WED</div><div class="day-date">Jun 11</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>2023 Booklet B (Compressed)</b><br>B6+B7+B8 from 2023 in 28 min. Advanced passages. Full sentences. Every 2-detail answer counts.</div>
+      <div class="paper-num">→ W08 Day 3</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">THU</div><div class="day-date">Jun 12</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Paper 1 Advanced Writing</b><br>2023 Paper 1 prompt. 4 min plan + 26 min write. Focus: strong opening, vivid description, idiom, strong close.</div>
+      <div class="paper-num">→ W08 Day 4</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">FRI</div><div class="day-date">Jun 13</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Final Vocabulary Blitz</b><br>Go through your full vocabulary notebook. Test all words you marked as "unsure". Aim to lock in 50+ collocations.</div>
+      <div class="paper-num">→ W08 Day 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEK 9 -->
+<div class="week-block">
+  <div class="week-header hard">
+    <div><span class="week-title">Week 9 (Final)</span> &nbsp; <span class="week-tag">Challenging</span></div>
+    <div class="week-dates">Jun 14 (Sat) – Jun 17 (Tue) &nbsp;|&nbsp; Theme: Final Mocks 2024–2025 + Exam Strategy</div>
+  </div>
+  <div class="week-grid">
+    <div class="day-cell weekend">
+      <div class="day-name">SAT</div><div class="day-date">Jun 14</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text"><b>Weekend Paper W9</b><br>Full 2025 Paper 1 (50 min) + 2024 Booklet A (40 min) = 90 min. Most recent papers. Exam conditions.</div>
+      <div class="paper-num">→ W09_Hard.html</div>
+    </div>
+    <div class="day-cell weekend">
+      <div class="day-name">SUN</div><div class="day-date">Jun 15</div>
+      <div class="session-badge badge-wknd">🗓 WEEKEND</div>
+      <div class="topic-text">Complete 2024 Booklet B (90 min). Final full Paper 2 mock. This is your exam-day rehearsal. Score everything. Celebrate your progress!</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">MON</div><div class="day-date">Jun 16</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>Exam Strategy Review</b><br>Review all time allocations. Re-read all model B8 answers. Revise top 20 idioms. Light vocabulary review only.</div>
+      <div class="paper-num">→ W09 Day 1</div>
+    </div>
+    <div class="day-cell">
+      <div class="day-name">TUE</div><div class="day-date">Jun 17</div>
+      <div class="session-badge badge-wkday">📋 30 MIN</div>
+      <div class="topic-text"><b>🏆 FINAL: 2025 Paper Sections</b><br>2025 P2 key sections (A1+A2+A3, 20 min) + 1 writing paragraph. Confidence check. You are READY!</div>
+      <div class="paper-num">→ W09 Day 2</div>
+    </div>
+    <div class="day-cell" style="background:#f5f5f5;"></div>
+    <div class="day-cell" style="background:#f5f5f5;"></div>
+    <div class="day-cell" style="background:#f5f5f5;"></div>
+  </div>
+</div>
+
+<!-- Paper Files List -->
+<div class="paper-files">
+  <h2>📂 Paper Files in This Folder</h2>
+  <div class="files-grid">
+    <div class="file-card"><div class="fc-name">W01_Easy.html</div><div class="fc-weeks">Week 1 | Apr 19–25</div><span class="fc-phase" style="background:#2e7d32;color:white">Easy</span></div>
+    <div class="file-card"><div class="fc-name">W02_Easy.html</div><div class="fc-weeks">Week 2 | Apr 26–May 2</div><span class="fc-phase" style="background:#2e7d32;color:white">Easy</span></div>
+    <div class="file-card"><div class="fc-name">W03_Easy.html</div><div class="fc-weeks">Week 3 | May 3–9</div><span class="fc-phase" style="background:#2e7d32;color:white">Easy</span></div>
+    <div class="file-card"><div class="fc-name">W04_Med.html</div><div class="fc-weeks">Week 4 | May 10–16</div><span class="fc-phase" style="background:#f57f17;color:white">Medium</span></div>
+    <div class="file-card"><div class="fc-name">W05_Med.html</div><div class="fc-weeks">Week 5 | May 17–23</div><span class="fc-phase" style="background:#f57f17;color:white">Medium</span></div>
+    <div class="file-card"><div class="fc-name">W06_Med.html</div><div class="fc-weeks">Week 6 | May 24–30</div><span class="fc-phase" style="background:#f57f17;color:white">Medium</span></div>
+    <div class="file-card"><div class="fc-name">W07_Hard.html</div><div class="fc-weeks">Week 7 | May 31–Jun 6</div><span class="fc-phase" style="background:#c62828;color:white">Hard</span></div>
+    <div class="file-card"><div class="fc-name">W08_Hard.html</div><div class="fc-weeks">Week 8 | Jun 7–13</div><span class="fc-phase" style="background:#c62828;color:white">Hard</span></div>
+    <div class="file-card"><div class="fc-name">W09_Hard.html</div><div class="fc-weeks">Week 9 | Jun 14–17</div><span class="fc-phase" style="background:#c62828;color:white">Hard</span></div>
+  </div>
+</div>
+
+<div style="background:#000080;color:white;text-align:center;padding:12px;font-size:12px;">
+  Pinki Ma'am's PSLE Hindi 60-Day Plan &nbsp;|&nbsp; Start: April 19, 2026 &nbsp;|&nbsp; End: June 17, 2026 &nbsp;|&nbsp; <b>हिंदी सीखो, आगे बढ़ो! 🌟</b>
+</div>
+</body>
+</html>

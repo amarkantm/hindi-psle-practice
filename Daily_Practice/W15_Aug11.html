@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W15 — Aug 17–21, 2026 | Hindi PSLE Daily Practice</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#c62828;--phase-bg:#fce4ec;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .day-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  .ans-key-section{page-break-before:always;}
+  @page{size:A4;margin:15mm;}
+}
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:20px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:20px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#000080;text-decoration:none;}
+.day-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.day-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ef9a9a;}
+.day-title{font-size:16px;font-weight:700;color:var(--navy);}
+.day-meta{font-size:11px;color:#555;}
+.vocab-card{margin:14px 18px;border:2px solid var(--saffron);border-radius:10px;overflow:hidden;}
+.vocab-title{background:var(--saffron);color:white;padding:7px 14px;font-size:13px;font-weight:700;}
+.vocab-table{width:100%;border-collapse:collapse;}
+.vocab-table th{background:#fff3e0;padding:6px 10px;font-size:11px;font-weight:700;color:#e65100;text-align:left;border-bottom:1px solid #ffe0b2;}
+.vocab-table td{padding:7px 10px;font-size:13px;border-bottom:1px solid #fff3e0;vertical-align:top;}
+.vocab-table tr:last-child td{border-bottom:none;}
+.vocab-hindi{font-size:15px;font-weight:700;color:var(--navy);}
+.years-badge{font-size:9px;background:#e3f2fd;color:#1565c0;border-radius:3px;padding:1px 5px;margin-top:3px;display:inline-block;}
+.practice-section{padding:14px 18px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #eee;}
+.sec-tag{background:var(--phase-color);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;}
+.sec-title{font-size:15px;font-weight:700;color:var(--navy);}
+.sec-time{font-size:11px;color:#888;margin-left:auto;}
+.source-badge{font-size:9px;background:#fce4ec;color:#880e4f;border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:4px;font-style:italic;}
+.q-block{margin-bottom:16px;}
+.q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.hint{font-size:11px;color:#777;font-style:italic;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
+.q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
+.opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
+.ans-line{border-bottom:1.5px solid #bbb;min-height:32px;margin:4px 0 10px;background:none;}
+.passage-box{background:#f8f9fa;border-left:4px solid var(--phase-color);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:2;font-family:serif;}
+.blank-num{background:#c62828;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin:0 2px;vertical-align:middle;}
+.word-box{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.9;}
+.word-box strong{color:#856404;font-size:11px;display:block;margin-bottom:4px;}
+.writing-prompt{background:#fce4ec;border:1.5px solid #ef9a9a;border-radius:8px;padding:14px 16px;margin-bottom:14px;}
+.writing-prompt h4{color:#b71c1c;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-text{font-size:13px;color:#333;margin-bottom:10px;line-height:1.9;}
+.writing-lines .ans-line{min-height:36px;}
+.self-assess{background:var(--phase-bg);border-radius:8px;padding:10px 14px;margin:14px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.sa-item{font-size:12px;color:#333;}
+.sa-item b{color:var(--phase-color);}
+.ans-key-section{background:#fffde7;border:1px solid #ffe082;border-radius:8px;margin:14px 18px;padding:14px 16px;}
+.ans-key-section h4{font-size:12px;font-weight:700;color:#b8860b;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 16px;}
+.ak-item{font-size:12px;color:#333;padding:3px 0;}
+.ak-item b{color:var(--navy);}
+.idiom-match-table{width:100%;border-collapse:collapse;margin-bottom:14px;}
+.idiom-match-table td{padding:7px 10px;font-size:13px;border:1px solid #e0e0e0;vertical-align:top;}
+.idiom-match-table tr:nth-child(odd){background:#fafafa;}
+.phase-banner{background:linear-gradient(90deg,#b71c1c,#c62828);color:white;text-align:center;padding:8px;font-size:12px;font-weight:700;letter-spacing:1px;}
+.timer-box{background:#b71c1c;color:white;border-radius:8px;padding:10px 18px;margin:12px 18px;font-size:16px;font-weight:700;text-align:center;letter-spacing:1px;}
+.mock-label{background:#ff8f00;color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:10px;}
+.oe-q-block{margin-bottom:18px;}
+.oe-marks{font-size:11px;background:#c62828;color:white;border-radius:3px;padding:1px 6px;margin-left:6px;}
+/* Special Grand Mock styles */
+.grand-mock-header{background:linear-gradient(135deg,#b71c1c,#880e4f);color:white;padding:16px 18px;margin:0;text-align:center;}
+.grand-mock-header h2{font-size:18px;letter-spacing:1px;margin-bottom:4px;}
+.grand-mock-header p{font-size:11px;opacity:.9;}
+.mock-section-divider{background:#b71c1c;color:white;padding:7px 18px;font-size:11px;font-weight:700;letter-spacing:.5px;display:flex;justify-content:space-between;align-items:center;}
+.encouragement-box{background:linear-gradient(135deg,#1a237e,#283593);color:white;border-radius:10px;padding:14px 18px;margin:14px 18px;text-align:center;}
+.encouragement-box h3{font-size:16px;margin-bottom:6px;}
+.encouragement-box p{font-size:12px;opacity:.9;line-height:1.8;}
+.weekend-box{background:#e8f5e9;border:2px solid #43a047;border-radius:10px;padding:14px 18px;margin:14px 18px;}
+.weekend-box h4{color:#1b5e20;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wknd-banner{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:8px 18px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.day-block.weekend-block{border-top-color:#1565c0;}
+.day-header.weekend-header{background:#e3f2fd;border-bottom-color:#90caf9;}
+.preview-box{background:#f3e5f5;border:1.5px solid #ce93d8;border-radius:8px;padding:12px 16px;margin:10px 18px;}
+.preview-box h4{color:#7b1fa2;font-size:12px;font-weight:700;margin-bottom:6px;}
+.preview-box p{font-size:12px;color:#333;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+<div class="phase-banner">🔴 PHASE 4 — PRE-PRELIMS FINAL PREP &nbsp;|&nbsp; 2023 Paper Style &nbsp;|&nbsp; GRAND MOCK ON FRIDAY</div>
+
+<div class="header">
+  <h1>🇮🇳 Hindi PSLE Daily Practice — Phase 4: PRE-PRELIMS</h1>
+  <p>Week 15 &nbsp;|&nbsp; Aug 17–21, 2026 &nbsp;|&nbsp; Final Sprint before Prelims!</p>
+  <p style="margin-top:4px;font-size:11px;opacity:.7;">परीक्षा तिथि: 28 सितंबर 2026 &nbsp;|&nbsp; Paper 1: 50 min &nbsp;|&nbsp; Paper 2: 1h 40min &nbsp;|&nbsp; 47 दिन शेष</p>
+</div>
+
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">NAVIGATE:</span>
+  <a class="nav-chip" href="../Hindi_Daily_Plan_May_Sept2026.html">📅 Master Plan</a>
+  <a class="nav-chip" href="W14_Aug04.html">← W14</a>
+  <span class="nav-chip" style="background:#fce4ec;border-color:#c62828;color:#c62828;">📌 W15 Aug 17–21</span>
+  <span class="nav-chip" style="background:#ffebee;border-color:#ef9a9a;color:#b71c1c;">🔴 Phase 4 Week 3 — Grand Mock Friday!</span>
+</div>
+
+<!-- DAY 1 — MONDAY Aug 17 -->
+<div class="day-block" id="mon">
+  <div class="day-header">
+    <div class="day-title">सोमवार — Monday, Aug 17</div>
+    <div class="day-meta">Vocabulary Collocations &nbsp;|&nbsp; ⏱ 30 min &nbsp;|&nbsp; 2023 Paper Style</div>
+  </div>
+
+  <div class="timer-box">⏱ समय: 30 मिनट &nbsp;|&nbsp; START TIME: _______ &nbsp;|&nbsp; END TIME: _______</div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 1/5) — सिद्धांत / संस्कृति थीम</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">सिद्धांत</div></td><td>principle / value</td><td>उसने अपने सिद्धांतों से कभी समझौता नहीं किया।</td><td><span class="years-badge">2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">कल्याण</div></td><td>welfare / well-being</td><td>समाज-कल्याण में योगदान देना नेक काम है।</td><td><span class="years-badge">2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">आत्मविश्वास</div></td><td>self-confidence (reinforce)</td><td>आत्मविश्वास से हर काम संभव है।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">परिश्रम</div></td><td>hard work / diligence (reinforce)</td><td>परिश्रम का फल मीठा होता है।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">संस्कृति</div></td><td>culture / heritage (reinforce)</td><td>हमें अपनी संस्कृति का सम्मान करना चाहिए।</td><td><span class="years-badge">recurring</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A1 MOCK</span>
+      <span class="sec-title">Vocabulary Collocations — सही शब्द भरो</span>
+      <span class="sec-time">⏱ 25 min</span>
+    </div>
+    <div class="source-badge">[2023 · P2, A1 · Q.1–10]</div>
+    <p style="font-size:12px;color:#555;margin-bottom:12px;">नीचे दिए गए वाक्यों में रिक्त स्थान पर सही हिंदी शब्द लिखो।</p>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> उसने अपने <span class="blank">&nbsp;</span> से कभी समझौता नहीं किया। <span class="hint">(principles / values)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> उसने परीक्षा में <span class="blank">&nbsp;</span> अंक प्राप्त किए। <span class="hint">(excellent / outstanding)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> माँ की <span class="blank">&nbsp;</span> से बड़ी कोई दौलत नहीं। <span class="hint">(blessings / prayers)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> उसने सामाजिक <span class="blank">&nbsp;</span> में बड़ा योगदान दिया। <span class="hint">(welfare / development)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> उसकी <span class="blank">&nbsp;</span> देखकर सभी हैरान थे। <span class="hint">(sincerity / dedication)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> बच्चों में <span class="blank">&nbsp;</span> विकसित करना ज़रूरी है। <span class="hint">(self-confidence)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> उसके <span class="blank">&nbsp;</span> ने उसे इस मुक़ाम तक पहुँचाया। <span class="hint">(hard work / efforts)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> हमें अपनी <span class="blank">&nbsp;</span> को बनाए रखना चाहिए। <span class="hint">(culture / identity)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> उसने अपने माता-पिता का सिर <span class="blank">&nbsp;</span> किया। <span class="hint">(raised with pride / glorified)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> वह सदा <span class="blank">&nbsp;</span> और विनम्र रहा। <span class="hint">(humble / polite)</span></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Mon)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> सिद्धांतों</div>
+      <div class="ak-item"><b>2.</b> उत्कृष्ट / शानदार</div>
+      <div class="ak-item"><b>3.</b> दुआएँ / आशीर्वाद</div>
+      <div class="ak-item"><b>4.</b> कल्याण / विकास में</div>
+      <div class="ak-item"><b>5.</b> लगन / ईमानदारी</div>
+      <div class="ak-item"><b>6.</b> आत्मविश्वास</div>
+      <div class="ak-item"><b>7.</b> परिश्रम / प्रयासों ने</div>
+      <div class="ak-item"><b>8.</b> संस्कृति / पहचान</div>
+      <div class="ak-item"><b>9.</b> ऊँचा</div>
+      <div class="ak-item"><b>10.</b> नम्र / विनम्र</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ कुल समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट (लक्ष्य: 30 मिनट)</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 2 — TUESDAY Aug 18 -->
+<div class="day-block" id="tue">
+  <div class="day-header">
+    <div class="day-title">मंगलवार — Tuesday, Aug 18</div>
+    <div class="day-meta">Cloze Passage — युवा नेतृत्व थीम &nbsp;|&nbsp; 2023 Style</div>
+  </div>
+
+  <div class="timer-box">⏱ समय: 30 मिनट &nbsp;|&nbsp; START TIME: _______ &nbsp;|&nbsp; END TIME: _______</div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 2/5) — युवा नेतृत्व थीम</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">युवा</div></td><td>youth / young person</td><td>युवा पीढ़ी देश का भविष्य है।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">नेतृत्व</div></td><td>leadership</td><td>अच्छे नेतृत्व से सफलता मिलती है।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">बदलाव</div></td><td>change / transformation</td><td>सकारात्मक बदलाव समाज को आगे ले जाता है।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">पहल</div></td><td>initiative / first step</td><td>उसने पर्यावरण बचाने की पहल की।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">प्रभाव</div></td><td>influence / impact / effect</td><td>उसके भाषण का गहरा प्रभाव पड़ा।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A2 MOCK</span>
+      <span class="sec-title">Cloze Passage — सही शब्द चुनो</span>
+      <span class="sec-time">⏱ 20 min</span>
+    </div>
+    <div class="source-badge">[2023 · P2, A2 · Q.1–10]</div>
+
+    <div class="word-box">
+      <strong>शब्द-भंडार (Word Box) — इन्हीं शब्दों में से चुनो:</strong>
+      युवा &nbsp;|&nbsp; नेतृत्व &nbsp;|&nbsp; बदलाव &nbsp;|&nbsp; पहल &nbsp;|&nbsp; प्रभाव &nbsp;|&nbsp; समाज &nbsp;|&nbsp; शिक्षा &nbsp;|&nbsp; उत्साह &nbsp;|&nbsp; ज़िम्मेदारी &nbsp;|&nbsp; भविष्य
+    </div>
+
+    <div class="passage-box">
+      आज के <span class="blank-num">1</span>_______ ही कल के नेता हैं। उनमें देश को बदलने का जोश और <span class="blank-num">2</span>_______ है। अच्छे <span class="blank-num">3</span>_______ के गुण — जैसे साहस, विनम्रता और दूरदर्शिता — युवाओं में होने चाहिए। जब युवा किसी अच्छे काम की <span class="blank-num">4</span>_______ करते हैं, तो पूरा <span class="blank-num">5</span>_______ उनसे प्रेरणा लेता है। <span class="blank-num">6</span>_______ से ही व्यक्ति का विकास होता है। युवाओं के सकारात्मक <span class="blank-num">7</span>_______ से समाज में अच्छा <span class="blank-num">8</span>_______ आता है। हर युवा को अपनी <span class="blank-num">9</span>_______ समझनी चाहिए। तभी हम एक उज्ज्वल <span class="blank-num">10</span>_______ बना सकते हैं।
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;">
+      <div class="q-block"><span class="q-num">1.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">2.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">3.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">4.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">5.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">6.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">7.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">8.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">9.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">10.</span> <div class="ans-line"></div></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Tue)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> युवा</div>
+      <div class="ak-item"><b>2.</b> उत्साह</div>
+      <div class="ak-item"><b>3.</b> नेतृत्व</div>
+      <div class="ak-item"><b>4.</b> पहल</div>
+      <div class="ak-item"><b>5.</b> समाज</div>
+      <div class="ak-item"><b>6.</b> शिक्षा</div>
+      <div class="ak-item"><b>7.</b> प्रभाव</div>
+      <div class="ak-item"><b>8.</b> बदलाव</div>
+      <div class="ak-item"><b>9.</b> ज़िम्मेदारी</div>
+      <div class="ak-item"><b>10.</b> भविष्य</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ कुल समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट (लक्ष्य: 30 मिनट)</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 3 — WEDNESDAY Aug 19 -->
+<div class="day-block" id="wed">
+  <div class="day-header">
+    <div class="day-title">बुधवार — Wednesday, Aug 19</div>
+    <div class="day-meta">MCQ Comprehension — A3 &nbsp;|&nbsp; 2023 Style</div>
+  </div>
+
+  <div class="timer-box">⏱ समय: 30 मिनट &nbsp;|&nbsp; START TIME: _______ &nbsp;|&nbsp; END TIME: _______</div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 3/5) — पुस्तक-संग्रह थीम</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">संग्रह</div></td><td>collection / drive / gathering</td><td>उसने ज़रूरतमंद बच्चों के लिए किताबें संग्रह कीं।</td><td><span class="years-badge">2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">अभाव</div></td><td>lack / shortage / deprivation</td><td>कई बच्चे किताबों के अभाव में पढ़ नहीं पाते।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+      <tr><td><div class="vocab-hindi">जागरूकता</div></td><td>awareness / consciousness</td><td>समाज में जागरूकता फैलाना ज़रूरी है।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">सुविधाहीन</div></td><td>underprivileged / lacking facilities</td><td>सुविधाहीन बच्चों की मदद करनी चाहिए।</td><td><span class="years-badge">2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">उत्साही</div></td><td>enthusiastic / motivated</td><td>उत्साही बच्चे हमेशा आगे बढ़ते हैं।</td><td><span class="years-badge">2023, 2024</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A3 MOCK</span>
+      <span class="sec-title">MCQ Comprehension — गद्यांश पढ़ो, सही उत्तर चुनो</span>
+      <span class="sec-time">⏱ 25 min</span>
+    </div>
+    <div class="source-badge">[2023 · P2, A3 · Q.1–10]</div>
+
+    <div class="passage-box">
+      <b>गद्यांश पढ़ो:</b><br><br>
+      तेरह वर्षीय सिया एक उत्साही और संवेदनशील छात्रा थी। उसने देखा कि उसके स्कूल के पास की झुग्गी-बस्ती के बच्चों के पास पढ़ने के लिए किताबें नहीं हैं। उसने इस समस्या का हल निकालने की ठानी। उसने अपने सहपाठियों से पुरानी किताबें दान करने की अपील की। एक हफ़्ते में उसने दो सौ से अधिक किताबें इकट्ठी कर लीं। उसके अध्यापकों ने भी इस अभियान में साथ दिया। सिया ने बस्ती में जाकर बच्चों को किताबें बाँटीं। उन बच्चों के चेहरों पर जो मुस्कान थी, वह सिया के लिए सबसे बड़ा पुरस्कार था। उसके स्कूल ने उसे "सामाजिक चेतना पुरस्कार" से नवाज़ा। सिया ने कहा — "एक किताब किसी का जीवन बदल सकती है।"
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> सिया ने किस समस्या को देखा?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. बस्ती के बच्चों के पास खाना नहीं था</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. बस्ती के बच्चों के पास किताबें नहीं थीं</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. बस्ती में स्कूल नहीं था</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. बस्ती के बच्चे स्कूल नहीं जाते थे</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> सिया ने अपने सहपाठियों से क्या अपील की?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. पैसे दान करने की</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. पुरानी किताबें दान करने की</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. खाना लाने की</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. बस्ती में पढ़ाने जाने की</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> एक हफ़्ते में कितनी किताबें इकट्ठी हुईं?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. पचास से अधिक</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. एक सौ से अधिक</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. दो सौ से अधिक</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. तीन सौ से अधिक</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> अभियान में किसने सिया का साथ दिया?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. केवल उसके माता-पिता</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. उसके अध्यापकों ने भी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. केवल उसकी सहेलियों ने</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. समाचारपत्र वालों ने</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> सिया को सबसे बड़ा पुरस्कार क्या लगा?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. स्कूल का पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. बस्ती के बच्चों के चेहरों की मुस्कान</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. अध्यापकों की प्रशंसा</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. समाचारपत्र में फ़ोटो</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> "उत्साही" शब्द का अर्थ क्या है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. थका हुआ</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. उदास</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. जोश से भरा हुआ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. डरा हुआ</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> स्कूल ने सिया को कौन सा पुरस्कार दिया?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. सर्वश्रेष्ठ छात्र पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. सामाजिक चेतना पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. खेल पुरस्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. सांस्कृतिक पुरस्कार</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> "अभाव" का विलोम (opposite) क्या है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. कमी</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. उपस्थिति</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. प्रचुरता / बहुतायत</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. समस्या</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> सिया ने क्या कहा?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. "पैसों से जीवन बदलता है।"</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. "एक किताब किसी का जीवन बदल सकती है।"</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. "शिक्षा से ही देश आगे बढ़ेगा।"</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. "बस्ती के बच्चों को स्कूल चाहिए।"</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A3 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> इस गद्यांश का उचित शीर्षक क्या होगा?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A. पुरानी किताबें</div>
+        <div class="q-opt"><div class="opt-circle"></div> B. बस्ती की समस्या</div>
+        <div class="q-opt"><div class="opt-circle"></div> C. एक किताब, एक बदलाव</div>
+        <div class="q-opt"><div class="opt-circle"></div> D. स्कूल का पुरस्कार</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Wed — MCQ)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> B</div>
+      <div class="ak-item"><b>2.</b> B</div>
+      <div class="ak-item"><b>3.</b> C</div>
+      <div class="ak-item"><b>4.</b> B</div>
+      <div class="ak-item"><b>5.</b> B</div>
+      <div class="ak-item"><b>6.</b> C</div>
+      <div class="ak-item"><b>7.</b> B</div>
+      <div class="ak-item"><b>8.</b> C</div>
+      <div class="ak-item"><b>9.</b> B</div>
+      <div class="ak-item"><b>10.</b> C</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ कुल समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट (लक्ष्य: 30 मिनट)</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 4 — THURSDAY Aug 20 -->
+<div class="day-block" id="thu">
+  <div class="day-header">
+    <div class="day-title">गुरुवार — Thursday, Aug 20</div>
+    <div class="day-meta">Harder Idioms — 2023 Style &nbsp;|&nbsp; ⏱ 30 min</div>
+  </div>
+
+  <div class="timer-box">⏱ समय: 30 मिनट &nbsp;|&nbsp; START TIME: _______ &nbsp;|&nbsp; END TIME: _______</div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 4/5) — कठिन मुहावरे 2023</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">अंगारों पर लोटना</div></td><td>to be in great agony / writhing in pain</td><td>परीक्षा का परिणाम सुनकर वह अंगारों पर लोट रहा था।</td><td><span class="years-badge">idiom 2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">तिल का ताड़ बनाना</div></td><td>to exaggerate / make a mountain of a molehill</td><td>उसने छोटी बात को तिल का ताड़ बना दिया।</td><td><span class="years-badge">idiom 2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">नौ दो ग्यारह होना</div></td><td>to flee / run away</td><td>पुलिस को देखते ही चोर नौ दो ग्यारह हो गया।</td><td><span class="years-badge">idiom 2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">आसमान के तारे तोड़ना</div></td><td>to do extraordinary / impossible things</td><td>उसने मेहनत से आसमान के तारे तोड़ दिए।</td><td><span class="years-badge">idiom 2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">स्थायी</div></td><td>permanent / lasting</td><td>अच्छे संस्कार स्थायी होते हैं।</td><td><span class="years-badge">2023</span></td></tr>
+    </table>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B6 MOCK</span>
+      <span class="sec-title">मुहावरा मिलान — Harder Idioms (2023)</span>
+      <span class="sec-time">⏱ 15 min</span>
+    </div>
+    <div class="source-badge">[2023 · P2, B6 · Q.1–5]</div>
+
+    <table class="idiom-match-table">
+      <tr>
+        <td style="width:55%;background:#fce4ec;font-weight:700;color:#880e4f;">मुहावरा</td>
+        <td style="background:#ffebee;font-weight:700;color:#b71c1c;">अर्थ</td>
+      </tr>
+      <tr>
+        <td><span class="source-badge">[2023 · P2, B6 · Q.1]</span><br><b>1.</b> अंगारों पर लोटना</td>
+        <td><b>A.</b> असाधारण काम करना</td>
+      </tr>
+      <tr>
+        <td><span class="source-badge">[2023 · P2, B6 · Q.2]</span><br><b>2.</b> तिल का ताड़ बनाना</td>
+        <td><b>B.</b> भाग जाना</td>
+      </tr>
+      <tr>
+        <td><span class="source-badge">[2023 · P2, B6 · Q.3]</span><br><b>3.</b> नौ दो ग्यारह होना</td>
+        <td><b>C.</b> बहुत पीड़ा में होना</td>
+      </tr>
+      <tr>
+        <td><span class="source-badge">[2023 · P2, B6 · Q.4]</span><br><b>4.</b> पत्थर पर दूब जमाना</td>
+        <td><b>D.</b> असंभव काम करना</td>
+      </tr>
+      <tr>
+        <td><span class="source-badge">[2023 · P2, B6 · Q.5]</span><br><b>5.</b> आसमान के तारे तोड़ना</td>
+        <td><b>E.</b> छोटी बात को बड़ा बनाना</td>
+      </tr>
+    </table>
+
+    <div class="sec-header" style="margin-top:20px;">
+      <span class="sec-tag">B7 MOCK</span>
+      <span class="sec-title">वाक्य-पूर्ति — Use Idioms in Sentences</span>
+      <span class="sec-time">⏱ 15 min</span>
+    </div>
+    <div class="source-badge">[2023 · P2, B7 · Q.6–10]</div>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, B7 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> नतीजा बुरा आने पर वह <span class="blank" style="min-width:180px">&nbsp;</span> रहा। <span class="hint">(great agony / distress)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, B7 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> उसने छोटी सी बात का <span class="blank" style="min-width:180px">&nbsp;</span> बना दिया। <span class="hint">(exaggerate)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, B7 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> इंस्पेक्टर को देखते ही गुंडे <span class="blank" style="min-width:180px">&nbsp;</span> हो गए। <span class="hint">(fled / ran away)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, B7 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> उसने इतना असंभव काम किया — सच में <span class="blank" style="min-width:180px">&nbsp;</span> जमा दी। <span class="hint">(did the impossible)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, B7 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> उसने पढ़ाई में इतनी मेहनत की कि <span class="blank" style="min-width:180px">&nbsp;</span> तोड़ दिए। <span class="hint">(extraordinary achievement)</span></div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Answer Key (Thu)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Match: 1→C, 2→E, 3→B, 4→D, 5→A</b></div>
+      <div class="ak-item"><b>6.</b> अंगारों पर लोट</div>
+      <div class="ak-item"><b>7.</b> तिल का ताड़</div>
+      <div class="ak-item"><b>8.</b> नौ दो ग्यारह</div>
+      <div class="ak-item"><b>9.</b> पत्थर पर दूब</div>
+      <div class="ak-item"><b>10.</b> आसमान के तारे</div>
+    </div>
+  </div>
+  <div class="self-assess">
+    <div class="sa-item"><b>⏱ कुल समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट (लक्ष्य: 30 मिनट)</div>
+    <div class="sa-item"><b>📊 स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+    <div class="sa-item"><b>⭐ आत्म-मूल्यांकन:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- DAY 5 — FRIDAY Aug 21 — GRAND PRELIMS MOCK -->
+<div class="day-block" id="fri">
+  <div class="grand-mock-header">
+    <h2>🏆 GRAND PRELIMS MOCK — शुक्रवार, Aug 21</h2>
+    <p>Full Paper 2 Condensed Simulation &nbsp;|&nbsp; Total Time: 80 Minutes &nbsp;|&nbsp; 2023 Paper Style</p>
+    <p style="margin-top:4px;font-size:12px;">Prelims आने वाले हैं! आपने 75 दिन अभ्यास किया है। हिम्मत रखो! परीक्षा में 38 दिन बचे हैं।</p>
+  </div>
+
+  <div class="timer-box" style="font-size:14px;">⏱ कुल समय: 80 मिनट &nbsp;|&nbsp; START TIME: _______ &nbsp;|&nbsp; END TIME: _______<br><span style="font-size:11px;font-weight:400;opacity:.9;">A1: 15 min → A2: 10 min → B6+B7: 10 min → B8: 15 min → Paper 1 planning: 10 min → Total: ~80 min</span></div>
+
+  <div class="vocab-card">
+    <div class="vocab-title">📚 आज के शब्द — Vocab Card (Day 5/5) — मनोबल / आत्मबल थीम</div>
+    <table class="vocab-table">
+      <tr><th>हिंदी शब्द</th><th>अर्थ (Meaning)</th><th>उदाहरण वाक्य</th><th>वर्ष</th></tr>
+      <tr><td><div class="vocab-hindi">मनोबल</div></td><td>morale / mental strength</td><td>परीक्षा से पहले मनोबल ऊँचा रखना ज़रूरी है।</td><td><span class="years-badge">2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">दृढ़ता</div></td><td>firmness / determination</td><td>दृढ़ता से लक्ष्य की ओर बढ़ते रहो।</td><td><span class="years-badge">2023</span></td></tr>
+      <tr><td><div class="vocab-hindi">परीक्षा</div></td><td>exam / test (recurring)</td><td>परीक्षा में पूरी तैयारी के साथ जाओ।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">तैयारी</div></td><td>preparation (recurring)</td><td>अच्छी तैयारी से सफलता मिलती है।</td><td><span class="years-badge">recurring</span></td></tr>
+      <tr><td><div class="vocab-hindi">आत्मबल</div></td><td>inner strength / willpower</td><td>आत्मबल से बड़ी से बड़ी मुश्किल पार होती है।</td><td><span class="years-badge">2023</span></td></tr>
+    </table>
+  </div>
+
+  <!-- SECTION A1 -->
+  <div class="mock-section-divider">
+    <span>📝 SECTION A1 — Vocabulary Collocations</span>
+    <span>⏱ 15 मिनट</span>
+  </div>
+
+  <div class="practice-section">
+    <div class="source-badge">[2023 · P2, A1 · Grand Mock · Q.1–10]</div>
+    <p style="font-size:12px;color:#555;margin-bottom:12px;">रिक्त स्थान में सही शब्द भरो। (अंग्रेज़ी संकेत दिया गया है।)</p>
+
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.1]</div>
+      <div class="q-text"><span class="q-num">1.</span> उसने कठिन समय में भी अपना <span class="blank">&nbsp;</span> नहीं खोया। <span class="hint">(morale / confidence)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.2]</div>
+      <div class="q-text"><span class="q-num">2.</span> उसकी <span class="blank">&nbsp;</span> देखकर सभी को प्रेरणा मिली। <span class="hint">(determination / firmness)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.3]</div>
+      <div class="q-text"><span class="q-num">3.</span> उसने अपनी माँ को <span class="blank">&nbsp;</span> दिया कि वह सफल होगा। <span class="hint">(promise)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.4]</div>
+      <div class="q-text"><span class="q-num">4.</span> बच्चों को बचपन से ही <span class="blank">&nbsp;</span> का पाठ पढ़ाना चाहिए। <span class="hint">(values / moral upbringing)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.5]</div>
+      <div class="q-text"><span class="q-num">5.</span> उसके माता-पिता उस पर बहुत <span class="blank">&nbsp;</span> थे। <span class="hint">(proud)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.6]</div>
+      <div class="q-text"><span class="q-num">6.</span> वह हर मुश्किल का <span class="blank">&nbsp;</span> हँसते-हँसते करता था। <span class="hint">(to face)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.7]</div>
+      <div class="q-text"><span class="q-num">7.</span> उसकी माँ उसकी सबसे बड़ी <span class="blank">&nbsp;</span> थी। <span class="hint">(inspiration)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.8]</div>
+      <div class="q-text"><span class="q-num">8.</span> उसने बड़े <span class="blank">&nbsp;</span> से अपनी बात रखी। <span class="hint">(self-confidence)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.9]</div>
+      <div class="q-text"><span class="q-num">9.</span> हमें अपनी <span class="blank">&nbsp;</span> और परंपराओं का सम्मान करना चाहिए। <span class="hint">(culture / heritage)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="source-badge">[2023 · P2, A1 · Q.10]</div>
+      <div class="q-text"><span class="q-num">10.</span> उसके <span class="blank">&nbsp;</span> ने उसे शिखर तक पहुँचाया। <span class="hint">(inner strength / hard work)</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION A2 -->
+  <div class="mock-section-divider">
+    <span>📝 SECTION A2 — Cloze Passage</span>
+    <span>⏱ 10 मिनट</span>
+  </div>
+
+  <div class="practice-section">
+    <div class="source-badge">[2023 · P2, A2 · Grand Mock · Q.1–10]</div>
+
+    <div class="word-box">
+      <strong>शब्द-भंडार (Word Box):</strong>
+      परिश्रम &nbsp;|&nbsp; सफलता &nbsp;|&nbsp; लक्ष्य &nbsp;|&nbsp; साहस &nbsp;|&nbsp; विश्वास &nbsp;|&nbsp; मेहनत &nbsp;|&nbsp; हार &nbsp;|&nbsp; आगे &nbsp;|&nbsp; जीवन &nbsp;|&nbsp; सीख
+    </div>
+
+    <div class="passage-box">
+      <span class="blank-num">1</span>_______ ही सफलता की कुंजी है। जो व्यक्ति <span class="blank-num">2</span>_______ और लगन से काम करता है, वह अपने <span class="blank-num">3</span>_______ तक ज़रूर पहुँचता है। जीवन में <span class="blank-num">4</span>_______ से डरना नहीं चाहिए, बल्कि उससे <span class="blank-num">5</span>_______ लेनी चाहिए। <span class="blank-num">6</span>_______ रखो कि तुम कर सकते हो। मुश्किलों का <span class="blank-num">7</span>_______ से सामना करो। जो गिरकर फिर उठ खड़े होते हैं, वे ही <span class="blank-num">8</span>_______ में सफल होते हैं। हमेशा <span class="blank-num">9</span>_______ बढ़ते रहो और अपनी <span class="blank-num">10</span>_______ पर गर्व करो।
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;">
+      <div class="q-block"><span class="q-num">1.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">2.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">3.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">4.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">5.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">6.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">7.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">8.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">9.</span> <div class="ans-line"></div></div>
+      <div class="q-block"><span class="q-num">10.</span> <div class="ans-line"></div></div>
+    </div>
+  </div>
+
+  <!-- SECTION B6+B7 -->
+  <div class="mock-section-divider">
+    <span>📝 SECTION B6+B7 — Idiom Match + Sentence Completion</span>
+    <span>⏱ 10 मिनट</span>
+  </div>
+
+  <div class="practice-section">
+    <div class="source-badge">[2023 · P2, B6+B7 · Grand Mock · Q.1–10]</div>
+
+    <table class="idiom-match-table">
+      <tr>
+        <td style="width:55%;background:#fce4ec;font-weight:700;color:#880e4f;">मुहावरा</td>
+        <td style="background:#ffebee;font-weight:700;color:#b71c1c;">अर्थ — सही अक्षर लिखो</td>
+      </tr>
+      <tr><td><b>1.</b> अंगारों पर लोटना</td><td><b>A.</b> भाग जाना &nbsp;&nbsp; उत्तर: ____</td></tr>
+      <tr><td><b>2.</b> नौ दो ग्यारह होना</td><td><b>B.</b> बहुत पीड़ा में होना &nbsp;&nbsp; उत्तर: ____</td></tr>
+      <tr><td><b>3.</b> तिल का ताड़ बनाना</td><td><b>C.</b> असाधारण काम करना &nbsp;&nbsp; उत्तर: ____</td></tr>
+      <tr><td><b>4.</b> आसमान के तारे तोड़ना</td><td><b>D.</b> छोटी बात को बड़ा करना &nbsp;&nbsp; उत्तर: ____</td></tr>
+      <tr><td><b>5.</b> पत्थर पर दूब जमाना</td><td><b>E.</b> असंभव काम करना &nbsp;&nbsp; उत्तर: ____</td></tr>
+    </table>
+
+    <p style="font-size:12px;color:#555;margin:12px 0 8px;">वाक्य-पूर्ति — नीचे दिए गए वाक्यों में उचित मुहावरा भरो:</p>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">6.</span> वह परिणाम सुनकर <span class="blank" style="min-width:180px">&nbsp;</span> रहा। <span class="hint">(great agony)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">7.</span> पुलिस देखते ही बदमाश <span class="blank" style="min-width:180px">&nbsp;</span> हो गए। <span class="hint">(fled)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">8.</span> उसने इस काम में <span class="blank" style="min-width:180px">&nbsp;</span> जमा दी — सब हैरान थे। <span class="hint">(did the impossible)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">9.</span> उसने मेहनत से <span class="blank" style="min-width:180px">&nbsp;</span> तोड़ दिए। <span class="hint">(extraordinary achievement)</span></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">10.</span> उसने छोटी सी बात का <span class="blank" style="min-width:180px">&nbsp;</span> बना दिया। <span class="hint">(exaggerate)</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION B8 -->
+  <div class="mock-section-divider">
+    <span>📝 SECTION B8 — Open-Ended Comprehension</span>
+    <span>⏱ 15 मिनट</span>
+  </div>
+
+  <div class="practice-section">
+    <div class="source-badge">[2023 · P2, B8 · Grand Mock · Q.1–5]</div>
+
+    <div class="passage-box">
+      <b>गद्यांश पढ़ो:</b><br><br>
+      पन्द्रह वर्षीय अदिति एक छोटे से गाँव की लड़की थी। उसके गाँव में लड़कियों को पढ़ाने का रिवाज़ नहीं था। लेकिन अदिति की माँ ने हिम्मत करके उसे स्कूल भेजा। अदिति ने दसवीं कक्षा में राज्य में प्रथम स्थान पाया। जब यह खबर गाँव में फैली, तो सभी को आश्चर्य हुआ। अदिति ने अपने गाँव की बाकी लड़कियों के लिए एक पाठशाला शुरू की। उसका कहना था — "शिक्षा हर लड़की का अधिकार है। कोई भी हमें आगे बढ़ने से नहीं रोक सकता।" आज अदिति एक जानी-मानी शिक्षिका है और उसके गाँव की सभी लड़कियाँ पढ़ती हैं।
+    </div>
+
+    <div class="oe-q-block">
+      <div class="source-badge">[2023 · P2, B8 · Q.1] — 2 marks</div>
+      <div class="q-text"><span class="q-num">Q1.</span> अदिति के गाँव में क्या रिवाज़ था? <span class="oe-marks">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="oe-q-block">
+      <div class="source-badge">[2023 · P2, B8 · Q.2] — 2 marks</div>
+      <div class="q-text"><span class="q-num">Q2.</span> अदिति की माँ ने क्या हिम्मत दिखाई? <span class="oe-marks">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="oe-q-block">
+      <div class="source-badge">[2023 · P2, B8 · Q.3] — 2 marks</div>
+      <div class="q-text"><span class="q-num">Q3.</span> अदिति ने अपनी सफलता के बाद गाँव के लिए क्या किया? <span class="oe-marks">2 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="oe-q-block">
+      <div class="source-badge">[2023 · P2, B8 · Q.4] — 3 marks</div>
+      <div class="q-text"><span class="q-num">Q4.</span> "शिक्षा हर लड़की का अधिकार है" — इस वाक्य से आप कितना सहमत हैं और क्यों? <span class="oe-marks">3 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+
+    <div class="oe-q-block">
+      <div class="source-badge">[2023 · P2, B8 · Q.5] — 1 mark</div>
+      <div class="q-text"><span class="q-num">Q5.</span> "रिवाज़" शब्द का अर्थ क्या है? <span class="oe-marks">1 अंक</span></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <!-- Weekend Paper 1 Box -->
+  <div class="weekend-box">
+    <h4>📅 सप्ताहांत अभ्यास — Weekend Paper 1 Practice Topic</h4>
+    <div class="source-badge">[2023 · P1 · Friendship / Emotional Support Theme]</div>
+    <p style="font-size:13px;color:#333;margin:10px 0;line-height:1.9;">
+      <b>विषय:</b> आपकी दोस्त बहुत उदास है क्योंकि वह स्कूल बदलकर आई है। आप उसे खुश करने के लिए क्या करेंगे? (150 शब्द)
+    </p>
+    <p style="font-size:11px;color:#1b5e20;"><b>📌 संकेत-बिंदु:</b> उसकी समस्या समझो → उसे अकेलापन न महसूस होने दो → उसे अपने दोस्तों से मिलाओ → साथ में कुछ मज़ेदार करो → भावनाएँ और सीख लिखो</p>
+  </div>
+
+  <!-- Answer Keys for Grand Mock -->
+  <div class="ans-key-section">
+    <h4>🔑 उत्तर-कुंजी — Grand Mock Answer Key</h4>
+    <p style="font-size:11px;color:#555;margin-bottom:8px;"><b>SECTION A1:</b></p>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> मनोबल / आत्मविश्वास</div>
+      <div class="ak-item"><b>2.</b> दृढ़ता</div>
+      <div class="ak-item"><b>3.</b> वचन / वादा</div>
+      <div class="ak-item"><b>4.</b> संस्कार</div>
+      <div class="ak-item"><b>5.</b> गर्वित</div>
+      <div class="ak-item"><b>6.</b> सामना</div>
+      <div class="ak-item"><b>7.</b> प्रेरणा</div>
+      <div class="ak-item"><b>8.</b> आत्मविश्वास से</div>
+      <div class="ak-item"><b>9.</b> संस्कृति</div>
+      <div class="ak-item"><b>10.</b> आत्मबल / परिश्रम ने</div>
+    </div>
+    <p style="font-size:11px;color:#555;margin:10px 0 6px;"><b>SECTION A2:</b></p>
+    <div class="ak-grid">
+      <div class="ak-item"><b>1.</b> परिश्रम</div>
+      <div class="ak-item"><b>2.</b> मेहनत</div>
+      <div class="ak-item"><b>3.</b> लक्ष्य</div>
+      <div class="ak-item"><b>4.</b> हार</div>
+      <div class="ak-item"><b>5.</b> सीख</div>
+      <div class="ak-item"><b>6.</b> विश्वास</div>
+      <div class="ak-item"><b>7.</b> साहस</div>
+      <div class="ak-item"><b>8.</b> जीवन</div>
+      <div class="ak-item"><b>9.</b> आगे</div>
+      <div class="ak-item"><b>10.</b> सफलता</div>
+    </div>
+    <p style="font-size:11px;color:#555;margin:10px 0 6px;"><b>SECTION B6+B7:</b></p>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Match: 1→B, 2→A, 3→D, 4→C, 5→E</b></div>
+      <div class="ak-item"><b>6.</b> अंगारों पर लोट</div>
+      <div class="ak-item"><b>7.</b> नौ दो ग्यारह</div>
+      <div class="ak-item"><b>8.</b> पत्थर पर दूब</div>
+      <div class="ak-item"><b>9.</b> आसमान के तारे</div>
+      <div class="ak-item"><b>10.</b> तिल का ताड़</div>
+    </div>
+    <p style="font-size:11px;color:#555;margin:10px 0 6px;"><b>SECTION B8:</b></p>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q1.</b> लड़कियों को पढ़ाने का रिवाज़ नहीं था।</div>
+      <div class="ak-item"><b>Q2.</b> माँ ने रिवाज़ के विरुद्ध जाकर अदिति को स्कूल भेजा।</div>
+      <div class="ak-item"><b>Q3.</b> अदिति ने गाँव की बाकी लड़कियों के लिए पाठशाला शुरू की।</div>
+      <div class="ak-item"><b>Q4.</b> (अपने शब्दों में: हाँ, मैं पूरी तरह सहमत हूँ। शिक्षा से ही लड़कियाँ आत्मनिर्भर बन सकती हैं...)</div>
+      <div class="ak-item"><b>Q5.</b> रिवाज़ = tradition / custom (परंपरा)</div>
+    </div>
+  </div>
+
+  <div class="encouragement-box">
+    <h3>🌟 Prelims coming up! You've practised 75 days. Keep going!</h3>
+    <p>परीक्षा में 38 दिन बचे हैं। &nbsp;|&nbsp; हर दिन की मेहनत रंग लाएगी।<br>
+    आत्मविश्वास रखो — तुम तैयार हो! &nbsp;💪&nbsp; शाबाश!</p>
+  </div>
+
+  <div class="self-assess" style="background:#ffebee;border:1px solid #ef9a9a;">
+    <div class="sa-item"><b>⏱ कुल समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट (लक्ष्य: 80 मिनट)</div>
+    <div class="sa-item"><b>📊 A1 स्कोर:</b> <span class="blank" style="min-width:30px">&nbsp;</span>/10</div>
+    <div class="sa-item"><b>📊 A2 स्कोर:</b> <span class="blank" style="min-width:30px">&nbsp;</span>/10</div>
+    <div class="sa-item"><b>📊 B6+B7:</b> <span class="blank" style="min-width:30px">&nbsp;</span>/10</div>
+    <div class="sa-item"><b>📊 B8:</b> <span class="blank" style="min-width:30px">&nbsp;</span>/10</div>
+    <div class="sa-item"><b>📊 कुल:</b> <span class="blank" style="min-width:40px">&nbsp;</span>/40</div>
+    <div class="sa-item"><b>⭐ Grand Mock:</b> &nbsp;⭐&nbsp;⭐&nbsp;⭐</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DAY 6 — SATURDAY 16 AUG 2026 · GRAND PRELIMS REHEARSAL
+     ═══════════════════════════════════════════════════════════ -->
+<div class="day-block weekend-block" id="day6">
+  <div class="wknd-banner">
+    <span>🏆 PRELIMS से पहले का आखिरी अभ्यास! पूरा जोश लगाएँ!</span>
+    <span>⏱ 90 मिनट</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">शनिवार — 22 अगस्त 2026 · GRAND PRELIMS REHEARSAL</div>
+      <div class="day-meta">Full Paper 1 + Paper 2 Booklet B Simulation · [2023 Paper]</div>
+    </div>
+    <div class="day-meta">90 मिनट</div>
+  </div>
+
+  <!-- PAPER 1: WRITING -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">Paper 1</span>
+      <span class="sec-title">लेखन — Writing Prompt</span>
+      <span class="sec-time">40 मिनट</span>
+    </div>
+    <div class="source-badge">[2023 · P1]</div>
+    <div class="q-block">
+      <div class="q-text" style="background:#fff8e1;border:1.5px solid #ffe082;border-radius:8px;padding:12px 14px;">
+        <strong>प्रश्न:</strong> आपके विद्यालय की एक खास घटना का वर्णन करें जिसने आपको बहुत प्रभावित किया। वह घटना क्या थी, आपने उससे क्या सीखा और उसका आप पर क्या प्रभाव पड़ा?<br>
+        <span class="hint">(150–200 शब्द · शीर्षक, पता, तारीख, नम्र भाषा अनिवार्य)</span>
+      </div>
+      <div style="border:1px dashed #ccc;border-radius:8px;padding:10px;margin-top:10px;min-height:180px;">
+        <div style="font-size:11px;color:#aaa;">यहाँ लिखें / Write here:</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- A1: COLLOCATIONS -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A1</span>
+      <span class="sec-title">Collocations — सही जोड़ी चुनें</span>
+      <span class="sec-time">10 मिनट</span>
+    </div>
+    <div class="source-badge">[2023 · P2 · A1]</div>
+    <p class="hint" style="margin-bottom:10px;">नीचे दिए गए शब्दों के साथ सही संज्ञा/क्रिया चुनकर रिक्त स्थान भरें।</p>
+
+    <div class="q-block">
+      <span class="q-num">1.</span><span class="q-text">उसने परीक्षा में <span class="blank">&nbsp;</span> प्राप्त की।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) सफलता</span><span class="q-opt"><span class="opt-circle"></span>(B) सफलतापूर्वक</span><span class="q-opt"><span class="opt-circle"></span>(C) सफल</span><span class="q-opt"><span class="opt-circle"></span>(D) सफलताएँ</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">2.</span><span class="q-text">वह रोज़ सुबह <span class="blank">&nbsp;</span> करता है।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) व्यायाम</span><span class="q-opt"><span class="opt-circle"></span>(B) व्यायामी</span><span class="q-opt"><span class="opt-circle"></span>(C) व्यायाम करना</span><span class="q-opt"><span class="opt-circle"></span>(D) व्यायामशाला</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">3.</span><span class="q-text">माँ ने बच्चे को <span class="blank">&nbsp;</span> दी।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) शाबाशी</span><span class="q-opt"><span class="opt-circle"></span>(B) शाबाश</span><span class="q-opt"><span class="opt-circle"></span>(C) शाबाशियाँ</span><span class="q-opt"><span class="opt-circle"></span>(D) शाबाशीदार</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">4.</span><span class="q-text">उसने गरीबों की <span class="blank">&nbsp;</span> की।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) सहायता</span><span class="q-opt"><span class="opt-circle"></span>(B) सहायक</span><span class="q-opt"><span class="opt-circle"></span>(C) सहायतापूर्ण</span><span class="q-opt"><span class="opt-circle"></span>(D) सहाय</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">5.</span><span class="q-text">टीम ने मिलकर <span class="blank">&nbsp;</span> हासिल किया।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) लक्ष्य</span><span class="q-opt"><span class="opt-circle"></span>(B) लक्षणीय</span><span class="q-opt"><span class="opt-circle"></span>(C) लक्षित</span><span class="q-opt"><span class="opt-circle"></span>(D) लक्ष्यहीन</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">6.</span><span class="q-text">उसने अपनी <span class="blank">&nbsp;</span> से सबको प्रभावित किया।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) प्रतिभा</span><span class="q-opt"><span class="opt-circle"></span>(B) प्रतिभाशाली</span><span class="q-opt"><span class="opt-circle"></span>(C) प्रतिभाएँ</span><span class="q-opt"><span class="opt-circle"></span>(D) प्रतिभावान</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">7.</span><span class="q-text">बच्चे ने स्कूल में <span class="blank">&nbsp;</span> किया।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) नामांकन</span><span class="q-opt"><span class="opt-circle"></span>(B) नामांकित</span><span class="q-opt"><span class="opt-circle"></span>(C) नाम</span><span class="q-opt"><span class="opt-circle"></span>(D) नामकरण</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">8.</span><span class="q-text">उसने दोस्त से <span class="blank">&nbsp;</span> माँगी।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) माफ़ी</span><span class="q-opt"><span class="opt-circle"></span>(B) माफ़</span><span class="q-opt"><span class="opt-circle"></span>(C) माफ़ करना</span><span class="q-opt"><span class="opt-circle"></span>(D) माफ़ीनामा</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">9.</span><span class="q-text">उसने कड़ी <span class="blank">&nbsp;</span> की और जीत हासिल की।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) मेहनत</span><span class="q-opt"><span class="opt-circle"></span>(B) मेहनती</span><span class="q-opt"><span class="opt-circle"></span>(C) मेहनतकश</span><span class="q-opt"><span class="opt-circle"></span>(D) मेहनताना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">10.</span><span class="q-text">उसने समस्या का <span class="blank">&nbsp;</span> निकाला।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) हल</span><span class="q-opt"><span class="opt-circle"></span>(B) हलचल</span><span class="q-opt"><span class="opt-circle"></span>(C) हलका</span><span class="q-opt"><span class="opt-circle"></span>(D) हलवाई</span></div>
+    </div>
+  </div>
+
+  <!-- B6+B7: IDIOMS + COMPLETIONS -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B6 + B7</span>
+      <span class="sec-title">मुहावरे + वाक्य-पूर्ति</span>
+      <span class="sec-time">15 मिनट</span>
+    </div>
+    <div class="source-badge">[2023 · P2 · B6 + B7]</div>
+    <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">B6 — मुहावरे का अर्थ चुनें:</p>
+    <div class="q-block">
+      <span class="q-num">11.</span><span class="q-text">"आँखें खुलना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) नींद टूटना</span><span class="q-opt"><span class="opt-circle"></span>(B) सच्चाई का पता चलना</span><span class="q-opt"><span class="opt-circle"></span>(C) आँखें धोना</span><span class="q-opt"><span class="opt-circle"></span>(D) दृष्टि कमज़ोर होना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">12.</span><span class="q-text">"हाथ पर हाथ धरना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) बहुत मेहनत करना</span><span class="q-opt"><span class="opt-circle"></span>(B) बेकार बैठे रहना</span><span class="q-opt"><span class="opt-circle"></span>(C) सहयोग करना</span><span class="q-opt"><span class="opt-circle"></span>(D) हाथ धोना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">13.</span><span class="q-text">"मुँह में पानी आना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) बहुत प्यास लगना</span><span class="q-opt"><span class="opt-circle"></span>(B) कुछ खाने की इच्छा होना</span><span class="q-opt"><span class="opt-circle"></span>(C) बोलने में कठिनाई</span><span class="q-opt"><span class="opt-circle"></span>(D) पानी पीना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">14.</span><span class="q-text">"नाक में दम करना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) सुगंध फैलाना</span><span class="q-opt"><span class="opt-circle"></span>(B) बहुत परेशान करना</span><span class="q-opt"><span class="opt-circle"></span>(C) साँस लेना</span><span class="q-opt"><span class="opt-circle"></span>(D) नाक साफ़ करना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">15.</span><span class="q-text">"कान पर जूँ न रेंगना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) ध्यान से सुनना</span><span class="q-opt"><span class="opt-circle"></span>(B) कोई असर न होना</span><span class="q-opt"><span class="opt-circle"></span>(C) बहरा होना</span><span class="q-opt"><span class="opt-circle"></span>(D) जल्दी सुनना</span></div>
+    </div>
+    <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin:12px 0 8px;">B7 — वाक्य पूरा करें (उचित शब्द से):</p>
+    <div class="q-block">
+      <span class="q-num">16.</span><span class="q-text">वह इतना थका हुआ था कि सोते ही <span class="blank">&nbsp;</span> आ गई।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) नींद</span><span class="q-opt"><span class="opt-circle"></span>(B) थकान</span><span class="q-opt"><span class="opt-circle"></span>(C) भूख</span><span class="q-opt"><span class="opt-circle"></span>(D) प्यास</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">17.</span><span class="q-text">उसकी बात सुनकर सबके चेहरे पर <span class="blank">&nbsp;</span> आ गई।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) मुस्कान</span><span class="q-opt"><span class="opt-circle"></span>(B) परेशानी</span><span class="q-opt"><span class="opt-circle"></span>(C) रोना</span><span class="q-opt"><span class="opt-circle"></span>(D) डर</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">18.</span><span class="q-text">उसने साहस के साथ मंच पर <span class="blank">&nbsp;</span> दिया।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) भाषण</span><span class="q-opt"><span class="opt-circle"></span>(B) भाषा</span><span class="q-opt"><span class="opt-circle"></span>(C) भाग</span><span class="q-opt"><span class="opt-circle"></span>(D) भार</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">19.</span><span class="q-text">बारिश में भीगने से उसे <span class="blank">&nbsp;</span> हो गई।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) सर्दी</span><span class="q-opt"><span class="opt-circle"></span>(B) गर्मी</span><span class="q-opt"><span class="opt-circle"></span>(C) खुशी</span><span class="q-opt"><span class="opt-circle"></span>(D) नींद</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">20.</span><span class="q-text">उसने अपनी गलती <span class="blank">&nbsp;</span> से स्वीकार की।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) विनम्रता</span><span class="q-opt"><span class="opt-circle"></span>(B) अहंकार</span><span class="q-opt"><span class="opt-circle"></span>(C) क्रोध</span><span class="q-opt"><span class="opt-circle"></span>(D) उदासी</span></div>
+    </div>
+  </div>
+
+  <!-- B8: OPEN-ENDED PASSAGE -->
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">गद्यांश — Open-Ended Written Questions</span>
+      <span class="sec-time">25 मिनट</span>
+    </div>
+    <div class="source-badge">[2023 · P2 · B8]</div>
+    <div style="background:#f9fbe7;border:1.5px solid #aed581;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:13px;line-height:2;">
+      <p>अर्जुन दसवीं कक्षा का छात्र था। एक दिन उसने देखा कि उसके स्कूल में कुछ बच्चे अकेले और उदास रहते हैं — कोई उनसे बात नहीं करता, कोई उन्हें खेलने में नहीं बुलाता। अर्जुन का मन भर आया। उसने सोचा कि कुछ करना होगा।</p>
+      <p style="margin-top:10px;">अगले दिन उसने अपने दो दोस्तों के साथ मिलकर एक "दयालुता क्लब" शुरू किया। इस क्लब का काम था — हर हफ्ते किसी एक अकेले बच्चे का दोस्त बनना, उसकी मदद करना और उसे क्लास की गतिविधियों में शामिल करना। धीरे-धीरे यह क्लब पूरे स्कूल में मशहूर हो गया। अध्यापकों ने इस पहल की प्रशंसा की और बीस और बच्चे इस क्लब से जुड़ गए।</p>
+      <p style="margin-top:10px;">अर्जुन की माँ ने जब यह सुना तो उनकी आँखें भर आईं। उन्होंने कहा, "बेटा, तुमने आज मुझे गर्व से भर दिया।" अर्जुन मुस्कुराया और बोला, "माँ, खुशी देने से खुशी मिलती है।"</p>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q1.</span><span class="q-text">अर्जुन ने "दयालुता क्लब" क्यों शुरू किया? <span class="hint">(2 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:50px;"></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q2.</span><span class="q-text">इस क्लब का मुख्य काम क्या था? <span class="hint">(2 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:50px;"></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q3.</span><span class="q-text">क्लब के बारे में जानकर अर्जुन की माँ को कैसा लगा और उन्होंने क्या कहा? <span class="hint">(2 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:50px;"></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q4.</span><span class="q-text">"मशहूर" शब्द का अर्थ क्या है? <span class="hint">(1 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:36px;"></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q5.</span><span class="q-text">इस कहानी से आपको क्या सीख मिलती है? अपने शब्दों में लिखें। <span class="hint">(3 अंक)</span></span>
+      <div style="border:1px dashed #ccc;border-radius:6px;padding:8px;margin-top:6px;min-height:70px;"></div>
+    </div>
+  </div>
+
+  <!-- SELF-ASSESSMENT -->
+  <div style="background:#e8f5e9;border:2px solid #43a047;border-radius:10px;padding:14px 18px;margin:14px 18px;">
+    <div style="font-size:13px;font-weight:700;color:#1b5e20;margin-bottom:10px;">📊 Self-Assessment Tracker — शनिवार Grand Rehearsal</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+      <div><b>Paper 1 (Writing):</b> <span class="blank" style="min-width:50px">&nbsp;</span>/20</div>
+      <div><b>A1 (Collocations):</b> <span class="blank" style="min-width:50px">&nbsp;</span>/10</div>
+      <div><b>B6 (Idioms):</b> <span class="blank" style="min-width:50px">&nbsp;</span>/5</div>
+      <div><b>B7 (Completions):</b> <span class="blank" style="min-width:50px">&nbsp;</span>/5</div>
+      <div><b>B8 (Passage):</b> <span class="blank" style="min-width:50px">&nbsp;</span>/10</div>
+      <div style="background:#1b5e20;color:white;padding:3px 8px;border-radius:6px;font-weight:700;"><b>कुल:</b> <span class="blank" style="min-width:40px">&nbsp;</span>/50</div>
+    </div>
+    <div style="margin-top:10px;font-size:12px;color:#333;"><b>आज का अनुभव:</b> <span class="blank" style="min-width:200px">&nbsp;</span></div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div style="background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:12px 16px;margin:10px 18px;">
+    <div style="font-size:12px;font-weight:700;color:#e65100;margin-bottom:6px;">उत्तर-कुंजी (Answer Key) — Day 6 शनिवार</div>
+    <div style="font-size:12px;color:#333;line-height:2;">
+      <b>A1:</b> 1-A · 2-A · 3-A · 4-A · 5-A · 6-A · 7-A · 8-A · 9-A · 10-A<br>
+      <b>B6:</b> 11-B · 12-B · 13-B · 14-B · 15-B<br>
+      <b>B7:</b> 16-A · 17-A · 18-A · 19-A · 20-A<br>
+      <b>B8 आदर्श उत्तर:</b><br>
+      Q1. अर्जुन ने क्लब इसलिए शुरू किया क्योंकि उसने देखा कि कुछ बच्चे अकेले और उदास रहते हैं और कोई उनसे बात नहीं करता — वह उनकी मदद करना चाहता था।<br>
+      Q2. इस क्लब का काम था — हर हफ्ते किसी एक अकेले बच्चे का दोस्त बनना, उसकी मदद करना और उसे गतिविधियों में शामिल करना।<br>
+      Q3. माँ की आँखें भर आईं; उन्होंने कहा "बेटा, तुमने मुझे गर्व से भर दिया।"<br>
+      Q4. "मशहूर" = प्रसिद्ध / famous।<br>
+      Q5. इस कहानी से सीख: दूसरों की मदद करने से दोनों को खुशी मिलती है; छोटे से प्रयास से बड़ा बदलाव आ सकता है।
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DAY 7 — SUNDAY 17 AUG 2026 · CALM REVISION BEFORE PRELIMS
+     ═══════════════════════════════════════════════════════════ -->
+<div class="day-block weekend-block" id="day7">
+  <div class="wknd-banner">
+    <span>🌟 Prelims से पहले आराम करें! आज सिर्फ़ 5 आसान प्रश्न।</span>
+    <span>20 मिनट</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">रविवार — 23 अगस्त 2026 · शांत पुनरावलोकन</div>
+      <div class="day-meta">Calm Revision — Confidence Builders · 5 Easy Questions Only</div>
+    </div>
+    <div class="day-meta">20 मिनट</div>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">आत्मविश्वास</span>
+      <span class="sec-title">5 आसान प्रश्न — Confidence Builders</span>
+      <span class="sec-time">20 मिनट</span>
+    </div>
+    <div class="source-badge">[2023 · P2 · A1 + B6]</div>
+    <p class="hint" style="margin-bottom:12px;">ये प्रश्न आप पहले से जानते हैं — बस शांत मन से करें।</p>
+    <div class="q-block">
+      <span class="q-num">1.</span><span class="q-text">उसने अपनी माँ को <span class="blank">&nbsp;</span> दी।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) खुशखबरी</span><span class="q-opt"><span class="opt-circle"></span>(B) खुशबू</span><span class="q-opt"><span class="opt-circle"></span>(C) खुशहाली</span><span class="q-opt"><span class="opt-circle"></span>(D) खुशनुमा</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">2.</span><span class="q-text">"दिल खुश होना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) बहुत प्रसन्न होना</span><span class="q-opt"><span class="opt-circle"></span>(B) बीमार होना</span><span class="q-opt"><span class="opt-circle"></span>(C) दिल का दर्द</span><span class="q-opt"><span class="opt-circle"></span>(D) थका होना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">3.</span><span class="q-text">उसने परीक्षा में अच्छे <span class="blank">&nbsp;</span> लाए।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) अंक</span><span class="q-opt"><span class="opt-circle"></span>(B) अंकुर</span><span class="q-opt"><span class="opt-circle"></span>(C) अंकित</span><span class="q-opt"><span class="opt-circle"></span>(D) अंकगणित</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">4.</span><span class="q-text">"मन लगाकर पढ़ना" का अर्थ है —</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) ध्यान से पढ़ना</span><span class="q-opt"><span class="opt-circle"></span>(B) तेज़ पढ़ना</span><span class="q-opt"><span class="opt-circle"></span>(C) शोर मचाना</span><span class="q-opt"><span class="opt-circle"></span>(D) किताब बंद करना</span></div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">5.</span><span class="q-text">टीम ने मिलकर बड़ी <span class="blank">&nbsp;</span> हासिल की।</span>
+      <div class="q-options"><span class="q-opt"><span class="opt-circle"></span>(A) जीत</span><span class="q-opt"><span class="opt-circle"></span>(B) जीत-हार</span><span class="q-opt"><span class="opt-circle"></span>(C) जीतना</span><span class="q-opt"><span class="opt-circle"></span>(D) जीतू</span></div>
+    </div>
+  </div>
+
+  <!-- ENCOURAGEMENT -->
+  <div style="background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;border-radius:12px;padding:20px 22px;margin:14px 18px;text-align:center;">
+    <div style="font-size:18px;margin-bottom:10px;">🌟</div>
+    <div style="font-size:14px;font-weight:700;line-height:2;">आप पूरी तरह तैयार हैं।<br>
+    परीक्षा में शांत रहें, ध्यान से पढ़ें।<br>
+    माँ-पापा को आप पर गर्व है!</div>
+    <div style="margin-top:12px;font-size:16px;font-weight:900;letter-spacing:2px;">ALL THE BEST! 💪</div>
+  </div>
+
+  <!-- ANSWER KEY -->
+  <div style="background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:10px 16px;margin:10px 18px;">
+    <div style="font-size:11px;font-weight:700;color:#e65100;margin-bottom:4px;">उत्तर-कुंजी — Day 7 रविवार</div>
+    <div style="font-size:12px;color:#333;">1-A · 2-A · 3-A · 4-A · 5-A</div>
+  </div>
+
+  <!-- PREVIEW NEXT WEEK -->
+  <div class="preview-box">
+    <h4>👀 आगे क्या है?</h4>
+    <p>Prelims के बाद: <strong>W16 (Aug 24)</strong> — PSLE की असली तैयारी शुरू होगी! 2023 पेपर का मिश्रित मॉक, नई शब्दावली और B8 रणनीति।</p>
+  </div>
+</div>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+<p style="text-align:center;font-size:11px;color:#888;padding:10px;">Hindi PSLE Daily Practice · W15 Aug 17–21, 2026 · Phase 4: Pre-Prelims Final Prep · परीक्षा: 28 सितंबर 2026</p>
+
+</body>
+</html>
