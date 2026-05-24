@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aarohi &mdash; Hindi Oral Sprint (May 25 &ndash; Aug 10, 2026)</title>
+<style>
+:root{
+  --navy:#000080;
+  --saffron:#FF9933;
+  --green-phase:#2e7d32;
+  --orange-phase:#f57f17;
+  --purple-phase:#7b1fa2;
+  --green-bg:#e8f5e9;
+  --orange-bg:#fff8e1;
+  --purple-bg:#f3e5f5;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .week-card{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  @page{size:A4;margin:15mm;}
+}
+
+/* ── Tricolour stripe ── */
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+
+/* ── Header ── */
+.header{
+  background:linear-gradient(135deg,#000080,#1a1a7a);
+  color:white;padding:22px 28px;
+  border-bottom:5px solid #FF9933;
+  text-align:center;
+}
+.header h1{font-size:22px;letter-spacing:1px;font-weight:800;}
+.header .sub{font-size:12px;opacity:.85;margin-top:6px;}
+.exam-pill{
+  display:inline-block;
+  background:#FF9933;
+  color:#000;
+  font-weight:800;
+  font-size:12px;
+  padding:4px 16px;
+  border-radius:20px;
+  margin-top:10px;
+  letter-spacing:.5px;
+}
+
+/* ── Countdown ── */
+.countdown-bar{
+  background:#fff;
+  border-bottom:3px solid #FF9933;
+  padding:10px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.cd-block{text-align:center;}
+.cd-num{font-size:28px;font-weight:800;color:var(--navy);line-height:1;}
+.cd-label{font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.5px;}
+.cd-sep{font-size:28px;font-weight:300;color:#bbb;line-height:1;}
+.cd-exam-note{font-size:11px;color:#b71c1c;font-weight:700;text-align:center;width:100%;}
+
+/* ── Nav chips ── */
+.week-nav{
+  background:white;
+  padding:10px 20px;
+  border-bottom:1px solid #ddd;
+  display:flex;gap:6px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.nav-chip{
+  border-radius:20px;
+  padding:3px 10px;
+  font-size:11px;font-weight:700;
+  text-decoration:none;
+  display:inline-block;
+}
+.nav-chip.phase-green{background:var(--green-bg);color:var(--green-phase);border:1.5px solid var(--green-phase);}
+.nav-chip.phase-orange{background:var(--orange-bg);color:var(--orange-phase);border:1.5px solid var(--orange-phase);}
+.nav-chip.phase-purple{background:var(--purple-bg);color:var(--purple-phase);border:1.5px solid var(--purple-phase);}
+.nav-chip.back-link{background:#eeeeee;color:#333;border:1.5px solid #999;}
+
+/* ── Sticky tip boxes at top ── */
+.sticky-section{
+  margin:16px 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+@media(max-width:700px){.sticky-section{grid-template-columns:1fr;}}
+.tip-box{
+  border-radius:12px;
+  padding:16px 18px;
+  box-shadow:0 2px 8px rgba(0,0,0,.10);
+}
+.tip-box.pronunciation{
+  background:linear-gradient(135deg,#e8f5e9,#f1f8e9);
+  border:2px solid var(--green-phase);
+}
+.tip-box.conversation-tips{
+  background:linear-gradient(135deg,#e3f2fd,#f0f4ff);
+  border:2px solid var(--navy);
+}
+.tip-box h3{
+  font-size:14px;font-weight:800;
+  margin-bottom:10px;padding-bottom:6px;
+  border-bottom:2px solid rgba(0,0,0,.1);
+}
+.tip-box.pronunciation h3{color:var(--green-phase);}
+.tip-box.conversation-tips h3{color:var(--navy);}
+.tip-row{
+  display:flex;gap:10px;
+  margin-bottom:7px;
+  font-size:12.5px;
+  align-items:flex-start;
+}
+.tip-icon{font-size:14px;flex-shrink:0;margin-top:1px;}
+.tip-text b{color:var(--navy);}
+.tip-box.pronunciation .tip-text b{color:var(--green-phase);}
+.speed-note{
+  margin-top:10px;
+  background:rgba(46,125,50,.1);
+  border-left:3px solid var(--green-phase);
+  padding:6px 10px;
+  border-radius:0 6px 6px 0;
+  font-size:12px;
+  font-weight:600;
+  color:var(--green-phase);
+}
+
+/* ── Week card ── */
+.week-card{
+  background:white;
+  margin:16px 20px;
+  border-radius:14px;
+  box-shadow:0 3px 12px rgba(0,0,0,.10);
+  overflow:hidden;
+}
+.week-card.phase-green{border-top:5px solid var(--green-phase);}
+.week-card.phase-orange{border-top:5px solid var(--orange-phase);}
+.week-card.phase-purple{border-top:5px solid var(--purple-phase);}
+
+.week-header{
+  padding:12px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  border-bottom:1px solid #e0e0e0;
+}
+.week-card.phase-green .week-header{background:var(--green-bg);}
+.week-card.phase-orange .week-header{background:var(--orange-bg);}
+.week-card.phase-purple .week-header{background:var(--purple-bg);}
+
+.week-title{font-size:17px;font-weight:800;}
+.week-card.phase-green .week-title{color:var(--green-phase);}
+.week-card.phase-orange .week-title{color:var(--orange-phase);}
+.week-card.phase-purple .week-title{color:var(--purple-phase);}
+
+.week-dates{font-size:11px;color:#555;margin-top:2px;}
+.topic-badge{
+  font-size:12px;font-weight:700;
+  padding:5px 14px;
+  border-radius:20px;
+  white-space:nowrap;
+}
+.week-card.phase-green .topic-badge{background:var(--green-phase);color:white;}
+.week-card.phase-orange .topic-badge{background:var(--orange-phase);color:white;}
+.week-card.phase-purple .topic-badge{background:var(--purple-phase);color:white;}
+
+/* ── Section inside week card ── */
+.oral-section{padding:16px 18px;}
+.oral-section + .oral-section{border-top:2px dashed #e0e0e0;}
+.sec-header{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:12px;padding-bottom:8px;
+  border-bottom:2px solid #eee;
+}
+.sec-tag{
+  font-size:10px;font-weight:800;
+  padding:3px 10px;border-radius:4px;
+  color:white;white-space:nowrap;
+}
+.week-card.phase-green .sec-tag{background:var(--green-phase);}
+.week-card.phase-orange .sec-tag{background:var(--orange-phase);}
+.week-card.phase-purple .sec-tag{background:var(--purple-phase);}
+.sec-title{font-size:14px;font-weight:700;color:var(--navy);}
+
+/* ── Reading passage ── */
+.passage-box{
+  background:#f8f9fa;
+  border-left:4px solid var(--navy);
+  padding:14px 18px;
+  border-radius:0 10px 10px 0;
+  margin-bottom:14px;
+  font-size:13.5px;
+  line-height:2.2;
+  font-family:Georgia,serif;
+  color:#1a1a1a;
+}
+.passage-box .passage-label{
+  font-size:10px;font-weight:800;
+  color:var(--navy);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:8px;
+  display:block;
+  font-family:'Segoe UI',Arial,sans-serif;
+}
+
+/* ── Reading tips ── */
+.reading-tips{
+  background:#fff9c4;
+  border:1.5px solid #f9a825;
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:12.5px;
+  margin-bottom:4px;
+}
+.reading-tips b{color:#e65100;font-size:12px;}
+.reading-tips ul{margin:4px 0 0 18px;}
+.reading-tips ul li{margin-bottom:3px;color:#333;}
+
+/* ── Conversation questions ── */
+.q-list{list-style:none;padding:0;margin-bottom:12px;}
+.q-list li{
+  display:flex;gap:10px;
+  padding:8px 10px;
+  border-radius:8px;
+  margin-bottom:6px;
+  font-size:13px;
+  line-height:1.7;
+}
+.q-list li:nth-child(odd){background:#f5f5f5;}
+.q-list li:nth-child(even){background:#fafafa;}
+.q-num-badge{
+  background:var(--navy);
+  color:white;
+  font-size:10px;font-weight:800;
+  width:22px;height:22px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.week-card.phase-green .q-num-badge{background:var(--green-phase);}
+.week-card.phase-orange .q-num-badge{background:var(--orange-phase);}
+.week-card.phase-purple .q-num-badge{background:var(--purple-phase);}
+.diff-hard .q-num-badge{background:#b71c1c!important;}
+
+/* ── Vocabulary ── */
+.vocab-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:6px;
+  margin-top:8px;
+}
+.vocab-item{
+  background:#f0f4ff;
+  border:1px solid #c5cae9;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:12.5px;
+}
+.vocab-item .hindi-word{
+  font-weight:800;
+  color:var(--navy);
+  font-size:13px;
+  display:block;
+}
+.vocab-item .eng-meaning{color:#555;font-size:11.5px;}
+.week-card.phase-green .vocab-item{background:#e8f5e9;border-color:#a5d6a7;}
+.week-card.phase-green .vocab-item .hindi-word{color:var(--green-phase);}
+.week-card.phase-orange .vocab-item{background:#fff8e1;border-color:#ffe082;}
+.week-card.phase-orange .vocab-item .hindi-word{color:#e65100;}
+.week-card.phase-purple .vocab-item{background:#f3e5f5;border-color:#ce93d8;}
+.week-card.phase-purple .vocab-item .hindi-word{color:var(--purple-phase);}
+
+/* ── Phase label strip ── */
+.phase-strip{
+  margin:20px 20px 0;
+  border-radius:8px 8px 0 0;
+  padding:7px 18px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.5px;
+  display:flex;align-items:center;gap:8px;
+}
+.phase-strip.phase-green{background:var(--green-phase);color:white;}
+.phase-strip.phase-orange{background:var(--orange-phase);color:white;}
+.phase-strip.phase-purple{background:var(--purple-phase);color:white;}
+
+/* ── Footer ── */
+.footer{
+  text-align:center;
+  padding:20px;
+  font-size:11px;
+  color:#888;
+  border-top:1px solid #ddd;
+  margin-top:8px;
+  background:white;
+}
+.exam-date-callout{
+  background:#b71c1c;
+  color:white;
+  text-align:center;
+  padding:12px 20px;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.5px;
+  margin:0;
+}
+</style>
+</head>
+<body>
+
+<!-- Tricolour stripe -->
+<div class="stripe">
+  <div style="background:#FF9933"></div>
+  <div style="background:#ffffff;border-top:1px solid #eee;border-bottom:1px solid #eee;"></div>
+  <div style="background:#138808"></div>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <h1>&#127470;&#127475; Aarohi &mdash; Hindi Oral Sprint</h1>
+  <p class="sub">May 25 &ndash; Aug 10, 2026 &nbsp;&bull;&nbsp; 11 Weeks &nbsp;&bull;&nbsp; पाठ वाचन &amp; बातचीत</p>
+  <div class="exam-pill">&#128197; Oral Exam: Thursday, 13 August 2026 &nbsp;|&nbsp; 0800&ndash;1330h</div>
+</div>
+
+<!-- Countdown -->
+<div class="countdown-bar" id="countdown-bar">
+  <div class="cd-block"><div class="cd-num" id="cd-days">--</div><div class="cd-label">दिन</div></div>
+  <div class="cd-sep">:</div>
+  <div class="cd-block"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">घंटे</div></div>
+  <div class="cd-sep">:</div>
+  <div class="cd-block"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">मिनट</div></div>
+  <div class="cd-sep">:</div>
+  <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">सेकंड</div></div>
+  <div class="cd-exam-note">&#128338; Countdown to Oral Exam &mdash; 13 August 2026, 0800h</div>
+</div>
+
+<!-- Week progress nav chips -->
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">JUMP TO WEEK:</span>
+  <a class="nav-chip back-link" href="../Hindi_Daily_Plan_May_Sept2026.html">&#8592; Study Plan</a>
+  <a class="nav-chip phase-green" href="#w1">W1 May 25</a>
+  <a class="nav-chip phase-green" href="#w2">W2 Jun 1</a>
+  <a class="nav-chip phase-green" href="#w3">W3 Jun 8</a>
+  <a class="nav-chip phase-green" href="#w4">W4 Jun 15</a>
+  <a class="nav-chip phase-orange" href="#w5">W5 Jun 22</a>
+  <a class="nav-chip phase-orange" href="#w6">W6 Jun 29</a>
+  <a class="nav-chip phase-orange" href="#w7">W7 Jul 6</a>
+  <a class="nav-chip phase-orange" href="#w8">W8 Jul 13</a>
+  <a class="nav-chip phase-purple" href="#w9">W9 Jul 20</a>
+  <a class="nav-chip phase-purple" href="#w10">W10 Jul 27</a>
+  <a class="nav-chip phase-purple" href="#w11">W11 Aug 3</a>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- STICKY GUIDE BOXES                          -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="sticky-section">
+
+  <!-- Pronunciation Guide -->
+  <div class="tip-box pronunciation">
+    <h3>&#127897; ध्वनि उच्चारण गाइड</h3>
+    <div class="tip-row">
+      <span class="tip-icon">&#9888;</span>
+      <span class="tip-text"><b>ण&nbsp;vs&nbsp;न</b> — परीक्षण &#10004;&nbsp;/&nbsp;परीक्षन &#10008;<br><span style="font-size:11px;color:#555;">ण = मुड़ी हुई जीभ, न = सपाट जीभ</span></span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#9888;</span>
+      <span class="tip-text"><b>श&nbsp;vs&nbsp;ष</b> — विशेष &#10004;&nbsp;/&nbsp;विशेस &#10008;<br><span style="font-size:11px;color:#555;">दोनों अलग ध्वनियाँ — सावधान रहें</span></span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#9888;</span>
+      <span class="tip-text"><b>ह मात्रा</b> — पहचान, बहुत, चाहिए<br><span style="font-size:11px;color:#555;">'ह' का उच्चारण स्पष्ट रखें, छोड़ें नहीं</span></span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#9888;</span>
+      <span class="tip-text"><b>चंद्रबिंदु</b> — चाँद &#10004;&nbsp;/&nbsp;चांद &#10008;<br><span style="font-size:11px;color:#555;">नासिक स्वर — हल्की नाक की ध्वनि</span></span>
+    </div>
+    <div class="speed-note">&#9201; पठन गति: न बहुत तेज़, न बहुत धीरे<br>लक्ष्य: ~90&ndash;100 शब्द प्रति मिनट</div>
+  </div>
+
+  <!-- Conversation Tips -->
+  <div class="tip-box conversation-tips">
+    <h3>&#128172; बातचीत टिप्स</h3>
+    <div class="tip-row">
+      <span class="tip-icon">&#128161;</span>
+      <span class="tip-text"><b>अपनी राय दो:</b><br>"मेरे विचार में..." &nbsp;/&nbsp; "मेरा मानना है कि..."</span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#128161;</span>
+      <span class="tip-text"><b>कारण दो:</b><br>"क्योंकि..." &nbsp;/&nbsp; "इसलिए..." &nbsp;/&nbsp; "चूँकि..."</span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#128161;</span>
+      <span class="tip-text"><b>उदाहरण दो:</b><br>"उदाहरण के लिए..." &nbsp;/&nbsp; "जैसे कि..."</span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#128161;</span>
+      <span class="tip-text"><b>विस्तार करो:</b><br>"इसके अलावा..." &nbsp;/&nbsp; "साथ ही..." &nbsp;/&nbsp; "दूसरी बात..."</span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#9888;</span>
+      <span class="tip-text"><b>कम से कम 3 वाक्य बोलो</b> — 1 वाक्य में जवाब देना पर्याप्त नहीं है!</span>
+    </div>
+    <div class="tip-row">
+      <span class="tip-icon">&#128276;</span>
+      <span class="tip-text"><b>रुको, सोचो, बोलो</b> — "एक पल..." कहकर समय लेना ठीक है।</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PHASE 1 — GREEN (W1–W4)                    -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="phase-strip phase-green">&#127807; PHASE 1: FOUNDATION &nbsp;&mdash;&nbsp; Weeks 1&ndash;4 (May 25 &ndash; Jun 21)</div>
+
+<!-- ════════════════════ WEEK 1 ════════════════════ -->
+<div class="week-card phase-green" id="w1">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 1 &mdash; Week 1</div>
+      <div class="week-dates">May 25 &ndash; 31, 2026</div>
+    </div>
+    <div class="topic-badge">परिवार और रिश्ते</div>
+  </div>
+
+  <!-- Section 1: Reading -->
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — परिवार और रिश्ते (Family)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें (Read aloud clearly)</span>
+      मेरे दादाजी एक किसान थे। उनके हाथों में मिट्टी की सोंधी खुशबू रहती थी और उनकी आँखों में हमेशा एक शांत मुस्कान। हर सुबह वे खेतों की ओर जाते और मुझे भी साथ ले जाते। वे कहते थे, "बेटी, ज़मीन झूठ नहीं बोलती — जितना दोगे, उतना पाओगे।"
+
+      धीरे-धीरे उन्होंने मुझे बीज बोना सिखाया, पौधों की देखभाल करना सिखाया और सबसे ज़रूरी बात — धैर्य रखना सिखाया। उनकी बातें आज भी मेरे मन में गूँजती हैं। जब भी मैं कठिनाई में होती हूँ, मुझे दादाजी की याद आती है और मेरे मन को हिम्मत मिलती है। परिवार के बड़े-बुज़ुर्ग हमारे जीवन के सबसे बड़े गुरु होते हैं। उनका प्यार और उनकी सीख हमें हमेशा आगे बढ़ने की प्रेरणा देती है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips for this passage:</b>
+      <ul>
+        <li>पंक्ति 1: "सोंधी" — ध्यान से पढ़ें, 'ध' स्पष्ट बोलें।</li>
+        <li>उद्धरण चिह्न (" ") पर थोड़ा रुककर, थोड़े अलग स्वर में पढ़ें।</li>
+        <li>"धैर्य" शब्द में 'ध्' + 'ऐ' मात्रा — धीरे-धीरे बोलें।</li>
+        <li>अंतिम वाक्य लंबा है — बीच में एक बार साँस लेकर पढ़ें।</li>
+        <li>भाव के साथ पढ़ें — यह याद की कहानी है, प्रेम और कृतज्ञता दिखाएँ।</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 2: Conversation -->
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — परिवार और रिश्ते</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>तुम्हारे परिवार में कौन तुम्हारे सबसे क़रीब है और क्यों?</span></li>
+      <li><span class="q-num-badge">2</span><span>तुम्हारे घर में कौन-सी परंपरा या रस्म सबसे ख़ास है?</span></li>
+      <li><span class="q-num-badge">3</span><span>परिवार के साथ समय बिताना क्यों ज़रूरी है?</span></li>
+      <li><span class="q-num-badge">4</span><span>बड़े-बुज़ुर्गों से हम क्या सीख सकते हैं?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>अगर तुम्हें परिवार के लिए कुछ एक काम करना हो, तो वह क्या होगा और क्यों?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">रिश्ते</span><span class="eng-meaning">relationships</span></div>
+        <div class="vocab-item"><span class="hindi-word">बुज़ुर्ग</span><span class="eng-meaning">elders</span></div>
+        <div class="vocab-item"><span class="hindi-word">परंपरा</span><span class="eng-meaning">tradition</span></div>
+        <div class="vocab-item"><span class="hindi-word">देखभाल</span><span class="eng-meaning">care</span></div>
+        <div class="vocab-item"><span class="hindi-word">प्रेरणा</span><span class="eng-meaning">inspiration</span></div>
+        <div class="vocab-item"><span class="hindi-word">सहयोग</span><span class="eng-meaning">cooperation</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 2 ════════════════════ -->
+<div class="week-card phase-green" id="w2">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 2 &mdash; Week 2</div>
+      <div class="week-dates">Jun 1 &ndash; 7, 2026</div>
+    </div>
+    <div class="topic-badge">स्वास्थ्य और जीवन-शैली</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — स्वास्थ्य और जीवन-शैली (Health)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      अर्जुन पहले हर शाम बिस्कुट खाते हुए टीवी देखता था। उसका वज़न बढ़ता जा रहा था और खेलने में साँस फूलने लगी थी। एक दिन उसके डॉक्टर ने कहा, "बेटा, तुम्हारा शरीर बदलाव माँग रहा है।"
+
+      उस दिन से अर्जुन ने जंक फूड छोड़ दिया। हर सुबह वह पार्क में दौड़ने जाता और रात को समय पर सो जाता। तीन महीनों में बदलाव दिखने लगा — वह चुस्त हो गया, पढ़ाई में भी मन लगने लगा। उसने जाना कि स्वास्थ्य कोई भाग्य नहीं, बल्कि एक आदत है। सही खाना, नियमित व्यायाम और पर्याप्त नींद — ये तीनों मिलकर एक अच्छी जीवन-शैली बनाते हैं।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"साँस फूलने" — चंद्रबिंदु (साँस) स्पष्ट नासिक उच्चारण करें।</li>
+        <li>डॉक्टर के संवाद पर आवाज़ थोड़ी बदलें — सलाह देने का स्वर।</li>
+        <li>"चुस्त" शब्द — 'च्' + 'उ' मात्रा — साफ़ बोलें, 'छुस्त' नहीं।</li>
+        <li>अंतिम 3 शब्दों की सूची (सही खाना, व्यायाम, नींद) धीरे-धीरे बोलें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — स्वास्थ्य और जीवन-शैली</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>तुम अपना स्वास्थ्य अच्छा रखने के लिए क्या-क्या करते हो?</span></li>
+      <li><span class="q-num-badge">2</span><span>आज के बच्चों में मोटापा बढ़ने के क्या कारण हैं?</span></li>
+      <li><span class="q-num-badge">3</span><span>स्कूल में खेलकूद के समय को क्यों बढ़ाना चाहिए?</span></li>
+      <li><span class="q-num-badge">4</span><span>अच्छे स्वास्थ्य के लिए खाना और नींद कितनी ज़रूरी है?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>अगर तुम्हारा कोई दोस्त बीमार पड़े तो तुम उसकी मदद कैसे करोगे?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">स्वास्थ्य</span><span class="eng-meaning">health</span></div>
+        <div class="vocab-item"><span class="hindi-word">व्यायाम</span><span class="eng-meaning">exercise</span></div>
+        <div class="vocab-item"><span class="hindi-word">पौष्टिक</span><span class="eng-meaning">nutritious</span></div>
+        <div class="vocab-item"><span class="hindi-word">नियमित</span><span class="eng-meaning">regular</span></div>
+        <div class="vocab-item"><span class="hindi-word">सुधार</span><span class="eng-meaning">improvement</span></div>
+        <div class="vocab-item"><span class="hindi-word">जीवन-शैली</span><span class="eng-meaning">lifestyle</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 3 ════════════════════ -->
+<div class="week-card phase-green" id="w3">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 3 &mdash; Week 3</div>
+      <div class="week-dates">Jun 8 &ndash; 14, 2026</div>
+    </div>
+    <div class="topic-badge">पर्यावरण</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — पर्यावरण (Environment)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      हमारे स्कूल ने पिछले साल एक हरित परियोजना शुरू की। हर कक्षा को एक छोटा बगीचा दिया गया। हम सबने मिलकर बीज बोए, पानी दिया और हफ़्तों तक पौधों की देखभाल की।
+
+      इसके साथ ही हमने प्लास्टिक की थैलियाँ लाना बंद किया और कैंटीन में कागज़ के डब्बे इस्तेमाल होने लगे। छह महीने बाद जब हमारे बगीचे में फूल खिले, तो हम सब बहुत खुश हुए। प्रिंसिपल महोदया ने कहा, "तुमने साबित कर दिया कि छोटे-छोटे कदम बड़ा बदलाव ला सकते हैं।" आज हमारा स्कूल पर्यावरण-मित्र विद्यालय के रूप में जाना जाता है। यह हम सबकी मेहनत का फल है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"हरित परियोजना" — दोनों शब्द स्पष्ट, 'परि' + 'योजना' अलग-अलग।</li>
+        <li>"पर्यावरण-मित्र" — लंबा शब्द, बीच में न रुकें, एक साँस में पढ़ें।</li>
+        <li>प्रिंसिपल का उद्धरण — उत्साह और प्रशंसा के स्वर में पढ़ें।</li>
+        <li>अंतिम वाक्य — गर्व के भाव से, थोड़ा धीरे पढ़ें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — पर्यावरण</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>पर्यावरण को बचाने के लिए तुम रोज़ाना क्या कर सकते हो?</span></li>
+      <li><span class="q-num-badge">2</span><span>प्लास्टिक के उपयोग को कम करना क्यों ज़रूरी है?</span></li>
+      <li><span class="q-num-badge">3</span><span>सिंगापुर में पेड़-पौधे लगाना इतना महत्वपूर्ण क्यों है?</span></li>
+      <li><span class="q-num-badge">4</span><span>अगर तुम्हारे स्कूल में एक पर्यावरण दिवस मनाया जाए तो तुम क्या-क्या करना चाहोगे?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>जलवायु परिवर्तन से बच्चों के भविष्य पर क्या प्रभाव पड़ेगा?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">पर्यावरण</span><span class="eng-meaning">environment</span></div>
+        <div class="vocab-item"><span class="hindi-word">प्रदूषण</span><span class="eng-meaning">pollution</span></div>
+        <div class="vocab-item"><span class="hindi-word">संरक्षण</span><span class="eng-meaning">conservation</span></div>
+        <div class="vocab-item"><span class="hindi-word">पुनर्चक्रण</span><span class="eng-meaning">recycling</span></div>
+        <div class="vocab-item"><span class="hindi-word">हरित</span><span class="eng-meaning">green</span></div>
+        <div class="vocab-item"><span class="hindi-word">जलवायु</span><span class="eng-meaning">climate</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 4 ════════════════════ -->
+<div class="week-card phase-green" id="w4">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 4 &mdash; Week 4</div>
+      <div class="week-dates">Jun 15 &ndash; 21, 2026</div>
+    </div>
+    <div class="topic-badge">प्रौद्योगिकी और इंटरनेट</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — प्रौद्योगिकी और इंटरनेट (Technology)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      नेहा के घर में एक नियम था — पढ़ाई के समय फोन बंद। पहले उसे यह नियम बुरा लगता था, लेकिन धीरे-धीरे उसने समझा कि इससे उसका ध्यान बेहतर होता है।
+
+      वह इंटरनेट का उपयोग ज़रूर करती थी — लेकिन होशियारी से। विज्ञान की जानकारी खोजना, ऑनलाइन लाइब्रेरी से किताबें पढ़ना, नई भाषाएँ सीखना — ये सब उसके पसंदीदा काम थे। वह जानती थी कि हर वेबसाइट पर लिखी बात सच नहीं होती, इसलिए वह हमेशा विश्वसनीय स्रोतों से ही जानकारी लेती। नेहा का मानना था कि तकनीक एक औज़ार है — अगर सही तरीके से इस्तेमाल करो तो यह उड़ान दे सकती है, नहीं तो यह जाल बन जाती है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"प्रौद्योगिकी" — लंबा शब्द, अभ्यास करें: प्र-औ-द्यो-गि-की।</li>
+        <li>"विश्वसनीय" — वि+श्व+स+नी+य — हर अक्षर स्पष्ट।</li>
+        <li>अंतिम वाक्य में "औज़ार", "उड़ान", "जाल" — तीनों पर हल्का ज़ोर दें।</li>
+        <li>नेहा का विचार दर्शाने वाले वाक्य को थोड़ा धीमे पढ़ें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — प्रौद्योगिकी और इंटरनेट</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>प्रौद्योगिकी हमारी पढ़ाई में किस प्रकार मदद करती है?</span></li>
+      <li><span class="q-num-badge">2</span><span>मोबाइल फोन के अत्यधिक उपयोग के क्या नुकसान हैं?</span></li>
+      <li><span class="q-num-badge">3</span><span>इंटरनेट पर कौन-सी जानकारी पर हमें भरोसा नहीं करना चाहिए और क्यों?</span></li>
+      <li><span class="q-num-badge">4</span><span>बच्चों के लिए मोबाइल फोन के उपयोग की समय-सीमा होनी चाहिए — तुम इससे सहमत हो या नहीं?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>भविष्य में कौन-सी नई तकनीक हमारे जीवन को बदल सकती है?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">प्रौद्योगिकी</span><span class="eng-meaning">technology</span></div>
+        <div class="vocab-item"><span class="hindi-word">उपयोग</span><span class="eng-meaning">use / usage</span></div>
+        <div class="vocab-item"><span class="hindi-word">साइबर सुरक्षा</span><span class="eng-meaning">cyber safety</span></div>
+        <div class="vocab-item"><span class="hindi-word">सोशल मीडिया</span><span class="eng-meaning">social media</span></div>
+        <div class="vocab-item"><span class="hindi-word">निर्भरता</span><span class="eng-meaning">dependence</span></div>
+        <div class="vocab-item"><span class="hindi-word">जागरूकता</span><span class="eng-meaning">awareness</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PHASE 2 — ORANGE (W5–W8)                   -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="phase-strip phase-orange">&#128293; PHASE 2: BUILD &nbsp;&mdash;&nbsp; Weeks 5&ndash;8 (Jun 22 &ndash; Jul 19)</div>
+
+<!-- ════════════════════ WEEK 5 ════════════════════ -->
+<div class="week-card phase-orange" id="w5">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 5 &mdash; Week 5</div>
+      <div class="week-dates">Jun 22 &ndash; 28, 2026</div>
+    </div>
+    <div class="topic-badge">प्रकृति और खोज</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — प्रकृति और खोज (Nature &amp; Discovery)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      उस दोपहर रिया अपने पिता के साथ बोटानिक गार्डन में टहल रही थी। अचानक एक पेड़ के नीचे उसे एक तितली दिखी जो वैसी नहीं थी जैसी उसने पहले कभी देखी थी। उसके पंखों पर नीले-हरे रंग की चमकदार धारियाँ थीं जो सूर्य की रोशनी में इंद्रधनुष की तरह चमक रही थीं।
+
+      रिया ने उसे ध्यान से देखा और तुरंत अपनी डायरी में उसका चित्र बनाया। घर जाकर उसने किताबों में खोज की और पाया कि यह एक दुर्लभ प्रजाति थी। उस दिन रिया के मन में एक विचार जागा — प्रकृति हर रोज़ हमें कुछ नया दिखाती है, बस हमें उसे देखने की ललक होनी चाहिए। जिज्ञासा ही हर महान खोज की जननी होती है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"इंद्रधनुष" — इन्+द्र+ध+नु+ष — ष का उच्चारण श नहीं।</li>
+        <li>"दुर्लभ" — दु+र्+ल+भ — 'र्' आधा उच्चारण करें।</li>
+        <li>तितली का वर्णन वाला भाग — आश्चर्य और उत्साह दिखाएँ।</li>
+        <li>अंतिम वाक्य (जिज्ञासा ही...) — धीरे और गंभीर स्वर में।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — प्रकृति और खोज</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>क्या तुमने कभी प्रकृति में कोई अद्भुत चीज़ देखी है? बताओ।</span></li>
+      <li><span class="q-num-badge">2</span><span>प्रकृति का अध्ययन करना क्यों ज़रूरी है?</span></li>
+      <li><span class="q-num-badge">3</span><span>शहरों में रहने वाले बच्चों को प्रकृति के बारे में जानने का मौका कम क्यों मिलता है?</span></li>
+      <li><span class="q-num-badge">4</span><span>अगर तुम्हें एक वैज्ञानिक खोज करनी हो तो तुम किस विषय में करना चाहोगे?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>वन्यजीवों की रक्षा के लिए हम क्या कर सकते हैं?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">अद्भुत</span><span class="eng-meaning">wonderful / amazing</span></div>
+        <div class="vocab-item"><span class="hindi-word">खोज</span><span class="eng-meaning">discovery</span></div>
+        <div class="vocab-item"><span class="hindi-word">वन्यजीव</span><span class="eng-meaning">wildlife</span></div>
+        <div class="vocab-item"><span class="hindi-word">जिज्ञासा</span><span class="eng-meaning">curiosity</span></div>
+        <div class="vocab-item"><span class="hindi-word">अन्वेषण</span><span class="eng-meaning">exploration</span></div>
+        <div class="vocab-item"><span class="hindi-word">संरक्षण</span><span class="eng-meaning">conservation</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 6 ════════════════════ -->
+<div class="week-card phase-orange" id="w6">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 6 &mdash; Week 6</div>
+      <div class="week-dates">Jun 29 &ndash; Jul 5, 2026</div>
+    </div>
+    <div class="topic-badge">सामुदायिक सेवा</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — सामुदायिक सेवा (Community Service)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      पिछली दिवाली में मेरी कक्षा के बच्चों ने एक वृद्धाश्रम में जाकर वहाँ के बुज़ुर्गों के साथ समय बिताया। पहले मुझे थोड़ी घबराहट थी, लेकिन जब हम वहाँ पहुँचे तो दादी-नानी जैसे चेहरों पर मुस्कान देखकर मेरा मन भर आया।
+
+      हमने उनके लिए गीत गाए, उनकी कहानियाँ सुनीं और उनके साथ खाना खाया। एक दादाजी ने मेरा हाथ थामकर कहा, "बहुत दिनों बाद किसी ने इस तरह बात की।" उस पल मुझे समझ आया कि सेवा करना केवल मदद देना नहीं है — यह अपनापन देना है। उस दिन जो सीखा, वह किसी किताब में नहीं मिलता।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"वृद्धाश्रम" — वृ+द्ध+आ+श्र+म — आधे अक्षर सँभालकर पढ़ें।</li>
+        <li>दादाजी का उद्धरण — भावुक और धीमे स्वर में।</li>
+        <li>"अपनापन देना है" — इस पर ज़ोर दें, अर्थ समझाएँ।</li>
+        <li>पूरा पैसेज प्रेम और कृतज्ञता के भाव से पढ़ें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — सामुदायिक सेवा</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>क्या तुमने कभी किसी सेवा कार्य में भाग लिया है? कैसा लगा?</span></li>
+      <li><span class="q-num-badge">2</span><span>समाज की मदद करना हमारा कर्तव्य क्यों है?</span></li>
+      <li><span class="q-num-badge">3</span><span>सिंगापुर में किस प्रकार के सामुदायिक कार्यक्रम चलाए जाते हैं?</span></li>
+      <li><span class="q-num-badge">4</span><span>बुज़ुर्गों और विकलांग लोगों की मदद के लिए हम क्या कर सकते हैं?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>स्वयंसेवी काम करने से हमें क्या सीखने को मिलता है?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">स्वयंसेवक</span><span class="eng-meaning">volunteer</span></div>
+        <div class="vocab-item"><span class="hindi-word">समुदाय</span><span class="eng-meaning">community</span></div>
+        <div class="vocab-item"><span class="hindi-word">सेवा</span><span class="eng-meaning">service</span></div>
+        <div class="vocab-item"><span class="hindi-word">सहानुभूति</span><span class="eng-meaning">empathy</span></div>
+        <div class="vocab-item"><span class="hindi-word">सहयोग</span><span class="eng-meaning">cooperation</span></div>
+        <div class="vocab-item"><span class="hindi-word">कर्तव्य</span><span class="eng-meaning">duty</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 7 ════════════════════ -->
+<div class="week-card phase-orange" id="w7">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 7 &mdash; Week 7</div>
+      <div class="week-dates">Jul 6 &ndash; 12, 2026</div>
+    </div>
+    <div class="topic-badge">खेलकूद और टीम भावना</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — खेलकूद और टीम भावना (Sports &amp; Teamwork)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      हमारी फुटबॉल टीम फाइनल मैच हार गई। तीन-शून्य से। मैदान में खड़े होकर जब विरोधी टीम का जश्न देखा, तो मन भारी हो गया। लेकिन उस शाम कप्तान आदित्य ने हम सबको एक जगह बुलाया।
+
+      उसने कहा, "हम हारे हैं, लेकिन टूटे नहीं हैं। इस टीम ने पिछले तीन महीनों में साथ मिलकर जो सीखा, वह किसी ट्रॉफी से बड़ा है।" उसकी बात सुनकर सबके चेहरे पर मुस्कान आ गई। हम अगले दिन फिर अभ्यास के लिए मैदान पर उतरे — इस बार और मज़बूत, और एकजुट। हार हमें टीम से अलग नहीं कर सकी, बल्कि हमें और क़रीब ले आई।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"तीन-शून्य से" — छोटा वाक्य, एकदम स्पष्ट और रुककर बोलें।</li>
+        <li>कप्तान के संवाद में आत्मविश्वास और गर्मजोशी दिखाएँ।</li>
+        <li>"एकजुट" — एक+जुट — दोनों भाग स्पष्ट।</li>
+        <li>अंतिम वाक्य में "बल्कि" पर हल्का रुकें — यह मोड़ है।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — खेलकूद और टीम भावना</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>तुम्हारा पसंदीदा खेल कौन-सा है और तुम उसे क्यों पसंद करते हो?</span></li>
+      <li><span class="q-num-badge">2</span><span>खेल में जीत से ज़्यादा भागीदारी क्यों ज़रूरी होती है?</span></li>
+      <li><span class="q-num-badge">3</span><span>टीम में काम करने से हम क्या-क्या सीखते हैं?</span></li>
+      <li><span class="q-num-badge">4</span><span>स्कूल में खेलकूद को पढ़ाई के बराबर महत्व क्यों दिया जाना चाहिए?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>किसी खिलाड़ी की कौन-सी बात तुम्हें सबसे ज़्यादा प्रेरित करती है?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">टीम भावना</span><span class="eng-meaning">team spirit</span></div>
+        <div class="vocab-item"><span class="hindi-word">प्रतिस्पर्धा</span><span class="eng-meaning">competition</span></div>
+        <div class="vocab-item"><span class="hindi-word">साहस</span><span class="eng-meaning">courage</span></div>
+        <div class="vocab-item"><span class="hindi-word">हार-जीत</span><span class="eng-meaning">win-loss</span></div>
+        <div class="vocab-item"><span class="hindi-word">अनुशासन</span><span class="eng-meaning">discipline</span></div>
+        <div class="vocab-item"><span class="hindi-word">प्रेरणा</span><span class="eng-meaning">motivation</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 8 ════════════════════ -->
+<div class="week-card phase-orange" id="w8">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 8 &mdash; Week 8</div>
+      <div class="week-dates">Jul 13 &ndash; 19, 2026</div>
+    </div>
+    <div class="topic-badge">शिक्षा और सीखना</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — शिक्षा और सीखना (Education)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      सिया को पहले किताबें बोझ लगती थीं। लेकिन एक दिन उसकी शिक्षिका ने उसे "पाँच का जादू" नाम की एक पतली-सी किताब दी। उस रात सिया ने उसे खत्म कर दिया — और सोई नहीं।
+
+      उस किताब के पात्र उसके सपनों में आने लगे। अगले दिन उसने पुस्तकालय से तीन और किताबें माँगीं। एक महीने में दस किताबें। साल के अंत तक उसके कमरे की दीवारें किताबों से भर गई थीं। सिया कहती है, "किताबें मुझे उन जगहों पर ले जाती हैं जहाँ मेरे पैर नहीं पहुँच सकते।" पढ़ने की आदत ने उसके शब्द-भंडार को, उसकी सोच को और उसके आत्मविश्वास को हज़ार गुना बढ़ा दिया।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"पाँच का जादू" — पुस्तक का नाम है, थोड़ा अलग, खास स्वर में।</li>
+        <li>सिया का उद्धरण (किताबें मुझे...) — प्रेम और उत्साह के साथ।</li>
+        <li>"हज़ार गुना" — ज़ोर देकर पढ़ें, यह मुख्य संदेश है।</li>
+        <li>अंतिम वाक्य में तीन बातें हैं — हर बात पर थोड़ा रुकें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — शिक्षा और सीखना</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>पढ़ाई में तुम्हारा पसंदीदा विषय कौन-सा है और क्यों?</span></li>
+      <li><span class="q-num-badge">2</span><span>किताबें पढ़ने की आदत क्यों ज़रूरी है?</span></li>
+      <li><span class="q-num-badge">3</span><span>परीक्षा में अच्छे अंक लाना ही सफलता की पहचान है — क्या तुम सहमत हो?</span></li>
+      <li><span class="q-num-badge">4</span><span>तुम्हारे पसंदीदा शिक्षक की कौन-सी बात तुम्हें सबसे अच्छी लगती है?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>भविष्य में तुम किस क्षेत्र में काम करना चाहते हो और उसके लिए क्या पढ़ना होगा?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">शिक्षा</span><span class="eng-meaning">education</span></div>
+        <div class="vocab-item"><span class="hindi-word">ज्ञान</span><span class="eng-meaning">knowledge</span></div>
+        <div class="vocab-item"><span class="hindi-word">परिश्रम</span><span class="eng-meaning">hard work</span></div>
+        <div class="vocab-item"><span class="hindi-word">प्रतिभा</span><span class="eng-meaning">talent</span></div>
+        <div class="vocab-item"><span class="hindi-word">लक्ष्य</span><span class="eng-meaning">goal</span></div>
+        <div class="vocab-item"><span class="hindi-word">सफलता</span><span class="eng-meaning">success</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PHASE 3 — PURPLE (W9–W11)                  -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="phase-strip phase-purple">&#11088; PHASE 3: PEAK &nbsp;&mdash;&nbsp; Weeks 9&ndash;11 (Jul 20 &ndash; Aug 9) &nbsp;&bull;&nbsp; EXAM: 13 Aug 0800h</div>
+
+<!-- ════════════════════ WEEK 9 ════════════════════ -->
+<div class="week-card phase-purple" id="w9">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 9 &mdash; Week 9</div>
+      <div class="week-dates">Jul 20 &ndash; 26, 2026</div>
+    </div>
+    <div class="topic-badge">त्योहार और संस्कृति</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — त्योहार और संस्कृति (Festivals &amp; Culture)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      हमारे घर में दीवाली सिर्फ़ एक त्योहार नहीं, एक उत्सव है। दो दिन पहले से तैयारियाँ शुरू हो जाती हैं। माँ गुझिया और लड्डू बनाती हैं, नानी घर के हर कोने में दीपक सजाती हैं और हम बच्चे रंगोली बनाते हैं।
+
+      शाम को जब दीपक जलते हैं, तो हमारा पूरा आँगन जगमगा उठता है। पड़ोसियों के साथ मिठाइयाँ बाँटी जाती हैं और हँसी-खुशी का माहौल होता है। दादाजी हमें बताते हैं कि दीवाली का असली अर्थ है — अंधेरे पर उजाले की जीत, बुराई पर अच्छाई की जीत। इन पलों में जो एकता और प्रेम होता है, वही हमारी असली विरासत है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"गुझिया" और "रंगोली" — खाद्य और कला शब्द, स्पष्ट उच्चारण।</li>
+        <li>"जगमगा उठता है" — आनंद और चमक का भाव लाएँ।</li>
+        <li>दादाजी की परिभाषा वाला वाक्य — गंभीर और धीरे पढ़ें।</li>
+        <li>"असली विरासत" — इस पर विशेष बल दें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — त्योहार और संस्कृति</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>तुम्हारा पसंदीदा त्योहार कौन-सा है और तुम उसे कैसे मनाते हो?</span></li>
+      <li><span class="q-num-badge">2</span><span>सिंगापुर में विभिन्न त्योहारों को मनाने से हमें क्या फ़ायदा होता है?</span></li>
+      <li><span class="q-num-badge">3</span><span>त्योहारों पर बड़े-बुज़ुर्गों की क्या भूमिका होती है?</span></li>
+      <li><span class="q-num-badge">4</span><span>क्या आधुनिक ज़माने में त्योहारों का तरीका बदल गया है? कैसे?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>भारतीय संस्कृति की कौन-सी बात तुम्हें सबसे अच्छी लगती है?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">त्योहार</span><span class="eng-meaning">festival</span></div>
+        <div class="vocab-item"><span class="hindi-word">परंपरा</span><span class="eng-meaning">tradition</span></div>
+        <div class="vocab-item"><span class="hindi-word">उत्सव</span><span class="eng-meaning">celebration</span></div>
+        <div class="vocab-item"><span class="hindi-word">सांस्कृतिक</span><span class="eng-meaning">cultural</span></div>
+        <div class="vocab-item"><span class="hindi-word">विरासत</span><span class="eng-meaning">heritage</span></div>
+        <div class="vocab-item"><span class="hindi-word">एकता</span><span class="eng-meaning">unity</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 10 ════════════════════ -->
+<div class="week-card phase-purple" id="w10">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 10 &mdash; Week 10</div>
+      <div class="week-dates">Jul 27 &ndash; Aug 2, 2026</div>
+    </div>
+    <div class="topic-badge">यात्रा और नई जगहें</div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — यात्रा और नई जगहें (Travel)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      पिछले स्कूल की छुट्टियों में हमारा परिवार मलेशिया के कैमरन हाइलैंड्स गया। पहाड़ों के ऊपर चाय के बाग़ान देखकर मेरी साँसें रुक-सी गईं — इतना सुंदर दृश्य मैंने पहले कभी नहीं देखा था।
+
+      वहाँ के लोग बहुत मेहमाननवाज़ थे। एक बूढ़े किसान ने हमें चाय की पत्तियाँ तोड़ना सिखाया और बताया कि उनका परिवार तीन पीढ़ियों से यही काम करता आया है। माँ ने उनसे उनकी भाषा में कुछ शब्द सीखे और वे ख़ुशी से मुस्कुराए। उस यात्रा ने मुझे सिखाया कि हर जगह की अपनी कहानी होती है और जो उसे सुनने का धैर्य रखता है, वही सच्चा यात्री होता है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips:</b>
+      <ul>
+        <li>"कैमरन हाइलैंड्स" — विदेशी नाम है, धीरे और स्पष्ट पढ़ें।</li>
+        <li>"साँसें रुक-सी गईं" — चंद्रबिंदु (साँसें) सँभालें; भाव दिखाएँ।</li>
+        <li>"मेहमाननवाज़" — लंबा शब्द, एक बार पहले अभ्यास करें।</li>
+        <li>अंतिम वाक्य — "सच्चा यात्री" पर ज़ोर देकर समाप्त करें।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Conversation Questions — यात्रा और नई जगहें</span>
+    </div>
+    <ul class="q-list">
+      <li><span class="q-num-badge">1</span><span>तुम अब तक कहाँ-कहाँ घूमने गए हो? कौन-सी जगह सबसे अच्छी लगी?</span></li>
+      <li><span class="q-num-badge">2</span><span>यात्रा करने से हमें क्या-क्या सीखने को मिलता है?</span></li>
+      <li><span class="q-num-badge">3</span><span>सिंगापुर को एक पर्यटन स्थल के रूप में क्यों जाना जाता है?</span></li>
+      <li><span class="q-num-badge">4</span><span>किसी देश की संस्कृति जानने का सबसे अच्छा तरीका क्या है?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>अगर तुम्हें किसी एक देश जाने का मौका मिले तो तुम कहाँ जाना चाहोगे और क्यों?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">यात्रा</span><span class="eng-meaning">travel / journey</span></div>
+        <div class="vocab-item"><span class="hindi-word">पर्यटन</span><span class="eng-meaning">tourism</span></div>
+        <div class="vocab-item"><span class="hindi-word">अनुभव</span><span class="eng-meaning">experience</span></div>
+        <div class="vocab-item"><span class="hindi-word">संस्कृति</span><span class="eng-meaning">culture</span></div>
+        <div class="vocab-item"><span class="hindi-word">विविधता</span><span class="eng-meaning">diversity</span></div>
+        <div class="vocab-item"><span class="hindi-word">स्मृति</span><span class="eng-meaning">memory</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ WEEK 11 ════════════════════ -->
+<div class="week-card phase-purple" id="w11">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 11 &mdash; Week 11 &nbsp;&#11088; Mock Oral</div>
+      <div class="week-dates">Aug 3 &ndash; 9, 2026 &nbsp;&bull;&nbsp; Exam: 13 Aug 0800h</div>
+    </div>
+    <div class="topic-badge">Mock Oral / Mixed Topics</div>
+  </div>
+
+  <div class="oral-section" style="background:#fce4ec;border-radius:0;">
+    <p style="font-size:12px;font-weight:700;color:#b71c1c;text-align:center;padding:6px 0 2px;">
+      &#9888; This is your final rehearsal week. Simulate real exam conditions — no looking at notes during practice.
+    </p>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">पाठ वाचन</span>
+      <span class="sec-title">Reading Aloud — सामाजिक समस्या (Social Issue)</span>
+    </div>
+    <div class="passage-box">
+      <span class="passage-label">&#128214; पाठ — ज़ोर से पढ़ें</span>
+      सिंगापुर में हर दिन लगभग सात सौ टन खाना बर्बाद होता है। यह सोचकर मन दुखी हो जाता है — जब एक ओर लोग भूखे हैं, दूसरी ओर थालियों में खाना छोड़ा जा रहा है।
+
+      रिया की दादी कहती थीं, "खाना अन्नदाता का आशीर्वाद है, उसे कभी फेंको नहीं।" इस बात ने रिया को इतना प्रभावित किया कि उसने अपने स्कूल में एक अभियान शुरू किया। वह दोपहर के भोजन के बाद बचे खाने को एक विशेष डब्बे में एकत्र करती और उसे ज़रूरतमंदों तक पहुँचाती। उसके एक प्रयास ने पचास बच्चों को प्रेरित किया। यह याद दिलाता है कि हर बड़ी समस्या का समाधान एक छोटे-से क़दम से शुरू होता है।
+    </div>
+    <div class="reading-tips">
+      <b>&#9998; Reading Tips — Mock Exam Level:</b>
+      <ul>
+        <li>"सात सौ टन" — संख्या धीरे और स्पष्ट बोलें।</li>
+        <li>"अन्नदाता का आशीर्वाद" — श्रद्धा और भाव के साथ पढ़ें।</li>
+        <li>"अभियान" — अ+भि+या+न — स्पष्ट उच्चारण।</li>
+        <li>अंतिम वाक्य — पूरे पैसेज का निष्कर्ष है — धीरे, गंभीर स्वर में।</li>
+        <li>पूरे पैसेज में ~90-100 शब्द/मिनट की गति रखें। समय लें — सटीकता पहले।</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oral-section">
+    <div class="sec-header">
+      <span class="sec-tag">बातचीत</span>
+      <span class="sec-title">Mixed Conversation Questions (Harder) — Mock Level</span>
+    </div>
+    <ul class="q-list">
+      <li class="diff-hard"><span class="q-num-badge">1</span><span>सिंगापुर में खाने की बर्बादी एक बड़ी समस्या है — इसे कैसे रोका जा सकता है?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">2</span><span>बुज़ुर्गों के अकेलेपन की समस्या को सुलझाने में युवा किस प्रकार मदद कर सकते हैं?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">3</span><span>तुम्हारे जीवन की सबसे बड़ी उपलब्धि क्या है?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">4</span><span>अगर तुम एक दिन के लिए सिंगापुर के प्रधानमंत्री बन जाओ तो सबसे पहले कौन-सा काम करोगे?</span></li>
+      <li class="diff-hard"><span class="q-num-badge">5</span><span>PSLE के बाद तुम क्या करना चाहते हो?</span></li>
+    </ul>
+    <div style="margin-top:10px;">
+      <div class="sec-header" style="margin-bottom:8px;">
+        <span class="sec-tag" style="background:#424242;">शब्द-भंडार</span>
+        <span class="sec-title">Key Vocabulary</span>
+      </div>
+      <div class="vocab-grid">
+        <div class="vocab-item"><span class="hindi-word">समस्या</span><span class="eng-meaning">problem</span></div>
+        <div class="vocab-item"><span class="hindi-word">समाधान</span><span class="eng-meaning">solution</span></div>
+        <div class="vocab-item"><span class="hindi-word">उपलब्धि</span><span class="eng-meaning">achievement</span></div>
+        <div class="vocab-item"><span class="hindi-word">जिम्मेदारी</span><span class="eng-meaning">responsibility</span></div>
+        <div class="vocab-item"><span class="hindi-word">नागरिक</span><span class="eng-meaning">citizen</span></div>
+        <div class="vocab-item"><span class="hindi-word">योगदान</span><span class="eng-meaning">contribution</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Exam callout -->
+<div class="exam-date-callout">
+  &#128197; PSLE Hindi Oral Examination &nbsp;&mdash;&nbsp; Thursday, 13 August 2026 &nbsp;&bull;&nbsp; 0800&ndash;1330h &nbsp;&mdash;&nbsp; You've got this, Aarohi!
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  Aarohi &mdash; Hindi Oral Sprint | May 25 &ndash; Aug 10, 2026 &nbsp;|&nbsp; PSLE Hindi Oral: 13 Aug 2026
+  &nbsp;|&nbsp; <a href="../Hindi_Daily_Plan_May_Sept2026.html" style="color:var(--navy);">Back to Study Plan</a>
+</div>
+
+<!-- ══ Countdown JavaScript ══ -->
+<script>
+(function(){
+  // Oral Exam: 13 August 2026, 08:00 SGT (UTC+8)
+  var examDate = new Date('2026-08-13T08:00:00+08:00');
+
+  function pad(n){ return n < 10 ? '0'+n : n; }
+
+  function tick(){
+    var now = new Date();
+    var diff = examDate - now;
+    if(diff <= 0){
+      document.getElementById('cd-days').textContent = '0';
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-mins').textContent = '00';
+      document.getElementById('cd-secs').textContent = '00';
+      return;
+    }
+    var days  = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins  = Math.floor((diff % 3600000)  / 60000);
+    var secs  = Math.floor((diff % 60000)    / 1000);
+    document.getElementById('cd-days').textContent  = days;
+    document.getElementById('cd-hours').textContent = pad(hours);
+    document.getElementById('cd-mins').textContent  = pad(mins);
+    document.getElementById('cd-secs').textContent  = pad(secs);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html>

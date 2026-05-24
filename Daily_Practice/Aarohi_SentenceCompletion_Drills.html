@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aarohi &mdash; वाक्य पूर्ति अभ्यास (W05&ndash;W09) | Hindi PSLE</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#f57f17;--phase-bg:#fff8e1;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .week-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  .wa2-box{page-break-after:avoid;}
+  @page{size:A4;margin:15mm;}
+  details{open:true;}
+  details summary{display:none;}
+  details .reveal-content{display:block!important;}
+}
+
+/* ── Tricolour stripe ── */
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+
+/* ── Header ── */
+.header{background:linear-gradient(135deg,var(--phase-color),#e65100);color:white;padding:20px 28px;border-bottom:5px solid #fff8e1;text-align:center;}
+.header h1{font-size:21px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.85;margin-top:5px;}
+
+/* ── Top nav ── */
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#fff3e0;border:1px solid #ffcc80;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#e65100;text-decoration:none;}
+.nav-chip.active{background:#f57f17;color:white;border-color:#f57f17;}
+.nav-chip.back{background:#000080;color:white;border-color:#000080;}
+
+/* ── WA2 Reminder box ── */
+.wa2-box{background:#fff3cd;border:2px solid #f57f17;border-radius:10px;margin:16px 20px;padding:14px 18px;}
+.wa2-box h3{font-size:13px;font-weight:700;color:#bf360c;margin-bottom:8px;letter-spacing:.3px;}
+.wa2-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.wa2-chip{background:#f57f17;color:white;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;}
+
+/* ── Score tracker ── */
+.score-tracker{background:#fff8e1;border:2px dashed #f57f17;border-radius:10px;margin:16px 20px;padding:14px 18px;text-align:center;}
+.score-tracker h3{font-size:14px;color:#e65100;margin-bottom:10px;}
+.score-display{font-size:22px;font-weight:700;color:var(--navy);letter-spacing:2px;}
+.score-note{font-size:11px;color:#888;margin-top:6px;}
+.score-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
+.score-btn{background:var(--phase-color);color:white;border:none;border-radius:6px;padding:6px 16px;font-size:12px;cursor:pointer;font-weight:600;}
+.score-btn.reset{background:#888;}
+
+/* ── Week block ── */
+.week-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.week-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffe082;}
+.week-title{font-size:16px;font-weight:700;color:#e65100;}
+.week-meta{font-size:11px;color:#777;}
+.week-theme{display:inline-block;background:#f57f17;color:white;font-size:10px;font-weight:700;padding:2px 10px;border-radius:4px;margin-left:8px;}
+
+/* ── Drill card ── */
+.drill-list{padding:14px 18px;}
+.drill-card{background:#fafafa;border:1px solid #ffe0b2;border-radius:8px;margin-bottom:14px;overflow:hidden;}
+.drill-card:last-child{margin-bottom:0;}
+.drill-num{display:inline-block;background:var(--phase-color);color:white;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;margin-bottom:8px;}
+.drill-sentence{font-size:14px;color:#1a1a1a;line-height:2;padding:10px 14px 0 14px;font-family:serif;}
+.blank-slot{display:inline-block;min-width:90px;border-bottom:2px solid #f57f17;margin:0 4px;vertical-align:bottom;font-size:13px;}
+.drill-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;padding:10px 14px;margin-top:4px;}
+.drill-opt{font-size:13px;color:#333;display:flex;align-items:center;gap:8px;cursor:pointer;border-radius:5px;padding:4px 6px;transition:background .15s;}
+.drill-opt:hover{background:#fff3e0;}
+.drill-opt.selected{background:#fff3e0;font-weight:700;}
+.drill-opt.correct{background:#e8f5e9;color:#2e7d32;font-weight:700;}
+.drill-opt.wrong{background:#ffebee;color:#c62828;text-decoration:line-through;}
+.opt-num{width:20px;height:20px;border:1.5px solid #f57f17;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#f57f17;}
+
+/* ── Reveal / details ── */
+details.answer-reveal{margin:0;}
+details.answer-reveal summary{
+  background:var(--phase-color);
+  color:white;
+  padding:7px 14px;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  list-style:none;
+  user-select:none;
+}
+details.answer-reveal summary::-webkit-details-marker{display:none;}
+details.answer-reveal[open] summary{background:#e65100;}
+.reveal-content{padding:12px 14px;background:#fff9f0;border-top:1px solid #ffe0b2;}
+.correct-ans{font-size:13px;color:#2e7d32;font-weight:700;margin-bottom:8px;}
+.correct-ans span{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:4px;padding:1px 8px;margin-left:6px;}
+.wrong-list{list-style:none;padding:0;margin:0;}
+.wrong-list li{font-size:12px;color:#555;padding:3px 0;border-bottom:1px dotted #eee;display:flex;gap:6px;align-items:baseline;}
+.wrong-list li:last-child{border-bottom:none;}
+.wrong-tag{background:#ffcdd2;color:#b71c1c;border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;flex-shrink:0;}
+.colloc-note{font-size:11px;background:#fff3e0;border-left:3px solid #f57f17;padding:5px 10px;margin-top:8px;border-radius:0 4px 4px 0;color:#6d4c41;font-style:italic;}
+
+/* ── Section divider ── */
+.section-divider{height:2px;background:linear-gradient(to right,var(--saffron),var(--green));margin:4px 18px;}
+
+/* ── Print button ── */
+.print-btn{background:var(--navy);color:white;border:none;padding:5px 14px;border-radius:4px;font-size:11px;cursor:pointer;font-weight:600;}
+
+/* ── Footer ── */
+.page-footer{text-align:center;padding:20px;font-size:11px;color:#888;}
+
+/* ── Responsive ── */
+@media(max-width:520px){
+  .drill-options{grid-template-columns:1fr;}
+  .wa2-chips{gap:6px;}
+  .score-btns{flex-direction:column;align-items:center;}
+  .week-header{flex-direction:column;align-items:flex-start;gap:4px;}
+  .week-nav{gap:6px;}
+}
+</style>
+</head>
+<body>
+
+<!-- Tricolour stripe -->
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+
+<!-- ══ HEADER ══ -->
+<div class="header">
+  <h1>Aarohi &mdash; वाक्य पूर्ति अभ्यास (W05&ndash;W09)</h1>
+  <p>Sentence Completion Drills &mdash; 5 per week, targeted practice</p>
+  <p style="margin-top:4px;font-size:11px;opacity:.75;">Phase 2: BUILD &nbsp;|&nbsp; Jun 22 &ndash; Jul 24, 2026 &nbsp;|&nbsp; PSLE: September 28, 2026</p>
+</div>
+
+<!-- ══ NAV ══ -->
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">NAVIGATE:</span>
+  <a class="nav-chip back" href="../Hindi_Daily_Plan_May_Sept2026.html">&#8592; Master Plan</a>
+  <a class="nav-chip active" href="#w05">W05 Jun 22</a>
+  <a class="nav-chip" href="#w06">W06 Jun 29</a>
+  <a class="nav-chip" href="#w07">W07 Jul 6</a>
+  <a class="nav-chip" href="#w08">W08 Jul 13</a>
+  <a class="nav-chip" href="#w09">W09 Jul 20</a>
+  <button class="print-btn no-print" onclick="window.print()" style="margin-left:auto;">Print</button>
+</div>
+
+<!-- ══ WA2 REMINDER ══ -->
+<div class="wa2-box">
+  <h3>&#9888;&#65039; WA2 Weakness Reminder — Section A (वाक्य पूर्ति): 0 / 5</h3>
+  <p style="font-size:12px;color:#5d4037;line-height:1.8;">तुमने WA2 में Section A में 0/5 पाया। इन <strong>8 शब्द-परिवारों</strong> को याद रखो — ये बार-बार आते हैं:</p>
+  <div class="wa2-chips">
+    <span class="wa2-chip">मरम्मत</span>
+    <span class="wa2-chip">सुधार</span>
+    <span class="wa2-chip">राहत</span>
+    <span class="wa2-chip">दरारें</span>
+    <span class="wa2-chip">हल / समाधान</span>
+    <span class="wa2-chip">मगन / खोए</span>
+    <span class="wa2-chip">नुकसान</span>
+    <span class="wa2-chip">उद्देश्य</span>
+  </div>
+  <p style="font-size:11px;color:#795548;margin-top:10px;">&#128161; हर गलत विकल्प के बाद <em>"उत्तर देखें"</em> खोलो और पढ़ो <strong>क्यों</strong> वह सही नहीं है — सिर्फ सही उत्तर याद करना काफी नहीं है।</p>
+</div>
+
+<!-- ══ SCORE TRACKER ══ -->
+<div class="score-tracker no-print" id="scoreTracker">
+  <h3>&#128202; मेरा स्कोर</h3>
+  <div class="score-display">मैंने <span id="scoreNum">0</span> / 25 सही किए</div>
+  <div class="score-note">हर सही उत्तर चुनने पर +1 अपने आप जुड़ेगा</div>
+  <div class="score-btns">
+    <button class="score-btn reset" onclick="resetScore()">स्कोर रीसेट करें</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     WEEK 5  Jun 22–26  —  Daily Life / Technology
+     ══════════════════════════════════════════════ -->
+<div class="week-block" id="w05">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 5 &mdash; Jun 22&ndash;26, 2026 <span class="week-theme">दैनिक जीवन / प्रौद्योगिकी</span></div>
+      <div class="week-meta">वाक्य पूर्ति &nbsp;|&nbsp; 5 अभ्यास-प्रश्न</div>
+    </div>
+  </div>
+
+  <div class="drill-list">
+
+    <!-- W5 D1 -->
+    <div class="drill-card" data-ans="2" data-id="w5d1">
+      <div class="drill-sentence">
+        <span class="drill-num">W5&middot;D1</span><br>
+        आजकल बच्चे अपने मोबाइल फोन में इतने <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> रहते हैं कि उन्हें आस-पास की बातों का ध्यान ही नहीं रहता।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w5d1',1)"><span class="opt-num">1</span> बड़े</div>
+        <div class="drill-opt" onclick="choose(this,'w5d1',2)"><span class="opt-num">2</span> खोए</div>
+        <div class="drill-opt" onclick="choose(this,'w5d1',3)"><span class="opt-num">3</span> खुश</div>
+        <div class="drill-opt" onclick="choose(this,'w5d1',4)"><span class="opt-num">4</span> नए</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — खोए (engrossed / lost in)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — बड़े</span> "फोन में बड़े रहना" का कोई अर्थ नहीं — बड़े size या age बताता है, absorbed नहीं।</li>
+            <li><span class="wrong-tag">3 — खुश</span> खुश होना mood है, "में खोए रहना" वाली absorption नहीं — collocation गलत।</li>
+            <li><span class="wrong-tag">4 — नए</span> नए = new; "फोन में नए रहना" असंगत और अर्थहीन है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>[चीज़] में खोए रहना</strong> = to be engrossed/lost in something &mdash; याद रखो!</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W5 D2 -->
+    <div class="drill-card" data-ans="3" data-id="w5d2">
+      <div class="drill-sentence">
+        <span class="drill-num">W5&middot;D2</span><br>
+        गर्मी की तेज़ धूप से परेशान राहगीरों को पेड़ों की छाँव से बड़ी <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मिली।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w5d2',1)"><span class="opt-num">1</span> थकान</div>
+        <div class="drill-opt" onclick="choose(this,'w5d2',2)"><span class="opt-num">2</span> परेशानी</div>
+        <div class="drill-opt" onclick="choose(this,'w5d2',3)"><span class="opt-num">3</span> राहत</div>
+        <div class="drill-opt" onclick="choose(this,'w5d2',4)"><span class="opt-num">4</span> चिंता</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — राहत (relief)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — थकान</span> थकान = tiredness — छाँव आराम देती है, थकान नहीं।</li>
+            <li><span class="wrong-tag">2 — परेशानी</span> परेशानी = trouble — छाँव से परेशानी बढ़ना context के विरुद्ध है।</li>
+            <li><span class="wrong-tag">4 — चिंता</span> चिंता = worry — negative word; छाँव positive outcome देती है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>राहत मिलना</strong> = to get relief &mdash; धूप/तकलीफ के बाद हमेशा राहत मिलती है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W5 D3 -->
+    <div class="drill-card" data-ans="3" data-id="w5d3">
+      <div class="drill-sentence">
+        <span class="drill-num">W5&middot;D3</span><br>
+        तेज़ भूकंप के बाद नए बने पुल में कई <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> आ गई थीं जिससे यातायात बंद करना पड़ा।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w5d3',1)"><span class="opt-num">1</span> गाड़ियाँ</div>
+        <div class="drill-opt" onclick="choose(this,'w5d3',2)"><span class="opt-num">2</span> खुशियाँ</div>
+        <div class="drill-opt" onclick="choose(this,'w5d3',3)"><span class="opt-num">3</span> दरारें</div>
+        <div class="drill-opt" onclick="choose(this,'w5d3',4)"><span class="opt-num">4</span> आवाज़ें</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — दरारें (cracks)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — गाड़ियाँ</span> गाड़ियाँ पुल में "आ" सकती हैं पर तब यातायात बंद नहीं होता — तर्क बेमेल।</li>
+            <li><span class="wrong-tag">2 — खुशियाँ</span> खुशियाँ ढाँचे में नहीं आतीं — भूकंप के संदर्भ में बिल्कुल असंगत।</li>
+            <li><span class="wrong-tag">4 — आवाज़ें</span> आवाज़ें abstract हैं; structural damage के लिए दरारें ही सही collocation है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>दरारें आना</strong> = cracks to appear (in a structure) &mdash; भूकंप/बाढ़ के बाद यही phrase आती है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W5 D4 -->
+    <div class="drill-card" data-ans="3" data-id="w5d4">
+      <div class="drill-sentence">
+        <span class="drill-num">W5&middot;D4</span><br>
+        टीम ने आपसी मतभेदों का <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> निकालने के लिए मिलकर बातचीत की।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w5d4',1)"><span class="opt-num">1</span> कारण</div>
+        <div class="drill-opt" onclick="choose(this,'w5d4',2)"><span class="opt-num">2</span> विस्तार</div>
+        <div class="drill-opt" onclick="choose(this,'w5d4',3)"><span class="opt-num">3</span> हल</div>
+        <div class="drill-opt" onclick="choose(this,'w5d4',4)"><span class="opt-num">4</span> इतिहास</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — हल (solution)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — कारण</span> कारण निकालना = find the reason, पर मतभेद को solve करना goal है — collocation अलग है।</li>
+            <li><span class="wrong-tag">2 — विस्तार</span> विस्तार = expansion; "मतभेदों का विस्तार निकालना" अर्थहीन phrase है।</li>
+            <li><span class="wrong-tag">4 — इतिहास</span> इतिहास = history; problem का हल ढूँढना उद्देश्य है, उसका इतिहास नहीं।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>मतभेदों का हल निकालना</strong> = to find a solution to differences &mdash; WA2 में तुमने "मैंने" लिखा था — verb नहीं, noun चाहिए!</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W5 D5 -->
+    <div class="drill-card" data-ans="2" data-id="w5d5">
+      <div class="drill-sentence">
+        <span class="drill-num">W5&middot;D5</span><br>
+        मेघा अपने स्वास्थ्य में <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> लाने के लिए हर सुबह दौड़ती है।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w5d5',1)"><span class="opt-num">1</span> गिरावट</div>
+        <div class="drill-opt" onclick="choose(this,'w5d5',2)"><span class="opt-num">2</span> सुधार</div>
+        <div class="drill-opt" onclick="choose(this,'w5d5',3)"><span class="opt-num">3</span> रुकावट</div>
+        <div class="drill-opt" onclick="choose(this,'w5d5',4)"><span class="opt-num">4</span> बिगाड़</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — सुधार (improvement)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — गिरावट</span> गिरावट = decline — कोई दौड़ कर गिरावट नहीं लाता; context positive है।</li>
+            <li><span class="wrong-tag">3 — रुकावट</span> रुकावट = obstruction — "स्वास्थ्य में रुकावट लाना" असंगत और अर्थहीन है।</li>
+            <li><span class="wrong-tag">4 — बिगाड़</span> बिगाड़ = deterioration — WA2 में तुमने "कम" लिखा था; दोनों गलत हैं — verb नहीं, noun चाहिए।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>सुधार लाना</strong> = to bring improvement &mdash; "कम लाना" Hindi में नहीं होता!</div>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /drill-list -->
+</div><!-- /w05 -->
+
+
+<!-- ══════════════════════════════════════════════
+     WEEK 6  Jun 29–Jul 3  —  Community / Buildings
+     ══════════════════════════════════════════════ -->
+<div class="week-block" id="w06">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 6 &mdash; Jun 29 &ndash; Jul 3, 2026 <span class="week-theme">समुदाय / इमारतें</span></div>
+      <div class="week-meta">वाक्य पूर्ति &nbsp;|&nbsp; 5 अभ्यास-प्रश्न</div>
+    </div>
+  </div>
+
+  <div class="drill-list">
+
+    <!-- W6 D1 -->
+    <div class="drill-card" data-ans="3" data-id="w6d1">
+      <div class="drill-sentence">
+        <span class="drill-num">W6&middot;D1</span><br>
+        बारिश के कारण पुरानी इमारत की <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> करवाना ज़रूरी हो गया था।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w6d1',1)"><span class="opt-num">1</span> बिक्री</div>
+        <div class="drill-opt" onclick="choose(this,'w6d1',2)"><span class="opt-num">2</span> आलोचना</div>
+        <div class="drill-opt" onclick="choose(this,'w6d1',3)"><span class="opt-num">3</span> मरम्मत</div>
+        <div class="drill-opt" onclick="choose(this,'w6d1',4)"><span class="opt-num">4</span> सफाई</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — मरम्मत (repair)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — बिक्री</span> बिक्री = sale — बारिश से बिक्री जरूरी नहीं होती; repair होती है।</li>
+            <li><span class="wrong-tag">2 — आलोचना</span> आलोचना = criticism — इमारत की आलोचना करवाना अर्थहीन collocation है।</li>
+            <li><span class="wrong-tag">4 — सफाई</span> सफाई = cleaning — possible but WA2 में यही गलती थी: ठीक/सफाई के बजाय मरम्मत सही है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>मरम्मत करवाना</strong> = to get repaired &mdash; WA2 में तुमने "ठीक" लिखा था — मरम्मत ही सही technical word है!</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W6 D2 -->
+    <div class="drill-card" data-ans="2" data-id="w6d2">
+      <div class="drill-sentence">
+        <span class="drill-num">W6&middot;D2</span><br>
+        इस कल्याण योजना का मुख्य <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> ग़रीब परिवारों की मदद करना है।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w6d2',1)"><span class="opt-num">1</span> मतलब</div>
+        <div class="drill-opt" onclick="choose(this,'w6d2',2)"><span class="opt-num">2</span> उद्देश्य</div>
+        <div class="drill-opt" onclick="choose(this,'w6d2',3)"><span class="opt-num">3</span> बहाना</div>
+        <div class="drill-opt" onclick="choose(this,'w6d2',4)"><span class="opt-num">4</span> विरोध</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — उद्देश्य (purpose/aim)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — मतलब</span> मतलब = meaning/purpose (informal) — formal writing में योजना के लिए उद्देश्य ही सही register है।</li>
+            <li><span class="wrong-tag">3 — बहाना</span> बहाना = excuse — negative connotation; कल्याण योजना का बहाना नहीं होता।</li>
+            <li><span class="wrong-tag">4 — विरोध</span> विरोध = opposition — किसी योजना का मुख्य विरोध नहीं होता; purpose होता है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>योजना/अभियान का उद्देश्य</strong> = the aim of a scheme — formal word; मतलब informal है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W6 D3 -->
+    <div class="drill-card" data-ans="4" data-id="w6d3">
+      <div class="drill-sentence">
+        <span class="drill-num">W6&middot;D3</span><br>
+        पढ़ाई में इतनी <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> हो जाने के कारण उसे समय का ध्यान नहीं रहा।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w6d3',1)"><span class="opt-num">1</span> थकान</div>
+        <div class="drill-opt" onclick="choose(this,'w6d3',2)"><span class="opt-num">2</span> उदासी</div>
+        <div class="drill-opt" onclick="choose(this,'w6d3',3)"><span class="opt-num">3</span> मगन</div>
+        <div class="drill-opt" onclick="choose(this,'w6d3',4)"><span class="opt-num">4</span> लगन</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>4 — लगन (dedication / engrossment as a noun)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — थकान</span> थकान = tiredness — थकान में होने से समय का ध्यान नहीं जाता; लगन में होने से जाता है।</li>
+            <li><span class="wrong-tag">2 — उदासी</span> उदासी = sadness — पढ़ाई में उदासी होने का संदर्भ नहीं बनता।</li>
+            <li><span class="wrong-tag">3 — मगन</span> मगन = adjective (absorbed); "इतनी मगन हो जाना" grammatically awkward — वाक्य में noun चाहिए: "इतनी लगन"।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Key difference: <strong>लगन</strong> (noun) vs <strong>मगन</strong> (adjective) — "पढ़ाई में लगन" = noun phrase; "पढ़ाई में मगन रहना" = adjective + verb phrase।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W6 D4 -->
+    <div class="drill-card" data-ans="4" data-id="w6d4">
+      <div class="drill-sentence">
+        <span class="drill-num">W6&middot;D4</span><br>
+        बाढ़ के कारण गाँव में भारी <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> हुई और कई घर बह गए।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w6d4',1)"><span class="opt-num">1</span> विकास</div>
+        <div class="drill-opt" onclick="choose(this,'w6d4',2)"><span class="opt-num">2</span> लाभ</div>
+        <div class="drill-opt" onclick="choose(this,'w6d4',3)"><span class="opt-num">3</span> सुधार</div>
+        <div class="drill-opt" onclick="choose(this,'w6d4',4)"><span class="opt-num">4</span> नुकसान</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>4 — नुकसान (damage/loss)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — विकास</span> विकास = development — बाढ़ से विकास नहीं होता; यह positive word है।</li>
+            <li><span class="wrong-tag">2 — लाभ</span> लाभ = benefit — बाढ़ से घर बहने पर लाभ नहीं होता; context negative है।</li>
+            <li><span class="wrong-tag">3 — सुधार</span> सुधार = improvement — disaster से सुधार नहीं होता; यह भी positive है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>भारी नुकसान होना</strong> = heavy loss/damage to occur — disaster contexts में यही phrase आती है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W6 D5 -->
+    <div class="drill-card" data-ans="3" data-id="w6d5">
+      <div class="drill-sentence">
+        <span class="drill-num">W6&middot;D5</span><br>
+        दोनों देशों ने मिलकर अपने विवाद का <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> शांतिपूर्ण तरीके से निकाला।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w6d5',1)"><span class="opt-num">1</span> कारण</div>
+        <div class="drill-opt" onclick="choose(this,'w6d5',2)"><span class="opt-num">2</span> विस्तार</div>
+        <div class="drill-opt" onclick="choose(this,'w6d5',3)"><span class="opt-num">3</span> समाधान</div>
+        <div class="drill-opt" onclick="choose(this,'w6d5',4)"><span class="opt-num">4</span> इतिहास</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — समाधान (solution)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — कारण</span> कारण = reason — "विवाद का कारण निकालना" मतलब problem खोजना, solve करना नहीं।</li>
+            <li><span class="wrong-tag">2 — विस्तार</span> विस्तार = expansion — "विवाद का विस्तार निकालना" अर्थहीन combination है।</li>
+            <li><span class="wrong-tag">4 — इतिहास</span> इतिहास = history — dispute का इतिहास निकालना संगत नहीं है; समाधान चाहिए।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>विवाद का समाधान निकालना</strong> = to find a resolution to a dispute — formal synonym of "हल निकालना"।</div>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /drill-list -->
+</div><!-- /w06 -->
+
+
+<!-- ══════════════════════════════════════════════
+     WEEK 7  Jul 6–10  —  Health / Sports
+     ══════════════════════════════════════════════ -->
+<div class="week-block" id="w07">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 7 &mdash; Jul 6&ndash;10, 2026 <span class="week-theme">स्वास्थ्य / खेल</span></div>
+      <div class="week-meta">वाक्य पूर्ति &nbsp;|&nbsp; 5 अभ्यास-प्रश्न</div>
+    </div>
+  </div>
+
+  <div class="drill-list">
+
+    <!-- W7 D1 -->
+    <div class="drill-card" data-ans="2" data-id="w7d1">
+      <div class="drill-sentence">
+        <span class="drill-num">W7&middot;D1</span><br>
+        ऑपरेशन के बाद डॉक्टर ने हड्डी की <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> के लिए कम से कम एक महीने का आराम लेने को कहा।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w7d1',1)"><span class="opt-num">1</span> सफाई</div>
+        <div class="drill-opt" onclick="choose(this,'w7d1',2)"><span class="opt-num">2</span> मरम्मत</div>
+        <div class="drill-opt" onclick="choose(this,'w7d1',3)"><span class="opt-num">3</span> जाँच</div>
+        <div class="drill-opt" onclick="choose(this,'w7d1',4)"><span class="opt-num">4</span> बिक्री</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — मरम्मत (repair / healing)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — सफाई</span> सफाई = cleaning — हड्डी की सफाई के लिए आराम नहीं चाहिए; healing के लिए चाहिए।</li>
+            <li><span class="wrong-tag">3 — जाँच</span> जाँच = examination — जाँच के लिए आराम नहीं, मरम्मत (healing) के लिए आराम ज़रूरी है।</li>
+            <li><span class="wrong-tag">4 — बिक्री</span> बिक्री = sale — हड्डी की बिक्री बेमेल और हास्यास्पद है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Extended use: <strong>मरम्मत</strong> buildings के अलावा body parts (हड्डी, अंग) के healing के लिए भी प्रयोग होता है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W7 D2 -->
+    <div class="drill-card" data-ans="3" data-id="w7d2">
+      <div class="drill-sentence">
+        <span class="drill-num">W7&middot;D2</span><br>
+        लंबी बीमारी के बाद स्वास्थ्य में <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> के लिए पौष्टिक आहार और पर्याप्त नींद ज़रूरी है।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w7d2',1)"><span class="opt-num">1</span> गिरावट</div>
+        <div class="drill-opt" onclick="choose(this,'w7d2',2)"><span class="opt-num">2</span> बिगाड़</div>
+        <div class="drill-opt" onclick="choose(this,'w7d2',3)"><span class="opt-num">3</span> सुधार</div>
+        <div class="drill-opt" onclick="choose(this,'w7d2',4)"><span class="opt-num">4</span> रुकावट</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — सुधार (improvement)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — गिरावट</span> गिरावट = decline — पौष्टिक आहार और नींद सुधार लाते हैं, गिरावट नहीं।</li>
+            <li><span class="wrong-tag">2 — बिगाड़</span> बिगाड़ = deterioration — healthy food से बिगाड़ नहीं होता; context positive है।</li>
+            <li><span class="wrong-tag">4 — रुकावट</span> रुकावट = obstruction — "स्वास्थ्य में रुकावट के लिए खाना खाना" बेतुका है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>स्वास्थ्य में सुधार</strong> = improvement in health — बीमारी के बाद recovery context में हमेशा सुधार।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W7 D3 -->
+    <div class="drill-card" data-ans="1" data-id="w7d3">
+      <div class="drill-sentence">
+        <span class="drill-num">W7&middot;D3</span><br>
+        भारी वर्षा के बाद सड़कों में जगह-जगह <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> आ गई थीं और वाहन चलाना मुश्किल हो गया।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w7d3',1)"><span class="opt-num">1</span> दरारें</div>
+        <div class="drill-opt" onclick="choose(this,'w7d3',2)"><span class="opt-num">2</span> गाड़ियाँ</div>
+        <div class="drill-opt" onclick="choose(this,'w7d3',3)"><span class="opt-num">3</span> बहार</div>
+        <div class="drill-opt" onclick="choose(this,'w7d3',4)"><span class="opt-num">4</span> खुशियाँ</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>1 — दरारें (cracks)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">2 — गाड़ियाँ</span> गाड़ियाँ सड़क पर होती हैं लेकिन उनसे वाहन चलाना मुश्किल नहीं होता — दरारें होती हैं तो होता है।</li>
+            <li><span class="wrong-tag">3 — बहार</span> बहार = spring season/blossoming — सड़क में बहार आना हिंदी में इस अर्थ में प्रयुक्त नहीं।</li>
+            <li><span class="wrong-tag">4 — खुशियाँ</span> खुशियाँ = happiness — सड़क में खुशियाँ आना अर्थहीन collocation है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>दरारें आना</strong> = cracks to form — weather damage के बाद roads/buildings में दरारें आती हैं।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W7 D4 -->
+    <div class="drill-card" data-ans="3" data-id="w7d4">
+      <div class="drill-sentence">
+        <span class="drill-num">W7&middot;D4</span><br>
+        थके हुए पर्वतारोहियों को ठंडे पानी और छाँव से बड़ी <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मिली।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w7d4',1)"><span class="opt-num">1</span> परेशानी</div>
+        <div class="drill-opt" onclick="choose(this,'w7d4',2)"><span class="opt-num">2</span> थकान</div>
+        <div class="drill-opt" onclick="choose(this,'w7d4',3)"><span class="opt-num">3</span> राहत</div>
+        <div class="drill-opt" onclick="choose(this,'w7d4',4)"><span class="opt-num">4</span> चिंता</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — राहत (relief)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — परेशानी</span> परेशानी = trouble — ठंडा पानी और छाँव राहत देते हैं, परेशानी नहीं।</li>
+            <li><span class="wrong-tag">2 — थकान</span> थकान = tiredness — ये already थके हुए हैं; छाँव से और थकान नहीं मिलती।</li>
+            <li><span class="wrong-tag">4 — चिंता</span> चिंता = anxiety — ठंडे पानी से चिंता नहीं मिलती; राहत मिलती है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Pattern: <strong>कठिनाई / थकान / धूप &rarr; राहत मिलना</strong> — जब कोई मुश्किल हो और relief मिले, हमेशा "राहत मिली"।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W7 D5 -->
+    <div class="drill-card" data-ans="2" data-id="w7d5">
+      <div class="drill-sentence">
+        <span class="drill-num">W7&middot;D5</span><br>
+        वह अपनी किताब में इतना <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> था कि उसे रात के दो बज गए, पर नींद नहीं आई।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w7d5',1)"><span class="opt-num">1</span> थका</div>
+        <div class="drill-opt" onclick="choose(this,'w7d5',2)"><span class="opt-num">2</span> मगन</div>
+        <div class="drill-opt" onclick="choose(this,'w7d5',3)"><span class="opt-num">3</span> उदास</div>
+        <div class="drill-opt" onclick="choose(this,'w7d5',4)"><span class="opt-num">4</span> घबराया</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — मगन (absorbed / engrossed)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — थका</span> थका = tired — थके होने पर नींद आती है, नहीं जाती; context उलटा है।</li>
+            <li><span class="wrong-tag">3 — उदास</span> उदास = sad — उदासी किताब पढ़ते रहने का कारण नहीं बनती।</li>
+            <li><span class="wrong-tag">4 — घबराया</span> घबराया = anxious/scared — "किताब में घबराया रहना" collocation गलत है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>[चीज़] में मगन रहना</strong> = to be absorbed in something — adjective; खोए (W5) noun phrase के साथ, मगन adjective verb के साथ।</div>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /drill-list -->
+</div><!-- /w07 -->
+
+
+<!-- ══════════════════════════════════════════════
+     WEEK 8  Jul 13–17  —  Science / Environment
+     ══════════════════════════════════════════════ -->
+<div class="week-block" id="w08">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 8 &mdash; Jul 13&ndash;17, 2026 <span class="week-theme">विज्ञान / पर्यावरण</span></div>
+      <div class="week-meta">वाक्य पूर्ति &nbsp;|&nbsp; 5 अभ्यास-प्रश्न</div>
+    </div>
+  </div>
+
+  <div class="drill-list">
+
+    <!-- W8 D1 -->
+    <div class="drill-card" data-ans="2" data-id="w8d1">
+      <div class="drill-sentence">
+        <span class="drill-num">W8&middot;D1</span><br>
+        तूफ़ान के बाद बंदरगाह के पास की दीवारों में <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> आ जाने के कारण उसे बंद कर दिया गया।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w8d1',1)"><span class="opt-num">1</span> रोशनी</div>
+        <div class="drill-opt" onclick="choose(this,'w8d1',2)"><span class="opt-num">2</span> दरारें</div>
+        <div class="drill-opt" onclick="choose(this,'w8d1',3)"><span class="opt-num">3</span> आवाज़ें</div>
+        <div class="drill-opt" onclick="choose(this,'w8d1',4)"><span class="opt-num">4</span> खुशियाँ</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — दरारें (cracks)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — रोशनी</span> रोशनी = light — दीवारों में रोशनी "आना" possible है पर तूफ़ान से नहीं; structural damage में दरारें आती हैं।</li>
+            <li><span class="wrong-tag">3 — आवाज़ें</span> आवाज़ें = sounds — आवाज़ें दीवारों में "आना" एक आम expression है पर बंद करने का कारण नहीं बनतीं।</li>
+            <li><span class="wrong-tag">4 — खुशियाँ</span> खुशियाँ = happiness — तूफ़ान के बाद खुशियाँ आने का कोई तर्क नहीं।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Pattern recap: तूफ़ान / भूकंप / बाढ़ + दीवार / सड़क / पुल = <strong>दरारें आना</strong> — यह combo exam में बहुत आता है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W8 D2 -->
+    <div class="drill-card" data-ans="2" data-id="w8d2">
+      <div class="drill-sentence">
+        <span class="drill-num">W8&middot;D2</span><br>
+        नई तकनीक की मदद से पुराने जलाशय की <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> का काम जल्द पूरा हो गया।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w8d2',1)"><span class="opt-num">1</span> बिक्री</div>
+        <div class="drill-opt" onclick="choose(this,'w8d2',2)"><span class="opt-num">2</span> मरम्मत</div>
+        <div class="drill-opt" onclick="choose(this,'w8d2',3)"><span class="opt-num">3</span> चर्चा</div>
+        <div class="drill-opt" onclick="choose(this,'w8d2',4)"><span class="opt-num">4</span> निंदा</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — मरम्मत (repair/restoration)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — बिक्री</span> बिक्री = sale — नई तकनीक से बिक्री नहीं होती; जलाशय की repair होती है।</li>
+            <li><span class="wrong-tag">3 — चर्चा</span> चर्चा = discussion — "चर्चा का काम पूरा होना" possible लेकिन नई तकनीक से चर्चा नहीं होती।</li>
+            <li><span class="wrong-tag">4 — निंदा</span> निंदा = criticism — नई तकनीक से निंदा का काम नहीं होता; reconstruction होती है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Scope of मरम्मत: buildings, roads, dams, tanks (जलाशय), body parts — किसी भी physical structure की repair = मरम्मत।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W8 D3 -->
+    <div class="drill-card" data-ans="3" data-id="w8d3">
+      <div class="drill-sentence">
+        <span class="drill-num">W8&middot;D3</span><br>
+        इस अभियान का <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> लोगों को जल संरक्षण के प्रति जागरूक करना है।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w8d3',1)"><span class="opt-num">1</span> नतीजा</div>
+        <div class="drill-opt" onclick="choose(this,'w8d3',2)"><span class="opt-num">2</span> बहाना</div>
+        <div class="drill-opt" onclick="choose(this,'w8d3',3)"><span class="opt-num">3</span> उद्देश्य</div>
+        <div class="drill-opt" onclick="choose(this,'w8d3',4)"><span class="opt-num">4</span> विरोध</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — उद्देश्य (aim/purpose)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — नतीजा</span> नतीजा = result — नतीजा बाद में आता है, उद्देश्य पहले निर्धारित होता है; tense mismatch।</li>
+            <li><span class="wrong-tag">2 — बहाना</span> बहाना = excuse — कोई अभियान "बहाने" से नहीं चलाया जाता; negative connotation।</li>
+            <li><span class="wrong-tag">4 — विरोध</span> विरोध = opposition — अभियान का उद्देश्य जागरूकता है, विरोध नहीं।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>अभियान / योजना का उद्देश्य ... है</strong> = the aim of the campaign/scheme is ... — formal register।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W8 D4 -->
+    <div class="drill-card" data-ans="4" data-id="w8d4">
+      <div class="drill-sentence">
+        <span class="drill-num">W8&middot;D4</span><br>
+        जंगल में आग लगने से पर्यावरण को भारी <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> पहुँचा और कई जानवर बेघर हो गए।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w8d4',1)"><span class="opt-num">1</span> लाभ</div>
+        <div class="drill-opt" onclick="choose(this,'w8d4',2)"><span class="opt-num">2</span> सुधार</div>
+        <div class="drill-opt" onclick="choose(this,'w8d4',3)"><span class="opt-num">3</span> विकास</div>
+        <div class="drill-opt" onclick="choose(this,'w8d4',4)"><span class="opt-num">4</span> नुकसान</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>4 — नुकसान (harm/damage)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — लाभ</span> लाभ = benefit — आग से जानवर बेघर होते हैं; यह positive नहीं हो सकता।</li>
+            <li><span class="wrong-tag">2 — सुधार</span> सुधार = improvement — वन आग से environment में सुधार नहीं होता।</li>
+            <li><span class="wrong-tag">3 — विकास</span> विकास = development — disaster से विकास नहीं होता; यह positive word है।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>नुकसान पहुँचना</strong> = damage to be caused — पर्यावरण / स्वास्थ्य / संपत्ति को नुकसान पहुँचता है।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W8 D5 -->
+    <div class="drill-card" data-ans="3" data-id="w8d5">
+      <div class="drill-sentence">
+        <span class="drill-num">W8&middot;D5</span><br>
+        सूखे के बाद बारिश होते ही किसानों को भारी <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मिली।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w8d5',1)"><span class="opt-num">1</span> थकान</div>
+        <div class="drill-opt" onclick="choose(this,'w8d5',2)"><span class="opt-num">2</span> चिंता</div>
+        <div class="drill-opt" onclick="choose(this,'w8d5',3)"><span class="opt-num">3</span> राहत</div>
+        <div class="drill-opt" onclick="choose(this,'w8d5',4)"><span class="opt-num">4</span> परेशानी</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — राहत (relief)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — थकान</span> थकान = tiredness — बारिश मिलने पर किसानों को थकान नहीं, खुशी और राहत होती है।</li>
+            <li><span class="wrong-tag">2 — चिंता</span> चिंता = worry — बारिश के बाद सूखे की समस्या हल होती है; चिंता नहीं बढ़ती।</li>
+            <li><span class="wrong-tag">4 — परेशानी</span> परेशानी = trouble — सूखे की परेशानी थी; बारिश से परेशानी नहीं मिलती।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Pattern: <strong>कठिनाई (सूखा, तूफ़ान, बीमारी) &rarr; समाधान (बारिश, छाँव, दवाई) &rarr; राहत मिलना</strong> — यह pattern याद रखो।</div>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /drill-list -->
+</div><!-- /w08 -->
+
+
+<!-- ══════════════════════════════════════════════
+     WEEK 9  Jul 20–24  —  Values / Society
+     ══════════════════════════════════════════════ -->
+<div class="week-block" id="w09">
+  <div class="week-header">
+    <div>
+      <div class="week-title">सप्ताह 9 &mdash; Jul 20&ndash;24, 2026 <span class="week-theme">मूल्य / समाज</span></div>
+      <div class="week-meta">वाक्य पूर्ति &nbsp;|&nbsp; 5 अभ्यास-प्रश्न</div>
+    </div>
+  </div>
+
+  <div class="drill-list">
+
+    <!-- W9 D1 -->
+    <div class="drill-card" data-ans="4" data-id="w9d1">
+      <div class="drill-sentence">
+        <span class="drill-num">W9&middot;D1</span><br>
+        गाँव के बुज़ुर्गों ने मिलकर पुराने तालाब की <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> करवाई ताकि पानी की कमी न हो।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w9d1',1)"><span class="opt-num">1</span> सजावट</div>
+        <div class="drill-opt" onclick="choose(this,'w9d1',2)"><span class="opt-num">2</span> बिक्री</div>
+        <div class="drill-opt" onclick="choose(this,'w9d1',3)"><span class="opt-num">3</span> आलोचना</div>
+        <div class="drill-opt" onclick="choose(this,'w9d1',4)"><span class="opt-num">4</span> मरम्मत</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>4 — मरम्मत (repair/restoration)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — सजावट</span> सजावट = decoration — पानी की कमी दूर करने के लिए सजावट नहीं, मरम्मत करते हैं।</li>
+            <li><span class="wrong-tag">2 — बिक्री</span> बिक्री = sale — बुज़ुर्ग समुदाय सेवा के लिए मिले थे, बिक्री के लिए नहीं।</li>
+            <li><span class="wrong-tag">3 — आलोचना</span> आलोचना = criticism — तालाब की आलोचना करने से पानी नहीं मिलेगा।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Recap: <strong>तालाब / जलाशय / इमारत / पुल की मरम्मत करवाना</strong> — physical structure + मरम्मत = always correct।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W9 D2 -->
+    <div class="drill-card" data-ans="3" data-id="w9d2">
+      <div class="drill-sentence">
+        <span class="drill-num">W9&middot;D2</span><br>
+        लंबे संघर्ष के बाद दोनों परिवारों के बीच के विवाद का <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> निकल आया।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w9d2',1)"><span class="opt-num">1</span> कारण</div>
+        <div class="drill-opt" onclick="choose(this,'w9d2',2)"><span class="opt-num">2</span> विस्तार</div>
+        <div class="drill-opt" onclick="choose(this,'w9d2',3)"><span class="opt-num">3</span> हल</div>
+        <div class="drill-opt" onclick="choose(this,'w9d2',4)"><span class="opt-num">4</span> इतिहास</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — हल (solution)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — कारण</span> कारण = reason — "संघर्ष के बाद कारण निकलना" मतलब solve नहीं; problem का source खोजना है।</li>
+            <li><span class="wrong-tag">2 — विस्तार</span> विस्तार = expansion — "विवाद का विस्तार निकलना" अर्थहीन है; expansion bad news होती।</li>
+            <li><span class="wrong-tag">4 — इतिहास</span> इतिहास = history — "विवाद का इतिहास निकलना" possible है पर context में solving है, not discovery।</li>
+          </ul>
+          <div class="colloc-note">&#128221; WA2 error reminder: तुमने "मैंने" लिखा था — <strong>हल निकलना / हल निकालना</strong> = solution to emerge / to find a solution — noun, verb नहीं!</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W9 D3 -->
+    <div class="drill-card" data-ans="2" data-id="w9d3">
+      <div class="drill-sentence">
+        <span class="drill-num">W9&middot;D3</span><br>
+        देश के दूरदराज़ इलाकों में शिक्षा के स्तर में <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> लाने के लिए सरकार काम कर रही है।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w9d3',1)"><span class="opt-num">1</span> गिरावट</div>
+        <div class="drill-opt" onclick="choose(this,'w9d3',2)"><span class="opt-num">2</span> सुधार</div>
+        <div class="drill-opt" onclick="choose(this,'w9d3',3)"><span class="opt-num">3</span> रुकावट</div>
+        <div class="drill-opt" onclick="choose(this,'w9d3',4)"><span class="opt-num">4</span> बिगाड़</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत:तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — सुधार (improvement)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — गिरावट</span> गिरावट = decline — सरकार शिक्षा में decline लाने के लिए काम नहीं करती।</li>
+            <li><span class="wrong-tag">3 — रुकावट</span> रुकावट = obstruction — "शिक्षा में रुकावट लाने के लिए काम करना" उद्देश्य के विपरीत है।</li>
+            <li><span class="wrong-tag">4 — बिगाड़</span> बिगाड़ = deterioration — WA2 में यह error था: "कम" लिखा; बिगाड़/कम दोनों गलत, सुधार सही।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>स्तर / स्वास्थ्य / स्थिति में सुधार लाना</strong> = to bring improvement in level/health/situation — सरकारी संदर्भ में सबसे common।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W9 D4 -->
+    <div class="drill-card" data-ans="3" data-id="w9d4">
+      <div class="drill-sentence">
+        <span class="drill-num">W9&middot;D4</span><br>
+        वह संगीत में इतना <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> हो गया था कि उसे बाहर का शोर बिल्कुल नहीं सुनाई दिया।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w9d4',1)"><span class="opt-num">1</span> उदास</div>
+        <div class="drill-opt" onclick="choose(this,'w9d4',2)"><span class="opt-num">2</span> परेशान</div>
+        <div class="drill-opt" onclick="choose(this,'w9d4',3)"><span class="opt-num">3</span> मगन</div>
+        <div class="drill-opt" onclick="choose(this,'w9d4',4)"><span class="opt-num">4</span> घबराया</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>3 — मगन (absorbed / engrossed)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — उदास</span> उदास = sad — उदास होकर शोर न सुनाई देना logically connected नहीं।</li>
+            <li><span class="wrong-tag">2 — परेशान</span> परेशान = troubled — परेशानी में शोर और ध्यान दोनों बढ़ते हैं; अनसुना नहीं होता।</li>
+            <li><span class="wrong-tag">4 — घबराया</span> घबराया = anxious — घबराहट में sounds और ज़्यादा सुनाई देते हैं।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Fixed collocation: <strong>[activity/चीज़] में मगन होना</strong> = to be absorbed in — "संगीत में मगन", "काम में मगन", "पढ़ाई में मगन"।</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- W9 D5 -->
+    <div class="drill-card" data-ans="2" data-id="w9d5">
+      <div class="drill-sentence">
+        <span class="drill-num">W9&middot;D5</span><br>
+        नदी के कटाव से किनारे की ज़मीन में <span class="blank-slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> आ जाने के कारण लोगों को घर छोड़ना पड़ा।
+      </div>
+      <div class="drill-options">
+        <div class="drill-opt" onclick="choose(this,'w9d5',1)"><span class="opt-num">1</span> खुशियाँ</div>
+        <div class="drill-opt" onclick="choose(this,'w9d5',2)"><span class="opt-num">2</span> दरारें</div>
+        <div class="drill-opt" onclick="choose(this,'w9d5',3)"><span class="opt-num">3</span> फूल</div>
+        <div class="drill-opt" onclick="choose(this,'w9d5',4)"><span class="opt-num">4</span> गाड़ियाँ</div>
+      </div>
+      <details class="answer-reveal">
+        <summary>उत्तर देखें &#9660;</summary>
+        <div class="reveal-content">
+          <div class="correct-ans">&#10003; सही उत्तर: <span>2 — दरारें (cracks)</span></div>
+          <ul class="wrong-list">
+            <li><span class="wrong-tag">1 — खुशियाँ</span> खुशियाँ = happiness — नदी कटाव से खुशियाँ नहीं आतीं; घर छोड़ने का कारण नहीं।</li>
+            <li><span class="wrong-tag">3 — फूल</span> फूल = flowers — ज़मीन में फूल आना एक अलग expression है; घर छोड़ने का कारण नहीं।</li>
+            <li><span class="wrong-tag">4 — गाड़ियाँ</span> गाड़ियाँ = vehicles — ज़मीन में गाड़ियाँ आने से लोग घर नहीं छोड़ते।</li>
+          </ul>
+          <div class="colloc-note">&#128221; Final recap: <strong>दरारें आना</strong> = cracks to form — नदी कटाव, भूकंप, बाढ़, तूफ़ान — सभी में यही word। इसे हमेशा याद रखो!</div>
+        </div>
+      </details>
+    </div>
+
+  </div><!-- /drill-list -->
+</div><!-- /w09 -->
+
+
+<!-- ══ COLLOCATION SUMMARY CARD ══ -->
+<div class="week-block" style="border-top-color:#000080;">
+  <div class="week-header" style="background:#e8eaf6;border-bottom-color:#c5cae9;">
+    <div>
+      <div class="week-title" style="color:#000080;">&#128273; Master Collocation Chart — 8 शब्द-परिवार</div>
+      <div class="week-meta">इन्हें परीक्षा से पहले ज़रूर याद करो</div>
+    </div>
+  </div>
+  <div style="padding:14px 18px;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead>
+        <tr style="background:#000080;color:white;">
+          <th style="padding:8px 10px;text-align:left;border-radius:4px 0 0 0;">शब्द</th>
+          <th style="padding:8px 10px;text-align:left;">Meaning</th>
+          <th style="padding:8px 10px;text-align:left;">Fixed Collocation</th>
+          <th style="padding:8px 10px;text-align:left;border-radius:0 4px 0 0;">Context Signal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff8e1;">
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">मरम्मत</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">repair</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">___ की मरम्मत करना/करवाना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">building, road, body part, tank</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">सुधार</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">improvement</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">___ में सुधार लाना / सुधार होना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">health, education, situation</td>
+        </tr>
+        <tr style="background:#fff8e1;">
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">राहत</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">relief</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">राहत मिलना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">after difficulty: heat, storm, illness</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">दरारें</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">cracks</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">दरारें आना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">earthquake, flood, storm + structure</td>
+        </tr>
+        <tr style="background:#fff8e1;">
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">हल / समाधान</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">solution</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">___ का हल निकालना / समाधान निकालना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">problem, dispute, disagreement</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">मगन / खोए</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">absorbed/engrossed</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">[चीज़] में मगन रहना / [चीज़] में खोए रहना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">so focused you forget surroundings</td>
+        </tr>
+        <tr style="background:#fff8e1;">
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;font-weight:700;color:#f57f17;">नुकसान</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">damage/loss</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">भारी नुकसान होना / नुकसान पहुँचना</td>
+          <td style="padding:7px 10px;border-bottom:1px solid #eee;">disaster, fire, flood &rarr; negative result</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 10px;font-weight:700;color:#f57f17;">उद्देश्य</td>
+          <td style="padding:7px 10px;">aim/purpose</td>
+          <td style="padding:7px 10px;">[योजना/अभियान] का उद्देश्य ... है</td>
+          <td style="padding:7px 10px;">formal: scheme, campaign, project</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ══ FINAL SCORE BOX (print-friendly) ══ -->
+<div class="score-tracker" id="finalScore">
+  <h3>&#127942; मेरा कुल स्कोर &mdash; W05 to W09</h3>
+  <div class="score-display">मैंने <span id="finalScoreNum">___</span> / 25 सही किए</div>
+  <div class="score-note" style="margin-top:8px;">
+    20&ndash;25: शाबाश! &nbsp;|&nbsp; 15&ndash;19: अच्छा — थोड़ा और अभ्यास &nbsp;|&nbsp; &lt;15: Collocations chart दोबारा पढ़ो
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="page-footer">
+  Hindi PSLE Daily Practice &mdash; Aarohi वाक्य पूर्ति Drills W05&ndash;W09 &nbsp;|&nbsp; Phase 2: BUILD &nbsp;|&nbsp; PSLE: Sep 28, 2026
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="../Hindi_Daily_Plan_May_Sept2026.html" style="color:#f57f17;text-decoration:none;">&#8592; Master Plan</a>
+</div>
+
+<script>
+// ── Score tracking ──
+var score = 0;
+var answered = {};
+
+function choose(el, drillId, optNum) {
+  var card = el.closest('.drill-card');
+  var correctAns = parseInt(card.getAttribute('data-ans'));
+
+  // Already answered
+  if (answered[drillId]) return;
+  answered[drillId] = true;
+
+  // Mark all options
+  var opts = card.querySelectorAll('.drill-opt');
+  opts.forEach(function(opt, idx) {
+    var thisNum = idx + 1;
+    if (thisNum === correctAns) {
+      opt.classList.add('correct');
+    } else if (thisNum === optNum && optNum !== correctAns) {
+      opt.classList.add('wrong');
+    }
+    opt.style.pointerEvents = 'none';
+  });
+
+  // Update score
+  if (optNum === correctAns) {
+    score++;
+    updateScoreDisplay();
+  }
+
+  // Auto-open the details reveal
+  var details = card.querySelector('details.answer-reveal');
+  if (details) details.open = true;
+}
+
+function updateScoreDisplay() {
+  var el1 = document.getElementById('scoreNum');
+  var el2 = document.getElementById('finalScoreNum');
+  if (el1) el1.textContent = score;
+  if (el2) el2.textContent = score;
+}
+
+function resetScore() {
+  score = 0;
+  answered = {};
+  updateScoreDisplay();
+  // Reset all option styles
+  document.querySelectorAll('.drill-opt').forEach(function(opt) {
+    opt.classList.remove('correct','wrong','selected');
+    opt.style.pointerEvents = '';
+  });
+  // Close all details
+  document.querySelectorAll('details.answer-reveal').forEach(function(d) {
+    d.open = false;
+  });
+}
+</script>
+
+</body>
+</html>
