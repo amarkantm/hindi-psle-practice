@@ -86,6 +86,15 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
 .weekend-block{border-top:4px solid #FF9933;}
 .wknd-banner{background:linear-gradient(135deg,#FF9933,#e65100);color:white;padding:6px 18px;display:flex;justify-content:space-between;font-size:11px;font-weight:700;}
 .weekend-header{background:#fff3e0;border-bottom:1px solid #ffe0b2;}
+
+/* ── Print-per-day ─────────────────────────────────── */
+@media print{
+  body.print-day .week-nav{display:none!important;}
+  body.print-day .no-print{display:none!important;}
+  body.print-day .day-block:not(.print-active){display:none!important;}
+  body.print-day .day-block.print-active{display:block!important;}
+  body.print-day .stripe,body.print-day .header{display:block!important;}
+}
 </style>
 </head>
 <body>
@@ -101,6 +110,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
   <span style="font-size:11px;font-weight:700;color:#555;">Navigate:</span>
   <a class="nav-chip" href="../Hindi_Daily_Plan_May_Sept2026.html">📋 Study Plan</a>
   <a class="nav-chip" href="W01_May05.html" style="background:#000080;color:white;">W01 (this week)</a>
+  <button class="nav-chip no-print" style="cursor:pointer;background:#2e7d32;color:white;border:none;" onclick="window.print()">🖨 Print Week</button>
   <a class="nav-chip" href="W02_May12.html">W02 May 12 →</a>
   <a class="nav-chip" href="W03_May19.html">W03 May 25 →</a>
   <a class="nav-chip" href="W04_May26.html">W04 Jun 1 →</a>
@@ -116,7 +126,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">सोमवार — Monday, May 5, 2026</div>
       <div class="day-meta">A1 Vocabulary / Fill-Blank MCQ | 2013 PSLE Paper | ~30 min</div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">🖨 Print</button>
+    <button class="print-btn no-print" onclick="printDay('day1')">🖨 Print</button>
   </div>
 
   <div class="vocab-card">
@@ -253,7 +263,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">मंगलवार — Tuesday, May 6, 2026</div>
       <div class="day-meta">A3 Cloze Comprehension | 2013 PSLE Paper | ~35 min</div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">🖨 Print</button>
+    <button class="print-btn no-print" onclick="printDay('day2')">🖨 Print</button>
   </div>
 
   <div class="vocab-card">
@@ -449,7 +459,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">बुधवार — Wednesday, May 7, 2026</div>
       <div class="day-meta">A4 MCQ Comprehension + Vocabulary | 2013 PSLE Paper | ~35 min</div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">🖨 Print</button>
+    <button class="print-btn no-print" onclick="printDay('day3')">🖨 Print</button>
   </div>
 
   <div class="practice-section">
@@ -642,7 +652,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">गुरुवार — Thursday, May 8, 2026</div>
       <div class="day-meta">B6 Idioms + B7 Sentence Completion | 2013 PSLE Paper | ~35 min</div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">🖨 Print</button>
+    <button class="print-btn no-print" onclick="printDay('day4')">🖨 Print</button>
   </div>
 
   <div class="practice-section">
@@ -770,7 +780,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">शुक्रवार — Friday, May 9, 2026</div>
       <div class="day-meta">B8 Open-Ended Comprehension | 2013 PSLE Paper | ~40 min &nbsp;<span style="background:#d32f2f;color:white;padding:2px 6px;border-radius:4px;font-size:10px;">Aarohi Focus ⚡</span></div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">🖨 Print</button>
+    <button class="print-btn no-print" onclick="printDay('day5')">🖨 Print</button>
   </div>
 
   <div class="focus-box-red">
@@ -864,7 +874,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">शनिवार — Saturday, May 10, 2026</div>
       <div class="day-meta">सप्ताहांत मॉक · Weekend Mock · 60 minutes · 20 Questions · 2013 Paper</div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">Print Day</button>
+    <button class="print-btn no-print" onclick="printDay('day6')">🖨 Print Day</button>
   </div>
 
   <!-- Vocab Review Card -->
@@ -885,171 +895,245 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     </table>
   </div>
 
-  <!-- 20 Mixed Questions -->
+  <!-- 20 Real 2013 PSLE P2 Questions — sourced from official paper -->
   <div class="practice-section">
     <div class="sec-header">
-      <span class="sec-tag">मिश्रित</span>
-      <span class="sec-title">Weekend Mock — सभी भागों से प्रश्न</span>
-      <span class="sec-time">60 मिनट</span>
+      <span class="sec-tag">असली PSLE</span>
+      <span class="sec-title">Weekend Mock — Mixed PSLE Years · वास्तविक प्रश्न (2012·2013·2014)</span>
+      <span class="sec-time">60 मिनट · 20 प्रश्न</span>
     </div>
 
-    <!-- Q1–Q5: Collocations -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin-bottom:8px;">भाग A — शब्द-प्रयोग (Collocations) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
-
-    <div class="q-block">
-      <span class="q-num">Q1.</span>
-      <span class="q-text">बाज़ार में <span class="blank">&nbsp;</span> के कारण सब्ज़ियों के दाम बढ़ गए।</span>
-      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">hoarding — जमाखोरी</span></details>
-    </div>
-    <div class="q-block">
-      <span class="q-num">Q2.</span>
-      <span class="q-text">दादी का कंगन बहुत <span class="blank">&nbsp;</span> था, इसलिए तिजोरी में रखा था।</span>
-      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">valuable — मूल्यवान</span></details>
-    </div>
-    <div class="q-block">
-      <span class="q-num">Q3.</span>
-      <span class="q-text">अपने मित्र की तरक्की देखकर <span class="blank">&nbsp;</span> नहीं करनी चाहिए।</span>
-      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">jealousy — ईर्ष्या</span></details>
-    </div>
-    <div class="q-block">
-      <span class="q-num">Q4.</span>
-      <span class="q-text">एक <span class="blank">&nbsp;</span> दुकानदार हमेशा सही वज़न देता है।</span>
-      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">honest — ईमानदार</span></details>
-    </div>
-    <div class="q-block">
-      <span class="q-num">Q5.</span>
-      <span class="q-text">पुराने ज़माने में लोकगृही बहुत <span class="blank">&nbsp;</span> नगर था।</span>
-      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">prosperous — समृद्ध</span></details>
+    <div style="background:#1565c0;color:white;border-radius:6px;padding:8px 14px;font-size:12px;font-weight:700;margin-bottom:12px;">
+      📋 निर्देश (PSLE OAS प्रारूप): प्रत्येक प्रश्न में सबसे सही उत्तर का नंबर (1, 2, 3 या 4) गोले में भरें।
     </div>
 
-    <div class="section-divider"></div>
+    <!-- ─── SECTION A1: Bee &amp; Pigeon ─── -->
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin-bottom:4px;">
+      भाग A1 — शब्द-भंडार &nbsp;<span class="source-badge">2012 PSLE · P2 · Section A1 · Q1–5</span>
+    </p>
+    <p style="font-size:11px;color:#555;margin-bottom:8px;">
+      प्र॰ 1 से 5 की ख़ाली जगहों को भरने के लिए नीचे दिए गए विकल्पों में से उपयुक्त शब्द या वाक्यांश चुनें। [5]
+    </p>
 
-    <!-- Q6–Q10: Cloze -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग B — रिक्त-पूर्ति (Cloze Passage) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
     <div class="passage-box">
-      एक बार एक <span class="blank-num">6</span> व्यापारी था जो दूर देशों में सामान बेचता था। उसका व्यवहार बहुत <span class="blank-num">7</span> था। जब उसके शहर में बाढ़ आई तो उसने <span class="blank-num">8</span> का काम नहीं किया, बल्कि सबकी मदद की। उसकी दुकान बहुत <span class="blank-num">9</span> थी, लेकिन उसका दिल उससे भी बड़ा था। लोग उसकी भलाई से बहुत <span class="blank-num">10</span> थे।
+      एक प्यासी मधुमक्खी पानी पीने के लिए एक नदी पर गई। अचानक, वह पानी में गिर गई और प्रवाह ने उसे <span class="blank-num">1</span>।<br><br>
+      एक कबूतर <span class="blank-num">2</span> एक पेड़ पर बैठा था और उसने मधुमक्खी को डूबते देखा। उसने झट से पेड़ का एक पत्ता उठाया और उसे पानी में <span class="blank-num">3</span>। मधुमक्खी पत्ते पर चढ़ गई और अपने पंख सूख जाने पर उड़ गई।<br><br>
+      कुछ दिनों के <span class="blank-num">4</span> कबूतर फिर उसी पेड़ पर आराम कर रहा था। मधुमक्खी पेड़ के पास उड़ रही थी। उसने एक शिकारी को अपनी बंदूक पक्षी की ओर <span class="blank-num">5</span> देखा। मधुमक्खी झटपट उड़कर शिकारी के पास गई और उसकी बाँह को काट लिया। शिकारी ने बंदूक फेंक दी और कबूतर बिना चोट खाए उड़ गया।
     </div>
-    <div class="word-box">
-      <strong>शब्द-भंडार (Word Box):</strong>
-      विदेशी &nbsp;·&nbsp; ईमानदार &nbsp;·&nbsp; जमाखोरी &nbsp;·&nbsp; आलीशान &nbsp;·&nbsp; प्रभावित
+
+    <div class="q-block"><span class="q-num">Q1.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) हटा दिया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) खींच लिया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) मसल दिया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) सुझा लिया</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q2.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) समीपता</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) दूरी</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) अगला</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) पास के</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q3.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) जड़ दिया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) डाल दिया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) उठा लिया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) खड़ा कर दिया</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q4.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) चले गए</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) पहले</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) बाद</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) बीत गए</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q5.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) तानते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) पेश करते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) दिखाते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) खींचते</div>
+      </div>
     </div>
 
     <div class="section-divider"></div>
 
-    <!-- Q11–Q16: MCQ Comprehension -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग C — बोधात्मक प्रश्न (MCQ Comprehension) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
+    <!-- ─── SECTION A2: Sea-side Picnic ─── -->
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 4px;">
+      भाग A2 — शब्द-भंडार &nbsp;<span class="source-badge">2014 PSLE · P2 · Section A2 · Q6–10</span>
+    </p>
+    <p style="font-size:11px;color:#555;margin-bottom:8px;">
+      प्र॰ 6 से 10 की ख़ाली जगहों को भरने के लिए नीचे दिए गए विकल्पों में से उपयुक्त शब्द या वाक्यांश चुनें। [5]
+    </p>
+
     <div class="passage-box">
-      रमेश एक परिश्रमी और होशियार छात्र था। एक दिन उसे पता चला कि उसके मित्र मोहन के पिता बीमार पड़ गए हैं। मोहन बहुत दुखी था और पढ़ाई में पिछड़ने लगा था। रमेश ने उसकी परेशानी देखी और रोज़ शाम को उसके घर जाकर उसे पढ़ाने लगा। परीक्षा में मोहन ने अच्छे अंक पाए। मोहन की माँ ने रमेश को आशीर्वाद दिया और कहा, "बेटा, तुम्हारी मित्रता सच्ची है।"
+      नमस्ते बच्चो! मेरी माध्यम ध्यान से सुनें! अपनी वर्ष के अंत में हमने अगले शनिवार को समुद्र के किनारे एक पिकनिक का <span class="blank-num">6</span> किया है। हम सवेरे 9.00 बजे स्कूल के मैदान में <span class="blank-num">7</span> होंगे। समुद्र के किनारे पहुँचाने के लिए स्कूल ने एक बस भाड़े पर ली है इसलिए हम सब की <span class="blank-num">8</span> पर आपका कुछ ख़र्च नहीं होगा। कृपया दोपहर का खाना अपने साथ लेकर आएँ। पानी पर आपका आइसकीम <span class="blank-num">9</span> को मन कर सकता है, इसलिए आपको अपने साथ पैसे भी लाने होंगे। हम समुद्र में तैर सकेंगे, रेत पर <span class="blank-num">10</span> सकेंगे या खेल खेलेंगे। यदि आप चलना चाहते हैं तो कृपया अपना नाम मेरे पास लिखवा दें। हमें उम्मीद है कि हमारा दिन मज़ेदार रहेगा।
     </div>
 
-    <div class="q-block">
-      <span class="q-num">Q11.</span>
-      <span class="q-text">रमेश कैसा छात्र था?</span>
+    <div class="q-block"><span class="q-num">Q6.</span>
       <div class="q-options">
-        <div class="q-opt"><span class="opt-circle"></span> (A) परिश्रमी और होशियार</div>
-        <div class="q-opt"><span class="opt-circle"></span> (B) आलसी और कमज़ोर</div>
-        <div class="q-opt"><span class="opt-circle"></span> (C) शरारती और चालाक</div>
-        <div class="q-opt"><span class="opt-circle"></span> (D) डरा हुआ और उदास</div>
+        <div class="q-opt"><span class="opt-circle"></span> (1) संपर्क</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) गुन</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) आयोजन</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) आपा</div>
       </div>
     </div>
-    <div class="q-block">
-      <span class="q-num">Q12.</span>
-      <span class="q-text">मोहन पढ़ाई में क्यों पिछड़ रहा था?</span>
+    <div class="q-block"><span class="q-num">Q7.</span>
       <div class="q-options">
-        <div class="q-opt"><span class="opt-circle"></span> (A) वह स्कूल नहीं गया</div>
-        <div class="q-opt"><span class="opt-circle"></span> (B) उसकी किताबें खो गईं</div>
-        <div class="q-opt"><span class="opt-circle"></span> (C) उसके पिता बीमार पड़े और वह दुखी था</div>
-        <div class="q-opt"><span class="opt-circle"></span> (D) वह खेलने में लगा रहा</div>
+        <div class="q-opt"><span class="opt-circle"></span> (1) सोए</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) आतंग</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) देखते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) जाना</div>
       </div>
     </div>
-    <div class="q-block">
-      <span class="q-num">Q13.</span>
-      <span class="q-text">रमेश ने मोहन की मदद किस तरह की?</span>
+    <div class="q-block"><span class="q-num">Q8.</span>
       <div class="q-options">
-        <div class="q-opt"><span class="opt-circle"></span> (A) उसे पैसे दिए</div>
-        <div class="q-opt"><span class="opt-circle"></span> (B) उसे खाना खिलाया</div>
-        <div class="q-opt"><span class="opt-circle"></span> (C) उसकी जगह परीक्षा दी</div>
-        <div class="q-opt"><span class="opt-circle"></span> (D) रोज़ शाम उसके घर जाकर पढ़ाया</div>
+        <div class="q-opt"><span class="opt-circle"></span> (1) भोजन</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) यात्रा</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) सूटकेस</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) उड़ान</div>
       </div>
     </div>
-    <div class="q-block">
-      <span class="q-num">Q14.</span>
-      <span class="q-text">मोहन की माँ ने रमेश के बारे में क्या कहा?</span>
+    <div class="q-block"><span class="q-num">Q9.</span>
       <div class="q-options">
-        <div class="q-opt"><span class="opt-circle"></span> (A) "तुम बुद्धिमान हो"</div>
-        <div class="q-opt"><span class="opt-circle"></span> (B) "तुम्हारी मित्रता सच्ची है"</div>
-        <div class="q-opt"><span class="opt-circle"></span> (C) "तुम महान हो"</div>
-        <div class="q-opt"><span class="opt-circle"></span> (D) "तुम बहुत अच्छे हो"</div>
+        <div class="q-opt"><span class="opt-circle"></span> (1) खरीदने</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) जमाने</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) पकाने</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) पीने</div>
       </div>
     </div>
-    <div class="q-block">
-      <span class="q-num">Q15.</span>
-      <span class="q-text">इस कहानी से क्या सीख मिलती है?</span>
+    <div class="q-block"><span class="q-num">Q10.</span>
       <div class="q-options">
-        <div class="q-opt"><span class="opt-circle"></span> (A) परीक्षा में हमेशा पहले आना चाहिए</div>
-        <div class="q-opt"><span class="opt-circle"></span> (B) अच्छे अंक पाना सबसे ज़रूरी है</div>
-        <div class="q-opt"><span class="opt-circle"></span> (C) मित्र की मुसीबत में काम आना चाहिए</div>
-        <div class="q-opt"><span class="opt-circle"></span> (D) माँ की बात हमेशा माननी चाहिए</div>
-      </div>
-    </div>
-    <div class="q-block">
-      <span class="q-num">Q16.</span>
-      <span class="q-text">"परिश्रमी" शब्द का अर्थ क्या है?</span>
-      <div class="q-options">
-        <div class="q-opt"><span class="opt-circle"></span> (A) आलसी</div>
-        <div class="q-opt"><span class="opt-circle"></span> (B) समझदार</div>
-        <div class="q-opt"><span class="opt-circle"></span> (C) मेहनती</div>
-        <div class="q-opt"><span class="opt-circle"></span> (D) चालाक</div>
+        <div class="q-opt"><span class="opt-circle"></span> (1) मछली पकड़</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) मौका चला</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) स्की मत</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) टहल</div>
       </div>
     </div>
 
     <div class="section-divider"></div>
 
-    <!-- Q17–Q18: Idiom Match -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग D — मुहावरे (Idioms) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
-    <table class="idiom-table">
-      <tr><th>मुहावरा / कहावत</th><th>अर्थ — सही उत्तर चुनें</th></tr>
-      <tr>
-        <td><b>Q17.</b> ईद का चाँद होना</td>
-        <td>
-          <div class="q-options" style="margin:0;">
-            <div class="q-opt"><span class="opt-circle"></span> (A) बहुत कम दिखाई देना</div>
-            <div class="q-opt"><span class="opt-circle"></span> (B) बहुत खुश होना</div>
-            <div class="q-opt"><span class="opt-circle"></span> (C) रात में घूमना</div>
-            <div class="q-opt"><span class="opt-circle"></span> (D) त्योहार मनाना</div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><b>Q18.</b> तन सुखी तो मन सुखी</td>
-        <td>
-          <div class="q-options" style="margin:0;">
-            <div class="q-opt"><span class="opt-circle"></span> (A) मन और तन अलग-अलग हैं</div>
-            <div class="q-opt"><span class="opt-circle"></span> (B) शरीर स्वस्थ हो तो मन भी प्रसन्न रहता है</div>
-            <div class="q-opt"><span class="opt-circle"></span> (C) तन की देखभाल पहले करनी चाहिए</div>
-            <div class="q-opt"><span class="opt-circle"></span> (D) मन की खुशी से तन ठीक होता है</div>
-          </div>
-        </td>
-      </tr>
-    </table>
+    <!-- ─── SECTION A3: Musician's Daughter (Q11–15) ─── -->
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 4px;">
+      भाग A3 — अर्थ-बोध (Q11–15) &nbsp;<span class="source-badge">2013 PSLE · P2 · Section A3 · Q11–15</span>
+    </p>
+    <p style="font-size:11px;color:#555;margin-bottom:8px;">
+      नीचे दिए अवतरण को ध्यान से पढ़ें और प्र॰ 11 से 15 के उत्तर दें। [5]
+    </p>
 
-    <!-- Q19–Q20: Sentence Completion -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग E — वाक्य-पूर्ति (Sentence Completion) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
-    <div class="q-block">
-      <span class="q-num">Q19.</span>
-      <span class="q-text">वह परीक्षा में पास होगा _______ वह कड़ी मेहनत करेगा।</span>
-      <div class="ans-line"></div>
-    </div>
-    <div class="q-block">
-      <span class="q-num">Q20.</span>
-      <span class="q-text">रमेश ने पहले मित्र की मदद की _______ खुद का काम किया।</span>
-      <div class="ans-line"></div>
+    <div class="passage-box">
+      एक प्रसिद्ध संगीतकार की एक दस साल की बेटी और चार साल का बेटा था। यह देख कर कि उसकी बेटी संगीत <span class="blank-num">11</span> है, संगीतकार ने उसे वायलिन <span class="blank-num">12</span> सिखाना शुरू किया। यह एक <span class="blank-num">13</span> छात्रा थी, इसलिए उसने वे अधिकांश धुनें बजाना सीख लिया जो उसके पिता ने सिखाईं।<br><br>
+      हर शाम जब उसके पिता जी उसे बहुत-सी धुनें बजाना <span class="blank-num">14</span> तब छोटा बेटा अपनी बहन के साथ ही बैठता था। वह अपनी उँगलियाँ <span class="blank-num">15</span> पर चलाने को तरसता लेकिन पिता उसे इसकी अनुमति नहीं देते थे।
     </div>
 
-    <!-- Bonus Writing -->
+    <div class="q-block"><span class="q-num">Q11.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) पसंद करती</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) संतुष्ट रहती</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) आशीर्वाद देती</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) माहौल करती</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q12.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) उठाना</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) रखना</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) बजाना</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) साफ़ करना</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q13.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) साहसी</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) उत्सुक</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) बहादुर</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) लगनशील</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q14.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) पढ़ाते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) प्रदर्शन करते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) अभ्यास करते</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) सिखाते</div>
+      </div>
+    </div>
+    <div class="q-block"><span class="q-num">Q15.</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) पाँवों</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) तारों</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) छड़ियों</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) पेंडलों</div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ─── SECTION A4-VOCAB (Q16–20 = real paper Q28–32) ─── -->
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 4px;">
+      भाग A4 — शब्द-ज्ञान (Q16–20) &nbsp;<span class="source-badge">2013 PSLE · P2 · Section A4 · Q28–32</span>
+    </p>
+    <p style="font-size:11px;color:#555;margin-bottom:8px;">
+      नीचे दिए गए शब्दों के सबसे सही अर्थ वाला विकल्प चुनें। [5]
+    </p>
+
+    <div class="q-block">
+      <span class="q-num">Q16.</span> <span class="q-text" style="font-weight:700;font-size:14px;">समृद्ध</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) आधुनिक</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) संपन्न</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) संस्कृत</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) शांत</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q17.</span> <span class="q-text" style="font-weight:700;font-size:14px;">विदेशी</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) ईमानदार</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) व्यापारी</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) बाहरी</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) हिंदी</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q18.</span> <span class="q-text" style="font-weight:700;font-size:14px;">चाह</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) खेद</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) विचार</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) उपाय</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) इच्छाएँ</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q19.</span> <span class="q-text" style="font-weight:700;font-size:14px;">ईर्ष्या</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) चतुराई</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) स्वार्थ</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) क्षोभ</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) जलन</div>
+      </div>
+    </div>
+    <div class="q-block">
+      <span class="q-num">Q20.</span> <span class="q-text" style="font-weight:700;font-size:14px;">ईमानदार</span>
+      <div class="q-options">
+        <div class="q-opt"><span class="opt-circle"></span> (1) नेक</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) विश्वासी</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) समझदार</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) ज़िम्मेदार</div>
+      </div>
+    </div>
+
+    <!-- Bonus Writing (Paper 1 style) -->
     <div class="writing-prompt">
-      <h4>✍ बोनस लेखन — Bonus Writing (50 शब्द)</h4>
-      <p class="wp-text">मित्र की मुसीबत में आपने कैसे मदद की या कोई कर सकता है? इस सप्ताह के कम-से-कम 3 शब्दों का प्रयोग करें।<br>How did you or someone help a friend in trouble? Use at least 3 words from this week.</p>
+      <h4>✍ बोनस लेखन — Paper 1 Style (50 शब्द)</h4>
+      <p class="wp-text">पिछले सप्ताह आपने किसी की मदद की या किसी ने आपकी। उस घटना के बारे में लिखिए — क्या हुआ, आपने क्या किया, परिणाम क्या रहा।<br>
+      <small style="color:#888;">इस सप्ताह के कम-से-कम 3 शब्दों का प्रयोग करें। (2013 Paper 1 writing style)</small></p>
       <div class="writing-lines">
         <div class="ans-line"></div>
         <div class="ans-line"></div>
@@ -1058,6 +1142,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
         <div class="ans-line"></div>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- Self-assess -->
@@ -1073,26 +1158,26 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     <div class="fold-note">उत्तर देखने से पहले स्वयं सोचें! Try first, then check!</div>
     <h4>उत्तर-कुंजी — Weekend Mock</h4>
     <div class="ak-grid">
-      <div class="ak-item"><b>Q1.</b> जमाखोरी</div>
-      <div class="ak-item"><b>Q2.</b> मूल्यवान</div>
-      <div class="ak-item"><b>Q3.</b> ईर्ष्या</div>
-      <div class="ak-item"><b>Q4.</b> ईमानदार</div>
-      <div class="ak-item"><b>Q5.</b> समृद्ध</div>
-      <div class="ak-item"><b>Q6.</b> विदेशी</div>
-      <div class="ak-item"><b>Q7.</b> ईमानदार</div>
-      <div class="ak-item"><b>Q8.</b> जमाखोरी</div>
-      <div class="ak-item"><b>Q9.</b> आलीशान</div>
-      <div class="ak-item"><b>Q10.</b> प्रभावित</div>
-      <div class="ak-item"><b>Q11.</b> (A)</div>
-      <div class="ak-item"><b>Q12.</b> (C)</div>
-      <div class="ak-item"><b>Q13.</b> (D)</div>
-      <div class="ak-item"><b>Q14.</b> (B)</div>
-      <div class="ak-item"><b>Q15.</b> (C)</div>
-      <div class="ak-item"><b>Q16.</b> (C)</div>
-      <div class="ak-item"><b>Q17.</b> (A) बहुत कम दिखाई देना</div>
-      <div class="ak-item"><b>Q18.</b> (B) शरीर स्वस्थ हो तो मन भी प्रसन्न रहता है</div>
-      <div class="ak-item"><b>Q19.</b> तभी / यदि / जब</div>
-      <div class="ak-item"><b>Q20.</b> और / फिर / उसके बाद</div>
+      <div class="ak-item"><b>Q1.</b> (2) खींच लिया <span style="font-size:10px;color:#888;">2012</span></div>
+      <div class="ak-item"><b>Q2.</b> (4) पास के <span style="font-size:10px;color:#888;">2012</span></div>
+      <div class="ak-item"><b>Q3.</b> (2) डाल दिया <span style="font-size:10px;color:#888;">2012</span></div>
+      <div class="ak-item"><b>Q4.</b> (3) बाद <span style="font-size:10px;color:#888;">2012</span></div>
+      <div class="ak-item"><b>Q5.</b> (1) तानते <span style="font-size:10px;color:#888;">2012</span></div>
+      <div class="ak-item"><b>Q6.</b> (3) आयोजन <span style="font-size:10px;color:#888;">2014</span></div>
+      <div class="ak-item"><b>Q7.</b> (4) जाना <span style="font-size:10px;color:#888;">2014</span></div>
+      <div class="ak-item"><b>Q8.</b> (2) यात्रा <span style="font-size:10px;color:#888;">2014</span></div>
+      <div class="ak-item"><b>Q9.</b> (1) खरीदने <span style="font-size:10px;color:#888;">2014</span></div>
+      <div class="ak-item"><b>Q10.</b> (4) टहल <span style="font-size:10px;color:#888;">2014</span></div>
+      <div class="ak-item"><b>Q11.</b> (1) पसंद करती</div>
+      <div class="ak-item"><b>Q12.</b> (3) बजाना</div>
+      <div class="ak-item"><b>Q13.</b> (2) उत्सुक</div>
+      <div class="ak-item"><b>Q14.</b> (4) सिखाते</div>
+      <div class="ak-item"><b>Q15.</b> (2) तारों</div>
+      <div class="ak-item"><b>Q16.</b> (2) संपन्न</div>
+      <div class="ak-item"><b>Q17.</b> (3) बाहरी</div>
+      <div class="ak-item"><b>Q18.</b> (4) इच्छाएँ</div>
+      <div class="ak-item"><b>Q19.</b> (4) जलन</div>
+      <div class="ak-item"><b>Q20.</b> (1) नेक</div>
     </div>
   </div>
 </div>
@@ -1105,7 +1190,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
       <div class="day-title">रविवार — Sunday, May 11, 2026</div>
       <div class="day-meta">सप्ताह समीक्षा · Week Review · 30 minutes · 5 Challenge Questions</div>
     </div>
-    <button class="print-btn no-print" onclick="window.print()">Print Day</button>
+    <button class="print-btn no-print" onclick="printDay('day7')">🖨 Print Day</button>
   </div>
 
   <!-- 5 Challenge Questions -->
@@ -1118,9 +1203,9 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
 
     <div class="q-block">
       <span class="q-num">C1.</span>
-      <span class="source-badge">2013 शब्द-भंडार · अभ्यास</span>
-      <span class="q-text"> एक <span class="blank">&nbsp;</span> व्यापारी ने <span class="blank">&nbsp;</span> की शिकायत सुनकर अपना माल उचित दाम पर बेचा।</span>
-      <details class="hint-toggle"><summary>💡 शब्द-संकेत</summary><span class="hint-content">ईमानदार, जमाखोरी</span></details>
+      <span class="source-badge">2013 PSLE · P2B · B7 · Q41</span>
+      <span class="q-text">मैं शादी में तो जाऊँगा <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> आप मेरे साथ चलेंगी।</span>
+      <div class="ans-line"></div>
     </div>
 
     <div class="q-block">
@@ -1141,18 +1226,20 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
 
     <div class="q-block">
       <span class="q-num">C4.</span>
-      <span class="source-badge">2013 · B7</span>
-      <span class="q-text"> वह _______ मेहनत करता रहा _______ उसे सफलता मिल गई। &nbsp;<span class="hint">(जोड़ने वाले शब्द लिखिए)</span></span>
+      <span class="source-badge">2013 PSLE · P2B · B7 · Q43</span>
+      <span class="q-text">उसने अपनी सारी स्कूल की किताबें साफ़ और <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> सजा दीं।</span>
       <div class="ans-line"></div>
     </div>
 
     <div class="q-block">
       <span class="q-num">C5.</span>
-      <span class="source-badge">शब्द-ज्ञान</span>
-      <span class="q-text"> 'समृद्ध' का समानार्थी (synonym) और 'ईमानदार' का विलोम (antonym) शब्द लिखिए।</span>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
-        <div>समानार्थी: <div class="ans-line"></div></div>
-        <div>विलोम: <div class="ans-line"></div></div>
+      <span class="source-badge">2013 PSLE · P2A · A5 · Q35</span>
+      <span class="q-text">पठन चुनौती में भाग लेने के लिए आपको ___ होना चाहिए।</span>
+      <div class="q-options" style="margin-top:8px;">
+        <div class="q-opt"><span class="opt-circle"></span> (1) प्रवेश शुल्क देना होगा</div>
+        <div class="q-opt"><span class="opt-circle"></span> (2) पुस्तकालय की वेबसाइट पर लॉग इन करना होगा</div>
+        <div class="q-opt"><span class="opt-circle"></span> (3) 9 से 12 साल की उम्र का होना चाहिए</div>
+        <div class="q-opt"><span class="opt-circle"></span> (4) नवंबर के दौरान नियमित रूप से पुस्तकालय जाना होगा</div>
       </div>
     </div>
   </div>
@@ -1186,11 +1273,11 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     <div class="fold-note">उत्तर देखने से पहले स्वयं सोचें!</div>
     <h4>उत्तर-कुंजी — Challenge Questions</h4>
     <div class="ak-grid">
-      <div class="ak-item" style="grid-column:1/-1;"><b>C1.</b> ईमानदार / जमाखोरी</div>
-      <div class="ak-item" style="grid-column:1/-1;"><b>C2.</b> ईद का चाँद (बहुत दिनों बाद दिखे → ईद का चाँद हो गए)</div>
-      <div class="ak-item" style="grid-column:1/-1;"><b>C3.</b> (1) किसी ने कम दान दिया (2) किसी ने तिरस्कार किया</div>
-      <div class="ak-item" style="grid-column:1/-1;"><b>C4.</b> इतनी / कि &nbsp;(या: लगातार / तब)</div>
-      <div class="ak-item" style="grid-column:1/-1;"><b>C5.</b> समानार्थी: संपन्न / धनी · विलोम: बेईमान / झूठा</div>
+      <div class="ak-item" style="grid-column:1/-1;"><b>C1.</b> तभी / यदि / जब भी &nbsp;<span style="color:#888;font-size:10px;">(2013 P2B · B7 · Q41)</span></div>
+      <div class="ak-item" style="grid-column:1/-1;"><b>C2.</b> ईद का चाँद &nbsp;<span style="color:#888;font-size:10px;">(बहुत दिनों बाद दिखे → ईद का चाँद हो गए · 2013 P2B · B6)</span></div>
+      <div class="ak-item" style="grid-column:1/-1;"><b>C3.</b> (1) किसी ने कम दान दिया (2) किसी ने तिरस्कार/अनादर किया &nbsp;<span style="color:#888;font-size:10px;">(2013 P2B · B8 · Q47)</span></div>
+      <div class="ak-item" style="grid-column:1/-1;"><b>C4.</b> सुथरी / व्यवस्थित / करीने से &nbsp;<span style="color:#888;font-size:10px;">(2013 P2B · B7 · Q43)</span></div>
+      <div class="ak-item" style="grid-column:1/-1;"><b>C5.</b> (3) 9 से 12 साल की उम्र का होना चाहिए &nbsp;<span style="color:#888;font-size:10px;">(2013 P2A · A5 · Q35)</span></div>
     </div>
   </div>
 </div>
@@ -1199,5 +1286,22 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
   Hindi PSLE Daily Practice — W01 May 5–9, 2026 | Phase 1 | Source: 2013 PSLE Paper
 </div>
 
+
+<script>
+function printDay(id){
+  document.querySelectorAll('.day-block').forEach(function(e){
+    e.classList.remove('print-active');
+  });
+  document.getElementById(id).classList.add('print-active');
+  document.body.classList.add('print-day');
+  window.print();
+  setTimeout(function(){
+    document.body.classList.remove('print-day');
+    document.querySelectorAll('.day-block').forEach(function(e){
+      e.classList.remove('print-active');
+    });
+  }, 600);
+}
+</script>
 </body>
 </html>
