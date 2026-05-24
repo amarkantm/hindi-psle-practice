@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W01 &mdash; May 25&ndash;29, 2026 | Hindi PSLE Daily Practice</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#2e7d32;--phase-bg:#e8f5e9;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{body{background:white;font-size:13px;}.no-print{display:none!important;}.day-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}.ans-key-section{page-break-before:always;}@page{size:A4;margin:15mm;}}
+.stripe{display:flex;height:5px;}.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:20px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:20px;letter-spacing:1px;}.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#000080;text-decoration:none;}
+.day-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.day-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8e6c9;}
+.day-title{font-size:16px;font-weight:700;color:var(--navy);}.day-meta{font-size:11px;color:#555;}
+.print-btn{background:var(--navy);color:white;border:none;padding:4px 12px;border-radius:4px;font-size:11px;cursor:pointer;}
+.practice-section{padding:14px 18px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #eee;}
+.sec-tag{background:var(--navy);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;}
+.sec-title{font-size:15px;font-weight:700;color:var(--navy);}.sec-time{font-size:11px;color:#888;margin-left:auto;}
+.source-badge{font-size:9px;background:#ede7f6;color:#4a148c;border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:6px;font-style:italic;}
+.q-block{margin-bottom:16px;}.q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
+.q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
+.opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
+.ans-line{border-bottom:1.5px solid #bbb;min-height:32px;margin:4px 0 10px;background:none;}
+.passage-box{background:#f8f9fa;border-left:4px solid var(--navy);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:2.1;font-family:serif;}
+.blank-num{background:#000080;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin:0 2px;vertical-align:middle;}
+.word-box{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.9;}
+.word-box strong{color:#856404;font-size:11px;display:block;margin-bottom:4px;}
+.writing-prompt{background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:14px 16px;margin-bottom:14px;}
+.writing-prompt h4{color:#e65100;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-text{font-size:13px;color:#333;margin-bottom:10px;line-height:1.9;}
+.bullet-list{margin:8px 0 12px 20px;}.bullet-list li{font-size:13px;color:#333;margin-bottom:4px;line-height:1.7;}
+.writing-lines .ans-line{min-height:36px;}
+.self-assess{background:#f0f4ff;border-radius:8px;padding:10px 14px;margin:14px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.sa-item{font-size:12px;color:#333;}.sa-item b{color:var(--navy);}
+.ans-key-section{background:#fffde7;border:1px solid #ffe082;border-radius:8px;margin:14px 18px;padding:14px 16px;}
+.ans-key-section h4{font-size:12px;font-weight:700;color:#b8860b;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 16px;}
+.ak-item{font-size:12px;color:#333;padding:3px 0;}.ak-item b{color:var(--navy);}
+.fold-note{font-size:10px;color:#888;font-style:italic;text-align:center;margin-bottom:8px;}
+.section-divider{height:2px;background:linear-gradient(to right,var(--saffron),var(--green));margin:8px 18px;}
+.day-block.weekend-block{border-top-color:#1565c0;}
+.day-header.weekend-header{background:#e3f2fd;border-bottom-color:#90caf9;}
+.wknd-banner{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:8px 18px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.advert-box{background:#fff8e1;border:1.5px solid #f57f17;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:12px;line-height:1.8;}
+.advert-box h3{color:#e65100;font-size:15px;font-weight:700;margin-bottom:10px;text-align:center;}
+</style>
+</head><body>
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+<div class="header">
+  <h1>&#127470;&#127475; Hindi PSLE Daily Practice &mdash; Week 1</h1>
+  <p>May 25&ndash;29, 2026 &nbsp;|&nbsp; Phase 1: FOUNDATION &nbsp;|&nbsp; 2022 Paper &nbsp;|&nbsp; PSLE: September 28, 2026</p>
+  <p style="margin-top:4px;font-size:11px;opacity:.7;">Paper 1: 50 min &nbsp;|&nbsp; Paper 2A: MCQ (A1&ndash;A5) &nbsp;|&nbsp; Paper 2B: Open-ended (B6&ndash;B8)</p>
+</div>
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">NAVIGATE:</span>
+  <a class="nav-chip" href="Holiday_May29_Jun18.html" style="background:#880e4f;color:white;">&#11088; Holiday Packet</a>
+  <span class="nav-chip" style="background:#000080;color:white;">&#128204; W01 May 25&ndash;29</span>
+  <a class="nav-chip" href="W02_Jun01.html">W02 Jun 1 &#8594;</a>
+  <a class="nav-chip" href="W03_Jun08.html">W03 Jun 8 &#8594;</a>
+</div>
+
+<!-- DAY 1 MON A1 -->
+<div class="day-block" id="mon">
+  <div class="day-header"><div><div class="day-title">&#9675; सोमवार &mdash; Monday, May 25, 2026</div>
+    <div class="day-meta">A1 Cloze MCQ &mdash; माउंट एवरेस्ट की सफाई अभियान (2022 Paper) &nbsp;|&nbsp; &#9203; ~30 min</div></div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">A1</span><span class="sec-title">भाग A1 &mdash; चुनाव करें (Q1&ndash;5)</span><span class="sec-time">&#9203; ~30 min</span></div>
+    <div class="source-badge">[2022 &middot; P2A &middot; A1 &middot; Q.1&ndash;5]</div>
+    <div class="passage-box">माउंट एवरेस्ट दुनिया का सबसे ऊँचा पर्वत है। _<span class="blank-num">1</span>_ करें कि ऊपर तक चढ़ने पर पता चले कि शिखर कचरे से भरा है। पर्वतारोहियों का कहना है कि पर्वत पर लगभग 50 टन कचरा है।
+
+पिछले कुछ वर्षों में, थके हुए पर्वतारोहियों द्वारा _<span class="blank-num">2</span>_ गई चीजें जैसे खाली ऑक्सीजन टंकी, टूटे तम्बू के डंडे और शिखर पर इस्तेमाल किए गए खाने के डब्बे हैं।
+
+नेपाल की सरकार चाहती है कि पाँच वर्षों _<span class="blank-num">3</span>_ पहाड़ की सफाई हो जाए। इसलिए अप्रैल के प्रारम्भ से, एवरेस्ट पर चढ़ने वाले पर्वतारोहियों को _<span class="blank-num">4</span>_ कचरे के साथ कम से कम आठ किलोग्राम कचरा और वापस नीचे लाना होगा।
+
+जब पर्वतारोही पहाड़ से नीचे आएंगे तब, साथ लाए कचरे को _<span class="blank-num">5</span>_ करने के लिए देना होगा। यह सुनिश्चित करने के लिए कि वे पर्याप्त कचरा वापस लाए हैं। जो भी पर्याप्त कचरा वापस नहीं लाएगा, शायद उसे भविष्य में पहाड़ पर चढ़ने की अनुमति नहीं दी जाएगी।</div><div class="q-block"><div class="q-text"><span class="q-num">Q1.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) पहचान</div><div class="q-opt"><div class="opt-circle"></div> B) समझ</div><div class="q-opt"><div class="opt-circle"></div> C) कल्पना</div><div class="q-opt"><div class="opt-circle"></div> D) अपेक्षा</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q2.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) दान की</div><div class="q-opt"><div class="opt-circle"></div> B) छोड़ दी</div><div class="q-opt"><div class="opt-circle"></div> C) खरीदी</div><div class="q-opt"><div class="opt-circle"></div> D) उधार ली</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q3.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) में</div><div class="q-opt"><div class="opt-circle"></div> B) से परे</div><div class="q-opt"><div class="opt-circle"></div> C) उनमें</div><div class="q-opt"><div class="opt-circle"></div> D) की ओर</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q4.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) सार्वजनिक</div><div class="q-opt"><div class="opt-circle"></div> B) अपने</div><div class="q-opt"><div class="opt-circle"></div> C) अनुमित</div><div class="q-opt"><div class="opt-circle"></div> D) स्वीकार्य</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q5.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) तुलना</div><div class="q-opt"><div class="opt-circle"></div> B) पुनर्नवीनीकरण</div><div class="q-opt"><div class="opt-circle"></div> C) बिक्री</div><div class="q-opt"><div class="opt-circle"></div> D) वज़न</div></div></div>
+  </div>
+  <div class="self-assess"><div class="sa-item"><b>&#9203; समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट</div>
+    <div class="sa-item"><b>&#128202; स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 5</div></div>
+  <div class="ans-key-section"><div class="fold-note">&#9988; उत्तर देखने से पहले खुद कोशिश करें!</div>
+    <h4>&#128273; Answer Key — Mon (A1)</h4><div class="ak-grid"><div class="ak-item"><b>Q1.</b> C &mdash; कल्पना</div><div class="ak-item"><b>Q2.</b> B &mdash; छोड़ दी</div><div class="ak-item"><b>Q3.</b> A &mdash; में</div><div class="ak-item"><b>Q4.</b> B &mdash; अपने</div><div class="ak-item"><b>Q5.</b> D &mdash; वज़न</div></div></div>
+</div>
+
+<!-- DAY 2 TUE A2+A3 -->
+<div class="day-block" id="tue">
+  <div class="day-header"><div><div class="day-title">&#9675; मंगलवार &mdash; Tuesday, May 26, 2026</div>
+    <div class="day-meta">A2 Cloze (Q6&ndash;10) + A3 Comprehension (Q11&ndash;20) (2022 Paper) &nbsp;|&nbsp; &#9203; ~40 min</div></div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">A2</span><span class="sec-title">भाग A2 (Q6&ndash;10)</span><span class="sec-time">&#9203; ~15 min</span></div>
+    <div class="source-badge">[2022 &middot; P2A &middot; A2 &middot; Q.6&ndash;10]</div>
+    <div class="passage-box">कुछ फूलों ने मधुमक्खियों को आकर्षित करने का कुशल तरीका निकाला है। फूलों को परागण के लिए मधुमक्खियों की जरूरत होती है और वह नीले रंग से आकर्षित होती हैं। प्राकृतिक रूप से नीले फूलों के लिए तो यह _<span class="blank-num">6</span>_ है परंतु अन्य रंगों के फूलों का क्या?
+
+कुछ फूल नीले प्रकाश का चक्र बनाकर समान _<span class="blank-num">7</span>_ उत्पन्न करते हैं। जब सूर्य की किरणें पंखुड़ियों की सतह के सूक्ष्म कागज पर _<span class="blank-num">8</span>_ हैं तब प्रकाश कागज से टकरा कर उसका प्रभाव बदल देता है। यह प्रभावित करता है कि फूल का रंग कैसा प्रतीत हो।
+
+केवल कुछ प्रकार के फूल इस प्रभाव को _<span class="blank-num">9</span>_ कर सकते हैं, जैसे ट्यूलिप और डेज़ी। प्रयोगों से पता चला कि मधुमक्खियाँ प्रकाश के चक्र को _<span class="blank-num">10</span>_ सकती हैं। यह अभी तक ज्ञात नहीं है कि अन्य कीट भी नीले रंग से आकर्षित होते हैं या नहीं।</div><div class="q-block"><div class="q-text"><span class="q-num">Q6.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) मज़बूत</div><div class="q-opt"><div class="opt-circle"></div> B) ठीक</div><div class="q-opt"><div class="opt-circle"></div> C) मुश्किल</div><div class="q-opt"><div class="opt-circle"></div> D) सहज</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q7.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) प्रभाव</div><div class="q-opt"><div class="opt-circle"></div> B) समस्या</div><div class="q-opt"><div class="opt-circle"></div> C) परिचय</div><div class="q-opt"><div class="opt-circle"></div> D) कारण</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q8.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) धमकती</div><div class="q-opt"><div class="opt-circle"></div> B) कूदती</div><div class="q-opt"><div class="opt-circle"></div> C) खींचती</div><div class="q-opt"><div class="opt-circle"></div> D) चमकती</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q9.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) नष्ट</div><div class="q-opt"><div class="opt-circle"></div> B) प्राप्त</div><div class="q-opt"><div class="opt-circle"></div> C) कमाना</div><div class="q-opt"><div class="opt-circle"></div> D) हल</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q10.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) चख</div><div class="q-opt"><div class="opt-circle"></div> B) सीख</div><div class="q-opt"><div class="opt-circle"></div> C) देख</div><div class="q-opt"><div class="opt-circle"></div> D) बचना</div></div></div>
+  </div>
+  <div class="section-divider"></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">A3</span><span class="sec-title">भाग A3 (Q11&ndash;20)</span><span class="sec-time">&#9203; ~25 min</span></div>
+    <div class="source-badge">[2022 &middot; P2A &middot; A3 &middot; Q.11&ndash;20]</div>
+    <div class="passage-box">शुक्रवार की एक सुबह अक्टूबर 2019 में कुछ अद्वितीय हुआ। अंतर्राष्ट्रीय अंतरिक्ष स्टेशन पर दो अंतरिक्ष यात्रियों ने पहली बार अखिल-महिला _<span class="blank-num">11</span>_ में भाग लिया।
+
+दो अंतरिक्ष यात्री, एक इंजीनियर और एक जीवविज्ञानी ने, सुबह आठ बजे के आसपास अंतरिक्ष स्टेशन को _<span class="blank-num">12</span>_। निकास की ओर जाने से पहले उन्होंने अपना मिशन मानक जाँच करने से _<span class="blank-num">13</span>_ किया। उन्होंने सबसे पहले _<span class="blank-num">14</span>_ सूट और सुरक्षा डोरियों की जाँच की। फिर उन्होंने खराब बैटरी चार्जर को बदलने के लिए स्टेशन के _<span class="blank-num">15</span>_ सात घंटे से ज़्यादा काम करने में बिताए।
+
+इसी तरह की अंतरिक्ष पदयात्रा की _<span class="blank-num">16</span>_ साल के प्रारम्भ में भी बनाई गई थी, लेकिन इसे रद्द करना पड़ा क्योंकि महिलाओं के लिए _<span class="blank-num">17</span>_ माप के पर्याप्त स्पेससूट उपलब्ध नहीं थे।
+
+संयुक्त राज्य अमेरिका ने 1963 में पहली बार उनकी महिला अंतरिक्ष यात्री को अंतरिक्ष में भेजा था और अब वहाँ किसी भी अन्य _<span class="blank-num">18</span>_ की तुलना में सबसे अधिक महिला अंतरिक्ष यात्री हैं। हालांकि अंतरिक्ष में जाने वाली पहली महिला 1963 में रूस की अंतरिक्ष यात्री वैलेंटिना टेरेशकोवा _<span class="blank-num">19</span>_।
+
+नासा की योजना 2024 तक चंद्रमा पर लौटने की है जब पहली महिला चंद्रमा की _<span class="blank-num">20</span>_ पर रहेंगी। यह एक पूर्णतः महिला दल होने की संभावना है।</div><div class="q-block"><div class="q-text"><span class="q-num">Q11.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) पाठ</div><div class="q-opt"><div class="opt-circle"></div> B) संगीत कार्यक्रम</div><div class="q-opt"><div class="opt-circle"></div> C) अंतरिक्ष-पदयात्रा</div><div class="q-opt"><div class="opt-circle"></div> D) प्रक्षेपण</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q12.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) खोया</div><div class="q-opt"><div class="opt-circle"></div> B) छोड़ा</div><div class="q-opt"><div class="opt-circle"></div> C) खोजा</div><div class="q-opt"><div class="opt-circle"></div> D) नापा</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q13.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) शुरू</div><div class="q-opt"><div class="opt-circle"></div> B) चयन</div><div class="q-opt"><div class="opt-circle"></div> C) ढूँढा</div><div class="q-opt"><div class="opt-circle"></div> D) भूला</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q14.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) आपके</div><div class="q-opt"><div class="opt-circle"></div> B) हमारे</div><div class="q-opt"><div class="opt-circle"></div> C) मेरे</div><div class="q-opt"><div class="opt-circle"></div> D) उनके</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q15.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) से</div><div class="q-opt"><div class="opt-circle"></div> B) अंदर</div><div class="q-opt"><div class="opt-circle"></div> C) परे</div><div class="q-opt"><div class="opt-circle"></div> D) बाहर</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q16.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) योजना</div><div class="q-opt"><div class="opt-circle"></div> B) भुगतान</div><div class="q-opt"><div class="opt-circle"></div> C) निर्माण</div><div class="q-opt"><div class="opt-circle"></div> D) खोना</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q17.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) अनुचित</div><div class="q-opt"><div class="opt-circle"></div> B) सही</div><div class="q-opt"><div class="opt-circle"></div> C) बड़े</div><div class="q-opt"><div class="opt-circle"></div> D) ईमानदार</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q18.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) शहर</div><div class="q-opt"><div class="opt-circle"></div> B) यह</div><div class="q-opt"><div class="opt-circle"></div> C) देश</div><div class="q-opt"><div class="opt-circle"></div> D) परिक्रमा-पथ</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q19.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) थे</div><div class="q-opt"><div class="opt-circle"></div> B) थीं</div><div class="q-opt"><div class="opt-circle"></div> C) हूँ</div><div class="q-opt"><div class="opt-circle"></div> D) होंगी</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q20.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) सतह</div><div class="q-opt"><div class="opt-circle"></div> B) अंदर</div><div class="q-opt"><div class="opt-circle"></div> C) आकाश</div><div class="q-opt"><div class="opt-circle"></div> D) तारा</div></div></div>
+  </div>
+  <div class="self-assess"><div class="sa-item"><b>&#9203; समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट</div>
+    <div class="sa-item"><b>&#128202; स्कोर:</b> A2: <span class="blank" style="min-width:30px">&nbsp;</span>/5 &nbsp;|&nbsp; A3: <span class="blank" style="min-width:30px">&nbsp;</span>/10</div></div>
+  <div class="ans-key-section"><div class="fold-note">&#9988; उत्तर देखने से पहले खुद कोशिश करें!</div>
+    <h4>&#128273; Answer Key — Tue (A2 + A3)</h4><div class="ak-grid"><div class="ak-item"><b>Q6.</b> B &mdash; ठीक</div><div class="ak-item"><b>Q7.</b> A &mdash; प्रभाव</div><div class="ak-item"><b>Q8.</b> D &mdash; चमकती</div><div class="ak-item"><b>Q9.</b> B &mdash; प्राप्त</div><div class="ak-item"><b>Q10.</b> C &mdash; देख</div><div class="ak-item"><b>Q11.</b> C &mdash; अंतरिक्ष-पदयात्रा</div><div class="ak-item"><b>Q12.</b> B &mdash; छोड़ा</div><div class="ak-item"><b>Q13.</b> A &mdash; शुरू</div><div class="ak-item"><b>Q14.</b> D &mdash; उनके</div><div class="ak-item"><b>Q15.</b> D &mdash; बाहर</div><div class="ak-item"><b>Q16.</b> A &mdash; योजना</div><div class="ak-item"><b>Q17.</b> B &mdash; सही</div><div class="ak-item"><b>Q18.</b> C &mdash; देश</div><div class="ak-item"><b>Q19.</b> B &mdash; थीं</div><div class="ak-item"><b>Q20.</b> A &mdash; सतह</div></div></div>
+</div>
+
+<!-- DAY 3 WED A5 -->
+<div class="day-block" id="wed">
+  <div class="day-header"><div><div class="day-title">&#9675; बुधवार &mdash; Wednesday, May 27, 2026</div>
+    <div class="day-meta">A5 Graphic MCQ &mdash; गायकों के साथ एक रोमांचक विश्व यात्रा में शामिल हों (2022 Paper) &nbsp;|&nbsp; &#9203; ~20 min</div></div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">A5</span><span class="sec-title">भाग A5 &mdash; चित्र-आधारित MCQ (Q33&ndash;35)</span><span class="sec-time">&#9203; ~20 min</span></div>
+    <div class="source-badge">[2022 &middot; P2A &middot; A5 &middot; Q.33&ndash;35]</div>
+    <div class="advert-box"><h3>गायकों के साथ एक रोमांचक विश्व यात्रा में शामिल हों</h3><p style="font-size:12px;color:#333;">आयोजक के बारे में:<br>• विश्व प्रसिद्ध ओपेरा गायिका सारा लिम स्थानीय बच्चों की एक गायक मंडली शुरू कर रही हैं।<br>• विश्व के उन देशों के गीत और संगीत को चुना जाएगा जहाँ उन्होंने अपने सफल करियर के दौरान यात्रा की है।<br>• उनका मानना है कि सभी बच्चों को एक साथ गायन का आनंद लेने का मौका मिलना चाहिए।<br>• गायक मंडली में गाना आत्मविश्वास और समुदाय की मजबूत भावना के निर्माण में मदद करता है।<br><br>पूर्वाभ्यास के दौरान:<br>• पूर्वाभ्यास कुछ मिनटों के हल्के व्यायाम के बाद, संगीत के एक खेल से प्रारम्भ होगा।<br>• पूर्वाभ्यास वेस्ट रोड कॉन्सर्ट हॉल के अभ्यास कक्ष में होगा।<br>• पहला पूर्वाभ्यास मंगलवार 12 नवंबर को शाम 6 से 8 बजे के बीच होगा।<br><br>कौन शामिल हो सकता है?<br>• 9 से 13 वर्ष की आयु के सभी बच्चों का स्वागत है।<br>• आपमें सिर्फ होना चाहिए उत्साह और संगीत के प्रति रुचि।<br>• गाने का कोई अनुभव आवश्यक नहीं है।</p></div>
+<div class="q-block"><div class="q-text"><span class="q-num">Q33.</span> सारा लिम _____________।</div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) ने गायक-मंडली के लिए गीत स्वयं लिखे हैं</div><div class="q-opt"><div class="opt-circle"></div> B) सभी राष्ट्रीयता के बच्चों को समझती हैं</div><div class="q-opt"><div class="opt-circle"></div> C) जानती हैं कि सभी बच्चों को गाना गाना प्रिय है</div><div class="q-opt"><div class="opt-circle"></div> D) एक प्रसिद्ध ओपेरा गायिका हैं</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q34.</span> पूर्वाभ्यास _____________।</div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) में कुछ शारीरिक गतिविधियाँ शामिल होंगी</div><div class="q-opt"><div class="opt-circle"></div> B) प्रत्येक शनिवार को होगा</div><div class="q-opt"><div class="opt-circle"></div> C) एक योग स्टूडियो में आयोजित होगा</div><div class="q-opt"><div class="opt-circle"></div> D) शाम 6 बजे से पहले प्रारम्भ होगा</div></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q35.</span> जो बच्चे भाग लेना चाहते हैं वे _____________।</div><div class="q-options"><div class="q-opt"><div class="opt-circle"></div> A) गायक मंडली में गा चुके हों</div><div class="q-opt"><div class="opt-circle"></div> B) किसी भी उम्र के हो सकते हैं</div><div class="q-opt"><div class="opt-circle"></div> C) संगीत को लेकर उत्साहित होने चाहिए</div><div class="q-opt"><div class="opt-circle"></div> D) सामूहिक कार्य में अच्छे होने चाहिए</div></div></div>
+  </div>
+  <div class="ans-key-section"><div class="fold-note">&#9988; उत्तर देखने से पहले खुद कोशिश करें!</div>
+    <h4>&#128273; Answer Key — Wed (A5)</h4><div class="ak-grid"><div class="ak-item"><b>Q33.</b> D &mdash; एक प्रसिद्ध ओपेरा गायिका हैं</div><div class="ak-item"><b>Q34.</b> A &mdash; में कुछ शारीरिक गतिविधियाँ शामिल होंगी</div><div class="ak-item"><b>Q35.</b> C &mdash; संगीत को लेकर उत्साहित होने चाहिए</div></div></div>
+</div>
+
+<!-- DAY 4 THU B6+B7 -->
+<div class="day-block" id="thu">
+  <div class="day-header"><div><div class="day-title">&#9675; गुरुवार &mdash; Thursday, May 28, 2026</div>
+    <div class="day-meta">B6 मुहावरे (Q36&ndash;40) + B7 वाक्य पूर्ति (Q41&ndash;45) (2022 Paper) &nbsp;|&nbsp; &#9203; ~35 min</div></div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">B6</span><span class="sec-title">भाग B6 &mdash; मुहावरे/लोकोक्तियाँ (Q36&ndash;40)</span><span class="sec-time">&#9203; ~15 min</span></div>
+    <div class="source-badge">[2022 &middot; P2B &middot; B6 &middot; Q.36&ndash;40]</div>
+    <div class="word-box"><strong>&#128230; शब्द-पेटी &mdash; Word Bank:</strong> ज्योति &nbsp;|&nbsp; धोखा &nbsp;|&nbsp; जैसी &nbsp;|&nbsp; वपू &nbsp;|&nbsp; चकमा &nbsp;|&nbsp; चमक &nbsp;|&nbsp; बहू &nbsp;|&nbsp; तैसी &nbsp;|&nbsp; गुण &nbsp;|&nbsp; सगुण</div>
+<div class="q-block"><div class="q-text"><span class="q-num">Q36.</span> दूर-दूर से आए रिश्तेदारों ने वर _________ को आशीर्वाद दिया।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q37.</span> मोहन ने कभी किसी की मदद नहीं की और जब उसे ज़रूरत पड़ी तो कोई सामने नहीं आया क्योंकि _________ करनी वैसी भरनी।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q38.</span> जैसे ही उसने सुना कि उसका बेटा आ रहा है उसकी आँखों में _________ आ गई।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q39.</span> राजा को जब भी कोई काम करने को कहो तो वह _________ देकर भाग जाता है।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q40.</span> मनुष्य के _________ अवगुण उसके व्यवहार से दिखते हैं।</div><div class="ans-line"></div></div>
+  </div>
+  <div class="section-divider"></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">B7</span><span class="sec-title">भाग B7 &mdash; वाक्य पूर्ति (Q41&ndash;45)</span><span class="sec-time">&#9203; ~15 min</span></div>
+    <div class="source-badge">[2022 &middot; P2B &middot; B7 &middot; Q.41&ndash;45]</div>
+<div class="q-block"><div class="q-text"><span class="q-num">Q41.</span> मेरी स्कूल यात्रा के _________ बस खराब हो गई।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q42.</span> खराब मौसम के पूर्वानुमान के _________ भी क्रिकेट मैच हुआ।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q43.</span> मैंने विदेशी फ़िल्म का आनंद लिया, _________ मैं एक भी शब्द समझ नहीं सका।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q44.</span> मुझे किताबें हमेशा से पसंद रही हैं, _________ जब मैं चार वर्ष की थी मेरी माँ ने मुझे पढ़ना सिखा दिया था।</div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q45.</span> जब रीता स्कूल पहुँची तो अध्यापिका ने उसे दिखाया कि बैग _________ रखना है।</div><div class="ans-line"></div></div>
+  </div>
+  <div class="self-assess"><div class="sa-item"><b>&#9203; समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट</div>
+    <div class="sa-item"><b>&#128202; स्कोर:</b> B6: <span class="blank" style="min-width:30px">&nbsp;</span>/5 &nbsp;|&nbsp; B7: <span class="blank" style="min-width:30px">&nbsp;</span>/5</div></div>
+  <div class="ans-key-section"><div class="fold-note">&#9988; उत्तर देखने से पहले खुद कोशिश करें!</div>
+    <h4>&#128273; Answer Key — Thu (B6 + B7)</h4><div class="ak-grid"><div class="ak-item"><b>Q36.</b> बहू</div><div class="ak-item"><b>Q37.</b> जैसी</div><div class="ak-item"><b>Q38.</b> चमक</div><div class="ak-item"><b>Q39.</b> चकमा</div><div class="ak-item"><b>Q40.</b> गुण</div><div class="ak-item"><b>Q41.</b> दौरान</div><div class="ak-item"><b>Q42.</b> बावजूद</div><div class="ak-item"><b>Q43.</b> हालाँकि</div><div class="ak-item"><b>Q44.</b> क्योंकि</div><div class="ak-item"><b>Q45.</b> कहाँ</div></div></div>
+</div>
+
+<!-- DAY 5 FRI B8 -->
+<div class="day-block" id="fri">
+  <div class="day-header"><div><div class="day-title">&#9675; शुक्रवार &mdash; Friday, May 29, 2026</div>
+    <div class="day-meta">B8 खुले उत्तर &mdash; जादव पायेंग — फोरेस्ट मैन ऑफ इंडिया (2022 Paper) &nbsp;|&nbsp; &#9203; ~40 min</div></div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button></div>
+  <div class="practice-section">
+    <div class="sec-header"><span class="sec-tag">B8</span><span class="sec-title">भाग B8 &mdash; आशय समझना &mdash; खुले उत्तर (Q46&ndash;50)</span><span class="sec-time">&#9203; ~40 min</span></div>
+    <div class="source-badge">[2022 &middot; P2B &middot; B8 &middot; Q.46&ndash;50]</div>
+    <div class="passage-box"><strong>गद्यांश पढ़िए:</strong><br><br>यदि आप भारत के सुदूर पूर्वोत्तर क्षेत्र में जाते हैं, तो आपको शानदार पहाड़ और विभिन्न प्रकार के अद्भुत वन्य जीवन मिलेंगे। आप जादव पायेंग नामक एक किसान के बारे में जान सकते हैं, जिन्हें 'फोरेस्ट मैन ऑफ इंडिया' के नाम से जाना जाता है और जिन्होंने पिछले 40 वर्षों में नदी के बीच में एक रेत के द्वीप पर पेड़ लगाकर प्राकृतिक वन्य इच्छा दिया है।<br><br>जब मैं उनसे मिलने गया, तो पायेंग ने मुझे अपनी दिनचर्या के बारे में बताया, 'हर दिन मैं अपनी साइकिल को अपनी नाव में रखता हूँ और फिर नदी के पार द्वीप पर जाता हूँ। वहाँ से फिर, मैं अपने खेत के लिए रोज़ एक किलोमीटर साइकिल चलाना शुरू करता हूँ। यह मेरे जीवन का लक्ष्य है।'<br><br>'जब मैं छोटा था, यह नदी के बीच में ज़मीन की एक खाली पट्टी थी। कभी, यहाँ केवल रेत थी और कोई पेड़ नहीं, कोई जीवन नहीं! अब मेरे द्वारा लगाए पेड़ अपने स्थान पर मिट्टी को जकड़ रहे हैं जिससे घास और अन्य पौधे यहाँ उगने में सक्षम हैं।'<br><br>आज, आप हर जगह घास और पेड़ देख सकते हैं और यहाँ तक कि ऐसे जानवर भी हैं जिन्होंने द्वीप पर अपना घर बना लिया है। पायेंग ने बताया कि कैसे उन्होंने खुद पेड़ लगाए। 'यह उतना मुश्किल नहीं है जितना लगता है,' उन्होंने विनम्रता से कहा, 'आप एक या दो पेड़ लगाते हैं, और एक बार जब वे बीज पैदा करते हैं, तो हवा आपके लिए उगाना जारी रखती है!' वन विभाग के निरीक्षक जब निरीक्षण करने के लिए आए तो एक बड़े जंगल, अनेक प्रकार के स्वस्थ पेड़ों, पौधों और जानवरों को पाकर आश्चर्यचकित थे। एक समय स्थानीय लोगों द्वारा पागल समझे जाने वाले, पायेंग को आज पर्यावरण पर उनके महत्वपूर्ण कार्य के लिए जाना जाता है।<br><br>पायेंग ने मुझे कुछ सबसे पुराने पेड़ दिखाए जो उन्होंने लगाए हैं। उन्होंने एक 30 साल पुराने पेड़ की ओर इशारा किया और मुझे ताजे निशान दिखाए, जहाँ एक बाघ ने अपने पंजे तेज़ किए थे। उन्होंने कहा कि उन्होंने कभी यहाँ कोई बाघ नहीं देखा है, लेकिन कभी-कभी शाम को उनकी आवाज़ें सुनी हैं। पायेंग ने कहा, 'मुझे जंगली जानवरों से कभी कोई खतरा नहीं लगता है। यह मेरा घर है, साथ ही उनका भी!'<br><br>पायेंग को भारत के सर्वोच्च पुरस्कारों में से एक मिला है और भारत सरकार ने उनके द्वारा लगाए जंगल को 'मोलाई' वन का नाम दिया है जो पायेंग का उपनाम है। लेकिन पुरस्कार और प्रसिद्धि उनके लिए बहुत कम मायने रखती है। उनका एकमात्र उद्देश्य पर्यावरण की रक्षा करना है।</div>
+<div class="q-block"><div class="q-text"><span class="q-num">Q46.</span> पायेंग की घर से द्वीप पर अपने खेत तक की प्रतिदिन की यात्रा का वर्णन करें। 2 विवरण दें।</div><div class="ans-line"></div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q47.</span> अनुच्छेद 3 के अनुसार, पायेंग के बचपन से लेकर अब तक द्वीप कैसे बदल गया है? 2 विवरण दें।</div><div class="ans-line"></div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q48.</span> जब वन विभाग के निरीक्षक द्वीप पर आए तो वे आश्चर्यचकित क्यों थे? 2 विवरण दें।</div><div class="ans-line"></div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q49.</span> पायेंग यह कैसे जानते हैं कि जंगल में बाघ हैं? 2 विवरण दें।</div><div class="ans-line"></div><div class="ans-line"></div></div><div class="q-block"><div class="q-text"><span class="q-num">Q50.</span> पायेंग की उपलब्धि को कैसे मान्यता दी गई है? 2 विवरण दें।</div><div class="ans-line"></div><div class="ans-line"></div></div>
+  </div>
+  <div class="self-assess"><div class="sa-item"><b>&#9203; समय:</b> <span class="blank" style="min-width:60px">&nbsp;</span> मिनट</div>
+    <div class="sa-item"><b>&#128202; स्कोर:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div></div>
+  <div class="ans-key-section"><div class="fold-note">&#9988; उत्तर देखने से पहले खुद कोशिश करें!</div>
+    <h4>&#128273; Answer Key — Fri (B8)</h4><div class="ak-grid"><div class="ak-item" style="grid-column:1/-1"><b>Q46.</b> (1) वे अपनी साइकिल को नाव में रखते हैं और नदी के पार द्वीप पर जाते हैं। / (2) वहाँ से वे अपने खेत के लिए रोज़ एक किलोमीटर साइकिल चलाते हैं।</div><div class="ak-item" style="grid-column:1/-1"><b>Q47.</b> (1) पहले केवल रेत थी और कोई पेड़ नहीं था, कोई जीवन नहीं था। / (2) अब पेड़ों ने मिट्टी को जकड़ लिया है और घास व पौधे उगने में सक्षम हैं।</div><div class="ak-item" style="grid-column:1/-1"><b>Q48.</b> (1) उन्हें वहाँ एक बड़ा जंगल मिला। / (2) अनेक प्रकार के स्वस्थ पेड़, पौधे और जानवर मिले।</div><div class="ak-item" style="grid-column:1/-1"><b>Q49.</b> (1) उन्हें 30 साल पुराने पेड़ पर बाघ के पंजे के ताजे निशान मिले। / (2) कभी-कभी शाम को वे बाघ की आवाज़ें सुनते हैं।</div><div class="ak-item" style="grid-column:1/-1"><b>Q50.</b> (1) उन्हें भारत के सर्वोच्च पुरस्कारों में से एक मिला है। / (2) भारत सरकार ने उनके जंगल को 'मोलाई' वन का नाम दिया है।</div></div></div>
+</div>
+
+<!-- DAY 6 SAT P1Q1 -->
+<div class="day-block weekend-block" id="sat">
+  <div class="wknd-banner"><span>&#128197; शनिवार &mdash; Saturday, May 30 &nbsp;|&nbsp; P1 Q1 &mdash; Situational Writing</span><span>&#9203; 50 min</span></div>
+  <div class="day-header weekend-header"><div><div class="day-title">P1 Q1 &mdash; Situational Writing (2022 Paper)</div>
+    <div class="day-meta">&#128221; कम से कम 100 शब्द</div></div></div>
+  <div class="practice-section">
+    <div class="writing-prompt">
+      <h4>&#128196; परिस्थिति (Situation):</h4>
+      <p class="wp-text">आपने विद्यालय की छुट्टियों के दौरान पाककला की कक्षा में भाग लिया। जब आप कक्षा में खाना पका रहे थे / रही थीं, तब कुछ आकस्मिक हुआ उस घटना के बारे में एक रचना लिखिए।</p>
+      <p class="wp-text">इस विषय पर कम से कम 100 शब्दों का एक लेख लिखें। सभी चारों बातों का प्रयोग करें:</p>
+      <ul class="bullet-list"><li>आपने पाककला की कक्षा में भाग क्यों लिया</li><li>क्या आकस्मिक हुआ</li><li>आपकी या दूसरों की प्रतिक्रिया कैसी थी</li><li>अंत में क्या हुआ</li></ul>
+    </div>
+    <div class="writing-lines"><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div></div>
+  </div>
+  <div class="ans-key-section"><h4>&#128273; Self-Check Tips</h4>
+    <div class="ak-grid"><div class="ak-item"><b>&#10003;</b> सभी 4 बुलेट बिंदु शामिल हैं?</div>
+      <div class="ak-item"><b>&#10003;</b> कम से कम 100 शब्द हैं?</div>
+      <div class="ak-item"><b>&#10003;</b> भाषा स्पष्ट और सही है?</div>
+      <div class="ak-item"><b>&#10003;</b> विचार तार्किक क्रम में हैं?</div></div></div>
+</div>
+
+<!-- DAY 7 SUN P1Q2 -->
+<div class="day-block weekend-block" id="sun">
+  <div class="wknd-banner"><span>&#128197; रविवार &mdash; Sunday, May 31 &nbsp;|&nbsp; P1 Q2 &mdash; Picture Writing</span><span>&#9203; 50 min</span></div>
+  <div class="day-header weekend-header"><div><div class="day-title">P1 Q2 &mdash; Picture Writing (2022 Paper)</div>
+    <div class="day-meta">&#128247; चित्र-आधारित कहानी &mdash; कम से कम 100 शब्द</div></div></div>
+  <div class="practice-section">
+    <div class="writing-prompt">
+      <h4>&#128196; निर्देश:</h4>
+      <p class="wp-text">नीचे दिए गए चित्रों की श्रृंखला को देखें। कम से कम 100 शब्दों में एक कहानी लिखें।</p>
+      <p class="wp-text"><strong>&#127958; दृश्य:</strong> 6-पैनल कहानी: MRT स्टेशन के पास माँ-बेटी विवरण पुस्तिका देख रही हैं → MRT गेट पर → ट्रेन चढ़ते समय → ट्रेन के अंदर हैरान/सोचती हुई → निराश खड़ी हैं → प्रश्नचिह्न (अंत खुला)</p>
+      <p class="wp-text"><strong>&#128221; शब्द/वाक्यांश:</strong></p>
+      <ul class="bullet-list"><li>विवरण पुस्तिका</li><li>हैरान</li><li>योजना</li><li>निराश</li><li>प्रसन्न</li><li>छूट गई</li><li>प्लेटफ़ॉर्म</li><li>खो गया</li></ul>
+    </div>
+    <div class="writing-lines"><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div><div class="ans-line"></div></div>
+  </div>
+  <div class="ans-key-section"><h4>&#128273; Self-Check Tips</h4>
+    <div class="ak-grid"><div class="ak-item"><b>&#10003;</b> 6 चित्रों का वर्णन है?</div>
+      <div class="ak-item"><b>&#10003;</b> शब्द-सूची के शब्द प्रयोग हुए?</div>
+      <div class="ak-item"><b>&#10003;</b> कम से कम 100 शब्द हैं?</div>
+      <div class="ak-item"><b>&#10003;</b> कहानी में आरंभ, मध्य, अंत है?</div></div></div>
+</div>
+
+<div style="text-align:center;padding:20px;font-size:11px;color:#888;">
+  Hindi PSLE Daily Practice &mdash; W01 May 25&ndash;29, 2026 &nbsp;|&nbsp; 2022 Paper &nbsp;|&nbsp; PSLE: Sep 28, 2026
+</div>
+</body></html>

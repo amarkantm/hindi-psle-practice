@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W07 &mdash; Jul 6–10, 2026 | Hindi PSLE Daily Practice</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#bf360c;--phase-bg:#fbe9e7;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .day-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  .ans-key-section{page-break-before:always;}
+  @page{size:A4;margin:15mm;}
+}
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:20px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:20px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#000080;text-decoration:none;}
+.day-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.day-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e0e0e0;}
+.day-title{font-size:16px;font-weight:700;color:var(--navy);}
+.day-meta{font-size:11px;color:#555;}
+.print-btn{background:var(--navy);color:white;border:none;padding:4px 12px;border-radius:4px;font-size:11px;cursor:pointer;}
+.practice-section{padding:14px 18px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #eee;}
+.sec-tag{background:var(--navy);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;}
+.sec-title{font-size:15px;font-weight:700;color:var(--navy);}
+.sec-time{font-size:11px;color:#888;margin-left:auto;}
+.source-badge{font-size:9px;background:#ede7f6;color:#4a148c;border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:6px;font-style:italic;}
+.q-block{margin-bottom:16px;}
+.q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
+.q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
+.opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
+.ans-line{border-bottom:1.5px solid #bbb;min-height:32px;margin:4px 0 10px;background:none;}
+.passage-box{background:#f8f9fa;border-left:4px solid var(--navy);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:2.1;font-family:serif;}
+.blank-num{background:#000080;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin:0 2px;vertical-align:middle;}
+.word-box{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.9;}
+.word-box strong{color:#856404;font-size:11px;display:block;margin-bottom:4px;}
+.writing-prompt{background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:14px 16px;margin-bottom:14px;}
+.writing-prompt h4{color:#e65100;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-text{font-size:13px;color:#333;margin-bottom:10px;line-height:1.9;}
+.bullet-list{margin:8px 0 12px 20px;}
+.bullet-list li{font-size:13px;color:#333;margin-bottom:4px;line-height:1.7;}
+.writing-lines .ans-line{min-height:36px;}
+.self-assess{background:#f0f4ff;border-radius:8px;padding:10px 14px;margin:14px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.sa-item{font-size:12px;color:#333;}
+.sa-item b{color:var(--navy);}
+.ans-key-section{background:#fffde7;border:1px solid #ffe082;border-radius:8px;margin:14px 18px;padding:14px 16px;}
+.ans-key-section h4{font-size:12px;font-weight:700;color:#b8860b;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 16px;}
+.ak-item{font-size:12px;color:#333;padding:3px 0;}
+.ak-item b{color:var(--navy);}
+.fold-note{font-size:10px;color:#888;font-style:italic;text-align:center;margin-bottom:8px;}
+.section-divider{height:2px;background:linear-gradient(to right,var(--saffron),var(--green));margin:8px 18px;}
+.day-block.weekend-block{border-top-color:#1565c0;}
+.day-header.weekend-header{background:#e3f2fd;border-bottom-color:#90caf9;}
+.wknd-banner{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:8px 18px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.advert-box{background:#fff8e1;border:1.5px solid #f57f17;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:12px;line-height:1.8;}
+.advert-box h3{color:#e65100;font-size:15px;font-weight:700;margin-bottom:10px;text-align:center;}
+.advert-box h4{color:#bf360c;font-size:12px;font-weight:700;margin:10px 0 4px;}
+</style>
+</head>
+<body>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+
+<div class="header">
+  <h1>&#127470;&#127475; Hindi PSLE Daily Practice &mdash; Week 7</h1>
+  <p>Jul 6–10, 2026 &nbsp;|&nbsp; Phase 3: DRILL &nbsp;|&nbsp; 2019 Paper &nbsp;|&nbsp; PSLE: September 28, 2026</p>
+  <p style="margin-top:4px;font-size:11px;opacity:.7;">Paper 1: 50 min &nbsp;|&nbsp; Paper 2A: MCQ (A1&ndash;A5) &nbsp;|&nbsp; Paper 2B: Open-ended (B6&ndash;B8)</p>
+</div>
+
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">NAVIGATE:</span>
+  <a class="nav-chip" href="Holiday_May29_Jun18.html" style="background:#880e4f;color:white;">&#11088; Holiday Packet</a>
+  <a class="nav-chip" href="W06_Jun29.html">&#8592; W06 Jun 29</a>
+  <span class="nav-chip" style="background:#000080;color:white;">&#128204; W07 Jul 6</span>
+  <a class="nav-chip" href="W08_Jul13.html">W08 Jul 13 &#8594;</a>
+  <a class="nav-chip" href="W09_Jul20.html">W09 Jul 20 &#8594;</a>
+</div>
+
+<!-- ═══ DAY 1 — MONDAY Jul 6 — A1 Cloze ═══ -->
+<div class="day-block" id="mon">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; सोमवार &mdash; Monday, Jul 6, 2026</div>
+      <div class="day-meta">A1 Cloze MCQ &mdash; भतेरी के सपने — दूधवाली का हिसाब (2019 Paper) &nbsp;|&nbsp; &#9203; ~30 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A1</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A1 &mdash; &#2330;&#2369;&#2344;&#2366;&#2357; &#2325;&#2352;&#2375;&#2306; (Q1&ndash;5)</span>
+      <span class="sec-time">&#9203; ~30 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2A &middot; A1 &middot; Q.1&ndash;5]</div>
+
+    <div class="passage-box">भतेरी नाम की गवालिन दूध की एक <span class="blank-num">1</span> सिर पर उठाकर बाज़ार जा रही थी। राह चलते-चलते उसने हिसाब लगाना शुरू किया कि वह दूध बेचकर मिलने वाले पैसों का क्या करेगी।
+
+मैं नत्य मुर्गियाँ खरीदूँगी, उसने कहा, और वे हर सुबह अंडे <span class="blank-num">2</span> करेंगी, जिन्हें मैं बेच दूँगी। अंडे बेच कर जो पैसा मिलेगा उससे मैं अपने लिए एक <span class="blank-num">3</span> घाघरा और रंगीली चोली खरीदूँगी और जब मैं ये नए कपड़े पहनकर बाज़ार जाऊँगी, तो सारे मेरी तारीफ करेंगे। उस गाँव के कितनी <span class="blank-num">4</span> होगी लेकिन मुझे उसकी परवाह नहीं है। मैं तो बस उसकी तरफ देखूँगी और अपने सिर को कुछ इस अदा से झटकूँगी।
+
+बोलते-बोलते जैसे ही उसने अपने सिर को झटका, सारा दूध गिर गया। इसलिए उसे घर जाकर सारी बात अपनी माँ को <span class="blank-num">5</span> पड़ी। ओह, मेरी बच्ची, उसकी माँ ने निश्वास लेते हुए कहा, सपनों की बेल फूलती है पर फलती नहीं है।</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q1.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) संदूक</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) डिब्बा</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) बाल्टी</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) गिलास</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q2.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) दिया</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) चुगा</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) तराशा</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) उगाया</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q3.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) फीका</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) भद्दा</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) पुराना</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) सुंदर</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q4.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) ख्याति</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) जलन</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) घबराहट</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) गंभीरता</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q5.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) रोनी</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) छिपानी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) बतानी</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) देनी</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 5</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Mon &middot; A1)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q1.</b> C &mdash; बाल्टी</div>
+      <div class="ak-item"><b>Q2.</b> A &mdash; दिया</div>
+      <div class="ak-item"><b>Q3.</b> D &mdash; सुंदर</div>
+      <div class="ak-item"><b>Q4.</b> B &mdash; जलन</div>
+      <div class="ak-item"><b>Q5.</b> C &mdash; बतानी</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 2 — TUESDAY Jul 7 — A2 + A3 ═══ -->
+<div class="day-block" id="tue">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; मंगलवार &mdash; Tuesday, Jul 7, 2026</div>
+      <div class="day-meta">A2 Cloze (Q6&ndash;10) + A3 Comprehension (Q11&ndash;20) (2019 Paper) &nbsp;|&nbsp; &#9203; ~40 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A2</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A2 &mdash; &#2349;&#2366;&#2359;&#2366; &#2346;&#2381;&#2352;&#2351;&#2379;&#2327; (Q6&ndash;10)</span>
+      <span class="sec-time">&#9203; ~15 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2A &middot; A2 &middot; Q.6&ndash;10]</div>
+    <div class="passage-box">कृपया ध्यान से सुनें! हम आप को दौरे पर आई 19 साल से कम उम्र वाले भारतीय खिलाड़ियों की क्रिकेट टीम के <span class="blank-num">6</span> सत्र को देखने सप्ताहांत में सिंगापुर क्रिकेट क्लब के रोमांचक दौरे पर ले जाने की योजना बना रहे हैं। उनका संत पूरा हो जाने के बाद, वे आपको क्रिकेट की नवीनतम तकनीकें सिखाएँगे। आप युवा क्रिकेटरों से <span class="blank-num">7</span> सकेंगे और बातें भी कर सकेंगे जिन में से कुछ <span class="blank-num">8</span> के क्रिकेट सितारे बन सकते हैं। खाना और नाश्ता उपलब्ध कराया जाएगा। कृपया क्लब में कैमरे न <span class="blank-num">9</span> क्योंकि पूरे दिन की तस्वीरें लेने के लिए उनका फोटोग्राफर वहाँ होगा। अपने <span class="blank-num">10</span> खेलने वाले जूतों की एक जोड़ी और अपने माता-पिता या अभिभावक के हस्ताक्षरों वाला एक अनुमति पत्र भी लेकर आएँ। मुझे विश्वास है कि हमें खूब आनंद आएगा!</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q6.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) अभ्यास</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) मेहनती</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) उबाऊ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) सख्त</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q7.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) लड़</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) मिल</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) उलझ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) जीत</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q8.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) अतीत</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) वर्तमान</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) आज</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) कल</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q9.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) लाएँ</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) छोड़ें</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) बेचें</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) गिराएँ</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q10.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बाद</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) बगल में</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) साथ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) से</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A3</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A3 &mdash; &#2309;&#2352;&#2381;&#2341; &#2327;&#2381;&#2352;&#2361;&#2339; (Q11&ndash;20)</span>
+      <span class="sec-time">&#9203; ~25 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2A &middot; A3 &middot; Q.11&ndash;20]</div>
+    <div class="passage-box">एक आदमी और उसका छोटा बेटा गधे पर सामान लादकर बाज़ार में जा रहे थे। उन्हें उसके साथ चलते देखकर पास से गुज़रते एक गाँव वाले ने कहा, अरे <span class="blank-num">11</span>, गधा सवारी के लिए नहीं तो और किस लिए होता है?
+
+इसलिए आदमी ने लड़के को गधे पर बैठा दिया और वे अपनी राह चल दिए। लेकिन जल्दी ही लोगों का एक दल उनके पास से गुज़रा, जिनमें से एक बोला, देखो उस <span class="blank-num">12</span> लड़के को, खुद चढ़ा बैठा है और बाप को पैदल चला रहा है!
+
+इसलिए आदमी ने अपने बेटे को <span class="blank-num">13</span>, उतरो गधे से, और खुद चढ़ गया। लेकिन वे ज़्यादा दूर नहीं गए थे कि दो और औरतें पास से गुज़रीं जिनमें से एक ने दूसरी से कहा, <span class="blank-num">14</span> आनी चाहिए उस स्वार्थी आदमी को जो अपने बेचारे छोटे से बेटे को पैदल चला रहा है।
+
+खैर, आदमी को समझ में नहीं आ रहा था कि क्या करे, लेकिन अंत में उसने अपने बेटे को उठा कर काठी पर अपने <span class="blank-num">15</span> बैठा लिया। तब तक वे <span class="blank-num">16</span> में पहुँच चुके थे और जब वे वहाँ मुख्य चौक की ओर चल रहे थे तो राहगीर तानों पर उँगलियाँ उठाने लगे। आदमी ने रुक कर पूछा कि मामला क्या है। लोगों ने कहा, तुम्हें अपने बेचारे गधे पर इतना बोझा लादते <span class="blank-num">17</span> नहीं लगता?
+
+उन्होंने काठी और सारा बोझ गधे की पीठ से हटा लिया और आपस में बाँट लिया। उसके बाद उन्होंने एक मुख्य चौक की ओर अपनी <span class="blank-num">18</span> जारी रखी। अचानक वह छोटा लड़का ठोकर खा कर गिर पड़ा क्योंकि उसका बोझ बहुत <span class="blank-num">19</span> था। वह चिल्लाया क्योंकि वे जो चीज़ वह दोनों लेकर चल रहे थे, वे पुल की दीवार पार करती हुई तेज़ बहती नदी में जा गिरीं।
+
+इससे तुम्हें सबक मिलेगा, उनके पीछे-पीछे आते हुए एक बूढ़े आदमी ने कहा, सब को खुश करने की <span class="blank-num">20</span> में आप किसी को भी खुश नहीं कर पाओगे! बाप और बेटे ने उस दिन अपना सबक सीख लिया।</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q11.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बच्चों</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) चतुरो</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) विद्वानों</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) मूर्खों</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q12.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) क्रोधी</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) आलसी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) लालची</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) दयालु</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q13.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) कहा</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) पूछा</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) खींचा</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) धकेला</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q14.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) दोष</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) अपमान</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) शर्म</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) दया</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q15.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) नीचे</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) ऊपर</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) बाहर</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) सामने</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q16.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) जंगल</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) शहर</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) पहाड़</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) घर</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q17.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बुरा</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) अद्भुत</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) थका</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) महान</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q18.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बहस</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) अनुभव</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) यात्रा</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) खेल</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q19.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) हल्का</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) भारी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) लघु</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) तंग</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q20.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) मिलन</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) अनदेखा</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) शिक्षा</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) कोशिश</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> A2: <span class="blank" style="min-width:30px">&nbsp;</span>/5 &nbsp;|&nbsp; A3: <span class="blank" style="min-width:30px">&nbsp;</span>/10</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Tue &middot; A2 + A3)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q6.</b> A &mdash; अभ्यास</div>
+      <div class="ak-item"><b>Q7.</b> B &mdash; मिल</div>
+      <div class="ak-item"><b>Q8.</b> D &mdash; कल</div>
+      <div class="ak-item"><b>Q9.</b> A &mdash; लाएँ</div>
+      <div class="ak-item"><b>Q10.</b> C &mdash; साथ</div>
+      <div class="ak-item"><b>Q11.</b> D &mdash; मूर्खों</div>
+      <div class="ak-item"><b>Q12.</b> B &mdash; आलसी</div>
+      <div class="ak-item"><b>Q13.</b> A &mdash; कहा</div>
+      <div class="ak-item"><b>Q14.</b> C &mdash; शर्म</div>
+      <div class="ak-item"><b>Q15.</b> D &mdash; सामने</div>
+      <div class="ak-item"><b>Q16.</b> B &mdash; शहर</div>
+      <div class="ak-item"><b>Q17.</b> A &mdash; बुरा</div>
+      <div class="ak-item"><b>Q18.</b> C &mdash; यात्रा</div>
+      <div class="ak-item"><b>Q19.</b> B &mdash; भारी</div>
+      <div class="ak-item"><b>Q20.</b> D &mdash; कोशिश</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 3 — WEDNESDAY Jul 8 — A5 Graphic MCQ ═══ -->
+<div class="day-block" id="wed">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; बुधवार &mdash; Wednesday, Jul 8, 2026</div>
+      <div class="day-meta">A5 Graphic MCQ &mdash; बाग़बानी सप्ताहांत (2019 Paper) &nbsp;|&nbsp; &#9203; ~20 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A5</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A5 &mdash; &#2330;&#2367;&#2340;&#2381;&#2352;-&#2310;&#2343;&#2366;&#2352;&#2367;&#2340; MCQ (Q33&ndash;35)</span>
+      <span class="sec-time">&#9203; ~20 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2A &middot; A5 &middot; Q.33&ndash;35]</div>
+
+    <div class="advert-box">
+      <h3>बाग़बानी सप्ताहांत</h3>
+      <p style="font-size:12px;color:#333;">घरों, छतों और बग़ीचों को संवारना सीखिए<br><br>बाग़बानी सप्ताहांत<br>19-20 अक्तूबर 2019<br><br>तैयारी:<br>• घर, छत और बग़ीचों के पौधों की देखभाल सीखना<br>• छतों के लिए पत्ती, फूलों और सुगंध वाले पौधे<br>• पथरीले बग़ीचों के लिए बेल, घास और नागफनी<br>• मिट्टी तैयार करना, जल-निकास और पोषण सीखना<br>• झूलती डलिया, बोतलों और पोषकों के पौधे<br>• अपने घरेलू पौधों को प्रतियोगिता के लिए तैयार करें<br><br>सप्ताहांत पर:<br>• देश के मशहूर बाग़बानों से मिलिए<br>• बग़ीचों और छतों को संवारने के गुर जानिए<br>• सजावट और हवा को साफ़ करने के लिए पौधों का प्रयोग<br>• आपको 8 से 10 टीमों में बाँटा जाएगा<br>• हर एक टीम एक बग़ीचे को संवारेगी<br>• छत, पथरीले बग़ीचों और घरेलू बग़ीचों में से एक चुनें<br>• प्रदर्शनी बग़ीचों के लिए पौधे स्कूल की नर्सरी से मिलेंगे<br>• माता-पिता को केवल देखने की अनुमति होगी<br><br>रविवार का सत्र:<br>• टीमों द्वारा संवारे बग़ीचों का लोगों के लिए प्रदर्शन<br>• सर्वश्रेष्ठ पकवानों और पौधों का चुनाव जज करेंगे<br>• जीतने वाले बग़ीचों और पौधों को पुरस्कार मिलेंगे<br>• प्रदर्शनी बग़ीचों के पौधे लोगों को बेचे जाएँगे<br>• बिक्री से मिलने वाला पैसा हरित परोपकारी संस्था को दान किया जाएगा<br><br>दोपहर के भोजन और जलपान की व्यवस्था स्कूल करेगा।</p>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q33.</span> नीचे दिए गए कथनों में से कौन सा सही है?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) सुगंध और फूलों वाले पौधे पथरीले बग़ीचों में लगाए जाते हैं।</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) पौधों के लिए मिट्टी तैयार करना आप स्कूल में सीखेंगे।</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) मशहूर बाग़बान आपको अपने पौधों की देखभाल करना सिखाएँगे।</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) आप प्रतियोगिता में हिस्सा लेने के लिए अपने घरेलू पौधे ला सकते हैं।</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q34.</span> मशहूर बाग़बान क्या करेंगे?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) वे आपको बताएँगे कि कौन सा बग़ीचा चुनना है।</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) वे आपको सिखाएँगे कि हवा को बेहतर करने के लिए कौन से पौधे लगाएँ।</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) वे आपके प्रदर्शनी बग़ीचों के लिए पौधे चुनेंगे।</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) वे आपके माँ-बाप की तरह केवल प्रेक्षक बने रहेंगे।</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q35.</span> प्रदर्शनी बग़ीचों के पौधे ___________ ।</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) किसी परोपकारी हरित संस्था को बेचे जाएँगे</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) स्कूल की नर्सरी में इस्तेमाल किए जाएँगे</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) परोपकारी संस्था की मदद के लिए लोगों को बेचे जाएँगे</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) पुरस्कार देने के बाद प्रतियोगियों को लौटा दिए जाएँगे</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Wed &middot; A5)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q33.</b> D &mdash; आप प्रतियोगिता में हिस्सा लेने के लिए अपने घरेलू पौधे ला सकते हैं।</div>
+      <div class="ak-item"><b>Q34.</b> B &mdash; वे आपको सिखाएँगे कि हवा को बेहतर करने के लिए कौन से पौधे लगाएँ।</div>
+      <div class="ak-item"><b>Q35.</b> C &mdash; परोपकारी संस्था की मदद के लिए लोगों को बेचे जाएँगे</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 4 — THURSDAY Jul 9 — B6 + B7 ═══ -->
+<div class="day-block" id="thu">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; गुरुवार &mdash; Thursday, Jul 9, 2026</div>
+      <div class="day-meta">B6 &#2350;&#2369;&#2361;&#2366;&#2357;&#2352;&#2375; (Q36&ndash;40) + B7 &#2357;&#2366;&#2325;&#2381;&#2351; &#2346;&#2370;&#2352;&#2381;&#2340;&#2367; (Q41&ndash;45) (2019 Paper) &nbsp;|&nbsp; &#9203; ~35 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B6</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; B6 &mdash; &#2350;&#2369;&#2361;&#2366;&#2357;&#2352;&#2375;/&#2354;&#2379;&#2325;&#2379;&#2325;&#2381;&#2340;&#2367;&#2351;&#2366;&#2305; (Q36&ndash;40)</span>
+      <span class="sec-time">&#9203; ~15 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2B &middot; B6 &middot; Q.36&ndash;40]</div>
+
+    <div class="word-box">
+      <strong>&#128230; &#2358;&#2348;&#2381;&#2342;-&#2346;&#2375;&#2335;&#2368; &mdash; Word Bank (&#2311;&#2344;&#2381;&#2361;&#2368;&#2306; &#2350;&#2375;&#2306; &#2360;&#2375; &#2330;&#2369;&#2344;&#2367;&#2319;):</strong>
+      खोज &nbsp;|&nbsp; सेंकें &nbsp;|&nbsp; बेलने &nbsp;|&nbsp; तरकीब &nbsp;|&nbsp; ठेंगा &nbsp;|&nbsp; जाँच &nbsp;|&nbsp; गरजते &nbsp;|&nbsp; मिल &nbsp;|&nbsp; इष्ट &nbsp;|&nbsp; अँगूठा
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q36.</span> चलिए इसी बहाने अपने <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मित्रों से मिलन भी हो जाएगा।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q37.</span> टोडरमल की बातों पर मत जाइए, जो <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> है वो बदलते नहीं।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q38.</span> आज जब ज़रूरत पड़ी तो छेदी लालने <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> दिख दिया।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q39.</span> पुलिस की <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> पड़ताल पूरी होने से पहले कोई बाहर नहीं जाएगा।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q40.</span> राजू को दाखिला दिलाने के लिए हमें बड़े पापड़ <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> रहे।</div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B7</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; B7 &mdash; &#2357;&#2366;&#2325;&#2381;&#2351; &#2346;&#2370;&#2352;&#2381;&#2340;&#2367; (Q41&ndash;45)</span>
+      <span class="sec-time">&#9203; ~15 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2B &middot; B7 &middot; Q.41&ndash;45]</div>
+    <p style="font-size:12px;color:#555;margin-bottom:10px;">&#2352;&#2367;&#2325;&#2381;&#2340; &#2360;&#2381;&#2341;&#2366;&#2344; &#2350;&#2375;&#2306; &#2313;&#2330;&#2367;&#2340; &#2358;&#2348;&#2381;&#2342;/&#2346;&#2342;&#2348;&#2306;&#2343; &#2354;&#2367;&#2326;&#2367;&#2319;&#2404;</p>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q41.</span> चीता अपने शिकार को रखने के लिए पेड़ <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> चढ़ा।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q42.</span> सब लोग घबरा गए <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> उसने घोषणा की।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q43.</span> जब वे जागे तो उनकी रसोई 50 सेंटीमीटर पानी <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> भर चुकी थी।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q44.</span> जल्दी आराम के लिए इन्हें गरम पानी में <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> लो।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q45.</span> पाँच और सात के <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> नंबर छः आता है।</div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> B6: <span class="blank" style="min-width:30px">&nbsp;</span>/5 &nbsp;|&nbsp; B7: <span class="blank" style="min-width:30px">&nbsp;</span>/5</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Thu &middot; B6 + B7)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q36.</b> इष्ट</div>
+      <div class="ak-item"><b>Q37.</b> गरजते</div>
+      <div class="ak-item"><b>Q38.</b> ठेंगा</div>
+      <div class="ak-item"><b>Q39.</b> जाँच</div>
+      <div class="ak-item"><b>Q40.</b> बेलने</div>
+      <div class="ak-item"><b>Q41.</b> पर</div>
+      <div class="ak-item"><b>Q42.</b> जब</div>
+      <div class="ak-item"><b>Q43.</b> से</div>
+      <div class="ak-item"><b>Q44.</b> सेंकें</div>
+      <div class="ak-item"><b>Q45.</b> बीच</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 5 — FRIDAY Jul 10 — B8 OE Comprehension ═══ -->
+<div class="day-block" id="fri">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; शुक्रवार &mdash; Friday, Jul 10, 2026</div>
+      <div class="day-meta">B8 &#2326;&#2369;&#2354;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; &mdash; संगीत के छात्र अरुण और पियानो वादक ऑलेग की कहानी (2019 Paper) &nbsp;|&nbsp; &#9203; ~40 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; B8 &mdash; &#2310;&#2358;&#2351; &#2360;&#2350;&#2360;&#2376;&#2306;&#2344;&#2366; &mdash; &#2326;&#2369;&#2354;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; (Q46&ndash;50)</span>
+      <span class="sec-time">&#9203; ~40 min</span>
+    </div>
+    <div class="source-badge">[2019 &middot; P2B &middot; B8 &middot; Q.46&ndash;50]</div>
+
+    <div class="passage-box">
+      <strong>&#2327;&#2342;&#2381;&#2351;&#2366;&#2306;&#2358; &#2346;&#2397;&#2364;&#2367;&#2319;:</strong><br><br>
+      18 साल के चिकित्सा के छात्र अरुण शर्मा को विश्वविद्यालय की फीस देने में कठिनाई हो रही थी। उसे समझ में नहीं आ रहा था कि मदद के लिए किसके पास जाए लेकिन तभी उसके दोस्त के मन में एक बढ़िया विचार आया। उन्होंने अपनी शिक्षा का पैसा इकट्ठा करने के लिए विश्वविद्यालय में संगीत का एक उत्सव कराने का फ़ैसला किया।<br><br>उत्सव में स्वयंसेवी के तौर पर भाग लेने वाले शौकिया संगीतकारों के अलावा उन्होंने पोलैंड में रहने वाले सुप्रसिद्ध पियानो वादक ऑलेग स्यातोल्स्की से भी भाग लेने के लिए संपर्क किया। लेकिन ऑलेग के प्रबंधक को अंदाज़ा नहीं था कि समारोह चंदा इकट्ठा करने के लिए हो रहा था, इसलिए उसने $2000 की फीस माँगी। छात्रों को विश्वास था कि वे इससे अधिक पैसा इकट्ठा कर लेंगे, इसलिए वे तैयार हो गए और संगीतोत्सव का प्रचार करने और टिकटें बेचने का काम शुरू कर दिया।<br><br>संगीतोत्सव का दिन आ गया और ऑलेग ने अपनी कला का शानदार प्रदर्शन किया जिससे सभी उपस्थित लोगों को आनंद उठाया। समारोह के अंत में दोनों छात्रों ने टिकट बेचकर मिले पैसों की गिनती की और उदास होकर एक-दूसरे को देखा क्योंकि उन्हें उतने पैसे नहीं मिले थे जितने की उन्हें ऑलेग की फीस को भरने की उम्मीद थी। वे ऑलेग के पास गए जिसने उनसे निराश दिखने का कारण पूछा। उन्होंने कहा, 'हमें बहुत अफ़सोस है कि हमारे पास आपको अपनी पूरी फीस देने के लिए आज केवल $1600 ही हैं जो जितना हम इकट्ठा कर सके। हम आपका बाकी पैसा जितना जल्दी हो सकेगा, देंगे। हम परेशान हैं क्योंकि हमें अपनी शिक्षा के लिए चंदा इकट्ठा करना था, लेकिन हम कामयाब नहीं हो सके और अब हमें आपका कर्ज़ भी चुकाना है।'<br><br>'नहीं,' ऑलेग ने पल भर रुक कर कहा, 'मैं यह स्वीकार नहीं कर सकता।' उसने पैसा वापस दोनों छात्रों की तरफ बढ़ा दिया। 'यह रहा आप लोगों का पैसा। जितना पैसा अपनी शिक्षा के लिए ज़रूरी हो, रख लें और यदि कुछ बच जाए, तो मुझे दे दें।' लड़कों के आश्चर्य हुआ और वे बड़े खुश हुए। उन्होंने उसका दिल खोल कर धन्यवाद किया।<br><br>दयालुता के इस छोटे से काम ने अरुण पर दीर्घकालिक असर डाला। बहुत साल बीतने पर, खूब सारी पढ़ाई और बहुत कड़ी मेहनत के बाद, अरुण शर्मा एक विश्व प्रसिद्ध प्रोफेसर बन गया। उसे पोलैंड के शहर वॉर्सा के एक बड़े अस्पताल में नई नौकरी मिली। वहाँ पर अपने दूसरे साल में उसे अपने परामर्श कक्ष में एक जाने-पहचाने व्यक्ति को देख कर आश्चर्य हुआ। वह ऑलेग था और वह अब काफी बूढ़े हो जाने और बाल सफेद हो जाने के बावजूद पहचाना जा सकता था। बरसों से पियानो बजा-बजा कर बेचारे ऑलेग के हाथों में तकलीफ होने लगी थी।<br><br>अरुण ने कहा, 'आपको अपने हाथों का ऑपरेशन कराना होगा जो मैं कर सकता हूँ।' ऑलेग उदास हो गया और बोला, 'मेरे पास ऑपरेशन कराने के लिए पैसे नहीं हैं क्योंकि मैं अब पियानो नहीं बजा सकता जिसके ज़रिए मैं अपनी रोजी-रोटी कमाता था।' अरुण ने कहा, 'नहीं, मैं यह स्वीकार नहीं कर सकता। आप चिकित्सा के एक ग़रीब छात्र और उसके दोस्त की मदद का फल था। चिकित्सा का वह छात्र मैं था और अब मैं मुफ्त में ऑपरेशन करके उसके बाद स्वस्थ होने में आपकी मदद कर सकता हूँ।'
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q46.</span> विश्वविद्यालय में अरुण और उसके दोस्त ने अपनी आर्थिक कठिनाई के हल के लिए क्या किया? 2 विवरण दीजिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q47.</span> अरुण और उसके दोस्त ने ऑलेग को क्या देने का प्रस्ताव रखा? 2 विवरण दीजिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q48.</span> अरुण और उसका दोस्त क्यों निराश हुए थे? 2 कारण लिखिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q49.</span> विश्वविद्यालय के बाद अरुण ने क्या नौकरी की और कहाँ काम किया?</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q50.</span> अरुण ऑलेग की मेहरबानी का बदला कैसे चुका पाया? 2 विवरण दीजिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Fri &middot; B8)</h4>
+    <div class="ak-grid">
+      <div class="ak-item" style="grid-column:1/-1"><b>Q46.</b> (1) विश्वविद्यालय में संगीत का एक उत्सव कराने का फ़ैसला किया / (2) टिकटें बेचने का काम शुरू किया / संगीतोत्सव का प्रचार किया</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q47.</b> (1) केवल $1600 दे सकते थे (पूरी $2000 की फीस नहीं) / (2) बाकी पैसा जल्द से जल्द देने का वादा किया</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q48.</b> (1) उन्हें उतने पैसे नहीं मिले जितने की उम्मीद थी / (2) शिक्षा के लिए चंदा इकट्ठा नहीं हो सका और ऑलेग का कर्ज़ भी था</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q49.</b> (1) विश्व प्रसिद्ध प्रोफेसर बने / (2) पोलैंड के वॉर्सा के बड़े अस्पताल में काम किया</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q50.</b> (1) ऑलेग के हाथों का मुफ्त ऑपरेशन किया / (2) ऑपरेशन के बाद स्वस्थ होने में मदद की</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 6 — SATURDAY Jul 11 — P1 Q1 Situational Writing ═══ -->
+<div class="day-block weekend-block" id="sat">
+  <div class="wknd-banner">
+    <span>&#128197; शनिवार &mdash; Saturday, Jul 11 &nbsp;|&nbsp; P1 Q1 &mdash; Situational Writing</span>
+    <span>&#9203; 50 min</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">P1 Q1 &mdash; Situational Writing (2019 Paper)</div>
+      <div class="day-meta">&#128221; Directed writing &mdash; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342;</div>
+    </div>
+  </div>
+
+  <div class="practice-section">
+    <div class="writing-prompt">
+      <h4>&#128196; &#2346;&#2352;&#2367;&#2360;&#2381;&#2341;&#2367;&#2340;&#2367; (Situation):</h4>
+      <p class="wp-text">हाल ही में आप अपने मित्रों के साथ पुस्तक मेले में गए/गई जहाँ आपने लेखन प्रतियोगिता में प्रथम पुरस्कार जीता। आपको अपने मनपसंद लेखक से बात करने का मौका भी मिला।<br><br>अपने अनुभव का वर्णन करते हुए कम से कम 100 शब्दों का एक लेख लिखें।</p>
+      <p class="wp-text">&#2311;&#2360; &#2357;&#2367;&#2359;&#2351; &#2346;&#2352; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342;&#2379;&#2306; &#2325;&#2366; &#2319;&#2325; &#2354;&#2375;&#2326; &#2354;&#2367;&#2326;&#2375;&#2306;&#2404; &#2309;&#2346;&#2344;&#2375; &#2354;&#2375;&#2326; &#2350;&#2375;&#2306; &#2344;&#2368;&#2330;&#2375; &#2342;&#2368; &#2327;&#2312; &#2360;&#2349;&#2368; &#2330;&#2366;&#2352;&#2379;&#2306; &#2348;&#2366;&#2340;&#2379;&#2306; &#2325;&#2366; &#2346;&#2381;&#2352;&#2351;&#2379;&#2327; &#2309;&#2357;&#2358;&#2381;&#2351; &#2325;&#2352;&#2375;&#2306;:</p>
+      <ul class="bullet-list"><li>आपको पुस्तक मेला दिलचस्प क्यों लगा</li><li>आपने पुरस्कार में क्या जीता तथा उसे प्राप्त करते हुए आपको कैसा लगा</li><li>जिस लेखक से आपने बात की उसने क्या कहा</li><li>अपने मनपसंद लेखक से बात करके आपने कैसा महसूस किया</li></ul>
+    </div>
+
+    <div class="writing-lines">
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>&#128273; P1 Q1 &mdash; Self-Check Tips</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2360;&#2349;&#2368; 4 &#2348;&#2369;&#2354;&#2375;&#2335; &#2348;&#2367;&#2306;&#2342;&#2369; &#2358;&#2366;&#2350;&#2367;&#2354; &#2361;&#2376;&#2306;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342; &#2361;&#2376;&#2306;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2349;&#2366;&#2359;&#2366; &#2360;&#2381;&#2346;&#2359;&#2381;&#2335; &#2324;&#2352; &#2360;&#2361;&#2368; &#2361;&#2376;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2357;&#2367;&#2330;&#2366;&#2352; &#2340;&#2366;&#2352;&#2381;&#2325;&#2367;&#2325; &#2325;&#2381;&#2352;&#2350; &#2350;&#2375;&#2306; &#2361;&#2376;&#2306;?</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 7 — SUNDAY Jul 12 — P1 Q2 Picture Writing ═══ -->
+<div class="day-block weekend-block" id="sun">
+  <div class="wknd-banner">
+    <span>&#128197; रविवार &mdash; Sunday, Jul 12 &nbsp;|&nbsp; P1 Q2 &mdash; Picture Writing</span>
+    <span>&#9203; 50 min</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">P1 Q2 &mdash; Picture Writing (2019 Paper)</div>
+      <div class="day-meta">&#128247; &#2330;&#2367;&#2340;&#2381;&#2352;-&#2310;&#2343;&#2366;&#2352;&#2367;&#2340; &#2325;&#2361;&#2366;&#2344;&#2368; &mdash; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342;</div>
+    </div>
+  </div>
+
+  <div class="practice-section">
+    <div class="writing-prompt">
+      <h4>&#128196; &#2344;&#2367;&#2352;&#2381;&#2342;&#2375;&#2358;:</h4>
+      <p class="wp-text">नीचे दिए गए चित्रों की शृंखला को देखें। इन चित्रों के आधार पर कम से कम 100 शब्दों में एक कहानी लिखें। अपनी कहानी में आप चित्रों के नीचे दिए गए शब्दों या वाक्यांशों का प्रयोग कर सकते हैं।</p>
+      <p class="wp-text"><strong>&#127958; &#2342;&#2371;&#2358;&#2381;&#2351;:</strong> Shopping — children kick football inside shop, scatter soft-ball display, 6 panels</p>
+      <p class="wp-text"><strong>&#128221; &#2358;&#2348;&#2381;&#2342;/&#2357;&#2366;&#2325;&#2381;&#2351;&#2366;&#2306;&#2358;:</strong></p>
+      <ul class="bullet-list"><li>खरीदारी</li><li>बातें करना</li><li>बच्चों का खेलना</li><li>फुटबॉल को किक मारना</li><li>चिंता करना</li><li>नर्म गेंदों का ढेर</li><li>बिखेरना</li><li>डाँटना</li></ul>
+    </div>
+
+    <div class="writing-lines">
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>&#128273; P1 Q2 &mdash; Self-Check Tips</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2361;&#2366;&#2344;&#2368; &#2350;&#2375;&#2306; 6 &#2330;&#2367;&#2340;&#2381;&#2352;&#2379;&#2306; &#2325;&#2366; &#2357;&#2352;&#2381;&#2339;&#2344; &#2361;&#2376;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2358;&#2348;&#2381;&#2342;-&#2360;&#2370;&#2330;&#2368; &#2325;&#2375; &#2358;&#2348;&#2381;&#2342; &#2346;&#2381;&#2352;&#2351;&#2379;&#2327; &#2361;&#2369;&#2319;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342; &#2361;&#2376;&#2306;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2361;&#2366;&#2344;&#2368; &#2350;&#2375;&#2306; &#2310;&#2352;&#2306;&#2349;, &#2350;&#2343;&#2381;&#2351;, &#2309;&#2306;&#2340; &#2361;&#2376;?</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:20px;font-size:11px;color:#888;">
+  Hindi PSLE Daily Practice &mdash; W07 Jul 6–10, 2026 &nbsp;|&nbsp; 2019 Paper &nbsp;|&nbsp; PSLE: Sep 28, 2026
+</div>
+
+</body>
+</html>

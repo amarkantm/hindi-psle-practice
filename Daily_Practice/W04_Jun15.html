@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W04 &mdash; Jun 15–19, 2026 | Hindi PSLE Daily Practice</title>
+<style>
+:root{--navy:#000080;--saffron:#FF9933;--green:#138808;--phase-color:#1a237e;--phase-bg:#e8eaf6;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;font-size:14px;line-height:1.7;}
+@media print{
+  body{background:white;font-size:13px;}
+  .no-print{display:none!important;}
+  .day-block{page-break-after:always;background:white!important;box-shadow:none!important;border:1px solid #ccc;}
+  .ans-key-section{page-break-before:always;}
+  @page{size:A4;margin:15mm;}
+}
+.stripe{display:flex;height:5px;}
+.stripe div{flex:1;}
+.header{background:linear-gradient(135deg,#000080,#1a1a7a);color:white;padding:20px 28px;border-bottom:5px solid #FF9933;text-align:center;}
+.header h1{font-size:20px;letter-spacing:1px;}
+.header p{font-size:12px;opacity:.8;margin-top:5px;}
+.week-nav{background:white;padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.nav-chip{background:#f0f4ff;border:1px solid #c5cae9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#000080;text-decoration:none;}
+.day-block{background:white;margin:16px 20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;border-top:4px solid var(--phase-color);}
+.day-header{background:var(--phase-bg);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e0e0e0;}
+.day-title{font-size:16px;font-weight:700;color:var(--navy);}
+.day-meta{font-size:11px;color:#555;}
+.print-btn{background:var(--navy);color:white;border:none;padding:4px 12px;border-radius:4px;font-size:11px;cursor:pointer;}
+.practice-section{padding:14px 18px;}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #eee;}
+.sec-tag{background:var(--navy);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;}
+.sec-title{font-size:15px;font-weight:700;color:var(--navy);}
+.sec-time{font-size:11px;color:#888;margin-left:auto;}
+.source-badge{font-size:9px;background:#ede7f6;color:#4a148c;border-radius:3px;padding:1px 6px;display:inline-block;margin-bottom:6px;font-style:italic;}
+.q-block{margin-bottom:16px;}
+.q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
+.q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
+.blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
+.q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
+.opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
+.ans-line{border-bottom:1.5px solid #bbb;min-height:32px;margin:4px 0 10px;background:none;}
+.passage-box{background:#f8f9fa;border-left:4px solid var(--navy);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;line-height:2.1;font-family:serif;}
+.blank-num{background:#000080;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin:0 2px;vertical-align:middle;}
+.word-box{background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:12px;line-height:1.9;}
+.word-box strong{color:#856404;font-size:11px;display:block;margin-bottom:4px;}
+.writing-prompt{background:#fff3e0;border:1.5px solid #ffb74d;border-radius:8px;padding:14px 16px;margin-bottom:14px;}
+.writing-prompt h4{color:#e65100;font-size:13px;font-weight:700;margin-bottom:8px;}
+.wp-text{font-size:13px;color:#333;margin-bottom:10px;line-height:1.9;}
+.bullet-list{margin:8px 0 12px 20px;}
+.bullet-list li{font-size:13px;color:#333;margin-bottom:4px;line-height:1.7;}
+.writing-lines .ans-line{min-height:36px;}
+.self-assess{background:#f0f4ff;border-radius:8px;padding:10px 14px;margin:14px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.sa-item{font-size:12px;color:#333;}
+.sa-item b{color:var(--navy);}
+.ans-key-section{background:#fffde7;border:1px solid #ffe082;border-radius:8px;margin:14px 18px;padding:14px 16px;}
+.ans-key-section h4{font-size:12px;font-weight:700;color:#b8860b;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;}
+.ak-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 16px;}
+.ak-item{font-size:12px;color:#333;padding:3px 0;}
+.ak-item b{color:var(--navy);}
+.fold-note{font-size:10px;color:#888;font-style:italic;text-align:center;margin-bottom:8px;}
+.section-divider{height:2px;background:linear-gradient(to right,var(--saffron),var(--green));margin:8px 18px;}
+.day-block.weekend-block{border-top-color:#1565c0;}
+.day-header.weekend-header{background:#e3f2fd;border-bottom-color:#90caf9;}
+.wknd-banner{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:8px 18px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.advert-box{background:#fff8e1;border:1.5px solid #f57f17;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:12px;line-height:1.8;}
+.advert-box h3{color:#e65100;font-size:15px;font-weight:700;margin-bottom:10px;text-align:center;}
+.advert-box h4{color:#bf360c;font-size:12px;font-weight:700;margin:10px 0 4px;}
+</style>
+</head>
+<body>
+
+<div class="stripe"><div style="background:#FF9933"></div><div style="background:#ffffff"></div><div style="background:#138808"></div></div>
+
+<div class="header">
+  <h1>&#127470;&#127475; Hindi PSLE Daily Practice &mdash; Week 4</h1>
+  <p>Jun 15–19, 2026 &nbsp;|&nbsp; Phase 2: BUILD &nbsp;|&nbsp; 2025 Paper &nbsp;|&nbsp; PSLE: September 28, 2026</p>
+  <p style="margin-top:4px;font-size:11px;opacity:.7;">Paper 1: 50 min &nbsp;|&nbsp; Paper 2A: MCQ (A1&ndash;A5) &nbsp;|&nbsp; Paper 2B: Open-ended (B6&ndash;B8)</p>
+</div>
+
+<div class="week-nav no-print">
+  <span style="font-size:11px;font-weight:700;color:#555;">NAVIGATE:</span>
+  <a class="nav-chip" href="Holiday_May29_Jun18.html" style="background:#880e4f;color:white;">&#11088; Holiday Packet</a>
+  <a class="nav-chip" href="W03_Jun08.html">&#8592; W03 Jun 8</a>
+  <span class="nav-chip" style="background:#000080;color:white;">&#128204; W04 Jun 15</span>
+  <a class="nav-chip" href="W05_Jun22.html">W05 Jun 22 &#8594;</a>
+  <a class="nav-chip" href="W06_Jun29.html">W06 Jun 29 &#8594;</a>
+</div>
+
+<!-- ═══ DAY 1 — MONDAY Jun 15 — A1 Cloze ═══ -->
+<div class="day-block" id="mon">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; सोमवार &mdash; Monday, Jun 15, 2026</div>
+      <div class="day-meta">A1 Cloze MCQ &mdash; जूलिया लिऊ — पेड़ पर रहने वाली पर्यावरणविद् (2025 Paper) &nbsp;|&nbsp; &#9203; ~30 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A1</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A1 &mdash; &#2330;&#2369;&#2344;&#2366;&#2357; &#2325;&#2352;&#2375;&#2306; (Q1&ndash;5)</span>
+      <span class="sec-time">&#9203; ~30 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2A &middot; A1 &middot; Q.1&ndash;5]</div>
+
+    <div class="passage-box">जूलिया लिऊ एक इच्छुक पर्यावरणविद् थी। एक दिन, जब वह सिर्फ 20 वर्ष की थी, एक दोस्त ने उससे कहा: 'यदि तुम पेड़ों से इतना प्यार करती हो तो, पेड़ जाकर उनके बारे में और अधिक _<span class="blank-num">1</span>_ नहीं सीखती?' जूलिया ने बिल्कुल वैसा ही करने का निर्णय लिया। उसने शयन-थैला लिया, भोजन का एक थैला बाँधा और कैलिफोर्निया में अपने माता-पिता के घर से कुछ ही दूरी पर एक राष्ट्रीय उद्यान में एक बड़े सदाबहार पेड़ पर _<span class="blank-num">2</span>_ गई। उसे यह इतना पसंद आया कि उसने वहाँ उसकी _<span class="blank-num">3</span>_ में एक घर बना लिया।
+
+जूलिया ने ट्री लाइफ नाम से एक ब्लॉग शुरू किया और _<span class="blank-num">4</span>_ हो गई। उसके समर्थक उसके लिए खाना _<span class="blank-num">5</span>_ और उसके लिए उसका फोन भी चार्ज करते। हालाँकि, जूलिया को जब पेड़ पर छह महीने हो गए, तो राष्ट्रीय उद्यान प्राधिकरण ने उसे नीचे आने का आदेश दिया, क्योंकि बहुत सारे लोग उससे मिलने के लिए जंगल में आ रहे थे।</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q1.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) क्या</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) क्यों</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) कहाँ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) कब</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q2.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) लगाई</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) खुदाई</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) चढ़</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) लाए</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q3.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) परछाई</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) तने</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) शाखाओं</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) जड़ों</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q4.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) मशहूर</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) उदास</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) परेशान</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) बुद्धिमान</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q5.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) छोड़ते</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) लाते</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) खाते</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) देखते</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 5</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Mon &middot; A1)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q1.</b> B &mdash; क्यों</div>
+      <div class="ak-item"><b>Q2.</b> C &mdash; चढ़</div>
+      <div class="ak-item"><b>Q3.</b> C &mdash; शाखाओं</div>
+      <div class="ak-item"><b>Q4.</b> A &mdash; मशहूर</div>
+      <div class="ak-item"><b>Q5.</b> B &mdash; लाते</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 2 — TUESDAY Jun 16 — A2 + A3 ═══ -->
+<div class="day-block" id="tue">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; मंगलवार &mdash; Tuesday, Jun 16, 2026</div>
+      <div class="day-meta">A2 Cloze (Q6&ndash;10) + A3 Comprehension (Q11&ndash;20) (2025 Paper) &nbsp;|&nbsp; &#9203; ~40 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A2</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A2 &mdash; &#2349;&#2366;&#2359;&#2366; &#2346;&#2381;&#2352;&#2351;&#2379;&#2327; (Q6&ndash;10)</span>
+      <span class="sec-time">&#9203; ~15 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2A &middot; A2 &middot; Q.6&ndash;10]</div>
+    <div class="passage-box">वायरलेस ईयरबड हर जगह उपलब्ध हैं। हो सकता है कि आप इस समय भी उनका _<span class="blank-num">6</span>_ कर रहे हों, या उन्हें अपनी जेब में ले कर जा रहे हों। लेकिन जबकि हम उन्हें पसंद करते हैं, फिर भी हो सकता है वे उतने अच्छे नहीं हों जितना हम सोचते हैं। हमें सबसे पहले यह जानना चाहिए कि क्या ईयरबड या हेडफोन वास्तव में हमारी सुनने की क्षमता के लिए अच्छे या ख़राब हैं, और दूसरी बात, इस बारे में सोचना चाहिए कि सड़क पर चलते समय या सड़क पार करते समय _<span class="blank-num">7</span>_ बने रहने के लिए उनका सावधानीपूर्वक उपयोग कैसे किया जाए।
+
+हम में से ज़्यादातर लोग जहाँ कहीं भी जाते हैं, जितना चाहें उतने _<span class="blank-num">8</span>_ संगीत के साथ अपनी मनपसंद धुनें सुनना पसंद करते हैं। हाल की तकनीकी प्रगति के कारण, अब हम अपने आस-पास के लोगों को _<span class="blank-num">9</span>_ किए बिना निश्चिन्त होकर संगीत सुनने में सक्षम हैं। हम आवाज़ को उतना बढ़ा सकते हैं जितना हमें _<span class="blank-num">10</span>_ है, या जितना हम चाहते हैं। लेकिन, हाल के वर्षों में श्रवण-स्वास्थ्य पर अधिक शोध होने के साथ, ईयरबड्स की सुरक्षा के बारे में सवाल भी बढ़ रहे हैं।</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q6.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बनाना</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) उपयोग</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) खोना</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) सुनना</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q7.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) सुरक्षित</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) शांत</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) स्वस्थ्य</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) संगीतमय</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q8.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) मज़बूत</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) ऊँचे</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) साफ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) कठिन</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q9.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) शिक्षित</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) चेतावनी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) मनोरंजन</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) तंग</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q10.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) देखभाल</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) पसंद</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) उम्मीद</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) करना</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A3</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A3 &mdash; &#2309;&#2352;&#2381;&#2341; &#2327;&#2381;&#2352;&#2361;&#2339; (Q11&ndash;20)</span>
+      <span class="sec-time">&#9203; ~25 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2A &middot; A3 &middot; Q.11&ndash;20]</div>
+    <div class="passage-box">हम आज रात के खाने के लिए कुछ नया अनुभव क्यों नहीं करते? _<span class="blank-num">11</span>_ विशेष व्यंजन के लिए बाहर जाने के बारे में क्या विचार है? शायद आप कुछ स्पैनिश तापस खाना चाहें, उसके बाद शायद एक मोरक्कन टैजीन, और फिर _<span class="blank-num">12</span>_ एक फ्रेंच टार्ट के साथ? पहले, एक शाम में इन सभी अलग-अलग व्यंजनों का _<span class="blank-num">13</span>_ करना लगभग असंभव सा था। हालाँकि, आजकल, दुनिया भर के कई बड़े शहरों में, आप खुली हवा में आराम से नए स्वाद को _<span class="blank-num">14</span>_ कर उन्हें खा सकते हैं। हाल ही में दुनिया भर में स्ट्रीट फूड की _<span class="blank-num">15</span>_ के विषय में यह एक अद्भुत बात है।
+
+बेशक, हम हमेशा अपने _<span class="blank-num">16</span>_ नाश्ते, जो फूड कोर्ट या फूड वैन से बेचे जाते हैं, उदाहरण के लिए, फ्रांस में क्रेप्स या सिंगापुर में गोरेंग पिसांग का आनंद ले सकते हैं। अब उपलब्ध भोजन की अद्भुत श्रेणी _<span class="blank-num">17</span>_ गई है। व्यवसायी युवा लोगों ने विदेशों में _<span class="blank-num">18</span>_ और अपने साथ वहाँ के राष्ट्रीय खाना बनाने का कौशल साथ लाए। अब, आप में से कुछ लोग अजीब _<span class="blank-num">19</span>_ और असामान्य गंध से आश्चर्यचकित हो सकते हैं। लेकिन मुझे लगता है कि हमें जीवन का आनंद लेने के लिए एक नया आयाम _<span class="blank-num">20</span>_ है। तो मैं बरिटो के लिए शहर के विक्री-केन्द्र में जा रहा हूँ!</div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q11.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) सबकुछ</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) कुछ भी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) किसी</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) कुछ नहीं</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q12.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) अंत</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) मनोरंजन</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) हासिल</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) तृप्त</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q13.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) हल</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) प्रबंध</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) आदेश</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) देना</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q14.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) स्वीकार</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) आविष्कार</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) ढूँढ</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) अनुमान</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q15.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) लोकप्रियता</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) गायब</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) बनाना</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) वज़न</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q16.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) असामान्य</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) पारंपरिक</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) कहावत</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) प्राचीन</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q17.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बदल</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) गिरना</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) प्रकट</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) फैलाव</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q18.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) सपना देखा</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) बचा हुआ</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) पार किया</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) यात्रा की</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q19.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) ध्वनि</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) स्वाद</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) प्रकाश</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) आसन</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q20.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) बनाया</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) खो दिया</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) याद रखा</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) मिला</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> A2: <span class="blank" style="min-width:30px">&nbsp;</span>/5 &nbsp;|&nbsp; A3: <span class="blank" style="min-width:30px">&nbsp;</span>/10</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Tue &middot; A2 + A3)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q6.</b> B &mdash; उपयोग</div>
+      <div class="ak-item"><b>Q7.</b> A &mdash; सुरक्षित</div>
+      <div class="ak-item"><b>Q8.</b> B &mdash; ऊँचे</div>
+      <div class="ak-item"><b>Q9.</b> D &mdash; तंग</div>
+      <div class="ak-item"><b>Q10.</b> B &mdash; पसंद</div>
+      <div class="ak-item"><b>Q11.</b> C &mdash; किसी</div>
+      <div class="ak-item"><b>Q12.</b> A &mdash; अंत</div>
+      <div class="ak-item"><b>Q13.</b> B &mdash; प्रबंध</div>
+      <div class="ak-item"><b>Q14.</b> C &mdash; ढूँढ</div>
+      <div class="ak-item"><b>Q15.</b> A &mdash; लोकप्रियता</div>
+      <div class="ak-item"><b>Q16.</b> B &mdash; पारंपरिक</div>
+      <div class="ak-item"><b>Q17.</b> A &mdash; बदल</div>
+      <div class="ak-item"><b>Q18.</b> D &mdash; यात्रा की</div>
+      <div class="ak-item"><b>Q19.</b> B &mdash; स्वाद</div>
+      <div class="ak-item"><b>Q20.</b> D &mdash; मिला</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 3 — WEDNESDAY Jun 17 — A5 Graphic MCQ ═══ -->
+<div class="day-block" id="wed">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; बुधवार &mdash; Wednesday, Jun 17, 2026</div>
+      <div class="day-meta">A5 Graphic MCQ &mdash; पृथ्वी एवं अंतरिक्ष का विज्ञान मेला (2025 Paper) &nbsp;|&nbsp; &#9203; ~20 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">A5</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; A5 &mdash; &#2330;&#2367;&#2340;&#2381;&#2352;-&#2310;&#2343;&#2366;&#2352;&#2367;&#2340; MCQ (Q33&ndash;35)</span>
+      <span class="sec-time">&#9203; ~20 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2A &middot; A5 &middot; Q.33&ndash;35]</div>
+
+    <div class="advert-box">
+      <h3>पृथ्वी एवं अंतरिक्ष का विज्ञान मेला</h3>
+      <p style="font-size:12px;color:#333;">शिक्षक ध्यान दें।<br>विज्ञान दुनिया को कैसे बदलता है यह सीखने के लिए अपनी कक्षा को एटमॉस सेंटर में लाएँ<br>1 से 28 जून तक भविष्य जानने हेतु आप इसमें भाग ले सकते हैं<br><br>अंतरिक्ष:<br>• अपोलो अंतरिक्ष कैप्सूल के पूर्ण आकार का मॉडल देखें<br>• अनुभव करें कि अंतरिक्ष यात्री कैसे काम और आराम करते हैं<br>• जाने कि, 50 वर्षों में, अंतरिक्ष प्रौद्योगिकी ने हमारे जीवन को कैसे बदल दिया है<br>• राष्ट्रीय अंतरिक्ष केंद्र में एक सप्ताहांत बिताने के लिए हमारी प्रतियोगिता में भाग लें।<br><br>पृथ्वी:<br>• हम जलवायु संकट का समाधान कैसे कर सकते हैं जानने के लिए वीडियो देखें<br>• पृथ्वी को रहने योग्य बनाए रखने में समुद्र की भूमिका के बारे में जाने<br>• हमारा सहभागितापूर्ण खेल खेलें और स्थानीय मौसम की भविष्यवाणी करें<br>• देखें अंतर्राष्ट्रीय अंतरिक्ष स्टेशन से पृथ्वी कैसी दिखती है<br>• पता लगाएँ कि वर्ष 2150 में जीवन कैसा होगा।<br><br>लोग:<br>• एक प्रागैतिहासिक गुफा में बनावटी हड्डियों और कलाकृतियों की खुदाई करें<br>• हमारे पूर्वज हिमयुग में कैसे जीवित रहे? अनुभव करें!<br>• मानवता कैसे विकसित होगी इसके बारे में विशेषज्ञों से बात करें<br>• विज्ञान के प्रति उत्साही अन्य युवाओं से मिलें<br>• विज्ञान के क्षेत्र में अपनी आजीविका की योजना बनाने के लिए सुझाव प्राप्त करें।<br><br>प्रत्येक युवा आगंतुक प्रेरित होकर बाहर आएगा और घर पर काम करने के लिए एक भविष्य विज्ञान अध्ययन सामग्री ले कर जाएगा।<br>अभिभावकों का भी स्वागत है!<br>www.earthandspacescience.org</p>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q33.</span> विज्ञान मेले में आने वाले लोग क्या कर सकते हैं?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) अंतरिक्ष प्रौद्योगिकी पर होने वाले प्रयोगों में शामिल हो सकते हैं</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) किसी अंतरिक्ष यात्री से ऑनलाइन बात कर सकते हैं</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) अपोलो अंतरिक्ष कैप्सूल के अंदर जा सकते हैं</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) राष्ट्रीय अंतरिक्ष केंद्र में जाने के लिए एक यात्रा जीत सकते हैं</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q34.</span> प्रदर्शनी में आने वाले लोग क्या जान सकते हैं?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) अंतर्राष्ट्रीय अंतरिक्ष स्टेशन, नज़दीक से कैसा दिखता है</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) दूसरे देशों के मौसम की भविष्यवाणी कैसे करें</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) हमारे ग्रह के लिए समुद्र कितना महत्वपूर्ण है</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) 50 वर्षों में जीवन कैसा होगा</div>
+        
+      </div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q35.</span> युवा इस यात्रा से अपने साथ क्या ले जा सकते हैं?</div>
+      <div class="q-options">
+        <div class="q-opt"><div class="opt-circle"></div> A) विज्ञान विषय पर शिक्षण सामग्री</div>
+        <div class="q-opt"><div class="opt-circle"></div> B) प्रागैतिहासिक बनावटी हड्डी</div>
+        <div class="q-opt"><div class="opt-circle"></div> C) हिमयुग के बारे में पुस्तकें</div>
+        <div class="q-opt"><div class="opt-circle"></div> D) युवा विज्ञान क्लब की सदस्यता</div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Wed &middot; A5)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q33.</b> D &mdash; राष्ट्रीय अंतरिक्ष केंद्र में जाने के लिए एक यात्रा जीत सकते हैं</div>
+      <div class="ak-item"><b>Q34.</b> C &mdash; हमारे ग्रह के लिए समुद्र कितना महत्वपूर्ण है</div>
+      <div class="ak-item"><b>Q35.</b> A &mdash; विज्ञान विषय पर शिक्षण सामग्री</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 4 — THURSDAY Jun 18 — B6 + B7 ═══ -->
+<div class="day-block" id="thu">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; गुरुवार &mdash; Thursday, Jun 18, 2026</div>
+      <div class="day-meta">B6 &#2350;&#2369;&#2361;&#2366;&#2357;&#2352;&#2375; (Q36&ndash;40) + B7 &#2357;&#2366;&#2325;&#2381;&#2351; &#2346;&#2370;&#2352;&#2381;&#2340;&#2367; (Q41&ndash;45) (2025 Paper) &nbsp;|&nbsp; &#9203; ~35 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B6</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; B6 &mdash; &#2350;&#2369;&#2361;&#2366;&#2357;&#2352;&#2375;/&#2354;&#2379;&#2325;&#2379;&#2325;&#2381;&#2340;&#2367;&#2351;&#2366;&#2305; (Q36&ndash;40)</span>
+      <span class="sec-time">&#9203; ~15 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2B &middot; B6 &middot; Q.36&ndash;40]</div>
+
+    <div class="word-box">
+      <strong>&#128230; &#2358;&#2348;&#2381;&#2342;-&#2346;&#2375;&#2335;&#2368; &mdash; Word Bank (&#2311;&#2344;&#2381;&#2361;&#2368;&#2306; &#2350;&#2375;&#2306; &#2360;&#2375; &#2330;&#2369;&#2344;&#2367;&#2319;):</strong>
+      प्राण &nbsp;|&nbsp; अपमान &nbsp;|&nbsp; भड़कते &nbsp;|&nbsp; बरसते &nbsp;|&nbsp; डींगें &nbsp;|&nbsp; चीखें &nbsp;|&nbsp; टाँग &nbsp;|&nbsp; सत्कार &nbsp;|&nbsp; ज़ोर &nbsp;|&nbsp; बाँका
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q36.</span> रीमा को अपने काम के बारे में <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मारने की आदत है।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q37.</span> मोहन ने पहलवान को चुनौती देते हुए बड़ी-बड़ी बातें सुनाई, पर जो गरजते हैं वो <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> नहीं।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q38.</span> आपको हर किसी के काम में <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> अड़ाना शोभा नहीं देता।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q39.</span> पुराने समय में शिक्षकों का बहुत आदर <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> किया जाता था।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q40.</span> बड़ों का आशीर्वाद हो तो कोई आपका बाल भी <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> नहीं कर सकता।</div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B7</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; B7 &mdash; &#2357;&#2366;&#2325;&#2381;&#2351; &#2346;&#2370;&#2352;&#2381;&#2340;&#2367; (Q41&ndash;45)</span>
+      <span class="sec-time">&#9203; ~15 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2B &middot; B7 &middot; Q.41&ndash;45]</div>
+    <p style="font-size:12px;color:#555;margin-bottom:10px;">&#2352;&#2367;&#2325;&#2381;&#2340; &#2360;&#2381;&#2341;&#2366;&#2344; &#2350;&#2375;&#2306; &#2313;&#2330;&#2367;&#2340; &#2358;&#2348;&#2381;&#2342;/&#2346;&#2342;&#2348;&#2306;&#2343; &#2354;&#2367;&#2326;&#2367;&#2319;&#2404;</p>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q41.</span> वह सफल था <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> उसके माता-पिता ने उसे प्रोत्साहित किया।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q42.</span> मैंने केक को चीनी का उपयोग किए <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> बनाया।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q43.</span> आप खरीदारी पर जाने से <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> अपने पैसे लाना याद रखें।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q44.</span> मैं कॉन्सर्ट में सम्मिलित होने में सफल रहा <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> मेरे पास टिकट नहीं था।</div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q45.</span> <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> ठंड का मौसम शुरू हुआ है मैं एक बार भी बाहर नहीं गई हूँ।</div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> B6: <span class="blank" style="min-width:30px">&nbsp;</span>/5 &nbsp;|&nbsp; B7: <span class="blank" style="min-width:30px">&nbsp;</span>/5</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Thu &middot; B6 + B7)</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>Q36.</b> डींगें</div>
+      <div class="ak-item"><b>Q37.</b> बरसते</div>
+      <div class="ak-item"><b>Q38.</b> टाँग</div>
+      <div class="ak-item"><b>Q39.</b> सत्कार</div>
+      <div class="ak-item"><b>Q40.</b> बाँका</div>
+      <div class="ak-item"><b>Q41.</b> क्योंकि</div>
+      <div class="ak-item"><b>Q42.</b> बिना</div>
+      <div class="ak-item"><b>Q43.</b> पहले</div>
+      <div class="ak-item"><b>Q44.</b> हालाँकि</div>
+      <div class="ak-item"><b>Q45.</b> जब से</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 5 — FRIDAY Jun 19 — B8 OE Comprehension ═══ -->
+<div class="day-block" id="fri">
+  <div class="day-header">
+    <div>
+      <div class="day-title">&#9675; शुक्रवार &mdash; Friday, Jun 19, 2026</div>
+      <div class="day-meta">B8 &#2326;&#2369;&#2354;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; &mdash; शहर छोड़कर पहाड़ में बसना — एक लेखिका का अनुभव (2025 Paper) &nbsp;|&nbsp; &#9203; ~40 min</div>
+    </div>
+    <button class="print-btn no-print" onclick="window.print()">Print</button>
+  </div>
+
+  <div class="practice-section">
+    <div class="sec-header">
+      <span class="sec-tag">B8</span>
+      <span class="sec-title">&#2349;&#2366;&#2327; B8 &mdash; &#2310;&#2358;&#2351; &#2360;&#2350;&#2360;&#2376;&#2306;&#2344;&#2366; &mdash; &#2326;&#2369;&#2354;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; (Q46&ndash;50)</span>
+      <span class="sec-time">&#9203; ~40 min</span>
+    </div>
+    <div class="source-badge">[2025 &middot; P2B &middot; B8 &middot; Q.46&ndash;50]</div>
+
+    <div class="passage-box">
+      <strong>&#2327;&#2342;&#2381;&#2351;&#2366;&#2306;&#2358; &#2346;&#2397;&#2364;&#2367;&#2319;:</strong><br><br>
+      डेढ़ साल पहले, मैं और मेरे पति एक सरल जीवन जीने की कोशिश करने के लिए शहर से पहाड़ों के एक सुदूर हिस्से में जा बसे। हम हमेशा से शहर छोड़ना चाहते थे, लेकिन यह कदम उठाने से पहले हमें काफी योजना बनानी पड़ी और हमें अपना घर बेचना पड़ा। हालाँकि, जब हम यहाँ पहुँचे, तो हमें लगा कि हमने सही समय पर सही काम किया है।<br><br>अब जबकि हम जंगली इलाके में रह रहे हैं, शहर में रहनेवाले मेरे मित्र मुझसे बहुत सारे सवाल पूछते हैं कि यहाँ का जीवन कैसा है। उनमें से अधिकांश यह नहीं समझ पाते कि कोई शहर से पहाड़ों पर क्यों जाएगा, लेकिन बाकी लोगों को यह विचार पसंद आता है और वे चाहते हैं कि काश वे भी ऐसा कर सकें। मैं उन्हें बताती हूँ कि सच तो यह है कि मुझे जंगल में रहना पसंद है। लेकिन शहरी जीवन की कुछ बातें ऐसी भी हैं जो मुझे सचमुच याद आती हैं। इसलिए यदि आप शहर से बाहर जाने का सपना देख रहे हैं और जंगल में एक आसान जीवन जीने की उम्मीद कर रहे हैं, तो आपको इसके बारे में ध्यानपूर्वक सोचने और वास्तविकता पर अपना शोध करने की आवश्यकता है। जंगली इलाकों में जीवन के कुछ हिस्से वास्तव में कठिन हैं।<br><br>यदि आप शहर छोड़ते हैं, तो आपको इस बात पर पुनर्विचार करने की आवश्यकता हो सकती है कि सफलता आपके लिए क्या मायने रखती है। शहर में, आपके जीवन के लिए पदोन्नति और व्यावसायिक स्तर पर निर्भर रहना आसान है। यहाँ पर स्तर कम महत्वपूर्ण लगता है। यदि आपका कार्य-अनुभव कार्यालय की नौकरियों तक ही सीमित है, तो एक बार जब आप शहर से बाहर निकल जाएंगे, तब आपके लिए अधिक नौकरियाँ नहीं होंगी, जब तक कि आप इंटरनेट से नहीं जुड़ जाते और काम के लिए इसका उपयोग करने के लिए आवश्यक कौशल और ज्ञान नहीं रखते हैं। शहर की नौकरी ज़ारी रखना और पूरे समय जंगल में रहना निश्चित रूप से एक सौभाग्य की बात है, लेकिन 9 से 5 के वातावरण के बाहर सफलतापूर्वक काम करने के लिए आत्म-अनुशासन भी आवश्यक है।<br><br>इसी तरह, जब आप जंगली इलाकों में रहते हैं तो आपके पास बहुत अधिक खाली समय होगा। शहर में ऐसी बहुत सी चीज़ें हैं जो आपका समय और ऊर्जा लेती हैं, दैनिक यात्रा से लेकर अच्छे कपड़े पहनने तक। जब मैं शहर में रहती थी, तो अलार्म बजने से मेरी नींद खुल जाती थी और तुरंत ही मेरा दिमाग उन सभी चीज़ों को लेकर तनाव से भर जाता था, जो मुझे उस दिन करने की ज़रूरत होती थीं, जैसे काम, बैठकें, दैनिक कार्य और सामाजिक दायित्व। यहाँ पर, मैं आमतौर पर स्वाभाविक रूप से उठती हूँ, बिना जल्दबाज़ी के नाश्ता करती हूँ और घर से काम करते हुए, अपने कुते को घुमाते हुए और अपने पति के साथ आराम करते हुए जीवन का आनंद लेती हूँ।
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q46.</span> लेखिका ने शहर छोड़ने से पहले क्या किया? कोई 2 बातें लिखिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q47.</span> लेखिका के शहरी मित्र उसके नए जीवन के बारे में क्या सोचते हैं? कोई 2 प्रतिक्रियाएँ लिखिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q48.</span> शहर से बाहर रहने पर काम के बारे में क्या कठिनाइयाँ हो सकती हैं? कोई 2 बातें लिखिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q49.</span> जंगल में रहते हुए लेखिका का सुबह का जीवन शहर से कैसे अलग है? कोई 2 बातें लिखिए।</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">Q50.</span> लेखिका ने जंगल में जाने से पहले जो सपना देखा था वह क्या था?</div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+    </div>
+  </div>
+
+  <div class="self-assess">
+    <div class="sa-item"><b>&#9203; &#2360;&#2350;&#2351;:</b> &#2350;&#2376;&#2306;&#2344;&#2375; <span class="blank" style="min-width:60px">&nbsp;</span> &#2350;&#2367;&#2344;&#2335; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2366; &#2325;&#2367;&#2351;&#2366;</div>
+    <div class="sa-item"><b>&#128202; &#2360;&#2381;&#2325;&#2379;&#2352;:</b> <span class="blank" style="min-width:40px">&nbsp;</span> / 10</div>
+  </div>
+
+  <div class="ans-key-section">
+    <div class="fold-note">&#9988; &mdash; &#2313;&#2340;&#2381;&#2340;&#2352; &#2342;&#2375;&#2326;&#2344;&#2375; &#2360;&#2375; &#2346;&#2361;&#2354;&#2375; &#2326;&#2369;&#2342; &#2325;&#2379;&#2358;&#2367;&#2358; &#2325;&#2352;&#2375;&#2306;! &mdash;</div>
+    <h4>&#128273; &#2313;&#2340;&#2381;&#2340;&#2352;-&#2325;&#2369;&#2306;&#2332;&#2368; &mdash; Answer Key (Fri &middot; B8)</h4>
+    <div class="ak-grid">
+      <div class="ak-item" style="grid-column:1/-1"><b>Q46.</b> (1) काफी योजना बनानी पड़ी / (2) अपना घर बेचना पड़ा</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q47.</b> (1) अधिकांश समझ नहीं पाते कि शहर छोड़कर पहाड़ पर क्यों जाएंगे / (2) कुछ को यह विचार पसंद है और वे भी ऐसा करना चाहते हैं</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q48.</b> (1) कार्यालय की नौकरियों का अनुभव होने पर शहर से बाहर काम नहीं मिलेगा / (2) इंटरनेट से जुड़ने और उसके उपयोग का कौशल ज़रूरी है</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q49.</b> (1) वह स्वाभाविक रूप से उठती है (अलार्म नहीं) / (2) बिना जल्दबाज़ी के नाश्ता करती है / तनाव नहीं होता</div>
+      <div class="ak-item" style="grid-column:1/-1"><b>Q50.</b> (1) शहर से बाहर जाकर जंगल में एक आसान जीवन जीना / (2) सरल जीवन की उम्मीद थी</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 6 — SATURDAY Jun 20 — P1 Q1 Situational Writing ═══ -->
+<div class="day-block weekend-block" id="sat">
+  <div class="wknd-banner">
+    <span>&#128197; शनिवार &mdash; Saturday, Jun 20 &nbsp;|&nbsp; P1 Q1 &mdash; Situational Writing</span>
+    <span>&#9203; 50 min</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">P1 Q1 &mdash; Situational Writing (2025 Paper)</div>
+      <div class="day-meta">&#128221; Directed writing &mdash; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342;</div>
+    </div>
+  </div>
+
+  <div class="practice-section">
+    <div class="writing-prompt">
+      <h4>&#128196; &#2346;&#2352;&#2367;&#2360;&#2381;&#2341;&#2367;&#2340;&#2367; (Situation):</h4>
+      <p class="wp-text">आपने हाल ही में स्थानीय पार्क से कचरा साफ करने वाले एक समूह के साथ एक दिन बिताने के लिए स्वेच्छा से काम किया है। आपको समाचार पत्र के लिए इस बारे में लिखने के लिए कहा जाता है।</p>
+      <p class="wp-text">&#2311;&#2360; &#2357;&#2367;&#2359;&#2351; &#2346;&#2352; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342;&#2379;&#2306; &#2325;&#2366; &#2319;&#2325; &#2354;&#2375;&#2326; &#2354;&#2367;&#2326;&#2375;&#2306;&#2404; &#2309;&#2346;&#2344;&#2375; &#2354;&#2375;&#2326; &#2350;&#2375;&#2306; &#2344;&#2368;&#2330;&#2375; &#2342;&#2368; &#2327;&#2312; &#2360;&#2349;&#2368; &#2330;&#2366;&#2352;&#2379;&#2306; &#2348;&#2366;&#2340;&#2379;&#2306; &#2325;&#2366; &#2346;&#2381;&#2352;&#2351;&#2379;&#2327; &#2309;&#2357;&#2358;&#2381;&#2351; &#2325;&#2352;&#2375;&#2306;:</p>
+      <ul class="bullet-list"><li>आपने इस आयोजन के लिए स्वेच्छा से भाग क्यों लिया</li><li>कार्यक्रम में किसने भाग लिया</li><li>अब जब आप पार्क को देखते हैं तो आपको कैसा महसूस होता है</li><li>आपके माता-पिता ने बाद में आपसे क्या कहा</li></ul>
+    </div>
+
+    <div class="writing-lines">
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>&#128273; P1 Q1 &mdash; Self-Check Tips</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2360;&#2349;&#2368; 4 &#2348;&#2369;&#2354;&#2375;&#2335; &#2348;&#2367;&#2306;&#2342;&#2369; &#2358;&#2366;&#2350;&#2367;&#2354; &#2361;&#2376;&#2306;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342; &#2361;&#2376;&#2306;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2349;&#2366;&#2359;&#2366; &#2360;&#2381;&#2346;&#2359;&#2381;&#2335; &#2324;&#2352; &#2360;&#2361;&#2368; &#2361;&#2376;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2357;&#2367;&#2330;&#2366;&#2352; &#2340;&#2366;&#2352;&#2381;&#2325;&#2367;&#2325; &#2325;&#2381;&#2352;&#2350; &#2350;&#2375;&#2306; &#2361;&#2376;&#2306;?</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DAY 7 — SUNDAY Jun 21 — P1 Q2 Picture Writing ═══ -->
+<div class="day-block weekend-block" id="sun">
+  <div class="wknd-banner">
+    <span>&#128197; रविवार &mdash; Sunday, Jun 21 &nbsp;|&nbsp; P1 Q2 &mdash; Picture Writing</span>
+    <span>&#9203; 50 min</span>
+  </div>
+  <div class="day-header weekend-header">
+    <div>
+      <div class="day-title">P1 Q2 &mdash; Picture Writing (2025 Paper)</div>
+      <div class="day-meta">&#128247; &#2330;&#2367;&#2340;&#2381;&#2352;-&#2310;&#2343;&#2366;&#2352;&#2367;&#2340; &#2325;&#2361;&#2366;&#2344;&#2368; &mdash; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342;</div>
+    </div>
+  </div>
+
+  <div class="practice-section">
+    <div class="writing-prompt">
+      <h4>&#128196; &#2344;&#2367;&#2352;&#2381;&#2342;&#2375;&#2358;:</h4>
+      <p class="wp-text">नीचे दिए गए चित्रों की श्रृंखला को देखें। इन चित्रों के आधार पर कम से कम 100 शब्दों में एक कहानी लिखें।</p>
+      <p class="wp-text"><strong>&#127958; &#2342;&#2371;&#2358;&#2381;&#2351;:</strong> 6-पैनल कहानी: दौड़ प्रतियोगिता — START बैनर के पास खिलाड़ी तैयार हैं → किसी से बात करते हुए → भीड़ के सामने दौड़ रहे हैं → FINISH पर पहुँचते हैं → FINISH पर जीत के करीब (प्रतिद्वंद्वी गिर गया) → प्रश्नचिह्न</p>
+      <p class="wp-text"><strong>&#128221; &#2358;&#2348;&#2381;&#2342;/&#2357;&#2366;&#2325;&#2381;&#2351;&#2366;&#2306;&#2358;:</strong></p>
+      <ul class="bullet-list"><li>दौड़ने के जूते</li><li>उत्साहित</li><li>दौड़</li><li>संकेत</li><li>रास्ता</li><li>की तरफ</li><li>देखना</li><li>आश्चर्य चकित</li></ul>
+    </div>
+
+    <div class="writing-lines">
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      <div class="ans-line"></div>
+      
+    </div>
+  </div>
+
+  <div class="ans-key-section">
+    <h4>&#128273; P1 Q2 &mdash; Self-Check Tips</h4>
+    <div class="ak-grid">
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2361;&#2366;&#2344;&#2368; &#2350;&#2375;&#2306; 6 &#2330;&#2367;&#2340;&#2381;&#2352;&#2379;&#2306; &#2325;&#2366; &#2357;&#2352;&#2381;&#2339;&#2344; &#2361;&#2376;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2358;&#2348;&#2381;&#2342;-&#2360;&#2370;&#2330;&#2368; &#2325;&#2375; &#2358;&#2348;&#2381;&#2342; &#2346;&#2381;&#2352;&#2351;&#2379;&#2327; &#2361;&#2369;&#2319;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2350; &#2360;&#2375; &#2325;&#2350; 100 &#2358;&#2348;&#2381;&#2342; &#2361;&#2376;&#2306;?</div>
+      <div class="ak-item"><b>&#10003;</b> &#2325;&#2381;&#2351;&#2366; &#2325;&#2361;&#2366;&#2344;&#2368; &#2350;&#2375;&#2306; &#2310;&#2352;&#2306;&#2349;, &#2350;&#2343;&#2381;&#2351;, &#2309;&#2306;&#2340; &#2361;&#2376;?</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:20px;font-size:11px;color:#888;">
+  Hindi PSLE Daily Practice &mdash; W04 Jun 15–19, 2026 &nbsp;|&nbsp; 2025 Paper &nbsp;|&nbsp; PSLE: Sep 28, 2026
+</div>
+
+</body>
+</html>
