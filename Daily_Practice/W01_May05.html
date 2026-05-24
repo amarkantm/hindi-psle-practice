@@ -45,7 +45,13 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
 .q-num{font-size:13px;font-weight:700;color:var(--navy);margin-right:4px;}
 .q-text{font-size:13px;color:#1a1a1a;line-height:1.8;}
 .blank{display:inline-block;min-width:100px;border-bottom:2px solid #333;margin:0 4px;vertical-align:bottom;}
-.hint{font-size:11px;color:#777;font-style:italic;}
+.hint{display:none;}
+.hint-toggle{display:inline-block;margin-left:8px;vertical-align:middle;}
+.hint-toggle summary{font-size:11px;color:#0277bd;cursor:pointer;font-style:italic;list-style:none;padding:1px 6px;border-radius:3px;border:1px solid #b3e5fc;background:#e1f5fe;}
+.hint-toggle summary::-webkit-details-marker{display:none;}
+.hint-toggle[open]{background:#fff8e1;border-radius:4px;padding:2px 8px;border:1px solid #ffe082;margin-top:2px;}
+.hint-toggle[open] summary{color:#e65100;background:#fff8e1;border-color:#ffb300;}
+.hint-content{font-size:12px;color:#555;padding:2px 0 2px 4px;font-style:italic;}
 .q-options{display:grid;grid-template-columns:1fr 1fr;gap:5px 20px;margin-top:8px;margin-left:24px;}
 .q-opt{font-size:12px;color:#333;display:flex;align-items:center;gap:6px;}
 .opt-circle{width:16px;height:16px;border:1.5px solid #999;border-radius:50%;flex-shrink:0;}
@@ -888,33 +894,38 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     </div>
 
     <!-- Q1–Q5: Collocations -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin-bottom:8px;">भाग A — शब्द-प्रयोग (Collocations) &nbsp;<span class="source-badge">2013 · P2, A1</span></p>
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin-bottom:8px;">भाग A — शब्द-प्रयोग (Collocations) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
 
     <div class="q-block">
       <span class="q-num">Q1.</span>
-      <span class="q-text">बाज़ार में <span class="blank">&nbsp;</span> के कारण सब्ज़ियों के दाम बढ़ गए। &nbsp;<span class="hint">(hoarding — जमाखोरी)</span></span>
+      <span class="q-text">बाज़ार में <span class="blank">&nbsp;</span> के कारण सब्ज़ियों के दाम बढ़ गए।</span>
+      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">hoarding — जमाखोरी</span></details>
     </div>
     <div class="q-block">
       <span class="q-num">Q2.</span>
-      <span class="q-text">दादी का कंगन बहुत <span class="blank">&nbsp;</span> था, इसलिए तिजोरी में रखा था। &nbsp;<span class="hint">(valuable — मूल्यवान)</span></span>
+      <span class="q-text">दादी का कंगन बहुत <span class="blank">&nbsp;</span> था, इसलिए तिजोरी में रखा था।</span>
+      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">valuable — मूल्यवान</span></details>
     </div>
     <div class="q-block">
       <span class="q-num">Q3.</span>
-      <span class="q-text">अपने मित्र की तरक्की देखकर <span class="blank">&nbsp;</span> नहीं करनी चाहिए। &nbsp;<span class="hint">(jealousy — ईर्ष्या)</span></span>
+      <span class="q-text">अपने मित्र की तरक्की देखकर <span class="blank">&nbsp;</span> नहीं करनी चाहिए।</span>
+      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">jealousy — ईर्ष्या</span></details>
     </div>
     <div class="q-block">
       <span class="q-num">Q4.</span>
-      <span class="q-text">एक <span class="blank">&nbsp;</span> दुकानदार हमेशा सही वज़न देता है। &nbsp;<span class="hint">(honest — ईमानदार)</span></span>
+      <span class="q-text">एक <span class="blank">&nbsp;</span> दुकानदार हमेशा सही वज़न देता है।</span>
+      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">honest — ईमानदार</span></details>
     </div>
     <div class="q-block">
       <span class="q-num">Q5.</span>
-      <span class="q-text">पुराने ज़माने में लोकगृही बहुत <span class="blank">&nbsp;</span> नगर था। &nbsp;<span class="hint">(prosperous — समृद्ध)</span></span>
+      <span class="q-text">पुराने ज़माने में लोकगृही बहुत <span class="blank">&nbsp;</span> नगर था।</span>
+      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">prosperous — समृद्ध</span></details>
     </div>
 
     <div class="section-divider"></div>
 
     <!-- Q6–Q10: Cloze -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग B — रिक्त-पूर्ति (Cloze Passage) &nbsp;<span class="source-badge">2013 · P2, A2</span></p>
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग B — रिक्त-पूर्ति (Cloze Passage) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
     <div class="passage-box">
       एक बार एक <span class="blank-num">6</span> व्यापारी था जो दूर देशों में सामान बेचता था। उसका व्यवहार बहुत <span class="blank-num">7</span> था। जब उसके शहर में बाढ़ आई तो उसने <span class="blank-num">8</span> का काम नहीं किया, बल्कि सबकी मदद की। उसकी दुकान बहुत <span class="blank-num">9</span> थी, लेकिन उसका दिल उससे भी बड़ा था। लोग उसकी भलाई से बहुत <span class="blank-num">10</span> थे।
     </div>
@@ -926,7 +937,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     <div class="section-divider"></div>
 
     <!-- Q11–Q16: MCQ Comprehension -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग C — बोधात्मक प्रश्न (MCQ Comprehension) &nbsp;<span class="source-badge">2013 · P2, A3</span></p>
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग C — बोधात्मक प्रश्न (MCQ Comprehension) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
     <div class="passage-box">
       रमेश एक परिश्रमी और होशियार छात्र था। एक दिन उसे पता चला कि उसके मित्र मोहन के पिता बीमार पड़ गए हैं। मोहन बहुत दुखी था और पढ़ाई में पिछड़ने लगा था। रमेश ने उसकी परेशानी देखी और रोज़ शाम को उसके घर जाकर उसे पढ़ाने लगा। परीक्षा में मोहन ने अच्छे अंक पाए। मोहन की माँ ने रमेश को आशीर्वाद दिया और कहा, "बेटा, तुम्हारी मित्रता सच्ची है।"
     </div>
@@ -995,7 +1006,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     <div class="section-divider"></div>
 
     <!-- Q17–Q18: Idiom Match -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग D — मुहावरे (Idioms) &nbsp;<span class="source-badge">2013 · P2, B6</span></p>
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग D — मुहावरे (Idioms) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
     <table class="idiom-table">
       <tr><th>मुहावरा / कहावत</th><th>अर्थ — सही उत्तर चुनें</th></tr>
       <tr>
@@ -1023,7 +1034,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
     </table>
 
     <!-- Q19–Q20: Sentence Completion -->
-    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग E — वाक्य-पूर्ति (Sentence Completion) &nbsp;<span class="source-badge">2013 · P2, B7</span></p>
+    <p style="font-size:12px;font-weight:700;color:#1565c0;margin:12px 0 8px;">भाग E — वाक्य-पूर्ति (Sentence Completion) &nbsp;<span class="source-badge">2013 शब्द-भंडार · अभ्यास</span></p>
     <div class="q-block">
       <span class="q-num">Q19.</span>
       <span class="q-text">वह परीक्षा में पास होगा _______ वह कड़ी मेहनत करेगा।</span>
@@ -1107,14 +1118,16 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#1a1a1a;fo
 
     <div class="q-block">
       <span class="q-num">C1.</span>
-      <span class="source-badge">2013 · P2, A1</span>
-      <span class="q-text"> एक <span class="blank">&nbsp;</span> व्यापारी ने <span class="blank">&nbsp;</span> की शिकायत सुनकर अपना माल उचित दाम पर बेचा। &nbsp;<span class="hint">(शब्द: ईमानदार, जमाखोरी)</span></span>
+      <span class="source-badge">2013 शब्द-भंडार · अभ्यास</span>
+      <span class="q-text"> एक <span class="blank">&nbsp;</span> व्यापारी ने <span class="blank">&nbsp;</span> की शिकायत सुनकर अपना माल उचित दाम पर बेचा।</span>
+      <details class="hint-toggle"><summary>💡 शब्द-संकेत</summary><span class="hint-content">ईमानदार, जमाखोरी</span></details>
     </div>
 
     <div class="q-block">
       <span class="q-num">C2.</span>
       <span class="source-badge">2013 · B6</span>
-      <span class="q-text"> बहुत दिनों बाद रोहन दिखा तो सब बोले, "अरे! तुम तो _______ हो गए थे।" &nbsp;<span class="hint">(मुहावरे का उचित रूप लिखिए)</span></span>
+      <span class="q-text"> बहुत दिनों बाद रोहन दिखा तो सब बोले, "अरे! तुम तो _______ हो गए थे।"</span>
+      <details class="hint-toggle"><summary>💡 संकेत</summary><span class="hint-content">मुहावरे का उचित रूप लिखिए — ईद का चाँद होना</span></details>
       <div class="ans-line"></div>
     </div>
 
